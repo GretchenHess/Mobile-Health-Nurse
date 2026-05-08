@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mobile Health Nurse — Gretchen Hess, BSN, RN | West Valley, Arizona</title>
+<meta name="description" content="A registered nurse who comes to you. Health navigation, medical advocacy, and beginner-friendly training in West Valley, Arizona. Protecting your HealthSpan.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #2d3142;
+    --navy-deep: #1f2230;
+    --red: #b8413a;
+    --red-deep: #9c3530;
+    --gold: #c9a961;
+    --gold-deep: #a88a47;
+    --teal: #2a7a7a;
+    --teal-deep: #1f5e5e;
+    --cream: #faf8f3;
+    --off-white: #fdfcf9;
+    --text-dark: #2a2d3a;
+    --text-medium: #555866;
+    --text-light: #888b95;
+    --border-soft: #e8e5dd;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-dark);
+    background: var(--off-white);
+    line-height: 1.6;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    line-height: 1.15;
+    color: var(--navy);
+    letter-spacing: -0.01em;
+  }
+
+  nav {
+    background: var(--navy);
+    padding: 1.25rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .brand h1 { color: white; font-size: 1.5rem; font-weight: 600; margin: 0; }
+  .brand .location {
+    color: var(--gold);
+    font-size: 0.7rem;
+    letter-spacing: 0.18em;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+  .nav-links { display: flex; gap: 2.25rem; list-style: none; }
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.82rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: color 0.2s;
+    padding-bottom: 0.4rem;
+  }
+  .nav-links a:hover { color: var(--gold); }
+  .nav-buttons { display: flex; gap: 0.75rem; }
+  .btn-connect, .btn-nurse-now {
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    font-size: 0.78rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: all 0.2s;
+    border-radius: 2px;
+  }
+  .btn-connect { background: var(--red); color: white; }
+  .btn-connect:hover { background: var(--red-deep); }
+  .btn-nurse-now { background: var(--gold); color: var(--navy); }
+  .btn-nurse-now:hover { background: var(--gold-deep); }
+
+  .hero { background: var(--navy); color: white; padding: 5rem 3rem 6rem; }
+  .hero-grid {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+  .hero-eyebrow {
+    color: var(--gold);
+    font-size: 0.78rem;
+    letter-spacing: 0.22em;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 1.75rem;
+  }
+  .hero h1 {
+    color: white;
+    font-size: clamp(2.75rem, 5vw, 4.25rem);
+    line-height: 1.05;
+    margin-bottom: 1.5rem;
+  }
+  .hero h1 .gold-accent { color: var(--gold); font-style: italic; }
+  .hero-sub {
+    font-size: 1.15rem;
+    color: rgba(255,255,255,0.82);
+    margin-bottom: 1.25rem;
+    max-width: 560px;
+    line-height: 1.55;
+  }
+  .healthspan-def {
+    font-size: 0.95rem;
+    color: rgba(255,255,255,0.7);
+    border-left: 2px solid var(--gold);
+    padding-left: 1rem;
+    margin-bottom: 2rem;
+    max-width: 540px;
+    font-style: italic;
+    line-height: 1.55;
+  }
+  .healthspan-def strong { color: var(--gold); font-style: normal; font-weight: 600; }
+  .hero-cta-row { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 2rem; }
+  .btn-primary, .btn-secondary {
+    padding: 1.1rem 2rem;
+    text-decoration: none;
+    font-size: 0.85rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: all 0.2s;
+    display: inline-block;
+    border-radius: 2px;
+    border: none;
+    cursor: pointer;
+  }
+  .btn-primary { background: var(--red); color: white; }
+  .btn-primary:hover { background: var(--red-deep); transform: translateY(-1px); }
+  .btn-secondary { border: 1.5px solid rgba(255,255,255,0.4); color: white; background: transparent; }
+  .btn-secondary:hover { background: rgba(255,255,255,0.08); border-color: white; }
+  .hero-fineprint { color: rgba(255,255,255,0.55); font-size: 0.85rem; }
+  .hero-image {
+    border-radius: 4px;
+    height: 100%;
+    min-height: 500px;
+    background: linear-gradient(135deg, #4a4d5a 0%, #2d3142 100%);
+  }
+
+  .resource-promise { background: var(--cream); padding: 5rem 3rem; text-align: center; border-bottom: 1px solid var(--border-soft); }
+  .resource-promise-inner { max-width: 800px; margin: 0 auto; }
+  .eyebrow {
+    color: var(--teal);
+    font-size: 0.78rem;
+    letter-spacing: 0.22em;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+  }
+  .resource-promise h2 { font-size: clamp(2.25rem, 4vw, 3.25rem); margin-bottom: 1.5rem; }
+  .resource-promise p { font-size: 1.15rem; color: var(--text-medium); line-height: 1.65; }
+  .resource-promise p strong { color: var(--navy); font-weight: 600; }
+
+  .who-i-help { padding: 6rem 3rem; }
+  .who-inner { max-width: 1300px; margin: 0 auto; }
+  .who-header { text-align: center; margin-bottom: 4rem; }
+  .who-header h2 { font-size: clamp(2.25rem, 4vw, 3.25rem); }
+  .who-header p { font-size: 1.1rem; color: var(--text-medium); margin-top: 1rem; max-width: 600px; margin-left: auto; margin-right: auto; }
+  .paths-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+  .path-card {
+    background: white;
+    padding: 2.5rem 2rem;
+    border-top: 4px solid var(--teal);
+    border-radius: 2px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+  }
+  .path-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(45,49,66,0.08); }
+  .path-card.reactive { border-top-color: var(--red); }
+  .path-card.parents { border-top-color: var(--gold); }
+  .path-card.beginner { border-top-color: var(--teal); }
+  .path-label { font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 600; margin-bottom: 1rem; }
+  .path-card.reactive .path-label { color: var(--red); }
+  .path-card.parents .path-label { color: var(--gold-deep); }
+  .path-card.beginner .path-label { color: var(--teal); }
+  .path-card h3 { font-size: 1.7rem; margin-bottom: 1rem; line-height: 1.2; }
+  .path-card p { color: var(--text-medium); font-size: 1rem; line-height: 1.65; margin-bottom: 1.5rem; flex-grow: 1; }
+  .path-link {
+    color: var(--navy);
+    text-decoration: none;
+    font-size: 0.82rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    font-weight: 600;
+    border-bottom: 1.5px solid var(--gold);
+    padding-bottom: 0.25rem;
+    align-self: flex-start;
+  }
+  .path-link:hover { color: var(--red); }
+
+  .nurse-now-band { background: var(--navy); color: white; padding: 4.5rem 3rem; }
+  .nurse-now-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1.4fr 1fr; gap: 3rem; align-items: center; }
+  .nurse-now-band .eyebrow { color: var(--gold); margin-bottom: 1rem; }
+  .nurse-now-band h2 { color: white; font-size: clamp(1.85rem, 3vw, 2.5rem); margin-bottom: 1rem; }
+  .nurse-now-band p { color: rgba(255,255,255,0.85); font-size: 1.1rem; line-height: 1.6; }
+  .nurse-now-band .gold-text { color: var(--gold); font-weight: 600; }
+  .nurse-now-cta { text-align: right; }
+  .btn-nurse-large {
+    background: var(--red);
+    color: white;
+    padding: 1.25rem 2.5rem;
+    text-decoration: none;
+    font-size: 0.9rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-weight: 600;
+    display: inline-block;
+    border-radius: 2px;
+    transition: all 0.2s;
+  }
+  .btn-nurse-large:hover { background: var(--red-deep); transform: translateY(-1px); }
+
+  .services-overview { padding: 6rem 3rem; background: var(--cream); }
+  .services-overview-inner { max-width: 1100px; margin: 0 auto; }
+  .services-overview-header { text-align: center; margin-bottom: 4rem; }
+  .services-overview-header h2 { font-size: clamp(2.25rem, 4vw, 3.25rem); }
+  .services-overview-header p { font-size: 1.1rem; color: var(--text-medium); margin-top: 1rem; max-width: 600px; margin-left: auto; margin-right: auto; }
+  .service-row {
+    background: white;
+    border-left: 4px solid var(--gold);
+    padding: 1.75rem 2.5rem;
+    margin-bottom: 1.25rem;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 2rem;
+    align-items: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    text-decoration: none;
+    color: inherit;
+  }
+  .service-row:hover { transform: translateX(4px); box-shadow: 0 8px 24px rgba(45,49,66,0.06); }
+  .service-row h3 { font-size: 1.5rem; margin-bottom: 0.4rem; }
+  .service-row p { color: var(--text-medium); font-size: 0.98rem; }
+  .service-meta { text-align: right; min-width: 180px; }
+  .service-price {
+    color: var(--gold-deep);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+  }
+  .service-link {
+    color: var(--teal);
+    text-decoration: none;
+    font-size: 0.78rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  .service-detail { padding: 5rem 3rem; border-bottom: 1px solid var(--border-soft); }
+  .service-detail.alt-bg { background: var(--cream); }
+  .service-detail-inner { max-width: 1100px; margin: 0 auto; }
+  .service-detail-header {
+    background: var(--navy);
+    color: white;
+    padding: 2rem 2.5rem;
+    border-radius: 2px 2px 0 0;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 1.5rem;
+    align-items: center;
+  }
+  .service-number {
+    background: var(--teal);
+    color: white;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+  .service-number.gold { background: var(--gold); color: var(--navy); }
+  .service-detail-header h3 { color: white; font-size: 1.85rem; margin: 0; }
+  .service-detail-price {
+    text-align: right;
+    color: var(--gold);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.85rem;
+    font-weight: 600;
+  }
+  .service-detail-price .small {
+    display: block;
+    font-size: 0.78rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-family: 'Inter', sans-serif;
+    color: rgba(201,169,97,0.7);
+    font-weight: 500;
+    margin-top: 0.2rem;
+  }
+  .service-detail-body { background: white; padding: 2.5rem; border-radius: 0 0 2px 2px; }
+  .service-detail-body > p { color: var(--text-medium); font-size: 1.05rem; line-height: 1.7; margin-bottom: 1.75rem; }
+  .service-detail-body em.quote {
+    display: block;
+    color: var(--teal);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    line-height: 1.4;
+    border-left: 3px solid var(--gold);
+    padding-left: 1.5rem;
+    margin-bottom: 1.75rem;
+    font-weight: 500;
+  }
+  .check-list { display: grid; grid-template-columns: 1fr 1fr; gap: 0.85rem 2rem; list-style: none; margin-top: 1.5rem; }
+  .check-list li {
+    color: var(--text-dark);
+    font-size: 0.98rem;
+    padding-left: 1.75rem;
+    position: relative;
+    line-height: 1.5;
+  }
+  .check-list li::before {
+    content: '✓';
+    color: var(--teal);
+    position: absolute;
+    left: 0;
+    font-weight: 700;
+    font-size: 1.1rem;
+  }
+
+  .tiers-block { margin-top: 2.5rem; padding-top: 2.5rem; border-top: 1px solid var(--border-soft); }
+  .tiers-label {
+    text-align: center;
+    color: var(--gold-deep);
+    font-size: 0.78rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 2rem;
+  }
+  .tiers-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+  .tier-card { border: 1.5px solid var(--border-soft); border-radius: 4px; padding: 2rem 1.75rem; position: relative; }
+  .tier-card.featured { border-color: var(--gold); border-width: 2px; }
+  .tier-badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--gold);
+    color: var(--navy);
+    font-size: 0.68rem;
+    letter-spacing: 0.18em;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 0.35rem 1rem;
+    border-radius: 2px;
+  }
+  .tier-card h4 { font-size: 1.5rem; margin-bottom: 1rem; }
+  .tier-price { font-family: 'Cormorant Garamond', serif; font-size: 2rem; color: var(--navy); font-weight: 600; margin-bottom: 0.25rem; }
+  .tier-price .per { font-family: 'Inter', sans-serif; font-size: 1rem; color: var(--text-medium); font-weight: 400; }
+  .tier-billing { color: var(--teal); font-size: 0.85rem; margin-bottom: 1.25rem; font-weight: 500; }
+  .tier-card .check-list { grid-template-columns: 1fr; gap: 0.65rem; margin-top: 1rem; }
+
+  .packages-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; margin-top: 2rem; }
+  .pkg-card { border: 1.5px solid var(--border-soft); border-radius: 4px; padding: 1.75rem 1.5rem; text-align: center; position: relative; }
+  .pkg-card.featured { border-color: var(--gold); border-width: 2px; }
+  .pkg-card h4 { font-size: 1.4rem; margin-bottom: 0.5rem; }
+  .pkg-detail { color: var(--text-light); font-size: 0.85rem; margin-bottom: 1rem; letter-spacing: 0.05em; }
+  .pkg-price { font-family: 'Cormorant Garamond', serif; font-size: 1.7rem; color: var(--navy); font-weight: 600; }
+  .pkg-price .per { font-family: 'Inter', sans-serif; font-size: 0.85rem; color: var(--text-medium); font-weight: 400; display: block; margin-top: 0.2rem; }
+
+  .proof-section { padding: 6rem 3rem; background: var(--off-white); }
+  .proof-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1.5fr; gap: 4rem; align-items: center; }
+  .proof-portrait {
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--gold) 0%, var(--gold-deep) 100%);
+    border: 6px solid var(--gold);
+    max-width: 380px;
+    margin: 0 auto;
+  }
+  .proof-content h2 { font-size: clamp(2rem, 3.5vw, 2.75rem); margin-bottom: 1.5rem; line-height: 1.15; }
+  .proof-content p { color: var(--text-medium); font-size: 1.1rem; line-height: 1.7; margin-bottom: 1.25rem; }
+  .proof-content .highlight { color: var(--navy); font-weight: 600; }
+
+  .values-section { background: var(--cream); padding: 6rem 3rem; }
+  .values-inner { max-width: 1200px; margin: 0 auto; }
+  .values-header { text-align: center; margin-bottom: 4rem; }
+  .values-header h2 { font-size: clamp(2rem, 3.5vw, 2.75rem); }
+  .values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+  .value-card { background: white; padding: 2.5rem 2rem; text-align: center; border-radius: 4px; box-shadow: 0 4px 16px rgba(45,49,66,0.04); }
+  .value-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+  .value-card h3 { font-size: 1.45rem; margin-bottom: 1rem; }
+  .value-card p { color: var(--text-medium); font-size: 1rem; line-height: 1.65; }
+
+  .quiz-section { padding: 6rem 3rem; }
+  .quiz-inner { max-width: 900px; margin: 0 auto; }
+  .quiz-header { text-align: center; margin-bottom: 3rem; }
+  .quiz-header h2 { font-size: clamp(2rem, 3.5vw, 3rem); margin-bottom: 1rem; }
+  .quiz-header p { color: var(--text-medium); font-size: 1.1rem; max-width: 580px; margin: 0 auto; }
+  .quiz-step-label { background: var(--navy); color: white; padding: 1.5rem 2rem; border-radius: 4px 4px 0 0; }
+  .quiz-step-label .small { color: var(--gold); font-size: 0.72rem; letter-spacing: 0.22em; font-weight: 600; text-transform: uppercase; }
+  .quiz-step-label h3 { color: white; font-size: 1.65rem; margin: 0.4rem 0 0; }
+  .quiz-options { background: white; padding: 2rem; border-radius: 0 0 4px 4px; box-shadow: 0 4px 16px rgba(45,49,66,0.04); }
+  .quiz-option {
+    display: block;
+    padding: 1.25rem 1.5rem;
+    border: 1.5px solid var(--border-soft);
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-decoration: none;
+    color: var(--text-dark);
+  }
+  .quiz-option:hover { border-color: var(--teal); background: rgba(42,122,122,0.03); }
+  .quiz-option strong { font-size: 1.05rem; color: var(--navy); display: block; margin-bottom: 0.25rem; }
+  .quiz-option span { color: var(--text-medium); font-size: 0.92rem; }
+
+  .next-section { padding: 6rem 3rem; background: var(--cream); }
+  .next-inner { max-width: 900px; margin: 0 auto; }
+  .next-header { text-align: center; margin-bottom: 3.5rem; }
+  .next-header h2 { font-size: clamp(2rem, 3.5vw, 2.75rem); }
+  .next-step { display: grid; grid-template-columns: auto 1fr; gap: 1.5rem; align-items: center; padding: 1rem 0; }
+  .next-num {
+    background: var(--red);
+    color: white;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+  }
+  .next-step p { font-size: 1.1rem; color: var(--text-dark); line-height: 1.5; }
+
+  .connect-section { padding: 6rem 3rem; }
+  .connect-inner { max-width: 1100px; margin: 0 auto; }
+  .connect-header { text-align: center; margin-bottom: 3.5rem; }
+  .connect-header h2 { font-size: clamp(2.25rem, 4vw, 3.25rem); margin-bottom: 1rem; }
+  .connect-header p { color: var(--text-medium); font-size: 1.1rem; max-width: 640px; margin: 0 auto; }
+  .connect-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+  .connect-card { padding: 2.5rem; border-radius: 4px; }
+  .connect-card.email { background: white; border: 1.5px solid var(--border-soft); }
+  .connect-card.book { background: var(--navy); color: white; }
+  .connect-card .icon { font-size: 2rem; margin-bottom: 1rem; }
+  .connect-card h3 { font-size: 1.5rem; margin-bottom: 1rem; }
+  .connect-card.book h3 { color: white; }
+  .connect-card p { color: var(--text-medium); font-size: 1rem; line-height: 1.65; margin-bottom: 1.25rem; }
+  .connect-card.book p { color: rgba(255,255,255,0.85); }
+  .connect-email-link { color: var(--teal); text-decoration: none; font-weight: 600; font-size: 1.1rem; }
+  .connect-card.book .visit-detail { color: var(--gold); font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 600; margin-bottom: 0.5rem; }
+  .connect-card.book .serving { color: rgba(255,255,255,0.65); font-size: 0.9rem; margin-bottom: 1.5rem; }
+  .connect-card.book .btn-primary { background: var(--red); color: white; width: 100%; text-align: center; }
+
+  .phone-band { background: var(--red); color: white; padding: 4rem 3rem; text-align: center; }
+  .phone-band .eyebrow { color: rgba(255,255,255,0.85); margin-bottom: 1rem; }
+  .phone-band h2 { color: white; font-size: clamp(2.5rem, 5vw, 3.75rem); margin-bottom: 1.5rem; }
+  .phone-number {
+    color: white;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+    display: block;
+    margin: 1rem 0;
+  }
+  .phone-band p { color: rgba(255,255,255,0.9); max-width: 600px; margin: 0 auto 1rem; font-size: 1.05rem; line-height: 1.6; }
+
+  .cta-band { background: var(--gold); padding: 5rem 3rem; text-align: center; }
+  .cta-band h2 { font-size: clamp(2.25rem, 4vw, 3rem); color: var(--navy-deep); margin-bottom: 1rem; }
+  .cta-band p { color: var(--navy-deep); font-size: 1.15rem; max-width: 600px; margin: 0 auto 2rem; opacity: 0.85; }
+  .cta-band .btn-primary { background: var(--navy); color: white; }
+  .cta-band .btn-primary:hover { background: var(--navy-deep); }
+
+  footer { background: var(--navy-deep); color: rgba(255,255,255,0.7); padding: 4rem 3rem 2rem; text-align: center; }
+  .footer-brand { color: white; font-family: 'Cormorant Garamond', serif; font-size: 1.75rem; font-weight: 600; margin-bottom: 0.5rem; }
+  .footer-tag { color: var(--gold); font-size: 0.85rem; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 2.5rem; }
+  .footer-nav { display: flex; justify-content: center; gap: 2.5rem; flex-wrap: wrap; list-style: none; margin-bottom: 2.5rem; }
+  .footer-nav a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.78rem; letter-spacing: 0.15em; text-transform: uppercase; font-weight: 500; }
+  .footer-nav a:hover { color: var(--gold); }
+  .footer-contact { border-top: 1px solid rgba(255,255,255,0.12); padding-top: 2rem; font-size: 0.9rem; color: rgba(255,255,255,0.55); }
+  .footer-contact a { color: var(--gold); text-decoration: none; }
+
+  @media (max-width: 900px) {
+    nav { padding: 1rem 1.5rem; flex-wrap: wrap; gap: 1rem; }
+    .nav-links { order: 3; width: 100%; justify-content: center; gap: 1rem; flex-wrap: wrap; }
+    .nav-links a { font-size: 0.7rem; }
+    .hero, .resource-promise, .who-i-help, .services-overview, .nurse-now-band,
+    .service-detail, .proof-section, .values-section, .quiz-section, .next-section,
+    .connect-section, .phone-band, .cta-band { padding: 4rem 1.5rem; }
+    .hero-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .hero-image { min-height: 300px; }
+    .paths-grid { grid-template-columns: 1fr; gap: 1.25rem; }
+    .nurse-now-inner { grid-template-columns: 1fr; text-align: center; }
+    .nurse-now-cta { text-align: center; }
+    .service-row { grid-template-columns: 1fr; text-align: left; }
+    .service-meta { text-align: left; }
+    .service-detail-header { grid-template-columns: 1fr; text-align: center; gap: 1rem; }
+    .service-detail-price { text-align: center; }
+    .check-list { grid-template-columns: 1fr; }
+    .tiers-grid, .packages-grid { grid-template-columns: 1fr; }
+    .proof-inner { grid-template-columns: 1fr; gap: 2rem; text-align: center; }
+    .proof-portrait { max-width: 240px; }
+    .values-grid { grid-template-columns: 1fr; }
+    .connect-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="brand">
+    <h1>Mobile Health Nurse</h1>
+    <div class="location">West Valley, Arizona</div>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#top">HOME</a></li>
+    <li><a href="#about">ABOUT</a></li>
+    <li><a href="#services">SERVICES</a></li>
+    <li><a href="#paths">FIND YOUR PATH</a></li>
+    <li><a href="#connect">CONNECT</a></li>
+  </ul>
+  <div class="nav-buttons">
+    <a href="#connect" class="btn-connect">CONNECT</a>
+    <a href="#nurse-now" class="btn-nurse-now">NURSE NOW</a>
+  </div>
+</nav>
+
+<a id="top"></a>
+
+<section class="hero">
+  <div class="hero-grid">
+    <div>
+      <div class="hero-eyebrow">Registered Nurse · West Valley, Arizona</div>
+      <h1>You don't need a system.<br>You need <span class="gold-accent">a nurse.</span></h1>
+      <p class="hero-sub">I'm Gretchen — an ICU-trained RN who shows up at your door, picks up the phone, and helps you navigate your health on your terms.</p>
+      <div class="healthspan-def">
+        <strong>HealthSpan</strong> — the years of your life lived in full strength, clarity, and independence. Not just years on the calendar. Protecting yours is my whole practice.
+      </div>
+      <div class="hero-cta-row">
+        <a href="tel:9136056275" class="btn-primary">CALL ME DIRECTLY</a>
+        <a href="#paths" class="btn-secondary">NOT SURE? FIND YOUR PATH</a>
+      </div>
+      <div class="hero-fineprint">Private pay · West Valley, AZ · HealthSpanRN@gmail.com</div>
+    </div>
+    <div class="hero-image"></div>
+  </div>
+</section>
+
+<section class="resource-promise">
+  <div class="resource-promise-inner">
+    <div class="eyebrow">A Different Kind of Healthcare</div>
+    <h2>I'm a nurse. I'm here. Call me when you need one.</h2>
+    <p>Mobile Health Nurse isn't a clinic, an app, or a portal. It's <strong>a resource</strong> — a real RN you can call, text, or email when something doesn't feel right, when you're scared, when you have questions nobody else has time to answer. Whether you book a visit or just need to think out loud with someone clinical, that's what I'm here for.</p>
+  </div>
+</section>
+
+<section class="who-i-help" id="paths">
+  <div class="who-inner">
+    <div class="who-header">
+      <div class="eyebrow">Who I Help</div>
+      <h2>Three kinds of people call me.</h2>
+      <p>You'll probably recognize yourself in one of these. If you don't, call anyway — we'll figure it out together.</p>
+    </div>
+    <div class="paths-grid">
+      <div class="path-card reactive">
+        <div class="path-label">You're managing something</div>
+        <h3>Medications, diagnoses, and appointments that leave you with more questions than answers.</h3>
+        <p>You walked out of the doctor's office more confused than when you walked in. The 10-minute appointment isn't built for your real life. You need someone clinical in your corner — someone who has time to actually listen, explain, and help you make a plan you understand.</p>
+        <a href="#service-clarity" class="path-link">See How I Help →</a>
+      </div>
+      <div class="path-card parents">
+        <div class="path-label">You're caring for a parent</div>
+        <h3>Mom or Dad is slowing down — and you want a clear picture before things get harder.</h3>
+        <p>Things aren't a crisis yet, but you can see what's coming. You're researching, asking questions, trying to make smart decisions before the next fall, the next ER visit, the next surprise. You need a nurse who can sit with your parent in their home and tell you what's really going on — in language that helps you plan, not panic.</p>
+        <a href="#service-clarity" class="path-link">Start with a Health Clarity Visit →</a>
+      </div>
+      <div class="path-card beginner">
+        <div class="path-label">You want to start over</div>
+        <h3>You know you need to get moving — but big-box gyms feel like the last place you'd ever walk into.</h3>
+        <p>You've thought about losing weight, lifting weights, doing <em>something</em> for years. You don't need another influencer. You need a calm, kind nurse who'll come to your home, keep it simple, and meet you exactly where you are — no judgment, no jargon, no jumping rope on day one.</p>
+        <a href="#service-training" class="path-link">Beginner-Friendly Training →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="nurse-now-band" id="nurse-now">
+  <div class="nurse-now-inner">
+    <div>
+      <div class="eyebrow">Nurse Now · Medical Advocacy</div>
+      <h2>Facing a diagnosis or a scary appointment?</h2>
+      <p>An ICU-trained nurse can be in the room with you — asking the right questions, translating what's said, and making sure your voice is heard. <span class="gold-text">Call me first.</span></p>
+    </div>
+    <div class="nurse-now-cta">
+      <a href="tel:9136056275" class="btn-nurse-large">NURSE NOW →</a>
+    </div>
+  </div>
+</section>
+
+<section class="services-overview" id="services">
+  <div class="services-overview-inner">
+    <div class="services-overview-header">
+      <div class="eyebrow">What I Offer</div>
+      <h2>Four ways I can help.</h2>
+      <p>Transparent pricing. No surprise bills. Private pay only — which means I work for you, not an insurance company.</p>
+    </div>
+    <a href="#service-clarity" class="service-row">
+      <div>
+        <h3>Health Clarity Visit</h3>
+        <p>A comprehensive in-home health assessment. Know exactly where you — or your parent — stand.</p>
+      </div>
+      <div class="service-meta">
+        <div class="service-price">$250</div>
+        <div class="service-link">Learn More →</div>
+      </div>
+    </a>
+    <a href="#service-partnership" class="service-row">
+      <div>
+        <h3>HealthSpan Partnership</h3>
+        <p>Ongoing RN support — visits, vital tracking, medication review, health coaching.</p>
+      </div>
+      <div class="service-meta">
+        <div class="service-price">From $375/mo</div>
+        <div class="service-link">Learn More →</div>
+      </div>
+    </a>
+    <a href="#service-advocacy" class="service-row">
+      <div>
+        <h3>Medical Advocacy (Nurse Now)</h3>
+        <p>An ICU nurse with you at your appointment. Nothing missed. Nothing lost.</p>
+      </div>
+      <div class="service-meta">
+        <div class="service-price">$150</div>
+        <div class="service-link">Learn More →</div>
+      </div>
+    </a>
+    <a href="#service-training" class="service-row">
+      <div>
+        <h3>Beginner-Friendly Training with a Nurse</h3>
+        <p>Private, in-home strength and movement coaching — for people who've been quietly avoiding gyms.</p>
+      </div>
+      <div class="service-meta">
+        <div class="service-price">From $85/session</div>
+        <div class="service-link">Learn More →</div>
+      </div>
+    </a>
+  </div>
+</section>
+
+<section class="service-detail" id="service-clarity">
+  <div class="service-detail-inner">
+    <div class="service-detail-header">
+      <div class="service-number">01</div>
+      <h3>Health Clarity Visit</h3>
+      <div class="service-detail-price">$250<span class="small">One-Time Investment</span></div>
+    </div>
+    <div class="service-detail-body">
+      <p>A comprehensive, one-on-one in-home health assessment designed to give you a complete, clear picture of where you stand — and where you're headed. You'll leave with a written action plan in plain language you can actually use. This is where your HealthSpan journey begins.</p>
+      <ul class="check-list">
+        <li>Full vital signs assessment</li>
+        <li>Head-to-toe physical health review</li>
+        <li>Medication review &amp; interaction check</li>
+        <li>Health history &amp; risk assessment</li>
+        <li>Chronic condition evaluation</li>
+        <li>Personalized written action plan</li>
+        <li>Priority care recommendations</li>
+        <li>Direct RN access for follow-up questions</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="service-detail alt-bg" id="service-partnership">
+  <div class="service-detail-inner">
+    <div class="service-detail-header">
+      <div class="service-number gold">02</div>
+      <h3>HealthSpan Partnership</h3>
+      <div class="service-detail-price">From $375<span class="small">Per Month</span></div>
+    </div>
+    <div class="service-detail-body">
+      <p>Consistent, proactive in-home nursing support so your health is always being watched over. Regular visits to track your numbers, review your medications, coach your habits, and catch changes early — before they become emergencies. Choose the level that fits your life.</p>
+      <div class="tiers-block">
+        <div class="tiers-label">Choose Your Level</div>
+        <div class="tiers-grid">
+          <div class="tier-card">
+            <h4>HealthSpan Essentials</h4>
+            <div class="tier-price">$375<span class="per">/ month</span></div>
+            <div class="tier-billing">per month</div>
+            <ul class="check-list">
+              <li>Monthly in-home RN visit</li>
+              <li>Vital signs tracking &amp; trending</li>
+              <li>Medication review</li>
+              <li>Nutrition &amp; movement coaching</li>
+              <li>Direct RN access by phone &amp; text</li>
+              <li>Quarterly written progress summary</li>
+            </ul>
+          </div>
+          <div class="tier-card featured">
+            <div class="tier-badge">Most Comprehensive</div>
+            <h4>HealthSpan Complete</h4>
+            <div class="tier-price">$650<span class="per">/ month</span></div>
+            <div class="tier-billing">per month</div>
+            <ul class="check-list">
+              <li>Everything in Essentials, plus:</li>
+              <li>Medical Advocacy included (1 appt/mo)</li>
+              <li>Priority scheduling</li>
+              <li>Post-appointment debrief &amp; summary</li>
+              <li>Bi-weekly check-ins</li>
+              <li>Family communication coordination</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="service-detail" id="service-advocacy">
+  <div class="service-detail-inner">
+    <div class="service-detail-header">
+      <div class="service-number">03</div>
+      <h3>Medical Advocacy</h3>
+      <div class="service-detail-price">$150<span class="small">First 2 Hours · $100/hr After</span></div>
+    </div>
+    <div class="service-detail-body">
+      <p>A seasoned ICU nurse in the room with you when it matters most. Whether it's a complex specialist visit, a new diagnosis, or a conversation you're not sure you'll fully understand alone — I sit with you, listen carefully, make sure your voice is heard, and help you leave with clarity instead of confusion.</p>
+      <ul class="check-list">
+        <li>Pre-visit question preparation</li>
+        <li>Real-time clinical interpretation</li>
+        <li>Ensure your concerns are addressed</li>
+        <li>Medication &amp; treatment plan review</li>
+        <li>Post-visit plain-language debrief</li>
+        <li>Written visit summary you keep</li>
+        <li>Help evaluating options &amp; next steps</li>
+        <li>Available a-la-carte or within Complete plan</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="service-detail alt-bg" id="service-training">
+  <div class="service-detail-inner">
+    <div class="service-detail-header">
+      <div class="service-number gold">04</div>
+      <h3>Beginner-Friendly Training with a Nurse</h3>
+      <div class="service-detail-price">$95<span class="small">Per Session</span></div>
+    </div>
+    <div class="service-detail-body">
+      <em class="quote">"You don't have to be in shape to start. You just have to start. I'll meet you exactly where you are — and I'll keep it simple, doable, and yours."</em>
+      <p>If you've been quietly avoiding gyms for years, this is for you. You don't need to be coordinated. You don't need to own workout clothes. You don't need to know what a kettlebell is. You just need to be ready to start somewhere — and I'll come to your home with everything we need. We'll go slow, build confidence, and figure out what your body actually likes. My RN background means I understand your medications, your conditions, and your real limits — so you stay safe while you get stronger.</p>
+      <ul class="check-list">
+        <li>In-home, private, zero-judgment sessions</li>
+        <li>Built around your medications &amp; conditions</li>
+        <li>Simple, doable movements that build confidence</li>
+        <li>Strength, balance, and mobility focus</li>
+        <li>Cardiovascular monitoring during sessions</li>
+        <li>Injury prevention &amp; biomechanics coaching</li>
+        <li>Home exercise plan you can actually follow</li>
+        <li>Accountability &amp; progress tracking</li>
+      </ul>
+      <div class="tiers-block">
+        <div class="tiers-label">Training Packages</div>
+        <div class="packages-grid">
+          <div class="pkg-card">
+            <h4>Jumpstart</h4>
+            <div class="pkg-detail">4 sessions</div>
+            <div class="pkg-price">$340<span class="per">$85/session</span></div>
+          </div>
+          <div class="pkg-card featured">
+            <div class="tier-badge">Most Popular</div>
+            <h4>Momentum</h4>
+            <div class="pkg-detail">8 sessions</div>
+            <div class="pkg-price">$640<span class="per">$80/session</span></div>
+          </div>
+          <div class="pkg-card">
+            <h4>HealthSpan</h4>
+            <div class="pkg-detail">12 sessions</div>
+            <div class="pkg-price">$900<span class="per">$75/session</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="proof-section" id="about">
+  <div class="proof-inner">
+    <div class="proof-portrait"></div>
+    <div class="proof-content">
+      <div class="eyebrow">Why It Works</div>
+      <h2>I'm not just a nurse.<br>I'm proof it's possible.</h2>
+      <p><span class="highlight">Eight years as an ICU nurse</span> — including on the frontlines through COVID-19. <span class="highlight">At 54, I'm on zero medications.</span> I swim, bike, run, lift weights, train for triathlons, hike, and golf. Every week.</p>
+      <p>I've stood at the bedside of people far younger than me who had lost control of their health. I know exactly what makes the difference. And I built this practice to help you get there — whether you're starting from scratch, managing a condition, or trying to keep your parent safe.</p>
+    </div>
+  </div>
+</section>
+
+<section class="values-section">
+  <div class="values-inner">
+    <div class="values-header">
+      <div class="eyebrow">What I Believe</div>
+      <h2>The principles behind this practice.</h2>
+    </div>
+    <div class="values-grid">
+      <div class="value-card">
+        <div class="value-icon">🏃</div>
+        <h3>Decline Is Not Inevitable</h3>
+        <p>The choices you make today write the story of your health at 70, 80, and beyond. I've seen both outcomes. The difference is real, and it's largely within your control.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">🩺</div>
+        <h3>You Deserve More Than 10 Minutes</h3>
+        <p>Real healthcare happens in conversation, not in rushed appointments. My model is built around time, attention, and genuine clinical expertise — in your home, on your terms.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">🛡️</div>
+        <h3>Prevention Is Power</h3>
+        <p>I'm not here to manage your decline. I'm here to help you protect your HealthSpan — the years of your life lived in full strength, independence, and quality.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="quiz-section">
+  <div class="quiz-inner">
+    <div class="quiz-header">
+      <div class="eyebrow">Not Sure Where to Start?</div>
+      <h2>Find Your Path</h2>
+      <p>Pick whichever sounds most like you and I'll point you to the right service. No pressure, no jargon.</p>
+    </div>
+    <div class="quiz-step-label">
+      <div class="small">Step 1 of 1</div>
+      <h3>What brings you here today?</h3>
+    </div>
+    <div class="quiz-options">
+      <a href="#service-partnership" class="quiz-option">
+        <strong>🩺 I'm managing a health condition</strong>
+        <span>Chronic illness, medications, recent diagnosis, or ongoing health concerns</span>
+      </a>
+      <a href="#service-advocacy" class="quiz-option">
+        <strong>🚨 I need a nurse with me — now</strong>
+        <span>Facing something scary, urgent, or a medical situation you don't want to navigate alone</span>
+      </a>
+      <a href="#service-advocacy" class="quiz-option">
+        <strong>📋 I have an appointment coming up</strong>
+        <span>A specialist visit, new diagnosis, or a medical conversation I want help preparing for</span>
+      </a>
+      <a href="#service-training" class="quiz-option">
+        <strong>💪 I want to get stronger and stay healthy</strong>
+        <span>Prevention, fitness, building resilience before problems start</span>
+      </a>
+      <a href="#service-clarity" class="quiz-option">
+        <strong>👵 I'm caring for an aging parent</strong>
+        <span>Looking for clarity on Mom or Dad's health before things get harder</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="next-section">
+  <div class="next-inner">
+    <div class="next-header">
+      <div class="eyebrow">After You Reach Out</div>
+      <h2>What Happens Next</h2>
+    </div>
+    <div class="next-step">
+      <div class="next-num">1</div>
+      <p>You call, email, or text — whichever feels right.</p>
+    </div>
+    <div class="next-step">
+      <div class="next-num">2</div>
+      <p>We have a real conversation about your health and what you need.</p>
+    </div>
+    <div class="next-step">
+      <div class="next-num">3</div>
+      <p>If it's a good fit, we schedule your first in-home visit.</p>
+    </div>
+    <div class="next-step">
+      <div class="next-num">4</div>
+      <p>I come to you. We get to work.</p>
+    </div>
+  </div>
+</section>
+
+<section class="phone-band">
+  <div class="eyebrow">The Best First Step</div>
+  <h2>Call Me Directly</h2>
+  <p>I pick up. We'll talk through what you're dealing with, I'll answer your questions, and together we'll figure out if and how I can help. No pressure, no commitment.</p>
+  <a href="tel:9136056275" class="phone-number">(913) 605-6275</a>
+  <p style="font-size: 0.95rem;">Gretchen Hess, BSN, RN, ACE-CPT · West Valley, Arizona</p>
+</section>
+
+<section class="connect-section" id="connect">
+  <div class="connect-inner">
+    <div class="connect-header">
+      <div class="eyebrow">Other Ways to Reach Me</div>
+      <h2>Not ready to call? That's okay.</h2>
+      <p>Reach out however feels comfortable. I respond personally — usually within a few hours.</p>
+    </div>
+    <div class="connect-grid">
+      <div class="connect-card email">
+        <div class="icon">✉️</div>
+        <h3>Send Me a Question</h3>
+        <p>Email me your question and I'll respond personally — usually within a few hours. There's no such thing as a silly question when it comes to your health.</p>
+        <a href="mailto:HealthSpanRN@gmail.com" class="connect-email-link">HealthSpanRN@gmail.com</a>
+        <p style="margin-top: 0.5rem; font-size: 0.85rem; color: var(--text-light);">I respond personally. Always.</p>
+      </div>
+      <div class="connect-card book">
+        <div class="icon">🏠</div>
+        <h3>Book a Health Clarity Visit</h3>
+        <p>Ready to start? Schedule your first in-home visit. I'll come to you, spend real time with you, and deliver a written health action plan you can actually use.</p>
+        <div class="visit-detail">$250 · In-Home · 60–90 min</div>
+        <div class="serving">Serving Goodyear · Litchfield Park · Avondale</div>
+        <a href="mailto:HealthSpanRN@gmail.com?subject=Schedule Health Clarity Visit" class="btn-primary">SCHEDULE VIA EMAIL OR PHONE</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <h2>Don't walk into that appointment alone.</h2>
+  <p>One call is all it takes. Let's talk about what you're facing and how I can help.</p>
+  <a href="tel:9136056275" class="btn-primary">CALL GRETCHEN NOW</a>
+</section>
+
+<footer>
+  <div class="footer-brand">Mobile Health Nurse</div>
+  <div class="footer-tag">Protecting Your HealthSpan, Not Just Your Lifespan</div>
+  <ul class="footer-nav">
+    <li><a href="#top">HOME</a></li>
+    <li><a href="#about">ABOUT</a></li>
+    <li><a href="#services">SERVICES</a></li>
+    <li><a href="#paths">FIND YOUR PATH</a></li>
+    <li><a href="#connect">CONNECT</a></li>
+    <li><a href="#nurse-now">NURSE NOW</a></li>
+  </ul>
+  <div class="footer-contact">
+    <a href="mailto:HealthSpanRN@gmail.com">HealthSpanRN@gmail.com</a> · West Valley, AZ · Goodyear · Litchfield Park · Avondale<br>
+    <span style="margin-top: 0.75rem; display: inline-block;">Gretchen Hess, BSN, RN, ACE-CPT</span>
+  </div>
+</footer>
+
+</body>
+</html>
