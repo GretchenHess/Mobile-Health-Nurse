@@ -272,7 +272,7 @@
 
   .service-detail { padding: 5rem 3rem; border-bottom: 1px solid var(--border-soft); }
   .service-detail.alt-bg { background: var(--cream); }
-  .service-detail-inner { max-width: 1100px; margin: 0 auto; display: block; }
+  .service-detail-inner { max-width: 1100px; margin: 0 auto; }
   .service-detail-header {
     background: var(--navy);
     color: white;
@@ -502,13 +502,6 @@
   .footer-nav a:hover { color: var(--gold); }
   .footer-contact { border-top: 1px solid rgba(255,255,255,0.12); padding-top: 2rem; font-size: 0.9rem; color: rgba(255,255,255,0.55); }
   .footer-contact a { color: var(--gold); text-decoration: none; }
-.service-detail { display: block !important; }
-  .service-detail-inner { display: block !important; }
-  .service-detail-body { display: block !important; }
-  .who-i-help, .resource-promise, .services-overview, .nurse-now-band,
-  .proof-section, .values-section, .quiz-section, .next-section,
-  .connect-section, .phone-band, .cta-band { display: block !important; }
-  .service-detail-header { display: grid !important; grid-template-columns: auto 1fr auto !important; }
 
   @media (max-width: 900px) {
     nav { padding: 1rem 1.5rem; flex-wrap: wrap; gap: 1rem; }
@@ -572,7 +565,9 @@
       </div>
       <div class="hero-fineprint">Private pay · West Valley, AZ · HealthSpanRN@gmail.com</div>
     </div>
-<div class="hero-image" style="background-image: url('images/gretchen-flyer.jpg'); background-size: cover; background-position: center top;"></div>
+    <div class="hero-image"></div>
+  </div>
+</section>
 
 <section class="resource-promise">
   <div class="resource-promise-inner">
