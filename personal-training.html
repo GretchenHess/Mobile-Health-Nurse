@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Personal Training — Gretchen Hess, BSN, RN, ACE-CPT | Mobile Health Nurse</title>
+<meta name="description" content="Corrective, athletic, intentional personal training from a triathlete RN. Built for active adults who want to move better, train smarter, and stay strong.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #2d3142;
+    --navy-deep: #1f2230;
+    --red: #b8413a;
+    --red-deep: #9c3530;
+    --gold: #c9a961;
+    --gold-deep: #a88a47;
+    --teal: #2a7a7a;
+    --teal-deep: #1f5e5e;
+    --cream: #faf8f3;
+    --off-white: #fdfcf9;
+    --text-dark: #2a2d3a;
+    --text-medium: #555866;
+    --text-light: #888b95;
+    --border-soft: #e8e5dd;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', sans-serif; color: var(--text-dark); background: var(--off-white); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+  h1, h2, h3, h4 { font-family: 'Cormorant Garamond', serif; font-weight: 600; line-height: 1.15; color: var(--navy); letter-spacing: -0.01em; }
+
+  /* NAV */
+  nav { background: var(--navy); padding: 1.25rem 3rem; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; }
+  .brand h1 { color: white; font-size: 1.5rem; font-weight: 600; margin: 0; }
+  .brand .location { color: var(--gold); font-size: 0.7rem; letter-spacing: 0.18em; font-family: 'Inter', sans-serif; font-weight: 500; text-transform: uppercase; }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a { color: white; text-decoration: none; font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 500; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--gold); }
+  .nav-links a.active { color: var(--gold); border-bottom: 1.5px solid var(--gold); padding-bottom: 0.2rem; }
+  .nav-buttons { display: flex; gap: 0.75rem; }
+  .btn-connect { padding: 0.75rem 1.5rem; text-decoration: none; font-size: 0.78rem; letter-spacing: 0.15em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; border-radius: 2px; background: var(--gold); color: var(--navy); }
+  .btn-connect:hover { background: var(--gold-deep); }
+  .btn-nurse-now { padding: 0.75rem 1.5rem; text-decoration: none; font-size: 0.78rem; letter-spacing: 0.15em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; border-radius: 2px; background: var(--red); color: white; }
+  .btn-nurse-now:hover { background: var(--red-deep); }
+
+  /* HERO — SPLIT with RED accent band */
+  .hero { background: var(--navy); color: white; padding: 0; overflow: hidden; }
+
+  .hero-inner { padding: 5rem 3rem 5rem; max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 1.1fr 1fr; gap: 4rem; align-items: center; }
+  .hero-eyebrow { color: var(--gold); font-size: 0.78rem; letter-spacing: 0.22em; font-weight: 600; text-transform: uppercase; margin-bottom: 1.5rem; }
+  .hero h1 { color: white; font-size: clamp(2.75rem, 5vw, 4.5rem); line-height: 1.05; margin-bottom: 1.25rem; }
+  .hero h1 em { color: var(--gold); font-style: italic; }
+  .hero-sub { font-size: 1.1rem; color: rgba(255,255,255,0.82); margin-bottom: 2rem; max-width: 520px; line-height: 1.6; }
+  .hero-badges { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-bottom: 2.25rem; }
+  .badge { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: rgba(255,255,255,0.9); padding: 0.35rem 0.85rem; border-radius: 2px; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; }
+  .badge.red { background: var(--red); border-color: var(--red); }
+  .badge.teal { background: var(--teal); border-color: var(--teal); }
+  .hero-cta-row { display: flex; gap: 1rem; flex-wrap: wrap; }
+  .btn-primary { padding: 1rem 2rem; text-decoration: none; font-size: 0.85rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; display: inline-block; border-radius: 2px; background: var(--red); color: white; }
+  .btn-primary:hover { background: var(--red-deep); transform: translateY(-1px); }
+  .btn-outline { padding: 1rem 2rem; text-decoration: none; font-size: 0.85rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; display: inline-block; border-radius: 2px; border: 1.5px solid rgba(255,255,255,0.4); color: white; background: transparent; }
+  .btn-outline:hover { background: rgba(255,255,255,0.08); border-color: white; }
+  .btn-teal { padding: 1rem 2rem; text-decoration: none; font-size: 0.85rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; display: inline-block; border-radius: 2px; background: var(--teal); color: white; }
+  .btn-teal:hover { background: var(--teal-deep); transform: translateY(-1px); }
+  .btn-gold { padding: 1rem 2rem; text-decoration: none; font-size: 0.85rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; display: inline-block; border-radius: 2px; background: var(--gold); color: var(--navy); }
+  .btn-gold:hover { background: var(--gold-deep); transform: translateY(-1px); }
+
+  /* HERO STATS BOX */
+  .hero-stats { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); border-radius: 4px; padding: 2.25rem; }
+  .hero-stats-label { color: var(--gold); font-size: 0.7rem; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 600; margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid rgba(255,255,255,0.1); }
+  .stat-row { display: grid; grid-template-columns: auto 1fr; gap: 1.25rem; align-items: center; padding: 1rem 0; border-bottom: 1px solid rgba(255,255,255,0.08); }
+  .stat-row:last-child { border-bottom: none; padding-bottom: 0; }
+  .stat-num { font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; font-weight: 700; color: white; line-height: 1; min-width: 72px; text-align: center; }
+  .stat-num.red { color: var(--red); }
+  .stat-num.gold { color: var(--gold); }
+  .stat-num.teal { color: #4ab8b8; }
+  .stat-label { color: rgba(255,255,255,0.75); font-size: 0.9rem; line-height: 1.45; }
+
+  /* COLOR BAND */
+  .color-band { display: grid; grid-template-columns: repeat(4, 1fr); }
+  .band-item { padding: 2.25rem 2rem; text-align: center; }
+  .band-item.navy { background: var(--navy-deep); }
+  .band-item.red { background: var(--red); }
+  .band-item.teal { background: var(--teal); }
+  .band-item.gold { background: var(--gold); }
+  .band-item h3 { font-size: 1.1rem; color: white; margin-bottom: 0.4rem; }
+  .band-item.gold h3 { color: var(--navy); }
+  .band-item p { font-size: 0.82rem; color: rgba(255,255,255,0.82); line-height: 1.5; }
+  .band-item.gold p { color: rgba(45,49,66,0.8); }
+
+  /* WHO THIS IS FOR */
+  .who { padding: 5rem 3rem; background: var(--cream); }
+  .who-inner { max-width: 1200px; margin: 0 auto; }
+  .section-eyebrow { color: var(--teal); font-size: 0.78rem; letter-spacing: 0.22em; font-weight: 600; text-transform: uppercase; margin-bottom: 1rem; }
+  .who h2 { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 0.75rem; }
+  .who .section-intro { font-size: 1.05rem; color: var(--text-medium); margin-bottom: 3rem; max-width: 640px; }
+  .who-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+  .who-card { background: white; border-radius: 2px; padding: 2.25rem; border-top: 4px solid var(--teal); position: relative; overflow: hidden; }
+  .who-card.red-top { border-top-color: var(--red); }
+  .who-card.gold-top { border-top-color: var(--gold); }
+  .who-card.navy-top { border-top-color: var(--navy); }
+  .who-card .card-icon { font-size: 2rem; margin-bottom: 1rem; }
+  .who-card h3 { font-size: 1.5rem; margin-bottom: 0.75rem; }
+  .who-card p { color: var(--text-medium); font-size: 0.98rem; line-height: 1.65; }
+
+  /* DIFFERENCE — DARK SECTION */
+  .difference { padding: 5rem 3rem; background: var(--navy); color: white; }
+  .difference-inner { max-width: 1100px; margin: 0 auto; }
+  .difference .section-eyebrow { color: var(--gold); }
+  .difference h2 { color: white; font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 0.75rem; }
+  .difference .section-intro { color: rgba(255,255,255,0.75); font-size: 1.05rem; margin-bottom: 3rem; max-width: 640px; }
+  .diff-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+  .diff-card { padding: 2rem; border-radius: 2px; position: relative; }
+  .diff-card.red-bg { background: var(--red); }
+  .diff-card.teal-bg { background: var(--teal); }
+  .diff-card.gold-bg { background: var(--gold); }
+  .diff-card.navy-bg { background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12); }
+  .diff-card h3 { color: white; font-size: 1.4rem; margin-bottom: 0.75rem; }
+  .diff-card.gold-bg h3 { color: var(--navy); }
+  .diff-card p { font-size: 0.95rem; line-height: 1.65; color: rgba(255,255,255,0.88); }
+  .diff-card.gold-bg p { color: rgba(45,49,66,0.82); }
+
+  /* WHAT TO EXPECT */
+  .expect { padding: 5rem 3rem; background: var(--off-white); }
+  .expect-inner { max-width: 1000px; margin: 0 auto; }
+  .expect h2 { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 0.75rem; }
+  .expect .section-intro { font-size: 1.05rem; color: var(--text-medium); margin-bottom: 3rem; }
+  .steps { display: grid; gap: 0; }
+  .step { display: grid; grid-template-columns: 72px 1fr; gap: 0; align-items: stretch; }
+  .step-left { display: flex; flex-direction: column; align-items: center; }
+  .step-num { width: 52px; height: 52px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 700; color: white; flex-shrink: 0; z-index: 1; }
+  .step-num.red { background: var(--red); }
+  .step-num.teal { background: var(--teal); }
+  .step-num.gold { background: var(--gold); color: var(--navy); }
+  .step-num.navy { background: var(--navy); }
+  .step-line { width: 2px; background: var(--border-soft); flex-grow: 1; margin: 0.5rem 0; }
+  .step-content { padding: 0 0 2.5rem 1.5rem; }
+  .step-content h3 { font-size: 1.35rem; margin-bottom: 0.5rem; color: var(--navy); }
+  .step-content p { color: var(--text-medium); font-size: 0.98rem; line-height: 1.65; }
+
+  /* VIDEO */
+  .video-section { padding: 5rem 3rem; background: var(--teal); color: white; text-align: center; }
+  .video-section .section-eyebrow { color: rgba(255,255,255,0.7); }
+  .video-section h2 { color: white; font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 0.75rem; }
+  .video-section p { color: rgba(255,255,255,0.82); max-width: 560px; margin: 0 auto 2.25rem; font-size: 1.05rem; }
+  .video-placeholder { max-width: 720px; margin: 0 auto; background: rgba(0,0,0,0.2); border: 2px dashed rgba(255,255,255,0.25); border-radius: 4px; padding: 4.5rem 2rem; color: rgba(255,255,255,0.5); }
+  .video-placeholder .play { font-size: 3.5rem; display: block; margin-bottom: 0.75rem; opacity: 0.5; }
+
+  /* PRICING */
+  .pricing { padding: 5rem 3rem; background: var(--navy); color: white; }
+  .pricing-inner { max-width: 1000px; margin: 0 auto; }
+  .pricing .section-eyebrow { color: var(--gold); }
+  .pricing h2 { color: white; font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 0.75rem; }
+  .pricing .section-intro { color: rgba(255,255,255,0.75); font-size: 1rem; margin-bottom: 3rem; }
+  .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; margin-bottom: 1.5rem; }
+  .pkg { border-radius: 4px; padding: 2.25rem 1.75rem; text-align: center; position: relative; }
+  .pkg.navy-card { background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.15); }
+  .pkg.red-card { background: var(--red); }
+  .pkg.teal-card { background: var(--teal); }
+  .pkg.featured { border: 2px solid var(--gold); background: rgba(201,169,97,0.12); }
+  .pkg-badge { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--gold); color: var(--navy); font-size: 0.65rem; letter-spacing: 0.18em; font-weight: 700; text-transform: uppercase; padding: 0.3rem 0.9rem; border-radius: 2px; white-space: nowrap; }
+  .pkg h4 { font-family: 'Inter', sans-serif; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.7); margin-bottom: 1rem; }
+  .pkg.featured h4 { color: var(--gold); }
+  .pkg-price { font-family: 'Cormorant Garamond', serif; font-size: 2.75rem; font-weight: 700; color: white; line-height: 1; margin-bottom: 0.25rem; }
+  .pkg-sessions { color: rgba(255,255,255,0.65); font-size: 0.82rem; margin-bottom: 0.75rem; }
+  .pkg-per { font-size: 0.88rem; color: rgba(255,255,255,0.85); font-weight: 500; }
+  .single-session-bar { background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.15); border-radius: 4px; padding: 1.5rem 2rem; display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap; }
+  .single-session-bar p { color: rgba(255,255,255,0.82); font-size: 0.98rem; }
+  .single-session-bar strong { color: white; }
+
+  /* ABOUT — RED SECTION */
+  .about { padding: 5rem 3rem; background: var(--red); color: white; }
+  .about-inner { max-width: 1100px; margin: 0 auto; }
+  .about .section-eyebrow { color: rgba(255,255,255,0.75); }
+  .about h2 { color: white; font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 2rem; }
+  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3.5rem; align-items: start; }
+  .about-text p { color: rgba(255,255,255,0.88); font-size: 1.05rem; line-height: 1.7; margin-bottom: 1.1rem; }
+  .about-text p:last-child { margin-bottom: 0; }
+  .about-creds { display: grid; gap: 1rem; }
+  .cred-item { background: rgba(0,0,0,0.15); border-left: 3px solid rgba(255,255,255,0.4); padding: 1.25rem 1.5rem; border-radius: 0 2px 2px 0; }
+  .cred-item strong { display: block; color: white; font-size: 0.95rem; font-weight: 600; margin-bottom: 0.25rem; }
+  .cred-item span { color: rgba(255,255,255,0.7); font-size: 0.85rem; }
+
+  /* FREE SESSION CTA */
+  .free-session { padding: 5.5rem 3rem; background: var(--gold); text-align: center; }
+  .free-session .section-eyebrow { color: rgba(45,49,66,0.65); }
+  .free-session h2 { color: var(--navy); font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 1rem; }
+  .free-session p { color: rgba(45,49,66,0.82); font-size: 1.05rem; max-width: 540px; margin: 0 auto 0.75rem; line-height: 1.65; }
+  .free-session .fine-print { font-size: 0.82rem; color: rgba(45,49,66,0.6); margin-top: 1.25rem; }
+  .btn-navy { padding: 1.1rem 2.5rem; text-decoration: none; font-size: 0.85rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; display: inline-block; border-radius: 2px; background: var(--navy); color: white; margin-top: 1rem; }
+  .btn-navy:hover { background: var(--navy-deep); transform: translateY(-1px); }
+
+  /* FOOTER */
+  footer { background: var(--navy-deep); color: rgba(255,255,255,0.7); padding: 3.5rem 3rem 2rem; text-align: center; }
+  .footer-brand { color: white; font-family: 'Cormorant Garamond', serif; font-size: 1.7rem; font-weight: 600; margin-bottom: 0.4rem; }
+  .footer-tag { color: var(--gold); font-size: 0.82rem; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 2.25rem; }
+  .footer-nav { display: flex; justify-content: center; gap: 2.25rem; flex-wrap: wrap; list-style: none; margin-bottom: 2.25rem; }
+  .footer-nav a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; font-weight: 500; }
+  .footer-nav a:hover { color: var(--gold); }
+  .footer-contact { border-top: 1px solid rgba(255,255,255,0.12); padding-top: 1.75rem; font-size: 0.88rem; color: rgba(255,255,255,0.5); }
+  .footer-contact a { color: var(--gold); text-decoration: none; }
+
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+    nav { padding: 1rem 1.5rem; flex-wrap: wrap; gap: 1rem; }
+    .nav-links { order: 3; width: 100%; justify-content: center; gap: 0.75rem; flex-wrap: wrap; }
+    .nav-links a { font-size: 0.68rem; }
+    .hero-inner { grid-template-columns: 1fr; gap: 2.5rem; padding: 3.5rem 1.5rem; }
+    .color-band { grid-template-columns: repeat(2, 1fr); }
+    .who-grid, .diff-grid, .about-grid { grid-template-columns: 1fr; }
+    .pricing-grid { grid-template-columns: 1fr; }
+    .step { grid-template-columns: 56px 1fr; }
+    .who, .difference, .expect, .video-section, .pricing, .about, .free-session { padding: 3.5rem 1.5rem; }
+    .single-session-bar { flex-direction: column; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="brand">
+    <h1>Mobile Health Nurse</h1>
+    <div class="location">West Valley, Arizona</div>
+  </div>
+  <ul class="nav-links">
+    <li><a href="/">Home</a></li>
+    <li><a href="/#about">About</a></li>
+    <li><a href="/#services">Services</a></li>
+    <li><a href="personal-training.html" class="active">Personal Training</a></li>
+    <li><a href="/#connect">Connect</a></li>
+  </ul>
+  <div class="nav-buttons">
+    <a href="/#connect" class="btn-connect">CONNECT</a>
+    <a href="tel:9136056275" class="btn-nurse-now">NURSE NOW</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+
+  <div class="hero-inner">
+    <div>
+      <div class="hero-eyebrow">Personal Training · Mobile Health Nurse</div>
+      <h1>Train with <em>intention.</em><br>Move like you mean it.</h1>
+      <p class="hero-sub">Corrective, athletic coaching from a triathlete RN — in your home, at your HOA gym, or wherever you train. I bring a clinical eye no standard trainer can match.</p>
+      <div class="hero-badges">
+        <span class="badge red">ACE Certified Trainer</span>
+        <span class="badge teal">Registered Nurse, BSN</span>
+        <span class="badge">Active Triathlete</span>
+        <span class="badge">Corrective Exercise</span>
+        <span class="badge">Myofascial Release</span>
+      </div>
+      <div class="hero-cta-row">
+        <a href="#free-session" class="btn-primary">Book Free 30-Min Session</a>
+        <a href="tel:9136056275" class="btn-outline">Call Gretchen</a>
+      </div>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stats-label">The person training you</div>
+      <div class="stat-row">
+        <div class="stat-num gold">54</div>
+        <div class="stat-label">Years old. Zero medications. Competing in triathlons every season.</div>
+      </div>
+      <div class="stat-row">
+        <div class="stat-num teal">8+</div>
+        <div class="stat-label">Years ICU nursing — including COVID-19 frontlines. I've seen what happens when people stop moving.</div>
+      </div>
+      <div class="stat-row">
+        <div class="stat-num red">ACE</div>
+        <div class="stat-label">Certified Personal Trainer with corrective exercise and myofascial release training.</div>
+      </div>
+      <div class="stat-row">
+        <div class="stat-num" style="font-size:1.6rem; color:white;">1:1</div>
+        <div class="stat-label">Always you and me. No shared sessions, no rotating trainers. I know your history every visit.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COLOR BAND — 4 DIFFERENTIATORS -->
+<div class="color-band">
+  <div class="band-item red">
+    <h3>Clinical Eye</h3>
+    <p>I catch what other trainers miss — pain patterns, medication effects, compensation habits. Every session.</p>
+  </div>
+  <div class="band-item teal">
+    <h3>Corrective First</h3>
+    <p>Movement patterns get assessed before we add weight. If something's off, we fix it — not defer it.</p>
+  </div>
+  <div class="band-item navy">
+    <h3>Athletic Standard</h3>
+    <p>I train for triathlons. My baseline is performance. I bring that standard — adjusted to where you are right now.</p>
+  </div>
+  <div class="band-item gold">
+    <h3>One Trainer, Always</h3>
+    <p>You work with me every single session. Your progress, your history, your goals — always known.</p>
+  </div>
+</div>
+
+<!-- WHO THIS IS FOR -->
+<section class="who">
+  <div class="who-inner">
+    <div class="section-eyebrow">Who I Train</div>
+    <h2>You already know how to work hard.<br>You want to work <em style="font-style:italic; color:var(--teal);">smart.</em></h2>
+    <p class="section-intro">This isn't beginner fitness. This is intentional, corrective, clinically-informed training for adults who are already active and want more.</p>
+    <div class="who-grid">
+      <div class="who-card red-top">
+        <div class="card-icon">🏋️</div>
+        <h3>The Intentional Lifter</h3>
+        <p>You're in the gym but want someone to confirm your form, correct your mechanics, and build a plan that actually matches your goals — not a generic routine off the internet.</p>
+      </div>
+      <div class="who-card teal-top">
+        <div class="card-icon">🦵</div>
+        <h3>Managing Pain or an Old Injury</h3>
+        <p>A knee, hip, or shoulder that keeps limiting you. You want to stay active and get stronger — with a trainer who understands anatomy and won't make it worse.</p>
+      </div>
+      <div class="who-card gold-top">
+        <div class="card-icon">⚡</div>
+        <h3>Ready to Level Up</h3>
+        <p>You've been consistent but plateaued. You want progressive, structured training that challenges you and tracks exactly where you're going.</p>
+      </div>
+      <div class="who-card navy-top">
+        <div class="card-icon">🩺</div>
+        <h3>Active with a Health Condition</h3>
+        <p>Managing a diagnosis, medications, or a history of injury — and you want a trainer whose clinical background means you can push without second-guessing safety.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT MAKES THIS DIFFERENT -->
+<section class="difference">
+  <div class="difference-inner">
+    <div class="section-eyebrow">Why This Is Different</div>
+    <h2>Not a program. A trainer<br>who knows your body.</h2>
+    <p class="section-intro">Most trainers write programs and count reps. I assess how you move, identify what's holding you back, and build training around your actual mechanics.</p>
+    <div class="diff-grid">
+      <div class="diff-card red-bg">
+        <h3>ICU-Trained Clinical Background</h3>
+        <p>Eight years in critical care means I understand your medications, your conditions, and how your body responds under load. Nothing gets missed. Nothing gets dismissed.</p>
+      </div>
+      <div class="diff-card teal-bg">
+        <h3>Movement Assessment Before Load</h3>
+        <p>Every client starts with a full movement screen. Compensations, imbalances, pain patterns — we identify them before we add weight. That's how injuries get prevented, not caused.</p>
+      </div>
+      <div class="diff-card gold-bg">
+        <h3>Proof of Concept</h3>
+        <p>I'm not selling a lifestyle I don't live. At 54, I swim, bike, run, lift, and compete in triathlons on zero medications. This is what intentional training and clinical self-awareness produces.</p>
+      </div>
+      <div class="diff-card navy-bg">
+        <h3>Continuity of Care</h3>
+        <p>You see the same trainer every session. I track your progress, remember what worked last time, and adjust in real time. That consistency compounds over weeks and months.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT TO EXPECT -->
+<section class="expect">
+  <div class="expect-inner">
+    <div class="section-eyebrow" style="color:var(--teal);">What a Session Looks Like</div>
+    <h2>Structured. Specific. Yours.</h2>
+    <p class="section-intro" style="color:var(--text-medium);">Every session follows the same intentional framework — with adjustments based on how you feel and what your body needs that day.</p>
+    <div class="steps">
+      <div class="step">
+        <div class="step-left">
+          <div class="step-num red">1</div>
+          <div class="step-line"></div>
+        </div>
+        <div class="step-content">
+          <h3>Movement Screen &amp; Check-In</h3>
+          <p>We start with how you move — not how much you can lift. I assess your patterns, note any changes since last session, and confirm your goals for the day.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-left">
+          <div class="step-num teal">2</div>
+          <div class="step-line"></div>
+        </div>
+        <div class="step-content">
+          <h3>Corrective Warm-Up</h3>
+          <p>Targeted activation and mobility work woven into your warm-up — not skipped. If something needs addressing, it gets addressed before we load.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-left">
+          <div class="step-num gold">3</div>
+          <div class="step-line"></div>
+        </div>
+        <div class="step-content">
+          <h3>Progressive, Coached Training</h3>
+          <p>Strength work built around your mechanics and goals. I cue in real time, adjust load when needed, and track what's working so every session builds on the last.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-left">
+          <div class="step-num navy">4</div>
+        </div>
+        <div class="step-content">
+          <h3>Take-Home Plan</h3>
+          <p>You leave every session with specific exercises or cues to reinforce between sessions. Progress isn't reserved for when I'm in the room.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VIDEO -->
+<section class="video-section">
+  <div class="section-eyebrow">See It for Yourself</div>
+  <h2>This is how I train.</h2>
+  <p>No stock footage. No filters. Real training from someone who does this every week — and brings that same energy to every client session.</p>
+  <!-- Replace placeholder with your embed when ready:
+  <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:4px;max-width:720px;margin:0 auto;">
+    <iframe src="YOUR_VIDEO_URL" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" allowfullscreen></iframe>
+  </div> -->
+  <div class="video-placeholder">
+    <span class="play">▶</span>
+    Training video coming soon — check back shortly.
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing">
+  <div class="pricing-inner">
+    <div class="section-eyebrow">Investment</div>
+    <h2>Training Packages</h2>
+    <p class="section-intro">Private, one-on-one sessions in your home, your HOA or community gym, or wherever you already train. Packages save you per session — or start single to try it out.</p>
+    <div class="pricing-grid">
+      <div class="pkg navy-card">
+        <h4>Jumpstart</h4>
+        <div class="pkg-price">$340</div>
+        <div class="pkg-sessions">4 sessions</div>
+        <div class="pkg-per">$85 per session</div>
+      </div>
+      <div class="pkg featured">
+        <div class="pkg-badge">Most Popular</div>
+        <h4>Momentum</h4>
+        <div class="pkg-price">$640</div>
+        <div class="pkg-sessions">8 sessions</div>
+        <div class="pkg-per">$80 per session</div>
+      </div>
+      <div class="pkg teal-card">
+        <h4>HealthSpan</h4>
+        <div class="pkg-price">$900</div>
+        <div class="pkg-sessions">12 sessions</div>
+        <div class="pkg-per">$75 per session</div>
+      </div>
+    </div>
+    <div class="single-session-bar">
+      <p><strong>Not ready to commit to a package?</strong> Single sessions available at $95. Or start with a free 30-minute intro — no purchase required.</p>
+      <a href="#free-session" class="btn-gold">Free Intro Session</a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about">
+  <div class="about-inner">
+    <div class="section-eyebrow">About Gretchen</div>
+    <h2>I'm not just your trainer.<br>I'm your clinical advantage.</h2>
+    <div class="about-grid">
+      <div class="about-text">
+        <p>I'm Gretchen — a Registered Nurse with ICU, Pre-Op, and PACU experience, and an ACE-Certified Personal Trainer. At 54, I'm on zero medications and training for triathlons every season.</p>
+        <p>I built this practice because I've stood at the bedside of people far younger than me who had lost control of their health. And I've seen what happens when people stay intentional — they stay strong, stay independent, and age completely differently.</p>
+        <p>I bring my clinical background to every training session. That means I notice things other trainers don't — compensations, pain patterns, medication effects on performance — and I adjust in real time.</p>
+        <a href="#free-session" class="btn-outline" style="margin-top:1.5rem;">Book Free Intro Session →</a>
+      </div>
+      <div class="about-creds">
+        <div class="cred-item">
+          <strong>BSN, RN</strong>
+          <span>Registered Nurse — ICU, Pre-Op, PACU experience. 8+ years including COVID-19 frontlines.</span>
+        </div>
+        <div class="cred-item">
+          <strong>ACE-CPT</strong>
+          <span>ACE Certified Personal Trainer with corrective exercise and myofascial release training.</span>
+        </div>
+        <div class="cred-item">
+          <strong>Active Triathlete</strong>
+          <span>Swim, bike, run, lift — every week. At 54, on zero medications. Proof the standard is real.</span>
+        </div>
+        <div class="cred-item">
+          <strong>Private Pay Only</strong>
+          <span>No insurance. No restrictions. I work for you — and I stay as long as you need.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FREE SESSION CTA -->
+<section class="free-session" id="free-session">
+  <div class="section-eyebrow">The First Step</div>
+  <h2>Let's train together — free, no obligation.</h2>
+  <p>A free 30-minute session to assess your movement, talk through your goals, and show you exactly what working with me looks like.</p>
+  <p>You'll walk away with something useful regardless of what you decide.</p>
+  <a href="tel:9136056275" class="btn-navy">Call or Text Gretchen</a>
+  <p class="fine-print">(913) 605-6275 · HealthSpanRN@gmail.com · West Valley, Arizona</p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-brand">Mobile Health Nurse</div>
+  <div class="footer-tag">In-Home Nursing Care and Personal Training</div>
+  <ul class="footer-nav">
+    <li><a href="/">Home</a></li>
+    <li><a href="/#services">All Services</a></li>
+    <li><a href="/#about">About</a></li>
+    <li><a href="/#connect">Connect</a></li>
+  </ul>
+  <div class="footer-contact">
+    <a href="mailto:HealthSpanRN@gmail.com">HealthSpanRN@gmail.com</a> · West Valley, AZ · Goodyear · Litchfield Park · Avondale<br>
+    <span style="margin-top: 0.75rem; display: inline-block;">Gretchen Hess, BSN, RN, ACE-CPT</span>
+  </div>
+</footer>
+
+</body>
+</html>
