@@ -54,8 +54,6 @@
   .hero-sub { font-size: 1.1rem; color: rgba(255,255,255,0.82); margin-bottom: 2rem; max-width: 520px; line-height: 1.6; }
   .hero-badges { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-bottom: 2.25rem; }
   .badge { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: rgba(255,255,255,0.9); padding: 0.35rem 0.85rem; border-radius: 2px; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; }
-  .badge.red { background: var(--red); border-color: var(--red); }
-  .badge.teal { background: var(--teal); border-color: var(--teal); }
   .hero-cta-row { display: flex; gap: 1rem; flex-wrap: wrap; }
   .btn-primary { padding: 1rem 2rem; text-decoration: none; font-size: 0.85rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; display: inline-block; border-radius: 2px; background: var(--red); color: white; }
   .btn-primary:hover { background: var(--red-deep); transform: translateY(-1px); }
@@ -71,10 +69,7 @@
   .hero-stats-label { color: var(--gold); font-size: 0.7rem; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 600; margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid rgba(255,255,255,0.1); }
   .stat-row { display: grid; grid-template-columns: auto 1fr; gap: 1.25rem; align-items: center; padding: 1rem 0; border-bottom: 1px solid rgba(255,255,255,0.08); }
   .stat-row:last-child { border-bottom: none; padding-bottom: 0; }
-  .stat-num { font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; font-weight: 700; color: white; line-height: 1; min-width: 72px; text-align: center; }
-  .stat-num.red { color: var(--red); }
-  .stat-num.gold { color: var(--gold); }
-  .stat-num.teal { color: #4ab8b8; }
+  .stat-num { font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; font-weight: 700; color: var(--gold); line-height: 1; min-width: 72px; text-align: center; }
   .stat-label { color: rgba(255,255,255,0.75); font-size: 0.9rem; line-height: 1.45; }
 
   /* COLOR BAND — toned down */
@@ -126,11 +121,7 @@
   .steps { display: grid; gap: 0; }
   .step { display: grid; grid-template-columns: 72px 1fr; gap: 0; align-items: stretch; }
   .step-left { display: flex; flex-direction: column; align-items: center; }
-  .step-num { width: 52px; height: 52px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 700; color: white; flex-shrink: 0; z-index: 1; }
-  .step-num.red { background: var(--red); }
-  .step-num.teal { background: var(--teal); }
-  .step-num.gold { background: var(--gold); color: var(--navy); }
-  .step-num.navy { background: var(--navy); }
+  .step-num { width: 52px; height: 52px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 700; color: white; background: var(--navy); flex-shrink: 0; z-index: 1; }
   .step-line { width: 2px; background: var(--border-soft); flex-grow: 1; margin: 0.5rem 0; }
   .step-content { padding: 0 0 2.5rem 1.5rem; }
   .step-content h3 { font-size: 1.35rem; margin-bottom: 0.5rem; color: var(--navy); }
@@ -151,13 +142,10 @@
   .pricing h2 { color: white; font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 0.75rem; }
   .pricing .section-intro { color: rgba(255,255,255,0.75); font-size: 1rem; margin-bottom: 3rem; }
   .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; margin-bottom: 1.5rem; }
-  .pkg { border-radius: 4px; padding: 2.25rem 1.75rem; text-align: center; position: relative; }
-  .pkg.navy-card { background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.15); }
-  .pkg.red-card { background: var(--red); }
-  .pkg.teal-card { background: var(--teal); }
-  .pkg.featured { border: 2px solid var(--gold); background: rgba(201,169,97,0.12); }
+  .pkg { border-radius: 4px; padding: 2.25rem 1.75rem; text-align: center; position: relative; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.15); }
+  .pkg.featured { border: 2px solid var(--gold); background: rgba(201,169,97,0.1); }
   .pkg-badge { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--gold); color: var(--navy); font-size: 0.65rem; letter-spacing: 0.18em; font-weight: 700; text-transform: uppercase; padding: 0.3rem 0.9rem; border-radius: 2px; white-space: nowrap; }
-  .pkg h4 { font-family: 'Inter', sans-serif; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.7); margin-bottom: 1rem; }
+  .pkg h4 { font-family: 'Inter', sans-serif; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.6); margin-bottom: 1rem; }
   .pkg.featured h4 { color: var(--gold); }
   .pkg-price { font-family: 'Cormorant Garamond', serif; font-size: 2.75rem; font-weight: 700; color: white; line-height: 1; margin-bottom: 0.25rem; }
   .pkg-sessions { color: rgba(255,255,255,0.65); font-size: 0.82rem; margin-bottom: 0.75rem; }
@@ -243,8 +231,8 @@
       <h1>Train with <em>intention.</em><br>Move like you mean it.</h1>
       <p class="hero-sub">Corrective, athletic coaching from a triathlete RN — in your home, at your HOA gym, or wherever you train. I bring a clinical eye no standard trainer can match.</p>
       <div class="hero-badges">
-        <span class="badge red">ACE Certified Trainer</span>
-        <span class="badge teal">Registered Nurse, BSN</span>
+        <span class="badge">ACE Certified Trainer</span>
+        <span class="badge">Registered Nurse, BSN</span>
         <span class="badge">Active Triathlete</span>
         <span class="badge">Corrective Exercise</span>
         <span class="badge">Myofascial Release</span>
@@ -257,15 +245,15 @@
     <div class="hero-stats">
       <div class="hero-stats-label">The person training you</div>
       <div class="stat-row">
-        <div class="stat-num gold">54</div>
+        <div class="stat-num">54</div>
         <div class="stat-label">Years old. Zero medications. Competing in triathlons every season.</div>
       </div>
       <div class="stat-row">
-        <div class="stat-num teal">8+</div>
+        <div class="stat-num">8+</div>
         <div class="stat-label">Years ICU nursing — including COVID-19 frontlines. I've seen what happens when people stop moving.</div>
       </div>
       <div class="stat-row">
-        <div class="stat-num red">ACE</div>
+        <div class="stat-num">ACE</div>
         <div class="stat-label">Certified Personal Trainer with corrective exercise and myofascial release training.</div>
       </div>
       <div class="stat-row">
@@ -363,7 +351,7 @@
     <div class="steps">
       <div class="step">
         <div class="step-left">
-          <div class="step-num red">1</div>
+          <div class="step-num">1</div>
           <div class="step-line"></div>
         </div>
         <div class="step-content">
@@ -373,7 +361,7 @@
       </div>
       <div class="step">
         <div class="step-left">
-          <div class="step-num teal">2</div>
+          <div class="step-num">2</div>
           <div class="step-line"></div>
         </div>
         <div class="step-content">
@@ -383,7 +371,7 @@
       </div>
       <div class="step">
         <div class="step-left">
-          <div class="step-num gold">3</div>
+          <div class="step-num">3</div>
           <div class="step-line"></div>
         </div>
         <div class="step-content">
@@ -393,7 +381,7 @@
       </div>
       <div class="step">
         <div class="step-left">
-          <div class="step-num navy">4</div>
+          <div class="step-num">4</div>
         </div>
         <div class="step-content">
           <h3>Take-Home Plan</h3>
@@ -426,7 +414,7 @@
     <h2>Training Packages</h2>
     <p class="section-intro">Private, one-on-one sessions in your home, your HOA or community gym, or wherever you already train. Packages save you per session — or start single to try it out.</p>
     <div class="pricing-grid">
-      <div class="pkg navy-card">
+      <div class="pkg">
         <h4>Jumpstart</h4>
         <div class="pkg-price">$340</div>
         <div class="pkg-sessions">4 sessions</div>
@@ -439,7 +427,7 @@
         <div class="pkg-sessions">8 sessions</div>
         <div class="pkg-per">$80 per session</div>
       </div>
-      <div class="pkg teal-card">
+      <div class="pkg">
         <h4>HealthSpan</h4>
         <div class="pkg-price">$900</div>
         <div class="pkg-sessions">12 sessions</div>
