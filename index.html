@@ -65,11 +65,15 @@
   .btn-nurse-now { background: var(--red); color: white; }
   .btn-nurse-now:hover { background: var(--red-deep); }
 
-  .hero { background: var(--navy); color: white; padding: 5rem 3rem 6rem; }
+  .hero { background: var(--navy); color: white; padding: 5rem 3rem 4rem; }
+  .hero-top { max-width: 1400px; margin: 0 auto 3.5rem; text-align: center; }
   .hero-grid { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 1.1fr 1fr; gap: 4rem; align-items: center; }
-  .hero-eyebrow { color: var(--gold); font-size: 0.78rem; letter-spacing: 0.22em; font-weight: 600; text-transform: uppercase; margin-bottom: 1.75rem; }
-  .hero h1 { color: white; font-size: clamp(2.75rem, 5vw, 4.25rem); line-height: 1.05; margin-bottom: 1.5rem; }
+  .hero-eyebrow { color: var(--gold); font-size: 0.78rem; letter-spacing: 0.22em; font-weight: 600; text-transform: uppercase; margin-bottom: 1.5rem; }
+  .hero h1 { color: white; font-size: clamp(2.75rem, 5.5vw, 5.5rem); line-height: 1.05; margin-bottom: 0.75rem; }
   .hero h1 .gold-accent { color: var(--gold); font-style: italic; }
+  .hero-not-typo { font-size: 0.88rem; color: rgba(255,255,255,0.5); font-style: italic; margin-bottom: 1.5rem; letter-spacing: 0.04em; }
+  .hero-not-typo span { color: var(--gold); font-style: normal; font-weight: 600; }
+  .hero-tagline { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.6rem, 3vw, 2.4rem); color: var(--gold); font-style: italic; font-weight: 500; margin-bottom: 2rem; line-height: 1.25; letter-spacing: 0.01em; }
   .hero-sub { font-size: 1.1rem; color: rgba(255,255,255,0.82); margin-bottom: 1.5rem; max-width: 540px; line-height: 1.55; }
   .healthspan-def { font-size: 0.92rem; color: rgba(255,255,255,0.65); border-left: 2px solid var(--gold); padding-left: 1rem; margin-bottom: 2rem; max-width: 520px; font-style: italic; line-height: 1.55; }
   .healthspan-def strong { color: var(--gold); font-style: normal; font-weight: 600; }
@@ -278,11 +282,9 @@
     nav { padding: 1rem 1.5rem; flex-wrap: wrap; gap: 1rem; }
     .nav-links { order: 3; width: 100%; justify-content: center; gap: 0.75rem; flex-wrap: wrap; }
     .nav-links a { font-size: 0.68rem; }
-    .hero, .resource-promise, .who-i-help, .services-overview, .nurse-now-band,
-    .training-spotlight, .service-detail, .proof-section, .values-section,
-    .quiz-section, .next-section, .connect-section, .phone-band, .cta-band { padding: 3.5rem 1.5rem; }
-    .hero-grid { grid-template-columns: 1fr; gap: 2rem; }
-    .hero-image { min-height: 280px; }
+    .hero { padding: 3rem 1.5rem 2.5rem; }
+    .hero-top { margin-bottom: 2rem; }
+    .hero-image { min-height: 240px !important; }
     .paths-grid { grid-template-columns: 1fr; gap: 1.1rem; }
     .nurse-now-inner { grid-template-columns: 1fr; text-align: center; }
     .nurse-now-cta { text-align: center; }
@@ -323,26 +325,27 @@
 <a id="top"></a>
 
 <section class="hero">
-  <div class="hero-grid">
-    <div>
-      <div class="hero-eyebrow">Registered Nurse · Certified Personal Trainer · West Valley, Arizona</div>
-      <h1>In-Home Nursing Care<br>and <span class="gold-accent">Personal Training.</span></h1>
-      <p class="hero-sub">One expert. Built for you and your parents. I'm Gretchen, RN and ACE-CPT — I come to your home or meet you on-location to help you stay strong, independent, and out of the hospital.</p>
-      <div class="hero-cta-row">
-        <a href="tel:9136056275" class="btn-primary">CALL ME DIRECTLY</a>
-        <a href="#paths" class="btn-secondary">FIND YOUR PATH</a>
-      </div>
-      <div class="hero-fineprint">Private pay · West Valley, AZ · HealthSpanRN@gmail.com</div>
+  <div class="hero-top">
+    <div class="hero-eyebrow">Registered Nurse · Certified Personal Trainer · West Valley, Arizona</div>
+    <h1>In-Hope Private Nursing. <span class="gold-accent">Personal Training.</span> Medical Advocacy.</h1>
+    <p class="hero-not-typo">Not a typo. <span>Hope is the whole point.</span></p>
+    <p class="hero-tagline">It's never too late to protect your health — and your parents'.</p>
+    <div class="hero-cta-row" style="justify-content:center;">
+      <a href="tel:9136056275" class="btn-primary">CALL ME DIRECTLY</a>
+      <a href="#paths" class="btn-secondary">FIND YOUR PATH</a>
     </div>
-    <div class="hero-image" style="background-image: url('images/gretchen-flyer.jpg'); background-size: cover; background-position: center top;"></div>
+    <div class="hero-fineprint" style="margin-top:1.25rem;">Private pay · West Valley, AZ · HealthSpanRN@gmail.com</div>
+  </div>
+  <div style="max-width:1400px; margin:0 auto;">
+    <div class="hero-image" style="background-image: url('images/gretchen-flyer.jpg'); background-size: cover; background-position: center top; min-height: 460px; border-radius: 4px;"></div>
   </div>
 </section>
 
 <section class="resource-promise">
   <div class="resource-promise-inner">
-    <div class="eyebrow">A Different Kind of Healthcare</div>
-    <h2>A real RN. In your home. On your side.</h2>
-    <p>Mobile Health Nurse isn't a clinic or a portal. It's <strong>a resource</strong> — a nurse you can call when something doesn't feel right, when you're scared, or when you have questions nobody else has time to answer.</p>
+    <div class="eyebrow">Healthcare Your Way</div>
+    <h2>Your Health. My Priority.</h2>
+    <p>I'm Gretchen — an ICU-trained RN who knows the inside world of the healthcare system and knows where you're headed if your health takes a back seat. I built this practice to make sure that doesn't happen to you.</p>
   </div>
 </section>
 
