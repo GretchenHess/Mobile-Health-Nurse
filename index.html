@@ -43,6 +43,7 @@
     letter-spacing: -0.01em;
   }
 
+  /* NAV */
   nav {
     background: var(--navy);
     padding: 1.25rem 3rem;
@@ -65,56 +66,112 @@
   .btn-nurse-now { background: var(--red); color: white; }
   .btn-nurse-now:hover { background: var(--red-deep); }
 
-  .hero { background: var(--navy); color: white; padding: 5rem 3rem 4rem; }
-  .hero-top { max-width: 1400px; margin: 0 auto 3.5rem; text-align: center; }
-  .hero-grid { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 1.1fr 1fr; gap: 4rem; align-items: center; }
-  .hero-eyebrow { color: var(--gold); font-size: 0.78rem; letter-spacing: 0.22em; font-weight: 600; text-transform: uppercase; margin-bottom: 1.5rem; }
-  .hero h1 { color: white; font-size: clamp(2.75rem, 5.5vw, 5.5rem); line-height: 1.05; margin-bottom: 0.75rem; }
-  .hero h1 .gold-accent { color: var(--gold); font-style: italic; }
-  .hero-not-typo { font-size: 0.88rem; color: rgba(255,255,255,0.5); font-style: italic; margin-bottom: 1.5rem; letter-spacing: 0.04em; }
-  .hero-not-typo span { color: var(--gold); font-style: normal; font-weight: 600; }
-  .hero-tagline { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.6rem, 3vw, 2.4rem); color: var(--gold); font-style: italic; font-weight: 500; margin-bottom: 2rem; line-height: 1.25; letter-spacing: 0.01em; }
-  .hero-sub { font-size: 1.1rem; color: rgba(255,255,255,0.82); margin-bottom: 1.5rem; max-width: 540px; line-height: 1.55; }
-  .healthspan-def { font-size: 0.92rem; color: rgba(255,255,255,0.65); border-left: 2px solid var(--gold); padding-left: 1rem; margin-bottom: 2rem; max-width: 520px; font-style: italic; line-height: 1.55; }
-  .healthspan-def strong { color: var(--gold); font-style: normal; font-weight: 600; }
-  .hero-cta-row { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 1.5rem; }
+  /* BUTTONS */
   .btn-primary, .btn-secondary { padding: 1rem 2rem; text-decoration: none; font-size: 0.85rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; display: inline-block; border-radius: 2px; border: none; cursor: pointer; }
   .btn-primary { background: var(--red); color: white; }
   .btn-primary:hover { background: var(--red-deep); transform: translateY(-1px); }
   .btn-secondary { border: 1.5px solid rgba(255,255,255,0.4); color: white; background: transparent; }
   .btn-secondary:hover { background: rgba(255,255,255,0.08); border-color: white; }
-  .hero-fineprint { color: rgba(255,255,255,0.5); font-size: 0.82rem; }
-  .hero-image { border-radius: 4px; height: 100%; min-height: 480px; background: linear-gradient(135deg, #4a4d5a 0%, #2d3142 100%); }
+  .btn-teal { display: inline-block; background: var(--teal); color: white; padding: 1rem 2rem; text-decoration: none; font-size: 0.85rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; border-radius: 2px; transition: all 0.2s; }
+  .btn-teal:hover { background: var(--teal-deep); transform: translateY(-1px); }
+  .btn-nurse-large { background: var(--red); color: white; padding: 1.25rem 2.5rem; text-decoration: none; font-size: 0.9rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; display: inline-block; border-radius: 2px; transition: all 0.2s; }
+  .btn-nurse-large:hover { background: var(--red-deep); transform: translateY(-1px); }
 
-  .resource-promise { background: var(--cream); padding: 4rem 3rem; text-align: center; border-bottom: 1px solid var(--border-soft); }
-  .resource-promise-inner { max-width: 760px; margin: 0 auto; }
+  /* EYEBROW */
   .eyebrow { color: var(--teal); font-size: 0.78rem; letter-spacing: 0.22em; font-weight: 600; text-transform: uppercase; margin-bottom: 1.25rem; }
-  .resource-promise h2 { font-size: clamp(2rem, 4vw, 2.75rem); margin-bottom: 1.25rem; }
-  .resource-promise p { font-size: 1.05rem; color: var(--text-medium); line-height: 1.65; }
-  .resource-promise p strong { color: var(--navy); font-weight: 600; }
 
-  .who-i-help { padding: 5rem 3rem; }
-  .who-inner { max-width: 1300px; margin: 0 auto; }
+  /* HERO */
+  .hero { background: var(--navy); color: white; padding: 5rem 3rem 4rem; }
+  .hero-top { max-width: 1400px; margin: 0 auto 3.5rem; text-align: center; }
+  .hero-eyebrow { color: var(--gold); font-size: 0.78rem; letter-spacing: 0.22em; font-weight: 600; text-transform: uppercase; margin-bottom: 1.5rem; }
+  .hero h1 { color: white; font-size: clamp(2.75rem, 5.5vw, 5.5rem); line-height: 1.05; margin-bottom: 1.25rem; }
+  .hero h1 .gold-accent { color: var(--gold); font-style: italic; }
+  .hero-tagline { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.4rem, 2.5vw, 2rem); color: rgba(255,255,255,0.85); font-style: italic; font-weight: 400; margin-bottom: 2rem; line-height: 1.4; max-width: 680px; margin-left: auto; margin-right: auto; }
+  .hero-services { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 0.5rem 0.75rem; margin-bottom: 2.25rem; }
+  .hero-services span { color: rgba(255,255,255,0.92); font-size: clamp(1rem, 2vw, 1.25rem); font-family: 'Inter', sans-serif; font-weight: 400; letter-spacing: 0.02em; }
+  .hero-services-dot { color: var(--gold) !important; font-weight: 700; font-size: 1.4rem !important; }
+  .hero-cta-row { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; margin-bottom: 1.5rem; }
+  .btn-gold { padding: 1rem 2rem; text-decoration: none; font-size: 0.85rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; display: inline-block; border-radius: 2px; background: var(--gold); color: var(--navy); }
+  .btn-gold:hover { background: var(--gold-deep); transform: translateY(-1px); }
+  .hero-fineprint { color: rgba(255,255,255,0.5); font-size: 0.82rem; margin-top: 1.25rem; }
+  .hero-image { border-radius: 4px; min-height: 420px; background: linear-gradient(135deg, #4a4d5a 0%, #2d3142 100%); background-image: url('images/hero-banner.jpg'); background-size: cover; background-position: center center; }
+
+  /* SECTION 2 — THE PROBLEM */
+  .problem-section { background: var(--cream); padding: 5rem 3rem; border-bottom: 1px solid var(--border-soft); }
+  .problem-inner { max-width: 820px; margin: 0 auto; }
+  .problem-section h2 { font-size: clamp(2rem, 4vw, 2.75rem); margin-bottom: 2rem; text-align: center; }
+  .problem-bullets { list-style: none; margin-bottom: 2.5rem; }
+  .problem-bullets li { font-size: 1.08rem; color: var(--text-medium); line-height: 1.7; padding: 1rem 0 1rem 2rem; border-bottom: 1px solid var(--border-soft); position: relative; }
+  .problem-bullets li:first-child { border-top: 1px solid var(--border-soft); }
+  .problem-bullets li::before { content: '—'; color: var(--gold); position: absolute; left: 0; font-weight: 600; }
+  .problem-turn { color: var(--navy); font-family: 'Inter', sans-serif; font-size: clamp(1.15rem, 2vw, 1.35rem); font-weight: 600; font-style: normal; line-height: 1.5; margin-bottom: 1.75rem; letter-spacing: 0.01em; }
+  .problem-number { display: inline-block; color: var(--red); font-family: 'Inter', sans-serif; font-size: clamp(1.35rem, 2.5vw, 1.75rem); font-weight: 700; text-decoration: none; letter-spacing: 0.04em; padding: 1rem 2.25rem; border: 2.5px solid var(--red); border-radius: 2px; margin-top: 0.25rem; transition: all 0.2s; }
+  .problem-number:hover { background: var(--red); color: white; }
+
+  /* SECTION 3 — WHO I AM */
+  .who-i-am { padding: 5rem 3rem; background: var(--navy); color: white; }
+  .who-i-am-inner { max-width: 900px; margin: 0 auto; text-align: center; }
+  .who-i-am .eyebrow { color: var(--gold); }
+  .who-i-am h2 { color: white; font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 1.5rem; }
+  .who-i-am p { color: rgba(255,255,255,0.82); font-size: 1.1rem; line-height: 1.75; margin-bottom: 1.25rem; max-width: 720px; margin-left: auto; margin-right: auto; }
+  .who-i-am p:last-of-type { margin-bottom: 0; }
+
+  /* SECTION 4 — WHAT I DO */
+  .what-i-do { padding: 5rem 3rem; background: var(--off-white); }
+  .what-i-do-inner { max-width: 1000px; margin: 0 auto; }
+  .what-i-do-header { text-align: center; margin-bottom: 3.5rem; }
+  .what-i-do-header h2 { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 0.75rem; }
+  .what-i-do-header p { color: var(--text-medium); font-size: 1.05rem; max-width: 560px; margin: 0 auto; }
+  .services-trio { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+  .service-trio-card { background: white; padding: 2.5rem 2rem; border-top: 4px solid var(--gold); border-radius: 2px; }
+  .service-trio-card.teal-top { border-top-color: var(--teal); }
+  .service-trio-card.red-top { border-top-color: var(--red); }
+  .service-trio-card h3 { font-size: 1.6rem; margin-bottom: 0.85rem; }
+  .service-trio-card p { color: var(--text-medium); font-size: 0.98rem; line-height: 1.65; margin-bottom: 1rem; }
+  .service-trio-card .differentiator { color: var(--navy); font-size: 0.88rem; font-weight: 600; font-style: italic; }
+
+  /* SECTION 5 — WHO THIS IS FOR */
+  .who-for { padding: 5rem 3rem; background: var(--cream); }
+  .who-for-inner { max-width: 900px; margin: 0 auto; }
+  .who-for-header { text-align: center; margin-bottom: 3.5rem; }
+  .who-for-header h2 { font-size: clamp(2rem, 4vw, 3rem); }
+  .for-list { display: flex; flex-direction: column; gap: 0; }
+  .for-item { padding: 1.75rem 0; border-bottom: 1px solid var(--border-soft); font-family: 'Cormorant Garamond', serif; font-size: clamp(1.25rem, 2.5vw, 1.6rem); color: var(--navy); line-height: 1.4; font-weight: 500; }
+  .for-item:last-of-type { border-bottom: none; }
+  .for-item em { color: var(--teal); font-style: normal; font-weight: 600; }
+  .who-for-close { text-align: center; margin-top: 3rem; font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: var(--navy); font-style: italic; }
+
+  /* SECTION 6 — CALL TO ACTION */
+  .main-cta { background: var(--red); color: white; padding: 5rem 3rem; text-align: center; }
+  .main-cta-inner { max-width: 700px; margin: 0 auto; }
+  .main-cta .eyebrow { color: rgba(255,255,255,0.85); margin-bottom: 1rem; }
+  .main-cta h2 { color: white; font-size: clamp(2.25rem, 4.5vw, 3.5rem); margin-bottom: 1.5rem; line-height: 1.1; }
+  .main-cta p { color: rgba(255,255,255,0.88); font-size: 1.05rem; line-height: 1.7; margin-bottom: 1.25rem; }
+  .main-cta p:last-of-type { margin-bottom: 2rem; }
+  .phone-number { color: white; font-family: 'Cormorant Garamond', serif; font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 600; text-decoration: none; letter-spacing: 0.02em; display: block; margin: 0.5rem 0 1.5rem; }
+  .main-cta .fine { color: rgba(255,255,255,0.6); font-size: 0.88rem; margin-top: 1rem; }
+
+  /* FOUR KINDS */
+  .who-i-help { padding: 5rem 3rem; background: var(--off-white); }
+  .who-inner { max-width: 1100px; margin: 0 auto; }
   .who-header { text-align: center; margin-bottom: 3.5rem; }
   .who-header h2 { font-size: clamp(2rem, 4vw, 3rem); }
   .who-header p { font-size: 1.05rem; color: var(--text-medium); margin-top: 0.75rem; max-width: 580px; margin-left: auto; margin-right: auto; }
   .paths-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
-  .path-card { background: white; padding: 2.25rem 1.75rem; border-top: 4px solid var(--teal); border-radius: 2px; transition: transform 0.2s, box-shadow 0.2s; display: flex; flex-direction: column; }
-  .path-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(45,49,66,0.08); }
+  .path-card { background: white; padding: 2rem 1.75rem; border-top: 4px solid var(--teal); border-radius: 2px; }
   .path-card.reactive { border-top-color: var(--red); }
   .path-card.parents { border-top-color: var(--gold); }
   .path-card.training { border-top-color: var(--teal-deep); }
   .path-card.beginner { border-top-color: var(--teal); }
-  .path-label { font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 600; margin-bottom: 0.85rem; }
+  .path-label { font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 600; margin-bottom: 0.75rem; }
   .path-card.reactive .path-label { color: var(--red); }
   .path-card.parents .path-label { color: var(--gold-deep); }
   .path-card.training .path-label { color: var(--teal-deep); }
   .path-card.beginner .path-label { color: var(--teal); }
-  .path-card h3 { font-size: 1.85rem; margin-bottom: 0.85rem; line-height: 1.2; }
-  .path-card p { color: var(--text-medium); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.5rem; flex-grow: 1; }
-  .path-link { color: var(--navy); text-decoration: none; font-size: 0.78rem; letter-spacing: 0.15em; text-transform: uppercase; font-weight: 600; border-bottom: 1.5px solid var(--gold); padding-bottom: 0.25rem; align-self: flex-start; }
-  .path-link:hover { color: var(--red); }
+  .path-card h3 { font-size: 1.35rem; margin-bottom: 0.65rem; line-height: 1.25; }
+  .path-card p { color: var(--text-medium); font-size: 0.92rem; line-height: 1.6; }
 
+  /* NURSE NOW BAND */
   .nurse-now-band { background: var(--navy); color: white; padding: 4rem 3rem; }
   .nurse-now-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1.4fr 1fr; gap: 3rem; align-items: center; }
   .nurse-now-band .eyebrow { color: var(--gold); margin-bottom: 1rem; }
@@ -122,24 +179,8 @@
   .nurse-now-band p { color: rgba(255,255,255,0.82); font-size: 1.05rem; line-height: 1.6; }
   .nurse-now-band .gold-text { color: var(--gold); font-weight: 600; }
   .nurse-now-cta { text-align: right; }
-  .btn-nurse-large { background: var(--red); color: white; padding: 1.25rem 2.5rem; text-decoration: none; font-size: 0.9rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; display: inline-block; border-radius: 2px; transition: all 0.2s; }
-  .btn-nurse-large:hover { background: var(--red-deep); transform: translateY(-1px); }
 
-  .services-overview { padding: 5rem 3rem; background: var(--cream); }
-  .services-overview-inner { max-width: 1100px; margin: 0 auto; }
-  .services-overview-header { text-align: center; margin-bottom: 3.5rem; }
-  .services-overview-header h2 { font-size: clamp(2rem, 4vw, 3rem); }
-  .services-overview-header p { font-size: 1.05rem; color: var(--text-medium); margin-top: 0.75rem; max-width: 580px; margin-left: auto; margin-right: auto; }
-  .service-row { background: white; border-left: 4px solid var(--gold); padding: 1.6rem 2.25rem; margin-bottom: 1rem; display: grid; grid-template-columns: 1fr auto; gap: 2rem; align-items: center; transition: transform 0.2s, box-shadow 0.2s; text-decoration: none; color: inherit; }
-  .service-row:hover { transform: translateX(4px); box-shadow: 0 8px 24px rgba(45,49,66,0.06); }
-  .service-row.training-row { border-left-color: var(--teal-deep); }
-  .service-row h3 { font-size: 1.4rem; margin-bottom: 0.35rem; }
-  .service-row p { color: var(--text-medium); font-size: 0.95rem; }
-  .service-meta { text-align: right; min-width: 180px; }
-  .service-price { color: var(--gold-deep); font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 600; margin-bottom: 0.3rem; }
-  .service-link { color: var(--teal); text-decoration: none; font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 600; }
-  .service-tag { display: inline-block; background: var(--teal-deep); color: white; font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 600; padding: 0.2rem 0.6rem; border-radius: 2px; margin-bottom: 0.4rem; }
-
+  /* TRAINING SPOTLIGHT */
   .training-spotlight { padding: 5rem 3rem; background: var(--navy); color: white; }
   .training-spotlight-inner { max-width: 1100px; margin: 0 auto; }
   .training-spotlight-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
@@ -150,8 +191,6 @@
   .training-differentiators li { color: rgba(255,255,255,0.85); font-size: 0.95rem; padding: 0.5rem 0 0.5rem 1.75rem; position: relative; border-bottom: 1px solid rgba(255,255,255,0.08); line-height: 1.5; }
   .training-differentiators li:last-child { border-bottom: none; }
   .training-differentiators li::before { content: '→'; color: var(--gold); position: absolute; left: 0; font-weight: 600; }
-  .btn-teal { display: inline-block; background: var(--teal); color: white; padding: 1rem 2rem; text-decoration: none; font-size: 0.85rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; border-radius: 2px; transition: all 0.2s; }
-  .btn-teal:hover { background: var(--teal-deep); transform: translateY(-1px); }
   .training-proof-box { background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.15); border-radius: 4px; padding: 2.5rem; }
   .training-proof-box .proof-label { color: var(--gold); font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 600; margin-bottom: 1.5rem; }
   .proof-stat { margin-bottom: 1.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.1); }
@@ -159,6 +198,7 @@
   .proof-stat-num { font-family: 'Cormorant Garamond', serif; font-size: 2.25rem; font-weight: 600; color: white; line-height: 1; margin-bottom: 0.25rem; }
   .proof-stat-label { color: rgba(255,255,255,0.6); font-size: 0.85rem; line-height: 1.4; }
 
+  /* SERVICE DETAILS */
   .service-detail { padding: 4.5rem 3rem; border-bottom: 1px solid var(--border-soft); }
   .service-detail.alt-bg { background: var(--cream); }
   .service-detail-inner { max-width: 1100px; margin: 0 auto; }
@@ -183,7 +223,6 @@
   .tier-card h4 { font-size: 1.45rem; margin-bottom: 0.85rem; }
   .tier-price { font-family: 'Cormorant Garamond', serif; font-size: 1.9rem; color: var(--navy); font-weight: 600; margin-bottom: 0.2rem; }
   .tier-price .per { font-family: 'Inter', sans-serif; font-size: 1rem; color: var(--text-medium); font-weight: 400; }
-  .tier-billing { color: var(--teal); font-size: 0.82rem; margin-bottom: 1.1rem; font-weight: 500; }
   .tier-card .check-list { grid-template-columns: 1fr; gap: 0.6rem; margin-top: 0.75rem; }
   .packages-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.1rem; margin-top: 1.75rem; }
   .pkg-card { border: 1.5px solid var(--border-soft); border-radius: 4px; padding: 1.6rem 1.4rem; text-align: center; position: relative; }
@@ -193,39 +232,7 @@
   .pkg-price { font-family: 'Cormorant Garamond', serif; font-size: 1.65rem; color: var(--navy); font-weight: 600; }
   .pkg-price .per { font-family: 'Inter', sans-serif; font-size: 0.82rem; color: var(--text-medium); font-weight: 400; display: block; margin-top: 0.15rem; }
 
-  .proof-section { padding: 5rem 3rem; background: var(--off-white); }
-  .proof-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1.5fr; gap: 4rem; align-items: center; }
-  .proof-portrait { aspect-ratio: 1; border-radius: 50%; background: linear-gradient(135deg, var(--gold) 0%, var(--gold-deep) 100%); border: 6px solid var(--gold); max-width: 360px; margin: 0 auto; }
-  .proof-content h2 { font-size: clamp(1.85rem, 3.5vw, 2.6rem); margin-bottom: 1.25rem; line-height: 1.15; }
-  .proof-content p { color: var(--text-medium); font-size: 1.05rem; line-height: 1.7; margin-bottom: 1.1rem; }
-  .proof-content .highlight { color: var(--navy); font-weight: 600; }
-
-  .values-section { background: var(--cream); padding: 5rem 3rem; }
-  .values-inner { max-width: 1200px; margin: 0 auto; }
-  .values-header { text-align: center; margin-bottom: 3.5rem; }
-  .values-header h2 { font-size: clamp(1.85rem, 3.5vw, 2.6rem); }
-  .values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.75rem; }
-  .value-card { background: white; padding: 2.25rem 1.75rem; text-align: center; border-radius: 4px; box-shadow: 0 4px 16px rgba(45,49,66,0.04); }
-  .value-icon { font-size: 2.25rem; margin-bottom: 0.85rem; }
-  .value-card h3 { font-size: 1.35rem; margin-bottom: 0.85rem; }
-  .value-card p { color: var(--text-medium); font-size: 0.95rem; line-height: 1.65; }
-
-  .quiz-section { padding: 5rem 3rem; }
-  .quiz-inner { max-width: 860px; margin: 0 auto; }
-  .quiz-header { text-align: center; margin-bottom: 2.75rem; }
-  .quiz-header h2 { font-size: clamp(1.85rem, 3.5vw, 2.75rem); margin-bottom: 0.85rem; }
-  .quiz-header p { color: var(--text-medium); font-size: 1.05rem; max-width: 540px; margin: 0 auto; }
-  .quiz-step-label { background: var(--navy); color: white; padding: 1.25rem 1.75rem; border-radius: 4px 4px 0 0; }
-  .quiz-step-label .small { color: var(--gold); font-size: 0.7rem; letter-spacing: 0.22em; font-weight: 600; text-transform: uppercase; }
-  .quiz-step-label h3 { color: white; font-size: 1.5rem; margin: 0.35rem 0 0; }
-  .quiz-options { background: white; padding: 1.75rem; border-radius: 0 0 4px 4px; box-shadow: 0 4px 16px rgba(45,49,66,0.04); }
-  .quiz-option { display: block; padding: 1.1rem 1.4rem; border: 1.5px solid var(--border-soft); border-radius: 4px; margin-bottom: 0.85rem; cursor: pointer; transition: all 0.2s; text-decoration: none; color: var(--text-dark); }
-  .quiz-option:last-child { margin-bottom: 0; }
-  .quiz-option:hover { border-color: var(--teal); background: rgba(42,122,122,0.03); }
-  .quiz-option.training-option:hover { border-color: var(--teal-deep); background: rgba(31,94,94,0.04); }
-  .quiz-option strong { font-size: 1rem; color: var(--navy); display: block; margin-bottom: 0.2rem; }
-  .quiz-option span { color: var(--text-medium); font-size: 0.88rem; }
-
+  /* NEXT STEPS */
   .next-section { padding: 4.5rem 3rem; background: var(--cream); }
   .next-inner { max-width: 860px; margin: 0 auto; }
   .next-header { text-align: center; margin-bottom: 3rem; }
@@ -234,6 +241,7 @@
   .next-num { background: var(--red); color: white; width: 42px; height: 42px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Cormorant Garamond', serif; font-size: 1.25rem; font-weight: 600; flex-shrink: 0; }
   .next-step p { font-size: 1.05rem; color: var(--text-dark); line-height: 1.5; }
 
+  /* CONNECT */
   .connect-section { padding: 5rem 3rem; }
   .connect-inner { max-width: 1100px; margin: 0 auto; }
   .connect-header { text-align: center; margin-bottom: 3rem; }
@@ -253,18 +261,14 @@
   .connect-card.book .serving { color: rgba(255,255,255,0.6); font-size: 0.88rem; margin-bottom: 1.4rem; }
   .connect-card.book .btn-primary { background: var(--red); color: white; width: 100%; text-align: center; }
 
-  .phone-band { background: var(--red); color: white; padding: 4rem 3rem; text-align: center; }
-  .phone-band .eyebrow { color: rgba(255,255,255,0.85); margin-bottom: 0.85rem; }
-  .phone-band h2 { color: white; font-size: clamp(2.25rem, 4.5vw, 3.5rem); margin-bottom: 1.25rem; }
-  .phone-number { color: white; font-family: 'Cormorant Garamond', serif; font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 600; text-decoration: none; letter-spacing: 0.02em; display: block; margin: 1rem 0; }
-  .phone-band p { color: rgba(255,255,255,0.88); max-width: 560px; margin: 0 auto 1rem; font-size: 1rem; line-height: 1.6; }
-
+  /* FINAL CTA BAND */
   .cta-band { background: var(--gold); padding: 4.5rem 3rem; text-align: center; }
   .cta-band h2 { font-size: clamp(2rem, 4vw, 2.75rem); color: var(--navy-deep); margin-bottom: 0.85rem; }
   .cta-band p { color: var(--navy-deep); font-size: 1.1rem; max-width: 560px; margin: 0 auto 1.75rem; opacity: 0.82; }
   .cta-band .btn-primary { background: var(--navy); color: white; }
   .cta-band .btn-primary:hover { background: var(--navy-deep); }
 
+  /* FOOTER */
   footer { background: var(--navy-deep); color: rgba(255,255,255,0.7); padding: 3.5rem 3rem 2rem; text-align: center; }
   .footer-brand { color: white; font-family: 'Cormorant Garamond', serif; font-size: 1.7rem; font-weight: 600; margin-bottom: 0.4rem; }
   .footer-tag { color: var(--gold); font-size: 0.82rem; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 2.25rem; }
@@ -274,8 +278,10 @@
   .footer-contact { border-top: 1px solid rgba(255,255,255,0.12); padding-top: 1.75rem; font-size: 0.88rem; color: rgba(255,255,255,0.5); }
   .footer-contact a { color: var(--gold); text-decoration: none; }
 
+  /* RESPONSIVE */
   @media (max-width: 1100px) {
     .paths-grid { grid-template-columns: repeat(2, 1fr); }
+    .services-trio { grid-template-columns: 1fr; }
     .training-spotlight-grid { grid-template-columns: 1fr; gap: 2.5rem; }
   }
   @media (max-width: 900px) {
@@ -284,20 +290,16 @@
     .nav-links a { font-size: 0.68rem; }
     .hero { padding: 3rem 1.5rem 2.5rem; }
     .hero-top { margin-bottom: 2rem; }
-    .hero-image { min-height: 240px !important; }
-    .paths-grid { grid-template-columns: 1fr; gap: 1.1rem; }
+    .hero-image { min-height: 240px; }
+    .paths-grid { grid-template-columns: 1fr; gap: 1rem; }
     .nurse-now-inner { grid-template-columns: 1fr; text-align: center; }
     .nurse-now-cta { text-align: center; }
-    .service-row { grid-template-columns: 1fr; }
-    .service-meta { text-align: left; }
     .service-detail-header { grid-template-columns: 1fr; text-align: center; gap: 1rem; }
     .service-detail-price { text-align: center; }
     .check-list { grid-template-columns: 1fr; }
     .tiers-grid, .packages-grid { grid-template-columns: 1fr; }
-    .proof-inner { grid-template-columns: 1fr; gap: 2rem; text-align: center; }
-    .proof-portrait { max-width: 220px; }
-    .values-grid { grid-template-columns: 1fr; }
     .connect-grid { grid-template-columns: 1fr; }
+    .problem-section, .who-i-am, .what-i-do, .who-for, .main-cta, .who-i-help, .training-spotlight, .next-section, .connect-section { padding: 3.5rem 1.5rem; }
   }
 </style>
 </head>
@@ -313,7 +315,7 @@
     <li><a href="#about">ABOUT</a></li>
     <li><a href="#services">SERVICES</a></li>
     <li><a href="personal-training.html">PERSONAL TRAINING</a></li>
-    <li><a href="#paths">FIND YOUR PATH</a></li>
+    <li><a href="#who-for">WHO I HELP</a></li>
     <li><a href="#connect">CONNECT</a></li>
   </ul>
   <div class="nav-buttons">
@@ -324,35 +326,136 @@
 
 <a id="top"></a>
 
+<!-- ===========================
+     SECTION 1 — HERO
+     =========================== -->
 <section class="hero">
   <div class="hero-top">
-    <div class="hero-eyebrow">Registered Nurse · Certified Personal Trainer · West Valley, Arizona</div>
-    <h1>In-Hope Private Nursing. <span class="gold-accent">Personal Training.</span> Medical Advocacy.</h1>
-    <p class="hero-not-typo">Not a typo. <span>Hope is the whole point.</span></p>
-    <p class="hero-tagline">Most people wait too long. You don't have to.</p>
-    <div class="hero-cta-row" style="justify-content:center;">
-      <a href="tel:9136056275" class="btn-primary">CALL ME DIRECTLY</a>
-      <a href="#paths" class="btn-secondary">FIND YOUR PATH</a>
+    <div class="hero-eyebrow">West Valley, Arizona · Private Pay · In-Home</div>
+    <h1>You Found the <span class="gold-accent">Right Person.</span></h1>
+    <div class="hero-services">
+      <span>In-Home Private Nursing</span>
+      <span class="hero-services-dot">·</span>
+      <span>Personal Training</span>
+      <span class="hero-services-dot">·</span>
+      <span>Medical Advocacy</span>
     </div>
-    <div class="hero-fineprint" style="margin-top:1.25rem;">Private pay · West Valley, AZ · HealthSpanRN@gmail.com</div>
+    <div class="hero-cta-row">
+      <a href="tel:9136056275" class="btn-primary">CALL ME DIRECTLY</a>
+      <a href="mailto:HealthSpanRN@gmail.com?subject=Schedule Health Clarity Visit" class="btn-gold">BOOK A HEALTH CLARITY VISIT</a>
+    </div>
+    <div class="hero-fineprint">Gretchen Hess, BSN, RN, ACE-CPT · HealthSpanRN@gmail.com</div>
   </div>
   <div style="max-width:1400px; margin:0 auto; padding: 0 3rem;">
-    <div class="hero-image" style="background-image: url('images/hero-banner.jpg'); background-size: cover; background-position: center center; min-height: 420px; border-radius: 4px;"></div>
+    <div class="hero-image"></div>
   </div>
 </section>
 
-<section class="resource-promise">
-  <div class="resource-promise-inner">
-    <div class="eyebrow">Healthcare Your Way</div>
-    <h2>Your Health. My Priority.</h2>
-    <p>I'm Gretchen — an ICU-trained RN who knows the inside world of the healthcare system and knows where you're headed if your health takes a back seat. I built this practice to make sure that doesn't happen to you.</p>
+<!-- ===========================
+     SECTION 3 — WHO I AM
+     =========================== -->
+<section class="who-i-am" id="about">
+  <div class="who-i-am-inner">
+    <div class="eyebrow">Who I Am</div>
+    <h2>I'm Gretchen — and I know what's at stake.</h2>
+    <p>I'm a registered nurse, personal trainer, and medical advocate. I've worked ICU and surgical care, and I've spent years watching what happens when people don't have the right support at the right time.</p>
+    <p>I started Mobile Health Nurse because I kept seeing the same thing: people who could have been helped earlier, guided better, and spared a lot of unnecessary suffering — if only someone had been paying attention.</p>
+    <p>That's what I do now. I come to you, I learn your health picture, and I stay in your corner. Whether you need monitoring, movement, or someone to walk into a difficult appointment with you — I know what to do.</p>
   </div>
 </section>
 
-<section class="who-i-help" id="paths">
+<!-- ===========================
+     SECTION 2 — THE PROBLEM
+     =========================== -->
+<section class="problem-section">
+  <div class="problem-inner">
+    <div class="eyebrow">Why People Call Me</div>
+    <h2>You Deserve More Than the System Gives You.</h2>
+    <ul class="problem-bullets">
+      <li>Most people navigate their health alone. They leave doctor appointments with more questions than answers, managing confusing diagnoses without real guidance, hoping nothing gets worse before their next visit.</li>
+      <li>The healthcare system isn't designed to give you time or clarity. You're a number moving through a process — not a person with a history, a life, and goals worth protecting.</li>
+      <li>You will benefit from someone who knows the system from the inside — and knows exactly how to help you use it, navigate it, and when necessary, push back against it.</li>
+    </ul>
+    <p class="problem-turn">That changes when you have someone in your corner.<br>One call is all it takes.</p>
+    <a href="tel:9136056275" class="problem-number">(913) 605-6275</a>
+  </div>
+</section>
+
+<!-- ===========================
+     SECTION 4 — WHAT I DO
+     =========================== -->
+<section class="what-i-do" id="services">
+  <div class="what-i-do-inner">
+    <div class="what-i-do-header">
+      <div class="eyebrow">What I Do</div>
+      <h2>Three ways I can help.</h2>
+      <p>Private pay only — which means I work for you, not an insurance company.</p>
+    </div>
+    <div class="services-trio">
+      <div class="service-trio-card">
+        <h3>Health Assessments &amp; Monitoring</h3>
+        <p>A comprehensive look at where your health stands today — and a plan to keep it moving in the right direction. Regular visits mean nothing gets missed and nothing gets ignored.</p>
+        <div class="differentiator">Not a checkup. A real picture of your health, in your home, with a plan you can actually use.</div>
+      </div>
+      <div class="service-trio-card teal-top">
+        <h3>In-Home Personal Training</h3>
+        <p>Strength, mobility, and endurance training built around your body, your goals, and your health history. Not a generic program — a plan that actually fits your life.</p>
+        <div class="differentiator">From a triathlete RN who trains at your level and brings a clinical eye to every session.</div>
+      </div>
+      <div class="service-trio-card red-top">
+        <h3>Medical Advocacy</h3>
+        <p>Someone who speaks the language, knows the system, and shows up with you. For appointments, diagnoses, decisions, and moments when you need clarity more than anything else.</p>
+        <div class="differentiator">An ICU nurse in the room — asking the right questions so nothing is missed.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===========================
+     SECTION 5 — WHO THIS IS FOR
+     =========================== -->
+<section class="who-for" id="who-for">
+  <div class="who-for-inner">
+    <div class="who-for-header">
+      <div class="eyebrow">Who This Is For</div>
+      <h2>If any of this sounds like you —<br>you're in the right place.</h2>
+    </div>
+    <div class="for-list">
+      <div class="for-item">For the person who is done leaving appointments <em>feeling dismissed.</em></div>
+      <div class="for-item">For the person managing a health condition who wants more than <em>a prescription and a follow-up in six months.</em></div>
+      <div class="for-item">For the person who is healthy now and wants to <em>stay that way</em> — because they've watched what happens when people don't.</div>
+      <div class="for-item">For the person who wants to stay strong, stay sharp, and <em>stay in control</em> of their own health story.</div>
+      <div class="for-item">For the person who wants <em>independence</em> instead of dependency on the healthcare system.</div>
+    </div>
+    <p class="who-for-close">If any of that sounds like you — you're in the right place.</p>
+  </div>
+</section>
+
+<!-- ===========================
+     SECTION 6 — MAIN CTA
+     =========================== -->
+<section class="main-cta">
+  <div class="main-cta-inner">
+    <div class="eyebrow">The Best First Step</div>
+    <h2>Call Me Directly.</h2>
+    <p>You don't need a referral. You don't need insurance approval. You don't need to explain yourself to a front desk or wait three weeks for an opening.</p>
+    <p>You just need to make one call. I'll answer your questions, help you figure out where to start, and tell you honestly whether I'm the right fit for what you need.</p>
+    <p>No pressure. No obligation. Just a real conversation with someone who knows how to help.</p>
+    <a href="tel:9136056275" class="phone-number">(913) 605-6275</a>
+    <div>
+      <a href="tel:9136056275" class="btn-secondary" style="border-color:rgba(255,255,255,0.6);">CALL OR TEXT NOW</a>
+    </div>
+    <div class="fine">Gretchen Hess, BSN, RN, ACE-CPT · West Valley, Arizona</div>
+  </div>
+</section>
+
+<!-- ===========================
+     FOUR KINDS OF PEOPLE
+     =========================== -->
+<section class="who-i-help">
   <div class="who-inner">
     <div class="who-header">
-      <div class="eyebrow">Who I Help</div>
+      <div class="eyebrow">Find Your Path</div>
       <h2>Four kinds of people call me.</h2>
       <p>You'll probably recognize yourself in one of these.</p>
     </div>
@@ -360,31 +463,28 @@
       <div class="path-card reactive">
         <div class="path-label">Managing a condition</div>
         <h3>More questions than answers after every appointment.</h3>
-        <p>The 10-minute visit isn't built for your real life. You need someone clinical in your corner — with time to listen, explain, and help you make a plan you actually understand.</p>
-        <a href="#service-clarity" class="path-link">See How I Help →</a>
+        <p>You need someone clinical with time to actually listen — and a plan you can understand.</p>
       </div>
       <div class="path-card parents">
         <div class="path-label">Caring for a parent</div>
-        <h3>Mom or Dad is slowing down — and you want a clear picture.</h3>
-        <p>Not a crisis yet, but you can see what's coming. You need a nurse who can sit with your parent in their home and tell you what's really going on — in language that helps you plan, not panic.</p>
-        <a href="#service-clarity" class="path-link">Start with a Health Clarity Visit →</a>
+        <h3>Something is changing and you want a clear picture.</h3>
+        <p>Before it becomes a crisis, you want a nurse who can sit with your parent and tell you what's really going on.</p>
       </div>
       <div class="path-card training">
-        <div class="path-label">Active adult · Personal training</div>
-        <h3>You already train. You want to move with more intention and precision.</h3>
-        <p>Corrective, athletic coaching from someone who trains at your level and brings a clinical eye to every movement pattern. Built for active adults who want to train smarter.</p>
-        <a href="personal-training.html" class="path-link">See Personal Training →</a>
+        <div class="path-label">Active adult</div>
+        <h3>You already move. You want to train smarter.</h3>
+        <p>Coaching from someone who trains at your level and brings a clinical eye to every session.</p>
       </div>
       <div class="path-card beginner">
-        <div class="path-label">Beginner-Friendly Training</div>
-        <h3>You know you need to get moving — just not sure where to start.</h3>
-        <p>No gym anxiety. No jargon. I come to your home, meet you exactly where you are, and build something simple and sustainable — backed by 8+ years of clinical nursing.</p>
-        <a href="#service-training" class="path-link">Beginner-Friendly Training →</a>
+        <div class="path-label">Ready to start</div>
+        <h3>You know you need to move — just not sure where to begin.</h3>
+        <p>No gym. No judgment. I come to you and we build something real, simple, and sustainable.</p>
       </div>
     </div>
   </div>
 </section>
 
+<!-- NURSE NOW BAND -->
 <section class="nurse-now-band" id="nurse-now">
   <div class="nurse-now-inner">
     <div>
@@ -398,67 +498,7 @@
   </div>
 </section>
 
-<section class="services-overview" id="services">
-  <div class="services-overview-inner">
-    <div class="services-overview-header">
-      <div class="eyebrow">What I Offer</div>
-      <h2>Five ways I can help.</h2>
-      <p>Transparent pricing. Private pay only — which means I work for you, not an insurance company.</p>
-    </div>
-    <a href="#service-clarity" class="service-row">
-      <div>
-        <h3>Health Clarity Visit</h3>
-        <p>A comprehensive in-home health assessment with a written action plan.</p>
-      </div>
-      <div class="service-meta">
-        <div class="service-price">$250</div>
-        <div class="service-link">Learn More →</div>
-      </div>
-    </a>
-    <a href="#service-partnership" class="service-row">
-      <div>
-        <h3>HealthSpan Partnership</h3>
-        <p>Ongoing RN support — visits, vital tracking, medication review, health coaching.</p>
-      </div>
-      <div class="service-meta">
-        <div class="service-price">From $375/mo</div>
-        <div class="service-link">Learn More →</div>
-      </div>
-    </a>
-    <a href="#service-advocacy" class="service-row">
-      <div>
-        <h3>Medical Advocacy</h3>
-        <p>An ICU nurse with you at your appointment. Nothing missed. Nothing lost.</p>
-      </div>
-      <div class="service-meta">
-        <div class="service-price">$150</div>
-        <div class="service-link">Learn More →</div>
-      </div>
-    </a>
-    <a href="personal-training.html" class="service-row training-row">
-      <div>
-        <div class="service-tag">Active Adults</div>
-        <h3>Personal Training</h3>
-        <p>Corrective, athletic, intentional coaching from a triathlete RN — for adults who already train and want to train smarter.</p>
-      </div>
-      <div class="service-meta">
-        <div class="service-price">From $85/session</div>
-        <div class="service-link">Full Details →</div>
-      </div>
-    </a>
-    <a href="#service-training" class="service-row">
-      <div>
-        <h3>Beginner-Friendly Training</h3>
-        <p>Private, in-home strength and movement coaching for people who are just getting started.</p>
-      </div>
-      <div class="service-meta">
-        <div class="service-price">From $85/session</div>
-        <div class="service-link">Learn More →</div>
-      </div>
-    </a>
-  </div>
-</section>
-
+<!-- TRAINING SPOTLIGHT -->
 <section class="training-spotlight">
   <div class="training-spotlight-inner">
     <div class="training-spotlight-grid">
@@ -498,12 +538,13 @@
   </div>
 </section>
 
+<!-- SERVICE DETAIL CARDS -->
 <section class="service-detail" id="service-clarity">
   <div class="service-detail-inner">
     <div class="service-detail-header">
       <div class="service-number">01</div>
       <h3>Health Clarity Visit</h3>
-      <div class="service-detail-price">$250<span class="small">One-Time Investment</span></div>
+      <div class="service-detail-price">$200<span class="small">One-Time Investment</span></div>
     </div>
     <div class="service-detail-body">
       <p>A comprehensive, one-on-one in-home health assessment. You'll leave with a written action plan in plain language you can actually use. This is where your HealthSpan journey begins.</p>
@@ -521,45 +562,25 @@
   </div>
 </section>
 
-<section class="service-detail alt-bg" id="service-partnership">
+<section class="service-detail alt-bg" id="service-monitoring">
   <div class="service-detail-inner">
     <div class="service-detail-header">
       <div class="service-number gold">02</div>
-      <h3>HealthSpan Partnership</h3>
-      <div class="service-detail-price">From $375<span class="small">Per Month</span></div>
+      <h3>Health Monitoring Plan</h3>
+      <div class="service-detail-price">$275<span class="small">Per Month · Two Visits</span></div>
     </div>
     <div class="service-detail-body">
       <p>Consistent, proactive in-home nursing support. Regular visits to track your numbers, review medications, coach habits, and catch changes before they become emergencies.</p>
-      <div class="tiers-block">
-        <div class="tiers-label">Choose Your Level</div>
-        <div class="tiers-grid">
-          <div class="tier-card">
-            <h4>HealthSpan Essentials</h4>
-            <div class="tier-price">$375<span class="per">/ month</span></div>
-            <ul class="check-list">
-              <li>Monthly in-home RN visit</li>
-              <li>Vital signs tracking &amp; trending</li>
-              <li>Medication review</li>
-              <li>Nutrition &amp; movement coaching</li>
-              <li>Direct RN access by phone &amp; text</li>
-              <li>Quarterly written progress summary</li>
-            </ul>
-          </div>
-          <div class="tier-card featured">
-            <div class="tier-badge">Most Comprehensive</div>
-            <h4>HealthSpan Complete</h4>
-            <div class="tier-price">$650<span class="per">/ month</span></div>
-            <ul class="check-list">
-              <li>Everything in Essentials, plus:</li>
-              <li>Medical Advocacy (1 appt/mo)</li>
-              <li>Priority scheduling</li>
-              <li>Post-appointment debrief &amp; summary</li>
-              <li>Bi-weekly check-ins</li>
-              <li>Family communication coordination</li>
-            </ul>
-          </div>
-        </div>
-      </div>
+      <ul class="check-list">
+        <li>Two in-home RN visits per month</li>
+        <li>Vital signs tracking &amp; trending</li>
+        <li>Medication review</li>
+        <li>Nutrition &amp; movement coaching</li>
+        <li>Direct RN access by phone &amp; text</li>
+        <li>Written progress summaries</li>
+        <li>Chronic condition monitoring</li>
+        <li>Early intervention &amp; care coordination</li>
+      </ul>
     </div>
   </div>
 </section>
@@ -569,7 +590,7 @@
     <div class="service-detail-header">
       <div class="service-number">03</div>
       <h3>Medical Advocacy</h3>
-      <div class="service-detail-price">$150<span class="small">First 2 Hours · $100/hr After</span></div>
+      <div class="service-detail-price">$100<span class="small">Per Hour · Two-Hour Minimum</span></div>
     </div>
     <div class="service-detail-body">
       <p>A seasoned ICU nurse in the room with you when it matters most. I sit with you, listen carefully, make sure your voice is heard, and help you leave with clarity instead of confusion.</p>
@@ -581,7 +602,7 @@
         <li>Post-visit plain-language debrief</li>
         <li>Written visit summary you keep</li>
         <li>Help evaluating options &amp; next steps</li>
-        <li>Available a-la-carte or within Complete plan</li>
+        <li>Available a-la-carte or add-on</li>
       </ul>
     </div>
   </div>
@@ -591,17 +612,17 @@
   <div class="service-detail-inner">
     <div class="service-detail-header">
       <div class="service-number gold">04</div>
-      <h3>Beginner-Friendly Training with a Nurse</h3>
-      <div class="service-detail-price">$95<span class="small">Per Session</span></div>
+      <h3>In-Home Personal Training</h3>
+      <div class="service-detail-price">$85<span class="small">Per Session</span></div>
     </div>
     <div class="service-detail-body">
       <em class="quote">"You don't have to be in shape to start. You just have to start. I'll meet you exactly where you are."</em>
-      <p>If you've been quietly avoiding gyms for years, this is for you. I come to your home with everything we need. We go slow, build confidence, and build something that fits your real life. My RN background means I understand your medications, your conditions, and your real limits.</p>
+      <p>I come to your home with everything we need. Training built around your health history, your medications, your body, and your goals — from a nurse who competes in triathlons and understands what real fitness looks like at every stage of life.</p>
       <ul class="check-list">
         <li>In-home, private, zero-judgment sessions</li>
         <li>Built around your medications &amp; conditions</li>
-        <li>Simple, doable movements that build confidence</li>
         <li>Strength, balance, and mobility focus</li>
+        <li>Corrective exercise &amp; movement screening</li>
         <li>Cardiovascular monitoring during sessions</li>
         <li>Injury prevention &amp; biomechanics coaching</li>
         <li>Home exercise plan you can actually follow</li>
@@ -632,84 +653,7 @@
   </div>
 </section>
 
-<section class="proof-section" id="about">
-  <div class="proof-inner">
-    <div class="proof-portrait"></div>
-    <div class="proof-content">
-      <div class="eyebrow">Why It Works</div>
-      <h2>I'm not just a nurse.<br>I'm proof it's possible.</h2>
-      <p><span class="highlight">Eight years as an ICU nurse</span> — including on the frontlines through COVID-19. <span class="highlight">At 54, I'm on zero medications.</span> I swim, bike, run, lift weights, train for triathlons, hike, and golf. Every week.</p>
-      <p>I've stood at the bedside of people far younger than me who had lost control of their health. I know what makes the difference. I built this practice to help you get there — whether you're starting from scratch, managing a condition, keeping your parent safe, or ready to train at a higher level.</p>
-    </div>
-  </div>
-</section>
-
-<section class="values-section">
-  <div class="values-inner">
-    <div class="values-header">
-      <div class="eyebrow">What I Believe</div>
-      <h2>The principles behind this practice.</h2>
-    </div>
-    <div class="values-grid">
-      <div class="value-card">
-        <div class="value-icon">🏃</div>
-        <h3>Decline Is Not Inevitable</h3>
-        <p>The choices you make today write the story of your health at 70, 80, and beyond. I've seen both outcomes. The difference is largely within your control.</p>
-      </div>
-      <div class="value-card">
-        <div class="value-icon">🩺</div>
-        <h3>You Deserve More Than 10 Minutes</h3>
-        <p>Real healthcare happens in conversation. My model is built around time, attention, and genuine clinical expertise — in your home, on your terms.</p>
-      </div>
-      <div class="value-card">
-        <div class="value-icon">🛡️</div>
-        <h3>Prevention Is Power</h3>
-        <p>I'm not here to manage your decline. I'm here to help you protect your HealthSpan — the years of your life lived in full strength and independence.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="quiz-section">
-  <div class="quiz-inner">
-    <div class="quiz-header">
-      <div class="eyebrow">Not Sure Where to Start?</div>
-      <h2>Find Your Path</h2>
-      <p>Pick whichever sounds most like you. No pressure, no jargon.</p>
-    </div>
-    <div class="quiz-step-label">
-      <div class="small">Step 1 of 1</div>
-      <h3>What brings you here today?</h3>
-    </div>
-    <div class="quiz-options">
-      <a href="#service-partnership" class="quiz-option">
-        <strong>🩺 I'm managing a health condition</strong>
-        <span>Chronic illness, medications, recent diagnosis, or ongoing health concerns</span>
-      </a>
-      <a href="#service-advocacy" class="quiz-option">
-        <strong>🚨 I need a nurse with me — now</strong>
-        <span>Facing something scary or a medical situation I don't want to navigate alone</span>
-      </a>
-      <a href="#service-advocacy" class="quiz-option">
-        <strong>📋 I have an appointment coming up</strong>
-        <span>A specialist visit, new diagnosis, or conversation I want help preparing for</span>
-      </a>
-      <a href="personal-training.html" class="quiz-option training-option">
-        <strong>🏋️ I'm active and want to train smarter</strong>
-        <span>Corrective coaching, better mechanics, athletic training from someone who trains at my level</span>
-      </a>
-      <a href="#service-training" class="quiz-option">
-        <strong>💪 I want to get stronger — and I'm just getting started</strong>
-        <span>Beginner-friendly, in-home, judgment-free movement and strength coaching</span>
-      </a>
-      <a href="#service-clarity" class="quiz-option">
-        <strong>👵 I'm caring for an aging parent</strong>
-        <span>Looking for clarity on Mom or Dad's health before things get harder</span>
-      </a>
-    </div>
-  </div>
-</section>
-
+<!-- WHAT HAPPENS NEXT -->
 <section class="next-section">
   <div class="next-inner">
     <div class="next-header">
@@ -723,14 +667,7 @@
   </div>
 </section>
 
-<section class="phone-band">
-  <div class="eyebrow">The Best First Step</div>
-  <h2>Call Me Directly</h2>
-  <p>I pick up. We'll talk through what you're dealing with, answer your questions, and figure out together if and how I can help. No pressure, no commitment.</p>
-  <a href="tel:9136056275" class="phone-number">(913) 605-6275</a>
-  <p style="font-size: 0.92rem;">Gretchen Hess, BSN, RN, ACE-CPT · West Valley, Arizona</p>
-</section>
-
+<!-- CONNECT -->
 <section class="connect-section" id="connect">
   <div class="connect-inner">
     <div class="connect-header">
@@ -750,7 +687,7 @@
         <div class="icon">🏠</div>
         <h3>Book a Health Clarity Visit</h3>
         <p>Ready to start? I'll come to you, spend real time with you, and deliver a written health action plan you can actually use.</p>
-        <div class="visit-detail">$250 · In-Home · 60–90 min</div>
+        <div class="visit-detail">$200 · In-Home · 60–90 min</div>
         <div class="serving">Serving Goodyear · Litchfield Park · Avondale</div>
         <a href="mailto:HealthSpanRN@gmail.com?subject=Schedule Health Clarity Visit" class="btn-primary">SCHEDULE VIA EMAIL OR PHONE</a>
       </div>
@@ -758,6 +695,7 @@
   </div>
 </section>
 
+<!-- FINAL CTA BAND -->
 <section class="cta-band">
   <h2>Don't walk into that appointment alone.</h2>
   <p>One call is all it takes. Let's talk about what you're facing and how I can help.</p>
@@ -772,7 +710,7 @@
     <li><a href="#about">ABOUT</a></li>
     <li><a href="#services">SERVICES</a></li>
     <li><a href="personal-training.html">PERSONAL TRAINING</a></li>
-    <li><a href="#paths">FIND YOUR PATH</a></li>
+    <li><a href="#who-for">WHO I HELP</a></li>
     <li><a href="#connect">CONNECT</a></li>
     <li><a href="#nurse-now">NURSE NOW</a></li>
   </ul>
