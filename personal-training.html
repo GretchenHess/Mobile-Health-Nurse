@@ -44,9 +44,8 @@
   .btn-nurse-now { padding: 0.75rem 1.5rem; text-decoration: none; font-size: 0.78rem; letter-spacing: 0.15em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; border-radius: 2px; background: var(--red); color: white; }
   .btn-nurse-now:hover { background: var(--red-deep); }
 
-  /* HERO — SPLIT with RED accent band */
+  /* HERO */
   .hero { background: var(--navy); color: white; padding: 0; overflow: hidden; }
-
   .hero-inner { padding: 5rem 3rem 5rem; max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 1.1fr 1fr; gap: 4rem; align-items: center; }
   .hero-eyebrow { color: var(--gold); font-size: 0.78rem; letter-spacing: 0.22em; font-weight: 600; text-transform: uppercase; margin-bottom: 1.5rem; }
   .hero h1 { color: white; font-size: clamp(2.75rem, 5vw, 4.5rem); line-height: 1.05; margin-bottom: 1.25rem; }
@@ -72,7 +71,7 @@
   .stat-num { font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; font-weight: 700; color: var(--gold); line-height: 1; min-width: 72px; text-align: center; }
   .stat-label { color: rgba(255,255,255,0.75); font-size: 0.9rem; line-height: 1.45; }
 
-  /* COLOR BAND — toned down */
+  /* COLOR BAND */
   .color-band { display: grid; grid-template-columns: repeat(4, 1fr); background: var(--cream); border-bottom: 1px solid var(--border-soft); }
   .band-item { padding: 2.25rem 2rem; text-align: center; border-right: 1px solid var(--border-soft); }
   .band-item:last-child { border-right: none; }
@@ -98,7 +97,7 @@
   .who-card h3 { font-size: 1.5rem; margin-bottom: 0.75rem; }
   .who-card p { color: var(--text-medium); font-size: 0.98rem; line-height: 1.65; }
 
-  /* DIFFERENCE — DARK SECTION */
+  /* DIFFERENCE */
   .difference { padding: 5rem 3rem; background: var(--cream); color: var(--text-dark); }
   .difference-inner { max-width: 1100px; margin: 0 auto; }
   .difference .section-eyebrow { color: var(--teal); }
@@ -135,26 +134,30 @@
   .video-placeholder { max-width: 720px; margin: 0 auto; background: rgba(255,255,255,0.05); border: 2px dashed rgba(255,255,255,0.2); border-radius: 4px; padding: 4.5rem 2rem; color: rgba(255,255,255,0.4); }
   .video-placeholder .play { font-size: 3.5rem; display: block; margin-bottom: 0.75rem; opacity: 0.4; }
 
-  /* PRICING */
+  /* PRICING — 4 PACKAGES */
   .pricing { padding: 5rem 3rem; background: var(--navy); color: white; }
-  .pricing-inner { max-width: 1000px; margin: 0 auto; }
+  .pricing-inner { max-width: 1100px; margin: 0 auto; }
   .pricing .section-eyebrow { color: var(--gold); }
   .pricing h2 { color: white; font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 0.75rem; }
   .pricing .section-intro { color: rgba(255,255,255,0.75); font-size: 1rem; margin-bottom: 3rem; }
-  .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; margin-bottom: 1.5rem; }
-  .pkg { border-radius: 4px; padding: 2.25rem 1.75rem; text-align: center; position: relative; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.15); }
+  .pricing-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; margin-bottom: 1.5rem; }
+  .pkg { border-radius: 4px; padding: 2.25rem 1.5rem; text-align: center; position: relative; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.15); }
   .pkg.featured { border: 2px solid var(--gold); background: rgba(201,169,97,0.1); }
   .pkg-badge { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--gold); color: var(--navy); font-size: 0.65rem; letter-spacing: 0.18em; font-weight: 700; text-transform: uppercase; padding: 0.3rem 0.9rem; border-radius: 2px; white-space: nowrap; }
-  .pkg h4 { font-family: 'Inter', sans-serif; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.6); margin-bottom: 1rem; }
+  .pkg h4 { font-family: 'Inter', sans-serif; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.6); margin-bottom: 0.75rem; }
   .pkg.featured h4 { color: var(--gold); }
+  .pkg-sessions-label { color: rgba(255,255,255,0.5); font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 600; margin-bottom: 0.5rem; }
+  .pkg-name { font-family: 'Cormorant Garamond', serif; font-size: 1.75rem; font-weight: 700; color: white; margin-bottom: 1rem; line-height: 1.1; }
+  .pkg.featured .pkg-name { color: var(--gold); }
   .pkg-price { font-family: 'Cormorant Garamond', serif; font-size: 2.75rem; font-weight: 700; color: white; line-height: 1; margin-bottom: 0.25rem; }
-  .pkg-sessions { color: rgba(255,255,255,0.65); font-size: 0.82rem; margin-bottom: 0.75rem; }
-  .pkg-per { font-size: 0.88rem; color: rgba(255,255,255,0.85); font-weight: 500; }
-  .single-session-bar { background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.15); border-radius: 4px; padding: 1.5rem 2rem; display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap; }
-  .single-session-bar p { color: rgba(255,255,255,0.82); font-size: 0.98rem; }
-  .single-session-bar strong { color: white; }
+  .pkg-per { color: rgba(255,255,255,0.65); font-size: 0.82rem; margin-bottom: 0.5rem; }
+  .pkg-tagline { font-size: 0.82rem; color: rgba(255,255,255,0.5); font-style: italic; margin-top: 0.75rem; }
+  .pkg.featured .pkg-tagline { color: rgba(201,169,97,0.7); }
+  .single-session-note { background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.15); border-radius: 4px; padding: 1.5rem 2rem; display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap; margin-top: 1.5rem; }
+  .single-session-note p { color: rgba(255,255,255,0.82); font-size: 0.98rem; }
+  .single-session-note strong { color: white; }
 
-  /* ABOUT — RED SECTION */
+  /* ABOUT */
   .about { padding: 5rem 3rem; background: var(--navy); color: white; }
   .about-inner { max-width: 1100px; margin: 0 auto; }
   .about .section-eyebrow { color: var(--gold); }
@@ -187,6 +190,9 @@
   .footer-contact a { color: var(--gold); text-decoration: none; }
 
   /* RESPONSIVE */
+  @media (max-width: 1100px) {
+    .pricing-grid { grid-template-columns: repeat(2, 1fr); }
+  }
   @media (max-width: 900px) {
     nav { padding: 1rem 1.5rem; flex-wrap: wrap; gap: 1rem; }
     .nav-links { order: 3; width: 100%; justify-content: center; gap: 0.75rem; flex-wrap: wrap; }
@@ -197,7 +203,7 @@
     .pricing-grid { grid-template-columns: 1fr; }
     .step { grid-template-columns: 56px 1fr; }
     .who, .difference, .expect, .video-section, .pricing, .about, .free-session { padding: 3.5rem 1.5rem; }
-    .single-session-bar { flex-direction: column; text-align: center; }
+    .single-session-note { flex-direction: column; text-align: center; }
   }
 </style>
 </head>
@@ -224,7 +230,6 @@
 
 <!-- HERO -->
 <section class="hero">
-
   <div class="hero-inner">
     <div>
       <div class="hero-eyebrow">Personal Training · Mobile Health Nurse</div>
@@ -264,7 +269,7 @@
   </div>
 </section>
 
-<!-- COLOR BAND — 4 DIFFERENTIATORS -->
+<!-- COLOR BAND -->
 <div class="color-band">
   <div class="band-item red">
     <h3>Clinical Eye</h3>
@@ -397,45 +402,56 @@
   <div class="section-eyebrow">See It for Yourself</div>
   <h2>This is how I train.</h2>
   <p>No stock footage. No filters. Real training from someone who does this every week — and brings that same energy to every client session.</p>
-  <!-- Replace placeholder with your embed when ready:
-  <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:4px;max-width:720px;margin:0 auto;">
-    <iframe src="YOUR_VIDEO_URL" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" allowfullscreen></iframe>
-  </div> -->
   <div class="video-placeholder">
     <span class="play">▶</span>
     Training video coming soon — check back shortly.
   </div>
 </section>
 
-<!-- PRICING -->
+<!-- PRICING — 4 PACKAGES -->
 <section class="pricing">
   <div class="pricing-inner">
     <div class="section-eyebrow">Investment</div>
-    <h2>Training Packages</h2>
-    <p class="section-intro">Private, one-on-one sessions in your home, your HOA or community gym, or wherever you already train. Packages save you per session — or start single to try it out.</p>
+    <h2>Simple, Transparent Pricing.</h2>
+    <p class="section-intro">Private, one-on-one sessions in your home, your HOA or community gym, or wherever you already train. No contracts. Cash, Zelle, and Venmo accepted.</p>
     <div class="pricing-grid">
+
       <div class="pkg">
-        <h4>Jumpstart</h4>
-        <div class="pkg-price">$340</div>
-        <div class="pkg-sessions">4 sessions</div>
-        <div class="pkg-per">$85 per session</div>
+        <div class="pkg-sessions-label">Single Session</div>
+        <div class="pkg-name">Drop-In</div>
+        <div class="pkg-price">$95</div>
+        <div class="pkg-per">per session</div>
+        <div class="pkg-tagline">Try it first</div>
       </div>
+
       <div class="pkg featured">
         <div class="pkg-badge">Most Popular</div>
-        <h4>Momentum</h4>
-        <div class="pkg-price">$640</div>
-        <div class="pkg-sessions">8 sessions</div>
-        <div class="pkg-per">$80 per session</div>
+        <div class="pkg-sessions-label">4 Sessions</div>
+        <div class="pkg-name">Jumpstart</div>
+        <div class="pkg-price">$300</div>
+        <div class="pkg-per">$75 / session · One month</div>
+        <div class="pkg-tagline">Build the foundation</div>
       </div>
+
       <div class="pkg">
-        <h4>HealthSpan</h4>
-        <div class="pkg-price">$900</div>
-        <div class="pkg-sessions">12 sessions</div>
-        <div class="pkg-per">$75 per session</div>
+        <div class="pkg-sessions-label">8 Sessions</div>
+        <div class="pkg-name">Momentum</div>
+        <div class="pkg-price">$560</div>
+        <div class="pkg-per">$70 / session · Two months</div>
+        <div class="pkg-tagline">Build real habits</div>
       </div>
+
+      <div class="pkg">
+        <div class="pkg-sessions-label">12 Sessions</div>
+        <div class="pkg-name">Committed</div>
+        <div class="pkg-price">$780</div>
+        <div class="pkg-per">$65 / session · Three months</div>
+        <div class="pkg-tagline">Transform your training</div>
+      </div>
+
     </div>
-    <div class="single-session-bar">
-      <p><strong>Not ready to commit to a package?</strong> Single sessions available at $95. Or start with a free 30-minute intro — no purchase required.</p>
+    <div class="single-session-note">
+      <p><strong>Not sure where to start?</strong> Call or text and we'll figure out the right fit together. Or start with a free 30-minute intro — no purchase required.</p>
       <a href="#free-session" class="btn-gold">Free Intro Session</a>
     </div>
   </div>
