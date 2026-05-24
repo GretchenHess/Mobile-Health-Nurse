@@ -104,17 +104,22 @@
   .problem-bullets li { font-size: 1.08rem; color: var(--text-medium); line-height: 1.7; padding: 1rem 0 1rem 2rem; border-bottom: 1px solid var(--border-soft); position: relative; }
   .problem-bullets li:first-child { border-top: 1px solid var(--border-soft); }
   .problem-bullets li::before { content: '—'; color: var(--gold); position: absolute; left: 0; font-weight: 600; }
-  .problem-turn { color: var(--navy); font-family: 'Inter', sans-serif; font-size: clamp(1.15rem, 2vw, 1.35rem); font-weight: 600; font-style: normal; line-height: 1.5; margin-bottom: 1.75rem; letter-spacing: 0.01em; }
-  .problem-number { display: inline-block; color: var(--red); font-family: 'Inter', sans-serif; font-size: clamp(1.35rem, 2.5vw, 1.75rem); font-weight: 700; text-decoration: none; letter-spacing: 0.04em; padding: 1rem 2.25rem; border: 2.5px solid var(--red); border-radius: 2px; margin-top: 0.25rem; transition: all 0.2s; }
-  .problem-number:hover { background: var(--red); color: white; }
+  .problem-turn { color: var(--navy); font-family: 'Cormorant Garamond', serif; font-size: clamp(1.35rem, 2.5vw, 1.75rem); font-weight: 600; font-style: italic; line-height: 1.4; margin-bottom: 1.75rem; }
+  .problem-number { display: inline-block; background: var(--red); color: white; font-family: 'Inter', sans-serif; font-size: 0.85rem; font-weight: 600; text-decoration: none; letter-spacing: 0.18em; text-transform: uppercase; padding: 1rem 2rem; border-radius: 2px; margin-top: 0.25rem; transition: all 0.2s; }
+  .problem-number:hover { background: var(--red-deep); transform: translateY(-1px); }
 
   /* SECTION 3 — WHO I AM */
   .who-i-am { padding: 5rem 3rem; background: var(--navy); color: white; }
-  .who-i-am-inner { max-width: 900px; margin: 0 auto; text-align: center; }
+  .who-i-am-inner { max-width: 900px; margin: 0 auto; text-align: left; }
   .who-i-am .eyebrow { color: var(--gold); }
   .who-i-am h2 { color: white; font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 1.5rem; }
-  .who-i-am p { color: rgba(255,255,255,0.82); font-size: 1.1rem; line-height: 1.75; margin-bottom: 1.25rem; max-width: 720px; margin-left: auto; margin-right: auto; }
-  .who-i-am p:last-of-type { margin-bottom: 0; }
+  .who-i-am p { color: rgba(255,255,255,0.82); font-size: 1.05rem; line-height: 1.75; margin-bottom: 1.25rem; font-family: 'Inter', sans-serif; font-weight: 300; max-width: 720px; }
+  .who-i-am .cta-nudge { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.35rem, 2.5vw, 1.75rem); font-weight: 600; color: white; font-style: italic; margin-bottom: 2rem; line-height: 1.35; }
+  .who-i-am-cta { display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; margin-top: 0.5rem; }
+  .btn-soft-red { display: inline-block; background: var(--red); color: white; padding: 1rem 2rem; text-decoration: none; font-size: 0.85rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; border-radius: 2px; transition: all 0.2s; }
+  .btn-soft-red:hover { background: var(--red-deep); transform: translateY(-1px); }
+  .who-i-am-phone { color: white; font-family: 'Cormorant Garamond', serif; font-size: clamp(1.5rem, 3vw, 2.25rem); font-weight: 600; text-decoration: none; letter-spacing: 0.02em; transition: color 0.2s; }
+  .who-i-am-phone:hover { color: var(--gold); }
 
   /* SECTION 4 — WHAT I DO */
   .what-i-do { padding: 5rem 3rem; background: var(--off-white); }
@@ -149,6 +154,11 @@
   .main-cta p { color: rgba(255,255,255,0.88); font-size: 1.05rem; line-height: 1.7; margin-bottom: 1.25rem; }
   .main-cta p:last-of-type { margin-bottom: 2rem; }
   .phone-number { color: white; font-family: 'Cormorant Garamond', serif; font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 600; text-decoration: none; letter-spacing: 0.02em; display: block; margin: 0.5rem 0 1.5rem; }
+  .main-cta-divider { border: none; border-top: 1px solid rgba(255,255,255,0.2); margin: 2.5rem auto; max-width: 400px; }
+  .main-cta-alt-label { font-size: 1.05rem; color: rgba(255,255,255,0.9); font-weight: 600; margin-bottom: 0.35rem !important; }
+  .main-cta-alt-sub { font-size: 0.95rem; color: rgba(255,255,255,0.6); font-style: italic; margin-bottom: 1.25rem !important; }
+  .btn-gold-cta { display: inline-block; background: var(--gold); color: var(--navy); padding: 1rem 2rem; text-decoration: none; font-size: 0.85rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; border-radius: 2px; transition: all 0.2s; }
+  .btn-gold-cta:hover { background: var(--gold-deep); transform: translateY(-1px); }
   .main-cta .fine { color: rgba(255,255,255,0.6); font-size: 0.88rem; margin-top: 1rem; }
 
   /* FOUR KINDS */
@@ -357,10 +367,14 @@
 <section class="who-i-am" id="about">
   <div class="who-i-am-inner">
     <div class="eyebrow">Who I Am</div>
-    <h2>I'm Gretchen — and I know what's at stake.</h2>
-    <p>I'm a registered nurse, personal trainer, and medical advocate. I've worked ICU and surgical care, and I've spent years watching what happens when people don't have the right support at the right time.</p>
-    <p>I started Mobile Health Nurse because I kept seeing the same thing: people who could have been helped earlier, guided better, and spared a lot of unnecessary suffering — if only someone had been paying attention.</p>
-    <p>That's what I do now. I come to you, I learn your health picture, and I stay in your corner. Whether you need monitoring, movement, or someone to walk into a difficult appointment with you — I know what to do.</p>
+    <h2>I'm Gretchen. I'm here to help.</h2>
+    <p>I'm a registered nurse and certified personal trainer — and I built this practice because people deserve more than what the healthcare system has time to give them. Whether you have a question, a concern, or just don't know where to start — call me. That's what I'm here for.</p>
+    <p>I've spent years as an ICU nurse watching what happens when people don't have the right support at the right time. I started Mobile Health Nurse so that doesn't have to be you.</p>
+    <p class="cta-nudge">That changes when you have someone in your corner. One call is all it takes.</p>
+    <div class="who-i-am-cta">
+      <a href="tel:9136056275" class="btn-soft-red">CALL OR TEXT ME</a>
+      <a href="tel:9136056275" class="who-i-am-phone">(913) 605-6275</a>
+    </div>
   </div>
 </section>
 
@@ -377,7 +391,7 @@
       <li>You will benefit from someone who knows the system from the inside — and knows exactly how to help you use it, navigate it, and when necessary, push back against it.</li>
     </ul>
     <p class="problem-turn">That changes when you have someone in your corner.<br>One call is all it takes.</p>
-    <a href="tel:9136056275" class="problem-number">(913) 605-6275</a>
+    <a href="tel:9136056275" class="problem-number">CALL OR TEXT · (913) 605-6275</a>
   </div>
 </section>
 
@@ -438,13 +452,15 @@
   <div class="main-cta-inner">
     <div class="eyebrow">The Best First Step</div>
     <h2>Call Me Directly.</h2>
-    <p>You don't need a referral. You don't need insurance approval. You don't need to explain yourself to a front desk or wait three weeks for an opening.</p>
-    <p>You just need to make one call. I'll answer your questions, help you figure out where to start, and tell you honestly whether I'm the right fit for what you need.</p>
-    <p>No pressure. No obligation. Just a real conversation with someone who knows how to help.</p>
+    <p>You don't need a reason. You don't need to have it figured out. Call or text and we'll talk through whatever you're dealing with — I'll answer your questions honestly and tell you how I can help.</p>
     <a href="tel:9136056275" class="phone-number">(913) 605-6275</a>
     <div>
       <a href="tel:9136056275" class="btn-secondary" style="border-color:rgba(255,255,255,0.6);">CALL OR TEXT NOW</a>
     </div>
+    <div class="main-cta-divider"></div>
+    <p class="main-cta-alt-label">Already know you need an in-home health assessment?</p>
+    <p class="main-cta-alt-sub">This is where you start.</p>
+    <a href="mailto:HealthSpanRN@gmail.com?subject=Schedule Health Clarity Visit" class="btn-gold-cta">BOOK A HEALTH CLARITY VISIT — $200</a>
     <div class="fine">Gretchen Hess, BSN, RN, ACE-CPT · West Valley, Arizona</div>
   </div>
 </section>
