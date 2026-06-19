@@ -57,10 +57,12 @@
   .eyebrow { color: var(--teal); font-size: 0.78rem; letter-spacing: 0.22em; font-weight: 600; text-transform: uppercase; margin-bottom: 1.25rem; }
 
   /* PAGE HERO */
-  .page-hero { background: var(--navy); color: white; padding: 4rem 3rem; text-align: center; }
+  .page-hero { background: var(--navy); color: white; padding: 4rem 3rem; }
+  .page-hero-inner-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
   .page-hero h1 { color: white; font-size: clamp(2.5rem, 5vw, 4rem); margin-bottom: 1rem; }
   .page-hero h1 .gold-accent { color: var(--gold); font-style: italic; }
-  .page-hero p { color: rgba(255,255,255,0.75); font-size: 1.05rem; max-width: 560px; margin: 0 auto; line-height: 1.7; }
+  .page-hero p { color: rgba(255,255,255,0.75); font-size: 1.05rem; line-height: 1.7; }
+  .page-hero-image img { width: 100%; border-radius: 4px; display: block; object-fit: cover; max-height: 400px; }
 
   /* SERVICE NAV ANCHORS */
   .service-nav { background: var(--cream); border-bottom: 1px solid var(--border-soft); padding: 0 3rem; position: sticky; top: 72px; z-index: 90; }
@@ -153,6 +155,8 @@
   @media (max-width: 900px) {
     nav { padding: 1rem 1.5rem; flex-wrap: wrap; gap: 1rem; }
     .nav-links { order: 3; width: 100%; justify-content: center; gap: 0.75rem; flex-wrap: wrap; }
+    .page-hero-inner-grid { grid-template-columns: 1fr; }
+    .page-hero-image { display: none; }
     .service-detail { padding: 3.5rem 1.5rem; }
     .service-detail-header { grid-template-columns: 1fr; text-align: center; gap: 1rem; }
     .service-detail-price { text-align: center; }
@@ -189,9 +193,16 @@
 
 <!-- PAGE HERO -->
 <section class="page-hero">
-  <div class="eyebrow">Private Pay · In-Home · West Valley, Arizona</div>
-  <h1>Services &amp; <span class="gold-accent">Pricing</span></h1>
-  <p>Everything here is private pay — which means I work for you, not an insurance company. No referrals needed. No waiting rooms.</p>
+  <div class="page-hero-inner-grid">
+    <div>
+      <div class="eyebrow">Private Pay · In-Home · West Valley, Arizona</div>
+      <h1>Services &amp; <span class="gold-accent">Pricing</span></h1>
+      <p>Everything here is private pay — which means I work for you, not an insurance company. No referrals needed. No waiting rooms.</p>
+    </div>
+    <div class="page-hero-image">
+      <img src="images/services-hero.jpg" alt="Nurse reviewing health information with a patient at home">
+    </div>
+  </div>
 </section>
 
 <!-- SERVICE NAV -->
