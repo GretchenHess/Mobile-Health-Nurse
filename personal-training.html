@@ -56,12 +56,14 @@
 
   /* HERO */
   .hero { background: var(--navy); color: white; padding: 5rem 3rem; }
-  .hero-inner { max-width: 900px; margin: 0 auto; text-align: center; }
+  .hero-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+  .hero-text { }
   .hero-eyebrow { color: var(--gold); font-size: 0.78rem; letter-spacing: 0.22em; font-weight: 600; text-transform: uppercase; margin-bottom: 1.5rem; }
   .hero h1 { color: white; font-size: clamp(2.75rem, 5vw, 4.5rem); line-height: 1.05; margin-bottom: 1.25rem; }
   .hero h1 em { color: var(--gold); font-style: italic; }
-  .hero-sub { font-size: 1.1rem; color: rgba(255,255,255,0.82); margin-bottom: 2.25rem; max-width: 620px; margin-left: auto; margin-right: auto; line-height: 1.65; }
-  .hero-cta-row { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
+  .hero-sub { font-size: 1.05rem; color: rgba(255,255,255,0.82); margin-bottom: 2.25rem; line-height: 1.65; }
+  .hero-cta-row { display: flex; gap: 1rem; flex-wrap: wrap; }
+  .hero-image img { width: 100%; border-radius: 4px; display: block; object-fit: cover; max-height: 420px; }
 
   /* WHY LIFTING MATTERS */
   .why { padding: 5rem 3rem; background: var(--cream); }
@@ -152,6 +154,8 @@
     .nav-links { order: 3; width: 100%; justify-content: center; gap: 0.75rem; flex-wrap: wrap; }
     .nav-links a { font-size: 0.68rem; }
     .hero, .why, .background, .certs, .pricing, .cta-section { padding: 3.5rem 1.5rem; }
+    .hero-inner { grid-template-columns: 1fr; }
+    .hero-image { display: none; }
     .why-grid { grid-template-columns: repeat(2, 1fr); }
     .why-item:nth-child(3n) { border-right: 1px solid var(--border-soft); }
     .why-item:nth-child(2n) { border-right: none; }
@@ -178,27 +182,32 @@
     <div class="location">West Valley, Arizona</div>
   </div>
   <ul class="nav-links">
-    <li><a href="/">Home</a></li>
-    <li><a href="/#about">About</a></li>
-    <li><a href="/#services">Services</a></li>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="why.html">Why Mobile Health Nurse</a></li>
+    <li><a href="services.html">Services</a></li>
     <li><a href="personal-training.html" class="active">Personal Training</a></li>
-    <li><a href="/#connect">Connect</a></li>
+    <li><a href="index.html#connect">Contact</a></li>
   </ul>
   <div class="nav-buttons">
-    <a href="/#connect" class="btn-connect">CONNECT</a>
-    <a href="tel:9136056275" class="btn-nurse-now">CALL NOW</a>
+    <a href="index.html#connect" class="btn-connect">CONNECT</a>
+    <a href="advocacy.html" class="btn-nurse-now">MEDICAL ADVOCACY</a>
   </div>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
   <div class="hero-inner">
-    <div class="hero-eyebrow">West Valley, Arizona · Private · In-Home</div>
-    <h1>Personal Training from a<br><em>Registered Nurse.</em></h1>
-    <p class="hero-sub">Learn to lift weights for strength, balance, stabilization, and core — with a certified personal trainer who is also a registered nurse.</p>
-    <div class="hero-cta-row">
-      <a href="tel:9136056275" class="btn-primary">CALL OR TEXT GRETCHEN</a>
-      <a href="#pricing" class="btn-outline">SEE PRICING</a>
+    <div class="hero-text">
+      <div class="hero-eyebrow">West Valley, Arizona · Private · In-Home</div>
+      <h1>Personal Training from a<br><em>Registered Nurse.</em></h1>
+      <p class="hero-sub">Learn to lift weights for strength, balance, stabilization, and core — with a certified personal trainer who is also a registered nurse.</p>
+      <div class="hero-cta-row">
+        <a href="#book" class="btn-primary">BOOK ONLINE</a>
+        <a href="#pricing" class="btn-outline">SEE PRICING</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="images/training-hero.jpg" alt="Active older adults lifting weights with confidence">
     </div>
   </div>
 </section>
@@ -212,79 +221,18 @@
       <p>Lifting weights is one of the most evidence-backed things you can do for your long-term health — physically and mentally. Here's what the research shows.</p>
     </div>
     <div class="why-grid">
-
-      <div class="why-item">
-        <div class="tag tag-physical">Physical</div>
-        <h3>Injury Prevention</h3>
-        <p>Strong muscles stabilize and protect your joints, reducing your risk of strains, sprains, and chronic pain.</p>
-      </div>
-
-      <div class="why-item">
-        <div class="tag tag-physical">Physical</div>
-        <h3>Bone Density</h3>
-        <p>Resistance training stimulates bone growth, significantly reducing the risk of osteoporosis and fractures as you age.</p>
-      </div>
-
-      <div class="why-item">
-        <div class="tag tag-physical">Physical</div>
-        <h3>Metabolic Health</h3>
-        <p>Muscle tissue burns more calories at rest than fat, improving insulin sensitivity and supporting healthy body composition.</p>
-      </div>
-
-      <div class="why-item">
-        <div class="tag tag-physical">Physical</div>
-        <h3>Cardiovascular Health</h3>
-        <p>Regular strength training lowers blood pressure, improves cholesterol levels, and reduces the risk of heart disease.</p>
-      </div>
-
-      <div class="why-item">
-        <div class="tag tag-physical">Physical</div>
-        <h3>Balance &amp; Fall Prevention</h3>
-        <p>Strengthening the muscles around your ankles, hips, and core dramatically improves stability and reduces fall risk.</p>
-      </div>
-
-      <div class="why-item">
-        <div class="tag tag-physical">Physical</div>
-        <h3>Functional Independence</h3>
-        <p>The strength to carry groceries, climb stairs, and get up from the floor without help is built — and maintained — in the gym.</p>
-      </div>
-
-      <div class="why-item">
-        <div class="tag tag-physical">Physical</div>
-        <h3>Chronic Disease Management</h3>
-        <p>Resistance training is clinically proven to help manage type 2 diabetes, arthritis, back pain, and other common chronic conditions.</p>
-      </div>
-
-      <div class="why-item">
-        <div class="tag tag-physical">Physical</div>
-        <h3>Hormonal Balance</h3>
-        <p>Strength training supports healthy testosterone and growth hormone levels, both of which decline with age and inactivity.</p>
-      </div>
-
-      <div class="why-item">
-        <div class="tag tag-mental">Mental</div>
-        <h3>Mood &amp; Anxiety</h3>
-        <p>Exercise releases endorphins and reduces cortisol, producing measurable improvements in mood, stress, and anxiety levels.</p>
-      </div>
-
-      <div class="why-item">
-        <div class="tag tag-mental">Mental</div>
-        <h3>Cognitive Function</h3>
-        <p>Regular physical activity increases blood flow to the brain and has been linked to reduced risk of dementia and cognitive decline.</p>
-      </div>
-
-      <div class="why-item">
-        <div class="tag tag-mental">Mental</div>
-        <h3>Sleep Quality</h3>
-        <p>People who exercise regularly fall asleep faster, sleep more deeply, and wake feeling more rested than those who don't.</p>
-      </div>
-
-      <div class="why-item">
-        <div class="tag tag-mental">Mental</div>
-        <h3>Confidence &amp; Self-Efficacy</h3>
-        <p>Getting stronger builds genuine confidence — not just in the gym, but in how you carry yourself and approach challenges in daily life.</p>
-      </div>
-
+      <div class="why-item"><div class="tag tag-physical">Physical</div><h3>Injury Prevention</h3><p>Strong muscles stabilize and protect your joints, reducing your risk of strains, sprains, and chronic pain.</p></div>
+      <div class="why-item"><div class="tag tag-physical">Physical</div><h3>Bone Density</h3><p>Resistance training stimulates bone growth, significantly reducing the risk of osteoporosis and fractures as you age.</p></div>
+      <div class="why-item"><div class="tag tag-physical">Physical</div><h3>Metabolic Health</h3><p>Muscle tissue burns more calories at rest than fat, improving insulin sensitivity and supporting healthy body composition.</p></div>
+      <div class="why-item"><div class="tag tag-physical">Physical</div><h3>Cardiovascular Health</h3><p>Regular strength training lowers blood pressure, improves cholesterol levels, and reduces the risk of heart disease.</p></div>
+      <div class="why-item"><div class="tag tag-physical">Physical</div><h3>Balance &amp; Fall Prevention</h3><p>Strengthening the muscles around your ankles, hips, and core dramatically improves stability and reduces fall risk.</p></div>
+      <div class="why-item"><div class="tag tag-physical">Physical</div><h3>Functional Independence</h3><p>The strength to carry groceries, climb stairs, and get up from the floor without help is built — and maintained — in the gym.</p></div>
+      <div class="why-item"><div class="tag tag-physical">Physical</div><h3>Chronic Disease Management</h3><p>Resistance training is clinically proven to help manage type 2 diabetes, arthritis, back pain, and other common chronic conditions.</p></div>
+      <div class="why-item"><div class="tag tag-physical">Physical</div><h3>Hormonal Balance</h3><p>Strength training supports healthy testosterone and growth hormone levels, both of which decline with age and inactivity.</p></div>
+      <div class="why-item"><div class="tag tag-mental">Mental</div><h3>Mood &amp; Anxiety</h3><p>Exercise releases endorphins and reduces cortisol, producing measurable improvements in mood, stress, and anxiety levels.</p></div>
+      <div class="why-item"><div class="tag tag-mental">Mental</div><h3>Cognitive Function</h3><p>Regular physical activity increases blood flow to the brain and has been linked to reduced risk of dementia and cognitive decline.</p></div>
+      <div class="why-item"><div class="tag tag-mental">Mental</div><h3>Sleep Quality</h3><p>People who exercise regularly fall asleep faster, sleep more deeply, and wake feeling more rested than those who don't.</p></div>
+      <div class="why-item"><div class="tag tag-mental">Mental</div><h3>Confidence &amp; Self-Efficacy</h3><p>Getting stronger builds genuine confidence — not just in the gym, but in how you carry yourself and approach challenges in daily life.</p></div>
     </div>
   </div>
 </section>
@@ -302,31 +250,19 @@
     <div class="stats-box">
       <div class="stat-item">
         <div class="stat-num">54</div>
-        <div class="stat-text">
-          <strong>Years old, zero medications</strong>
-          <span>Competing in triathlons. Lifting every week. This is what intentional training produces.</span>
-        </div>
+        <div class="stat-text"><strong>Years old, zero medications</strong><span>Competing in triathlons. Lifting every week. This is what intentional training produces.</span></div>
       </div>
       <div class="stat-item">
         <div class="stat-num">8+</div>
-        <div class="stat-text">
-          <strong>Years as an ICU nurse</strong>
-          <span>Including COVID-19 frontlines. I understand what happens to the body when people stop moving.</span>
-        </div>
+        <div class="stat-text"><strong>Years as an ICU nurse</strong><span>Including COVID-19 frontlines. I understand what happens to the body when people stop moving.</span></div>
       </div>
       <div class="stat-item">
         <div class="stat-num">ACE</div>
-        <div class="stat-text">
-          <strong>Certified Personal Trainer</strong>
-          <span>With additional training in corrective exercise and myofascial release.</span>
-        </div>
+        <div class="stat-text"><strong>Certified Personal Trainer</strong><span>With additional training in corrective exercise and myofascial release.</span></div>
       </div>
       <div class="stat-item">
         <div class="stat-num">1:1</div>
-        <div class="stat-text">
-          <strong>Always just the two of us</strong>
-          <span>No shared sessions. No rotating trainers. I know your history, your goals, your progress.</span>
-        </div>
+        <div class="stat-text"><strong>Always just the two of us</strong><span>No shared sessions. No rotating trainers. I know your history, your goals, your progress.</span></div>
       </div>
     </div>
   </div>
@@ -340,22 +276,10 @@
       <h2>What I bring to every session.</h2>
     </div>
     <div class="certs-grid">
-      <div class="cert-card">
-        <h3>BSN, RN</h3>
-        <p>Registered Nurse with a Bachelor of Science in Nursing. ICU, Pre-Op, and PACU clinical experience over 8+ years.</p>
-      </div>
-      <div class="cert-card gold-top">
-        <h3>ACE-CPT</h3>
-        <p>ACE Certified Personal Trainer — one of the most respected certifications in the industry, grounded in exercise science.</p>
-      </div>
-      <div class="cert-card red-top">
-        <h3>Corrective Exercise</h3>
-        <p>Trained to identify and address movement compensations, muscle imbalances, and biomechanical patterns that lead to injury.</p>
-      </div>
-      <div class="cert-card navy-top">
-        <h3>Myofascial Release</h3>
-        <p>Trained in soft tissue techniques that address fascial restriction, improve mobility, and support recovery between sessions.</p>
-      </div>
+      <div class="cert-card"><h3>BSN, RN</h3><p>Registered Nurse with a Bachelor of Science in Nursing. ICU, Pre-Op, and PACU clinical experience over 8+ years.</p></div>
+      <div class="cert-card gold-top"><h3>ACE-CPT</h3><p>ACE Certified Personal Trainer — one of the most respected certifications in the industry, grounded in exercise science.</p></div>
+      <div class="cert-card red-top"><h3>Corrective Exercise</h3><p>Trained to identify and address movement compensations, muscle imbalances, and biomechanical patterns that lead to injury.</p></div>
+      <div class="cert-card navy-top"><h3>Myofascial Release</h3><p>Trained in soft tissue techniques that address fascial restriction, improve mobility, and support recovery between sessions.</p></div>
     </div>
   </div>
 </section>
@@ -367,40 +291,10 @@
     <h2>Simple, Transparent Pricing.</h2>
     <p class="pricing-intro">Private, one-on-one sessions in your home or HOA gym. No contracts. Cash, Zelle, and Venmo accepted.</p>
     <div class="pricing-grid">
-
-      <div class="pkg">
-        <div class="pkg-sessions-label">Single Session</div>
-        <div class="pkg-name">Drop-In</div>
-        <div class="pkg-price">$95</div>
-        <div class="pkg-per">per session</div>
-        <div class="pkg-tagline">Try it first</div>
-      </div>
-
-      <div class="pkg featured">
-        <div class="pkg-badge">Most Popular</div>
-        <div class="pkg-sessions-label">4 Sessions</div>
-        <div class="pkg-name">Jumpstart</div>
-        <div class="pkg-price">$300</div>
-        <div class="pkg-per">$75 / session · One month</div>
-        <div class="pkg-tagline">Build the foundation</div>
-      </div>
-
-      <div class="pkg">
-        <div class="pkg-sessions-label">8 Sessions</div>
-        <div class="pkg-name">Momentum</div>
-        <div class="pkg-price">$560</div>
-        <div class="pkg-per">$70 / session · Two months</div>
-        <div class="pkg-tagline">Build real habits</div>
-      </div>
-
-      <div class="pkg">
-        <div class="pkg-sessions-label">12 Sessions</div>
-        <div class="pkg-name">Committed</div>
-        <div class="pkg-price">$780</div>
-        <div class="pkg-per">$65 / session · Three months</div>
-        <div class="pkg-tagline">Transform your training</div>
-      </div>
-
+      <div class="pkg"><div class="pkg-sessions-label">Single Session</div><div class="pkg-name">Drop-In</div><div class="pkg-price">$95</div><div class="pkg-per">per session</div><div class="pkg-tagline">Try it first</div></div>
+      <div class="pkg featured"><div class="pkg-badge">Most Popular</div><div class="pkg-sessions-label">4 Sessions</div><div class="pkg-name">Jumpstart</div><div class="pkg-price">$300</div><div class="pkg-per">$75 / session · One month</div><div class="pkg-tagline">Build the foundation</div></div>
+      <div class="pkg"><div class="pkg-sessions-label">8 Sessions</div><div class="pkg-name">Momentum</div><div class="pkg-price">$560</div><div class="pkg-per">$70 / session · Two months</div><div class="pkg-tagline">Build real habits</div></div>
+      <div class="pkg"><div class="pkg-sessions-label">12 Sessions</div><div class="pkg-name">Committed</div><div class="pkg-price">$780</div><div class="pkg-per">$65 / session · Three months</div><div class="pkg-tagline">Transform your training</div></div>
     </div>
     <div class="single-session-note">
       <p><strong>Not sure where to start?</strong> Call or text and we'll figure out the right fit. A free 30-minute intro session is always available — no purchase required.</p>
@@ -422,10 +316,11 @@
   <div class="footer-brand">Mobile Health Nurse</div>
   <div class="footer-tag">In-Home Nursing Care and Personal Training</div>
   <ul class="footer-nav">
-    <li><a href="/">Home</a></li>
-    <li><a href="/#services">All Services</a></li>
-    <li><a href="/#about">About</a></li>
-    <li><a href="/#connect">Connect</a></li>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="services.html">All Services</a></li>
+    <li><a href="why.html">Why Mobile Health Nurse</a></li>
+    <li><a href="advocacy.html">Medical Advocacy</a></li>
+    <li><a href="index.html#connect">Connect</a></li>
   </ul>
   <div class="footer-contact">
     <a href="mailto:HealthSpanRN@gmail.com">HealthSpanRN@gmail.com</a> · West Valley, AZ · Goodyear · Litchfield Park · Avondale<br>
