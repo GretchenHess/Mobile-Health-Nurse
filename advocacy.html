@@ -43,6 +43,8 @@
   .btn-connect:hover { background: var(--gold-deep); }
   .btn-advocacy { background: var(--red); color: white; }
   .btn-advocacy:hover { background: var(--red-deep); }
+  .btn-direct { padding: 0.75rem 1.5rem; text-decoration: none; font-size: 0.78rem; letter-spacing: 0.15em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; border-radius: 2px; background: #3a3d4a; color: var(--gold); border: 1px solid var(--gold); }
+  .btn-direct:hover { background: #2c2e38; }
 
   /* HAMBURGER */
   .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; background: none; border: none; z-index: 300; }
@@ -61,6 +63,7 @@
   .mobile-menu-cta a { font-family: 'Inter', sans-serif !important; font-size: 0.85rem !important; letter-spacing: 0.18em !important; text-transform: uppercase !important; font-weight: 600 !important; padding: 1rem !important; border-radius: 2px !important; border-bottom: none !important; }
   .mobile-menu-cta .m-gold { background: var(--gold); color: var(--navy) !important; }
   .mobile-menu-cta .m-red { background: var(--red); color: white !important; }
+  .mobile-menu-cta .m-teal { background: #3a3d4a; color: var(--gold) !important; border: 1px solid var(--gold); }
 
   /* BUTTONS */
   .btn-primary { padding: 1rem 2rem; text-decoration: none; font-size: 0.85rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; display: inline-block; border-radius: 2px; background: var(--red); color: white; border: none; cursor: pointer; }
@@ -179,7 +182,7 @@
 
 <!-- MOBILE DRAWER -->
 <div class="mobile-menu" id="mobileMenu">
-  <a href="index.html#about" onclick="closeMenu()">About</a>
+  <a href="index.html" onclick="closeMenu()">Home</a>
   <a href="why.html" onclick="closeMenu()">Why Mobile Health Nurse</a>
   <a href="services.html" onclick="closeMenu()">Services</a>
   <a href="personal-training.html" onclick="closeMenu()">Personal Training</a>
@@ -187,6 +190,7 @@
   <div class="mobile-menu-cta">
     <a href="#contact" class="m-gold" onclick="closeMenu()">Connect</a>
     <a href="tel:9136056275" class="m-red" onclick="closeMenu()">Call Now</a>
+    <a href="nurse-direct.html" class="m-teal" onclick="closeMenu()">Nurse Direct Line</a>
   </div>
 </div>
 
@@ -205,6 +209,8 @@
   <div class="nav-buttons">
     <a href="#contact" class="btn-connect">Connect</a>
     <a href="tel:9136056275" class="btn-advocacy">Call Now</a>
+  
+    <a href="nurse-direct.html" class="btn-direct">Nurse Direct Line</a>
   </div>
   <button class="hamburger" id="hamburger" aria-label="Open menu" onclick="toggleMenu()">
     <span></span><span></span><span></span>
