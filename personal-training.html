@@ -31,7 +31,7 @@
   h1, h2, h3, h4 { font-family: 'Cormorant Garamond', serif; font-weight: 600; line-height: 1.15; color: var(--navy); letter-spacing: -0.01em; }
 
   /* NAV */
-  nav { background: var(--navy); padding: 1.25rem 3rem; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; }
+  nav { background: var(--navy); padding: 1.25rem 3rem; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 200; }
   .brand h1 { color: white; font-size: 1.5rem; font-weight: 600; margin: 0; }
   .brand .location { color: var(--gold); font-size: 0.7rem; letter-spacing: 0.18em; font-family: 'Inter', sans-serif; font-weight: 500; text-transform: uppercase; }
   .nav-links { display: flex; gap: 2rem; list-style: none; }
@@ -44,6 +44,24 @@
   .btn-nurse-now { padding: 0.75rem 1.5rem; text-decoration: none; font-size: 0.78rem; letter-spacing: 0.15em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; border-radius: 2px; background: var(--red); color: white; }
   .btn-nurse-now:hover { background: var(--red-deep); }
 
+  /* HAMBURGER */
+  .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; background: none; border: none; z-index: 300; }
+  .hamburger span { display: block; width: 24px; height: 2px; background: white; border-radius: 2px; transition: all 0.3s ease; transform-origin: center; }
+  .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+  .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  /* MOBILE DRAWER */
+  .mobile-menu { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: var(--navy-deep); z-index: 150; flex-direction: column; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: opacity 0.3s ease; }
+  .mobile-menu.open { opacity: 1; pointer-events: all; }
+  .mobile-menu a { color: white; text-decoration: none; font-size: 1.6rem; font-family: 'Cormorant Garamond', serif; font-weight: 600; padding: 1rem 2rem; letter-spacing: 0.02em; border-bottom: 1px solid rgba(255,255,255,0.08); width: 100%; text-align: center; transition: color 0.2s; }
+  .mobile-menu a:last-child { border-bottom: none; }
+  .mobile-menu a:hover { color: var(--gold); }
+  .mobile-menu-cta { margin-top: 1.5rem; display: flex; flex-direction: column; gap: 0.75rem; width: 100%; padding: 0 2rem; }
+  .mobile-menu-cta a { font-family: 'Inter', sans-serif !important; font-size: 0.85rem !important; letter-spacing: 0.18em !important; text-transform: uppercase !important; font-weight: 600 !important; padding: 1rem !important; border-radius: 2px !important; border-bottom: none !important; }
+  .mobile-menu-cta .m-gold { background: var(--gold); color: var(--navy) !important; }
+  .mobile-menu-cta .m-red { background: var(--red); color: white !important; }
+
   /* BUTTONS */
   .btn-primary { padding: 1rem 2rem; text-decoration: none; font-size: 0.85rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; display: inline-block; border-radius: 2px; background: var(--red); color: white; }
   .btn-primary:hover { background: var(--red-deep); transform: translateY(-1px); }
@@ -54,10 +72,12 @@
   .btn-outline { padding: 1rem 2rem; text-decoration: none; font-size: 0.85rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; display: inline-block; border-radius: 2px; border: 1.5px solid rgba(255,255,255,0.4); color: white; background: transparent; }
   .btn-outline:hover { background: rgba(255,255,255,0.08); border-color: white; }
 
+  /* EYEBROW */
+  .eyebrow { color: var(--teal); font-size: 0.78rem; letter-spacing: 0.22em; font-weight: 600; text-transform: uppercase; margin-bottom: 1rem; }
+
   /* HERO */
   .hero { background: var(--navy); color: white; padding: 5rem 3rem; }
   .hero-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
-  .hero-text { }
   .hero-eyebrow { color: var(--gold); font-size: 0.78rem; letter-spacing: 0.22em; font-weight: 600; text-transform: uppercase; margin-bottom: 1.5rem; }
   .hero h1 { color: white; font-size: clamp(2.75rem, 5vw, 4.5rem); line-height: 1.05; margin-bottom: 1.25rem; }
   .hero h1 em { color: var(--gold); font-style: italic; }
@@ -65,11 +85,10 @@
   .hero-cta-row { display: flex; gap: 1rem; flex-wrap: wrap; }
   .hero-image img { width: 100%; border-radius: 4px; display: block; object-fit: cover; max-height: 420px; }
 
-  /* WHY LIFTING MATTERS */
+  /* WHY */
   .why { padding: 5rem 3rem; background: var(--cream); }
   .why-inner { max-width: 1100px; margin: 0 auto; }
   .why-header { text-align: center; margin-bottom: 3.5rem; }
-  .eyebrow { color: var(--teal); font-size: 0.78rem; letter-spacing: 0.22em; font-weight: 600; text-transform: uppercase; margin-bottom: 1rem; }
   .why-header h2 { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 0.75rem; }
   .why-header p { color: var(--text-medium); font-size: 1.05rem; max-width: 600px; margin: 0 auto; line-height: 1.65; }
   .why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border: 1px solid var(--border-soft); border-radius: 4px; overflow: hidden; }
@@ -82,7 +101,7 @@
   .tag-physical { background: rgba(42,122,122,0.1); color: var(--teal-deep); }
   .tag-mental { background: rgba(201,169,97,0.15); color: var(--gold-deep); }
 
-  /* MY BACKGROUND */
+  /* BACKGROUND */
   .background { padding: 5rem 3rem; background: var(--navy); color: white; }
   .background-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
   .background .eyebrow { color: var(--gold); }
@@ -94,7 +113,7 @@
   .stat-text strong { display: block; color: white; font-size: 0.9rem; font-weight: 600; margin-bottom: 0.2rem; }
   .stat-text span { color: rgba(255,255,255,0.65); font-size: 0.82rem; line-height: 1.4; }
 
-  /* CERTIFICATIONS */
+  /* CERTS */
   .certs { padding: 4rem 3rem; background: var(--off-white); border-bottom: 1px solid var(--border-soft); }
   .certs-inner { max-width: 1100px; margin: 0 auto; }
   .certs-header { text-align: center; margin-bottom: 2.5rem; }
@@ -144,38 +163,73 @@
   .footer-contact { border-top: 1px solid rgba(255,255,255,0.12); padding-top: 1.75rem; font-size: 0.88rem; color: rgba(255,255,255,0.5); }
   .footer-contact a { color: var(--gold); text-decoration: none; }
 
-  /* RESPONSIVE */
+  /* TABLET */
   @media (max-width: 1100px) {
     .pricing-grid { grid-template-columns: repeat(2, 1fr); }
     .certs-grid { grid-template-columns: repeat(2, 1fr); }
   }
-  @media (max-width: 900px) {
-    nav { padding: 1rem 1.5rem; flex-wrap: wrap; gap: 1rem; }
-    .nav-links { order: 3; width: 100%; justify-content: center; gap: 0.75rem; flex-wrap: wrap; }
-    .nav-links a { font-size: 0.68rem; }
-    .hero, .why, .background, .certs, .pricing, .cta-section { padding: 3.5rem 1.5rem; }
-    .hero-inner { grid-template-columns: 1fr; }
-    .hero-image { display: none; }
-    .why-grid { grid-template-columns: repeat(2, 1fr); }
-    .why-item:nth-child(3n) { border-right: 1px solid var(--border-soft); }
-    .why-item:nth-child(2n) { border-right: none; }
-    .why-item:nth-last-child(-n+3) { border-bottom: 1px solid var(--border-soft); }
-    .why-item:nth-last-child(-n+2) { border-bottom: none; }
-    .background-inner { grid-template-columns: 1fr; gap: 2.5rem; }
-    .pricing-grid { grid-template-columns: 1fr; }
-    .certs-grid { grid-template-columns: 1fr; }
-    .single-session-note { flex-direction: column; text-align: center; }
-  }
-  @media (max-width: 600px) {
-    .why-grid { grid-template-columns: 1fr; }
+
+  /* ══════════════════════
+     MOBILE (≤ 768px)
+  ══════════════════════ */
+  @media (max-width: 768px) {
+    nav { padding: 1rem 1.25rem; }
+    .nav-links { display: none; }
+    .nav-buttons { display: none; }
+    .hamburger { display: flex; }
+    .mobile-menu { display: flex; }
+
+    .hero { padding: 2.5rem 1.25rem 0; }
+    .hero-inner { grid-template-columns: 1fr; gap: 1.5rem; }
+    .hero-text { padding-bottom: 2rem; }
+    .hero-image { margin: 0 -1.25rem; }
+    .hero-image img { max-height: 260px; border-radius: 0; object-fit: cover; object-position: center 20%; }
+    .hero-cta-row { flex-direction: column; align-items: stretch; }
+    .hero-cta-row a { text-align: center; }
+
+    .why { padding: 3rem 1.25rem; }
+    .why-grid { grid-template-columns: 1fr; border-radius: 4px; }
     .why-item { border-right: none !important; border-bottom: 1px solid var(--border-soft) !important; }
     .why-item:last-child { border-bottom: none !important; }
+
+    .background { padding: 3rem 1.25rem; }
+    .background-inner { grid-template-columns: 1fr; gap: 2rem; }
+
+    .certs { padding: 3rem 1.25rem; }
+    .certs-grid { grid-template-columns: 1fr; }
+
+    .pricing { padding: 3rem 1.25rem; }
+    .pricing-grid { grid-template-columns: 1fr; gap: 1rem; }
+    .single-session-note { flex-direction: column; text-align: center; }
+    .single-session-note a { width: 100%; text-align: center; }
+
+    .cta-section { padding: 3rem 1.25rem; }
+
+    footer { padding: 2.5rem 1.25rem 1.5rem; }
+    .footer-nav { gap: 0.75rem 1.25rem; }
+    .footer-nav a { font-size: 0.68rem; }
+  }
+
+  @media (max-width: 600px) {
+    .why-grid { grid-template-columns: 1fr; }
   }
 </style>
 </head>
 <body>
 
-<!-- NAV -->
+<!-- MOBILE DRAWER -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html" onclick="closeMenu()">Home</a>
+  <a href="why.html" onclick="closeMenu()">Why Mobile Health Nurse</a>
+  <a href="services.html" onclick="closeMenu()">Services</a>
+  <a href="personal-training.html" onclick="closeMenu()">Personal Training</a>
+  <a href="index.html#connect" onclick="closeMenu()">Contact</a>
+  <div class="mobile-menu-cta">
+    <a href="index.html#connect" class="m-gold" onclick="closeMenu()">Connect</a>
+    <a href="advocacy.html" class="m-red" onclick="closeMenu()">Medical Advocacy</a>
+  </div>
+</div>
+
 <nav>
   <div class="brand">
     <h1>Mobile Health Nurse</h1>
@@ -189,9 +243,12 @@
     <li><a href="index.html#connect">Contact</a></li>
   </ul>
   <div class="nav-buttons">
-    <a href="index.html#connect" class="btn-connect">CONNECT</a>
-    <a href="advocacy.html" class="btn-nurse-now">MEDICAL ADVOCACY</a>
+    <a href="index.html#connect" class="btn-connect">Connect</a>
+    <a href="advocacy.html" class="btn-nurse-now">Medical Advocacy</a>
   </div>
+  <button class="hamburger" id="hamburger" aria-label="Open menu" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
 
 <!-- HERO -->
@@ -202,8 +259,8 @@
       <h1>Personal Training from a<br><em>Registered Nurse.</em></h1>
       <p class="hero-sub">Learn to lift weights for strength, balance, stabilization, and core — with a certified personal trainer who is also a registered nurse.</p>
       <div class="hero-cta-row">
-        <a href="#book" class="btn-primary">BOOK ONLINE</a>
-        <a href="#pricing" class="btn-outline">SEE PRICING</a>
+        <a href="#book" class="btn-primary">Book Online</a>
+        <a href="#pricing" class="btn-outline">See Pricing</a>
       </div>
     </div>
     <div class="hero-image">
@@ -298,7 +355,7 @@
     </div>
     <div class="single-session-note">
       <p><strong>Not sure where to start?</strong> Call or text and we'll figure out the right fit. A free 30-minute intro session is always available — no purchase required.</p>
-      <a href="tel:9136056275" class="btn-gold">CALL OR TEXT GRETCHEN</a>
+      <a href="tel:9136056275" class="btn-gold">Call or Text Gretchen</a>
     </div>
   </div>
 </section>
@@ -307,11 +364,10 @@
 <section class="cta-section" id="book">
   <h2>Ready to get started?</h2>
   <p>Call or text to set up your first session. No paperwork, no commitment — just a conversation about what you need and where you want to go.</p>
-  <a href="tel:9136056275" class="btn-navy">CALL OR TEXT · (913) 605-6275</a>
+  <a href="tel:9136056275" class="btn-navy">Call or Text · (913) 605-6275</a>
   <p class="fine">HealthSpanRN@gmail.com · West Valley, Arizona · Goodyear · Litchfield Park · Avondale</p>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <div class="footer-brand">Mobile Health Nurse</div>
   <div class="footer-tag">In-Home Nursing Care and Personal Training</div>
@@ -324,9 +380,24 @@
   </ul>
   <div class="footer-contact">
     <a href="mailto:HealthSpanRN@gmail.com">HealthSpanRN@gmail.com</a> · West Valley, AZ · Goodyear · Litchfield Park · Avondale<br>
-    <span style="margin-top: 0.75rem; display: inline-block;">Gretchen Hess, BSN, RN, ACE-CPT</span>
+    <span style="margin-top:0.75rem;display:inline-block;">Gretchen Hess, BSN, RN, ACE-CPT</span>
   </div>
 </footer>
 
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById('mobileMenu');
+    const burger = document.getElementById('hamburger');
+    const isOpen = menu.classList.toggle('open');
+    burger.classList.toggle('open', isOpen);
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+  }
+  function closeMenu() {
+    document.getElementById('mobileMenu').classList.remove('open');
+    document.getElementById('hamburger').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
+</script>
 </body>
 </html>
