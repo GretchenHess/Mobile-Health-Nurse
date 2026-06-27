@@ -31,11 +31,13 @@
   h1, h2, h3, h4 { font-family: 'Cormorant Garamond', serif; font-weight: 600; line-height: 1.15; color: var(--navy); letter-spacing: -0.01em; }
 
   /* NAV */
-  nav { background: var(--navy); padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 200; gap: 1rem; }
-  .brand h1 { color: white; font-size: 1.25rem; font-weight: 600; margin: 0; white-space: nowrap; }
+  nav { background: var(--navy); padding: 0; display: flex; flex-direction: column; position: sticky; top: 0; z-index: 200; }
+  .nav-top { display: flex; justify-content: space-between; align-items: center; padding: 0.9rem 2.5rem; }
+  .nav-bottom { display: flex; justify-content: space-between; align-items: center; padding: 0 2.5rem 0.75rem; border-top: 1px solid rgba(255,255,255,0.08); }
+  .brand h1 { color: white; font-size: 1.4rem; font-weight: 600; margin: 0; white-space: nowrap; }
   .brand .location { color: var(--gold); font-size: 0.65rem; letter-spacing: 0.15em; font-family: 'Inter', sans-serif; font-weight: 500; text-transform: uppercase; }
-  .nav-links { display: flex; gap: 1.5rem; list-style: none; }
-  .nav-links a { color: white; text-decoration: none; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; transition: color 0.2s; white-space: nowrap; }
+  .nav-links { display: flex; gap: 1.75rem; list-style: none; }
+  .nav-links a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; transition: color 0.2s; white-space: nowrap; }
   .nav-links a:hover { color: var(--gold); }
   .nav-links a.active { color: var(--gold); border-bottom: 1.5px solid var(--gold); padding-bottom: 0.2rem; }
   .nav-buttons { display: flex; gap: 0.75rem; }
@@ -174,9 +176,8 @@
      MOBILE (≤ 768px)
   ══════════════════════ */
   @media (max-width: 768px) {
-    nav { padding: 1rem 1.25rem; }
-    .nav-links { display: none; }
-    .nav-buttons { display: none; }
+    .nav-top { padding: 0.9rem 1.25rem; }
+    .nav-bottom { display: none; }
     .hamburger { display: flex; }
     .mobile-menu { display: flex; }
 
@@ -233,26 +234,30 @@
 </div>
 
 <nav>
-  <div class="brand">
+  <div class="nav-top">
+    <div class="brand">
     <h1>Mobile Health Nurse</h1>
     <div class="location">West Valley, Arizona</div>
   </div>
-  <ul class="nav-links">
+    <button class="hamburger" id="hamburger" aria-label="Open menu" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="nav-bottom">
+    <ul class="nav-links">
     <li><a href="index.html">Home</a></li>
     <li><a href="why.html">Why Mobile Health Nurse</a></li>
     <li><a href="services.html">Services</a></li>
     <li><a href="personal-training.html" class="active">Personal Training</a></li>
     <li><a href="index.html#connect">Contact</a></li>
   </ul>
-  <div class="nav-buttons">
+    <div class="nav-buttons">
     <a href="index.html#connect" class="btn-connect">Connect</a>
     <a href="advocacy.html" class="btn-nurse-now">Medical Advocacy</a>
   
     <a href="nurse-direct.html" class="btn-direct">Nurse Direct Line</a>
   </div>
-  <button class="hamburger" id="hamburger" aria-label="Open menu" onclick="toggleMenu()">
-    <span></span><span></span><span></span>
-  </button>
+  </div>
 </nav>
 
 <!-- HERO -->
