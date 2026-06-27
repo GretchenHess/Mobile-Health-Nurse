@@ -31,20 +31,20 @@
   h1, h2, h3 { font-family: 'Cormorant Garamond', serif; font-weight: 600; line-height: 1.15; color: var(--navy); letter-spacing: -0.01em; }
 
   /* NAV */
-  nav { background: var(--navy); padding: 1.25rem 3rem; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 200; }
-  .brand h1 { color: white; font-size: 1.5rem; font-weight: 600; margin: 0; }
-  .brand .location { color: var(--gold); font-size: 0.7rem; letter-spacing: 0.18em; font-family: 'Inter', sans-serif; font-weight: 500; text-transform: uppercase; }
-  .nav-links { display: flex; gap: 2rem; list-style: none; }
-  .nav-links a { color: white; text-decoration: none; font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 500; transition: color 0.2s; }
+  nav { background: var(--navy); padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 200; gap: 1rem; }
+  .brand h1 { color: white; font-size: 1.25rem; font-weight: 600; margin: 0; white-space: nowrap; }
+  .brand .location { color: var(--gold); font-size: 0.65rem; letter-spacing: 0.15em; font-family: 'Inter', sans-serif; font-weight: 500; text-transform: uppercase; }
+  .nav-links { display: flex; gap: 1.5rem; list-style: none; }
+  .nav-links a { color: white; text-decoration: none; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; transition: color 0.2s; white-space: nowrap; }
   .nav-links a:hover { color: var(--gold); }
   .nav-links a.active { color: var(--gold); }
   .nav-buttons { display: flex; gap: 0.75rem; }
-  .btn-connect, .btn-advocacy { padding: 0.75rem 1.5rem; text-decoration: none; font-size: 0.78rem; letter-spacing: 0.15em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; border-radius: 2px; }
+  .btn-connect, .btn-advocacy { padding: 0.6rem 1rem; text-decoration: none; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; border-radius: 2px; white-space: nowrap; }
   .btn-connect { background: var(--gold); color: var(--navy); }
   .btn-connect:hover { background: var(--gold-deep); }
   .btn-advocacy { background: var(--red); color: white; }
   .btn-advocacy:hover { background: var(--red-deep); }
-  .btn-direct { padding: 0.75rem 1.5rem; text-decoration: none; font-size: 0.78rem; letter-spacing: 0.15em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; border-radius: 2px; background: #3a3d4a; color: var(--gold); border: 1px solid var(--gold); }
+  .btn-direct { padding: 0.6rem 1rem; text-decoration: none; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; border-radius: 2px; background: #3a3d4a; color: var(--gold); border: 1px solid var(--gold); white-space: nowrap; }
   .btn-direct:hover { background: #2c2e38; }
 
   /* HAMBURGER */
