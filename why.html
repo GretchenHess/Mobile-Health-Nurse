@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Why Mobile Health Nurse — Gretchen Hess, BSN, RN</title>
-<meta name="description" content="You deserve good healthcare. Mobile Health Nurse exists to make sure you get it.">
+<meta name="description" content="You deserve great healthcare, not just good. Mobile Health Nurse exists to make sure you get it.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -44,6 +44,8 @@
   .btn-connect:hover { background: var(--gold-deep); }
   .btn-advocacy { background: var(--red); color: white; }
   .btn-advocacy:hover { background: var(--red-deep); }
+  .btn-direct { padding: 0.75rem 1.5rem; text-decoration: none; font-size: 0.78rem; letter-spacing: 0.15em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; border-radius: 2px; background: #3a3d4a; color: var(--gold); border: 1px solid var(--gold); }
+  .btn-direct:hover { background: #2c2e38; }
 
   /* HAMBURGER */
   .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; background: none; border: none; z-index: 300; }
@@ -62,6 +64,7 @@
   .mobile-menu-cta a { font-family: 'Inter', sans-serif !important; font-size: 0.85rem !important; letter-spacing: 0.18em !important; text-transform: uppercase !important; font-weight: 600 !important; padding: 1rem !important; border-radius: 2px !important; border-bottom: none !important; }
   .mobile-menu-cta .m-gold { background: var(--gold); color: var(--navy) !important; }
   .mobile-menu-cta .m-red { background: var(--red); color: white !important; }
+  .mobile-menu-cta .m-teal { background: #3a3d4a; color: var(--gold) !important; border: 1px solid var(--gold); }
 
   /* BUTTONS */
   .btn-primary { padding: 1rem 2rem; text-decoration: none; font-size: 0.85rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; display: inline-block; border-radius: 2px; background: var(--red); color: white; border: none; cursor: pointer; }
@@ -178,7 +181,7 @@
 
 <!-- MOBILE DRAWER -->
 <div class="mobile-menu" id="mobileMenu">
-  <a href="index.html#about" onclick="closeMenu()">About</a>
+  <a href="index.html" onclick="closeMenu()">Home</a>
   <a href="why.html" onclick="closeMenu()">Why Mobile Health Nurse</a>
   <a href="services.html" onclick="closeMenu()">Services</a>
   <a href="personal-training.html" onclick="closeMenu()">Personal Training</a>
@@ -186,6 +189,7 @@
   <div class="mobile-menu-cta">
     <a href="#contact" class="m-gold" onclick="closeMenu()">Connect</a>
     <a href="advocacy.html" class="m-red" onclick="closeMenu()">Medical Advocacy</a>
+    <a href="nurse-direct.html" class="m-teal" onclick="closeMenu()">Nurse Direct Line</a>
   </div>
 </div>
 
@@ -204,6 +208,8 @@
   <div class="nav-buttons">
     <a href="#contact" class="btn-connect">Connect</a>
     <a href="advocacy.html" class="btn-advocacy">Medical Advocacy</a>
+  
+    <a href="nurse-direct.html" class="btn-direct">Nurse Direct Line</a>
   </div>
   <button class="hamburger" id="hamburger" aria-label="Open menu" onclick="toggleMenu()">
     <span></span><span></span><span></span>
@@ -215,7 +221,7 @@
   <div class="page-hero-inner">
     <div>
       <div class="eyebrow">Why This Exists</div>
-      <h1>You deserve<br><em>good healthcare.</em></h1>
+      <h1>You deserve<br><em>great healthcare.</em><br>Not just good.</h1>
       <p>Most people navigate their health completely alone — leaving appointments confused, managing conditions without real guidance, and making important decisions without someone in their corner. Mobile Health Nurse exists to change that.</p>
     </div>
     <div class="page-hero-image">
