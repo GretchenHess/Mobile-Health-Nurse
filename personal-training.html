@@ -40,7 +40,7 @@
   .nav-links a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; transition: color 0.2s; white-space: nowrap; }
   .nav-links a:hover { color: var(--gold); }
   .nav-links a.active { color: var(--gold); border-bottom: 1.5px solid var(--gold); padding-bottom: 0.2rem; }
-  .nav-buttons { display: flex; gap: 0.75rem; }
+  .nav-buttons { display: none; }
   .btn-connect { padding: 0.6rem 1rem; text-decoration: none; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; border-radius: 2px; background: var(--gold); color: var(--navy); white-space: nowrap; }
   .btn-connect:hover { background: var(--gold-deep); }
   .btn-nurse-now { padding: 0.6rem 1rem; text-decoration: none; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; border-radius: 2px; background: var(--red); color: white; white-space: nowrap; }
@@ -63,13 +63,15 @@
   .mobile-menu-cta a { font-family: 'Inter', sans-serif !important; font-size: 0.85rem !important; letter-spacing: 0.18em !important; text-transform: uppercase !important; font-weight: 600 !important; padding: 1rem !important; border-radius: 2px !important; border-bottom: none !important; }
   .mobile-menu-cta .m-gold { background: var(--gold); color: var(--navy) !important; }
   .mobile-menu-cta .m-red { background: var(--red); color: white !important; }
-  .mobile-menu-cta .m-teal { background: #3a3d4a; color: var(--gold) !important; border: 1px solid var(--gold); }
+  .mobile-menu-cta .m-teal { background: #4a6fa5; color: white !important; }
 
   /* BUTTONS */
   .btn-primary { padding: 1rem 2rem; text-decoration: none; font-size: 0.85rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; display: inline-block; border-radius: 2px; background: var(--red); color: white; }
   .btn-primary:hover { background: var(--red-deep); transform: translateY(-1px); }
-  .btn-gold { padding: 1rem 2rem; text-decoration: none; font-size: 0.85rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; display: inline-block; border-radius: 2px; background: var(--gold); color: var(--navy); }
-  .btn-gold:hover { background: var(--gold-deep); transform: translateY(-1px); }
+  .btn-advocacy-gold { padding: 1rem 2rem; text-decoration: none; font-size: 0.85rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; display: inline-block; border-radius: 2px; background: var(--gold); color: var(--navy); }
+  .btn-advocacy-gold:hover { background: var(--gold-deep); transform: translateY(-1px); }
+  .btn-gold { padding: 1rem 2rem; text-decoration: none; font-size: 0.85rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; display: inline-block; border-radius: 2px; background: #f5f0e8; color: var(--navy); border: 1.5px solid #c9b99a; }
+  .btn-gold:hover { background: #ede7d9; transform: translateY(-1px); }
   .btn-navy { padding: 1rem 2rem; text-decoration: none; font-size: 0.85rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; display: inline-block; border-radius: 2px; background: var(--navy); color: white; }
   .btn-navy:hover { background: var(--navy-deep); transform: translateY(-1px); }
   .btn-outline { padding: 1rem 2rem; text-decoration: none; font-size: 0.85rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; display: inline-block; border-radius: 2px; border: 1.5px solid rgba(255,255,255,0.4); color: white; background: transparent; }
@@ -251,12 +253,6 @@
     <li><a href="personal-training.html" class="active">Personal Training</a></li>
     <li><a href="index.html#connect">Contact</a></li>
   </ul>
-    <div class="nav-buttons">
-    <a href="index.html#connect" class="btn-connect">Connect</a>
-    <a href="advocacy.html" class="btn-nurse-now">Medical Advocacy</a>
-  
-    <a href="nurse-direct.html" class="btn-direct">Nurse Direct Line</a>
-  </div>
   </div>
 </nav>
 
@@ -268,8 +264,8 @@
       <h1>Personal Training from a<br><em>Registered Nurse.</em></h1>
       <p class="hero-sub">Learn to lift weights for strength, balance, stabilization, and core — with a certified personal trainer who is also a registered nurse.</p>
       <div class="hero-cta-row">
-        <a href="#book" class="btn-primary">Book Online</a>
-        <a href="#pricing" class="btn-outline">See Pricing</a>
+        <a href="#book" class="btn-gold">Book Online</a>
+        <a href="#pricing" style="display:inline-block;padding:1rem 2rem;text-decoration:none;font-size:0.85rem;letter-spacing:0.18em;text-transform:uppercase;font-weight:600;border-radius:2px;background:#2d5a3d;color:white;transition:all 0.2s;">See Pricing</a>
       </div>
     </div>
     <div class="hero-image">
@@ -364,7 +360,7 @@
     </div>
     <div class="single-session-note">
       <p><strong>Not sure where to start?</strong> Call or text and we'll figure out the right fit. A free 30-minute intro session is always available — no purchase required.</p>
-      <a href="tel:9136056275" class="btn-gold">Call or Text Gretchen</a>
+      <a href="tel:9136056275" class="btn-primary">Call or Text Gretchen</a>
     </div>
   </div>
 </section>

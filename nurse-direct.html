@@ -26,6 +26,8 @@
     --border-soft: #e8e5dd;
     --charcoal: #3a3d4a;
     --charcoal-deep: #2c2e38;
+    --slate: #4a6fa5;
+    --slate-deep: #3a5a8a;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   html { scroll-behavior: smooth; }
@@ -41,8 +43,8 @@
   .nav-links { display: flex; gap: 1.75rem; list-style: none; }
   .nav-links a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; transition: color 0.2s; white-space: nowrap; }
   .nav-links a:hover { color: var(--gold); }
-  .nav-links a.active { color: var(--teal); }
-  .nav-buttons { display: flex; gap: 0.75rem; }
+  .nav-links a.active { color: #4a6fa5; }
+  .nav-buttons { display: none; }
   .btn-connect { padding: 0.75rem 1.5rem; text-decoration: none; font-size: 0.78rem; letter-spacing: 0.15em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; border-radius: 2px; background: var(--gold); color: var(--navy); }
   .btn-connect:hover { background: var(--gold-deep); }
   .btn-advocacy { padding: 0.75rem 1.5rem; text-decoration: none; font-size: 0.78rem; letter-spacing: 0.15em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; border-radius: 2px; background: var(--red); color: white; }
@@ -69,15 +71,19 @@
   .mobile-menu-cta .m-teal { background: var(--charcoal); color: var(--gold) !important; border: 1px solid var(--gold); }
 
   /* ── BUTTONS ── */
-  .btn-primary { padding: 1rem 2rem; text-decoration: none; font-size: 0.85rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; display: inline-block; border-radius: 2px; background: var(--gold); color: var(--navy); border: none; cursor: pointer; }
-  .btn-primary:hover { background: var(--gold-deep); transform: translateY(-1px); }
-  .btn-gold { padding: 1rem 2rem; text-decoration: none; font-size: 0.85rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; display: inline-block; border-radius: 2px; background: var(--gold); color: var(--navy); }
-  .btn-gold:hover { background: var(--gold-deep); transform: translateY(-1px); }
+  .btn-primary { padding: 1rem 2rem; text-decoration: none; font-size: 0.85rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; display: inline-block; border-radius: 2px; background: #4a6fa5; color: white; border: none; cursor: pointer; }
+  .btn-primary:hover { background: #3a5a8a; transform: translateY(-1px); }
+  .btn-advocacy-gold { padding: 1rem 2rem; text-decoration: none; font-size: 0.85rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; display: inline-block; border-radius: 2px; background: var(--gold); color: var(--navy); }
+  .btn-advocacy-gold:hover { background: var(--gold-deep); transform: translateY(-1px); }
+  .btn-gold { padding: 1rem 2rem; text-decoration: none; font-size: 0.85rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; display: inline-block; border-radius: 2px; background: #f5f0e8; color: var(--navy); border: 1.5px solid #c9b99a; }
+  .btn-gold:hover { background: #ede7d9; transform: translateY(-1px); }
   .btn-outline-white { padding: 1rem 2rem; text-decoration: none; font-size: 0.85rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; display: inline-block; border-radius: 2px; border: 1.5px solid rgba(255,255,255,0.45); color: white; background: transparent; transition: all 0.2s; }
   .btn-outline-white:hover { border-color: white; background: rgba(255,255,255,0.08); }
+  .btn-slate { padding: 1rem 2rem; text-decoration: none; font-size: 0.85rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; display: inline-block; border-radius: 2px; background: #4a6fa5; color: white; }
+  .btn-slate:hover { background: #3a5a8a; transform: translateY(-1px); }
 
   /* ── EYEBROW ── */
-  .eyebrow { font-size: 0.78rem; letter-spacing: 0.22em; font-weight: 600; text-transform: uppercase; margin-bottom: 1.25rem; color: var(--teal); }
+  .eyebrow { font-size: 0.78rem; letter-spacing: 0.22em; font-weight: 600; text-transform: uppercase; margin-bottom: 1.25rem; color: #4a6fa5; }
   .eyebrow-gold { font-size: 0.78rem; letter-spacing: 0.22em; font-weight: 600; text-transform: uppercase; margin-bottom: 1.25rem; color: var(--gold); }
 
   /* ── HERO ── */
@@ -115,7 +121,7 @@
   .how-inner h2 { color: white; font-size: clamp(2rem, 4vw, 2.75rem); margin-bottom: 0.75rem; text-align: center; }
   .how-subtitle { color: rgba(255,255,255,0.6); font-size: 1rem; text-align: center; margin-bottom: 3rem; }
   .how-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 3rem; }
-  .how-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.15); border-top: 3px solid var(--gold); border-radius: 4px; padding: 2rem 1.75rem; }
+  .how-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.15); border-top: 3px solid #4a6fa5; border-radius: 4px; padding: 2rem 1.75rem; }
   .how-card h3 { color: white; font-size: 1.4rem; margin-bottom: 0.75rem; }
   .how-card p { color: rgba(255,255,255,0.72); font-size: 0.95rem; line-height: 1.65; }
   .how-card .how-icon { font-size: 1.5rem; margin-bottom: 1rem; }
@@ -127,7 +133,7 @@
   .includes-sub { color: var(--text-medium); font-size: 1rem; text-align: center; margin-bottom: 3rem; }
   .check-list { display: grid; grid-template-columns: 1fr 1fr; gap: 0.85rem 3rem; list-style: none; }
   .check-list li { font-size: 1rem; padding-left: 1.75rem; position: relative; line-height: 1.55; color: var(--text-dark); }
-  .check-list li::before { content: '✓'; color: var(--teal); position: absolute; left: 0; font-weight: 700; font-size: 1.05rem; }
+  .check-list li::before { content: '✓'; color: #4a6fa5; position: absolute; left: 0; font-weight: 700; font-size: 1.05rem; }
 
   /* ── WHO IT'S FOR ── */
   .who-section { padding: 5rem 3rem; background: var(--off-white); }
@@ -246,11 +252,6 @@
     <li><a href="personal-training.html">Personal Training</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
-    <div class="nav-buttons">
-    <a href="index.html#connect" class="btn-connect">Connect</a>
-    <a href="advocacy.html" class="btn-advocacy">Medical Advocacy</a>
-    <a href="nurse-direct.html" class="btn-direct active">Nurse Direct Line</a>
-  </div>
   </div>
 </nav>
 
@@ -267,7 +268,7 @@
       </div>
       <div class="hero-cta-row">
         <a href="#book" class="btn-gold">Get Started</a>
-        <a href="tel:9136056275" class="btn-outline-white">Call to Enroll</a>
+        <a href="tel:9136056275" class="btn-slate">Call to Enroll</a>
       </div>
     </div>
     <div class="hero-image">
@@ -384,7 +385,7 @@
     </div>
     <div class="pricing-cta-row">
       <a href="#book" class="btn-gold">Get Started Online</a>
-      <a href="tel:9136056275" class="btn-outline-white">Call to Enroll · (913) 605-6275</a>
+      <a href="tel:9136056275" class="btn-slate">Call to Enroll · (913) 605-6275</a>
     </div>
     <p class="pricing-fine">Available to anyone in the United States. No in-home visit required.</p>
   </div>

@@ -39,7 +39,7 @@
   .nav-links { display: flex; gap: 1.75rem; list-style: none; }
   .nav-links a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; transition: color 0.2s; white-space: nowrap; }
   .nav-links a:hover { color: var(--gold); }
-  .nav-buttons { display: flex; gap: 0.75rem; }
+  .nav-buttons { display: none; }
   .btn-connect, .btn-advocacy { padding: 0.6rem 1rem; text-decoration: none; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; border-radius: 2px; white-space: nowrap; }
   .btn-connect { background: var(--gold); color: var(--navy); }
   .btn-connect:hover { background: var(--gold-deep); }
@@ -65,13 +65,15 @@
   .mobile-menu-cta a { font-family: 'Inter', sans-serif !important; font-size: 0.85rem !important; letter-spacing: 0.18em !important; text-transform: uppercase !important; font-weight: 600 !important; padding: 1rem !important; border-radius: 2px !important; border-bottom: none !important; }
   .mobile-menu-cta .m-gold { background: var(--gold); color: var(--navy) !important; }
   .mobile-menu-cta .m-red { background: var(--red); color: white !important; }
-  .mobile-menu-cta .m-teal { background: #3a3d4a; color: var(--gold) !important; border: 1px solid var(--gold); }
+  .mobile-menu-cta .m-teal { background: #4a6fa5; color: white !important; }
 
   /* BUTTONS */
   .btn-primary { padding: 1rem 2rem; text-decoration: none; font-size: 0.85rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; display: inline-block; border-radius: 2px; background: var(--red); color: white; border: none; cursor: pointer; }
   .btn-primary:hover { background: var(--red-deep); transform: translateY(-1px); }
-  .btn-gold { padding: 1rem 2rem; text-decoration: none; font-size: 0.85rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; display: inline-block; border-radius: 2px; background: var(--gold); color: var(--navy); }
-  .btn-gold:hover { background: var(--gold-deep); transform: translateY(-1px); }
+  .btn-advocacy-gold { padding: 1rem 2rem; text-decoration: none; font-size: 0.85rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; display: inline-block; border-radius: 2px; background: var(--gold); color: var(--navy); }
+  .btn-advocacy-gold:hover { background: var(--gold-deep); transform: translateY(-1px); }
+  .btn-gold { padding: 1rem 2rem; text-decoration: none; font-size: 0.85rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; display: inline-block; border-radius: 2px; background: #f5f0e8; color: var(--navy); border: 1.5px solid #c9b99a; }
+  .btn-gold:hover { background: #ede7d9; transform: translateY(-1px); }
   .btn-outline-white { padding: 1rem 2rem; text-decoration: none; font-size: 0.85rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; display: inline-block; border-radius: 2px; border: 1.5px solid rgba(255,255,255,0.5); color: white; background: transparent; }
   .btn-outline-white:hover { border-color: white; background: rgba(255,255,255,0.08); }
 
@@ -213,12 +215,6 @@
     <li><a href="personal-training.html">Personal Training</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
-    <div class="nav-buttons">
-    <a href="#contact" class="btn-connect">Connect</a>
-    <a href="tel:9136056275" class="btn-advocacy">Call Now</a>
-  
-    <a href="nurse-direct.html" class="btn-direct">Nurse Direct Line</a>
-  </div>
   </div>
 </nav>
 
@@ -230,7 +226,7 @@
       <h1>Having a nurse in the room<br><em>changes everything.</em></h1>
       <p class="hero-lead">In the doctor's office, the hospital room, or before a procedure — I show up with you.</p>
       <div class="cta-row">
-        <a href="#book" class="btn-gold">Book Online</a>
+        <a href="#book" class="btn-advocacy-gold">Book Online</a>
         <a href="tel:9136056275" class="btn-outline-white">Call to Check Availability</a>
       </div>
     </div>
@@ -310,8 +306,8 @@
     </div>
     <p class="pricing-note">Travel time within West Valley is included. Distance outside Goodyear, Litchfield Park, and Avondale may incur an additional travel fee — ask when you call.</p>
     <div class="pricing-cta">
-      <a href="#book" class="btn-primary">Book Online</a>
-      <a href="tel:9136056275" class="btn-gold">Call to Check Availability</a>
+      <a href="#book" class="btn-advocacy-gold">Book Online</a>
+      <a href="tel:9136056275" class="btn-primary">Call to Check Availability</a>
     </div>
   </div>
 </section>
@@ -322,7 +318,7 @@
   <h2>Call and find out if I'm available.</h2>
   <p>I'll tell you honestly whether I can be there. If I can't, I'll help you think through your next best option. That's what I'm here for.</p>
   <div class="btn-row">
-    <a href="tel:9136056275" class="btn-gold">Call (913) 605-6275</a>
+    <a href="tel:9136056275" class="btn-advocacy-gold">Call (913) 605-6275</a>
   </div>
 </section>
 

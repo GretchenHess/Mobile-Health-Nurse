@@ -46,7 +46,7 @@
   .nav-links { display: flex; gap: 2rem; list-style: none; }
   .nav-links a { color: white; text-decoration: none; font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 500; transition: color 0.2s; }
   .nav-links a:hover { color: var(--gold); }
-  .nav-buttons { display: flex; gap: 0.75rem; }
+  .nav-buttons { display: none; }
   .btn-connect, .btn-advocacy {
     padding: 0.75rem 1.5rem;
     text-decoration: none;
@@ -141,10 +141,18 @@
   .mobile-menu-cta .m-teal { background: #3a3d4a; color: var(--gold) !important; border: 1px solid var(--gold); }
 
   /* ── BUTTONS ── */
+  .btn-hero-call { padding: 0.95rem 1.75rem; text-decoration: none; font-size: 0.82rem; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; display: inline-block; border-radius: 2px; background: var(--red); color: white; }
+  .btn-hero-call:hover { background: var(--red-deep); transform: translateY(-1px); }
+  .btn-hero-advocacy { padding: 0.95rem 1.75rem; text-decoration: none; font-size: 0.82rem; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; display: inline-block; border-radius: 2px; background: var(--gold); color: var(--navy); border: 1.5px solid var(--gold-deep); }
+  .btn-hero-advocacy:hover { background: var(--gold-deep); transform: translateY(-1px); }
+  .btn-hero-direct { padding: 0.95rem 1.75rem; text-decoration: none; font-size: 0.82rem; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; display: inline-block; border-radius: 2px; background: #4a6fa5; color: white; }
+  .btn-hero-direct:hover { background: #3a5a8a; transform: translateY(-1px); }
   .btn-primary { padding: 1rem 2rem; text-decoration: none; font-size: 0.85rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; display: inline-block; border-radius: 2px; border: none; cursor: pointer; background: var(--red); color: white; }
   .btn-primary:hover { background: var(--red-deep); transform: translateY(-1px); }
-  .btn-gold { padding: 1rem 2rem; text-decoration: none; font-size: 0.85rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; display: inline-block; border-radius: 2px; background: var(--gold); color: var(--navy); }
-  .btn-gold:hover { background: var(--gold-deep); transform: translateY(-1px); }
+  .btn-advocacy-gold { padding: 1rem 2rem; text-decoration: none; font-size: 0.85rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; display: inline-block; border-radius: 2px; background: var(--gold); color: var(--navy); }
+  .btn-advocacy-gold:hover { background: var(--gold-deep); transform: translateY(-1px); }
+  .btn-gold { padding: 1rem 2rem; text-decoration: none; font-size: 0.85rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; display: inline-block; border-radius: 2px; background: #f5f0e8; color: var(--navy); border: 1.5px solid #c9b99a; }
+  .btn-gold:hover { background: #ede7d9; transform: translateY(-1px); }
 
   /* ── EYEBROW ── */
   .eyebrow { color: var(--teal); font-size: 0.78rem; letter-spacing: 0.22em; font-weight: 600; text-transform: uppercase; margin-bottom: 1.25rem; }
@@ -158,7 +166,7 @@
   .hero-services { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 0.5rem 0.75rem; margin-bottom: 2.25rem; }
   .hero-services span { color: rgba(255,255,255,0.92); font-size: clamp(1rem, 2vw, 1.25rem); font-family: 'Inter', sans-serif; font-weight: 400; letter-spacing: 0.02em; }
   .hero-services-dot { color: var(--gold) !important; font-weight: 700; font-size: 1.4rem !important; }
-  .hero-cta-row { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; margin-bottom: 1.5rem; }
+  .hero-cta-row { display: flex; gap: 0.85rem; flex-wrap: wrap; justify-content: center; margin-bottom: 1.5rem; max-width: 640px; margin-left: auto; margin-right: auto; }
   .hero-fineprint { color: rgba(255,255,255,0.45); font-size: 0.82rem; margin-top: 1.25rem; margin-bottom: 3.5rem; }
   .hero-image-wrap { max-width: 1400px; margin: 0 auto; }
   .hero-image-wrap img { width: 100%; display: block; max-height: 520px; object-fit: cover; object-position: center 20%; border-radius: 4px 4px 0 0; }
@@ -263,7 +271,7 @@
     .hero-services { gap: 0.3rem 0.5rem; }
     .hero-services span { font-size: 0.92rem; }
     .hero-services-dot { font-size: 1rem !important; }
-    .hero-cta-row { flex-direction: column; align-items: stretch; gap: 0.75rem; }
+    .hero-cta-row { flex-direction: column; align-items: stretch; gap: 0.75rem; max-width: 100%; }
     .hero-cta-row a { text-align: center; }
     .hero-fineprint { font-size: 0.75rem; margin-bottom: 2rem; }
     /* Hero image — bleed edge-to-edge */
@@ -356,11 +364,7 @@
     <li><a href="personal-training.html">Personal Training</a></li>
     <li><a href="#connect">Contact</a></li>
   </ul>
-    <div class="nav-buttons">
-    <a href="#connect" class="btn-connect">Connect</a>
-    <a href="advocacy.html" class="btn-advocacy">Medical Advocacy</a>
-    <a href="nurse-direct.html" class="btn-direct">Nurse Direct Line</a>
-  </div>
+
   </div>
 </nav>
 
@@ -381,8 +385,9 @@
       <span>Nurse Direct Line</span>
     </div>
     <div class="hero-cta-row">
-      <a href="tel:9136056275" class="btn-primary">Call Me Directly</a>
-      <a href="#book" class="btn-gold">Book Online</a>
+      <a href="tel:9136056275" class="btn-hero-call">Call Me Directly</a>
+      <a href="advocacy.html" class="btn-hero-advocacy">Medical Advocacy</a>
+      <a href="nurse-direct.html" class="btn-hero-direct">Nurse Direct Line</a>
     </div>
     <div class="hero-fineprint">Gretchen Hess, BSN, RN, ACE-CPT · HealthSpanRN@gmail.com</div>
   </div>
@@ -483,7 +488,7 @@
     <div style="text-align: center; flex-shrink: 0;">
       <div style="font-family: 'Cormorant Garamond', serif; font-size: 3.5rem; font-weight: 700; color: var(--gold); line-height: 1;">$149</div>
       <div style="color: rgba(255,255,255,0.5); font-size: 0.82rem; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 1.25rem;">/month</div>
-      <a href="nurse-direct.html" style="display: inline-block; background: var(--gold); color: #2c2e38; padding: 0.9rem 1.75rem; text-decoration: none; font-size: 0.82rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 700; border-radius: 2px; transition: all 0.2s;">Now You Do →</a>
+      <a href="nurse-direct.html" style="display: inline-block; background: #4a6fa5; color: white; padding: 0.9rem 1.75rem; text-decoration: none; font-size: 0.82rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 700; border-radius: 2px; transition: all 0.2s;">Now You Do →</a>
     </div>
   </div>
 </section>

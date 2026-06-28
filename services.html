@@ -40,7 +40,7 @@
   .nav-links a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; transition: color 0.2s; white-space: nowrap; }
   .nav-links a:hover { color: var(--gold); }
   .nav-links a.active { color: var(--gold); }
-  .nav-buttons { display: flex; gap: 0.75rem; }
+  .nav-buttons { display: none; }
   .btn-connect, .btn-advocacy { padding: 0.6rem 1rem; text-decoration: none; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; border-radius: 2px; white-space: nowrap; }
   .btn-connect { background: var(--gold); color: var(--navy); }
   .btn-connect:hover { background: var(--gold-deep); }
@@ -66,15 +66,21 @@
   .mobile-menu-cta a { font-family: 'Inter', sans-serif !important; font-size: 0.85rem !important; letter-spacing: 0.18em !important; text-transform: uppercase !important; font-weight: 600 !important; padding: 1rem !important; border-radius: 2px !important; border-bottom: none !important; }
   .mobile-menu-cta .m-gold { background: var(--gold); color: var(--navy) !important; }
   .mobile-menu-cta .m-red { background: var(--red); color: white !important; }
-  .mobile-menu-cta .m-teal { background: #3a3d4a; color: var(--gold) !important; border: 1px solid var(--gold); }
+  .mobile-menu-cta .m-teal { background: #4a6fa5; color: white !important; }
 
   /* BUTTONS */
   .btn-primary { padding: 1rem 2rem; text-decoration: none; font-size: 0.85rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; display: inline-block; border-radius: 2px; border: none; cursor: pointer; background: var(--red); color: white; }
   .btn-primary:hover { background: var(--red-deep); transform: translateY(-1px); }
-  .btn-gold { padding: 1rem 2rem; text-decoration: none; font-size: 0.85rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; display: inline-block; border-radius: 2px; background: var(--gold); color: var(--navy); }
-  .btn-gold:hover { background: var(--gold-deep); transform: translateY(-1px); }
-  .btn-teal { display: inline-block; background: var(--teal); color: white; padding: 1rem 2rem; text-decoration: none; font-size: 0.85rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; border-radius: 2px; transition: all 0.2s; }
-  .btn-teal:hover { background: var(--teal-deep); transform: translateY(-1px); }
+  .btn-advocacy-gold { padding: 1rem 2rem; text-decoration: none; font-size: 0.85rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; display: inline-block; border-radius: 2px; background: var(--gold); color: var(--navy); }
+  .btn-advocacy-gold:hover { background: var(--gold-deep); transform: translateY(-1px); }
+  .btn-partnership { padding: 1rem 2rem; text-decoration: none; font-size: 0.85rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; display: inline-block; border-radius: 2px; background: var(--teal); color: white; }
+  .btn-partnership:hover { background: var(--teal-deep); transform: translateY(-1px); }
+  .btn-navy-outline { padding: 1rem 2rem; text-decoration: none; font-size: 0.85rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; display: inline-block; border-radius: 2px; background: var(--navy); color: white; }
+  .btn-navy-outline:hover { background: var(--navy-deep); transform: translateY(-1px); }
+  .btn-gold { padding: 1rem 2rem; text-decoration: none; font-size: 0.85rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; display: inline-block; border-radius: 2px; background: #f5f0e8; color: var(--navy); border: 1.5px solid #c9b99a; }
+  .btn-gold:hover { background: #ede7d9; transform: translateY(-1px); }
+  .btn-teal { display: inline-block; background: #f5f0e8; color: var(--navy); padding: 1rem 2rem; text-decoration: none; font-size: 0.85rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; border-radius: 2px; transition: all 0.2s; }
+  .btn-teal:hover { background: #ede7d9; transform: translateY(-1px); }
 
   /* EYEBROW */
   .eyebrow { color: var(--teal); font-size: 0.78rem; letter-spacing: 0.22em; font-weight: 600; text-transform: uppercase; margin-bottom: 1.25rem; }
@@ -118,6 +124,7 @@
   .tiers-block { margin-top: 2.5rem; padding-top: 2rem; border-top: 1px solid var(--border-soft); }
   .tiers-label { text-align: center; color: var(--gold-deep); font-size: 0.75rem; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 600; margin-bottom: 1.75rem; }
   .tiers-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+  .tiers-grid.four-col { grid-template-columns: repeat(4, 1fr); }
   .tier-card { border: 1.5px solid var(--border-soft); border-radius: 4px; padding: 1.75rem 1.5rem; position: relative; background: white; }
   .tier-card.featured { border-color: var(--gold); border-width: 2px; }
   .tier-badge { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--gold); color: var(--navy); font-size: 0.65rem; letter-spacing: 0.18em; font-weight: 700; text-transform: uppercase; padding: 0.3rem 0.9rem; border-radius: 2px; white-space: nowrap; }
@@ -262,12 +269,6 @@
     <li><a href="personal-training.html">Personal Training</a></li>
     <li><a href="#connect">Contact</a></li>
   </ul>
-    <div class="nav-buttons">
-    <a href="#connect" class="btn-connect">Connect</a>
-    <a href="advocacy.html" class="btn-advocacy">Medical Advocacy</a>
-  
-    <a href="nurse-direct.html" class="btn-direct">Nurse Direct Line</a>
-  </div>
   </div>
 </nav>
 
@@ -291,8 +292,8 @@
     <a href="#clarity">Health Clarity Visit</a>
     <a href="#partnership">Health Partnership</a>
     <a href="#direct">Nurse Direct Line</a>
-    <a href="advocacy.html">Medical Advocacy</a>
-    <a href="personal-training.html">Personal Training</a>
+    <a href="#advocacy">Medical Advocacy</a>
+    <a href="#training">Personal Training</a>
   </div>
 </div>
 
@@ -321,8 +322,8 @@
         <li>Written visit summary — yours to keep</li>
       </ul>
       <div class="cta-row" style="margin-top:2rem;display:flex;gap:1rem;flex-wrap:wrap;">
-        <a href="https://my.practicebetter.io/#/69ffb000145191dbf1011aa4/bookings?s=6a04f47eba7c191d9f808898" class="btn-primary">Book Online</a>
-        <a href="tel:9136056275" class="btn-gold">Call to Schedule</a>
+        <a href="https://my.practicebetter.io/#/69ffb000145191dbf1011aa4/bookings?s=6a04f47eba7c191d9f808898" class="btn-gold">Book Online</a>
+        <a href="tel:9136056275" class="btn-navy-outline">Call to Schedule</a>
       </div>
     </div>
   </div>
@@ -410,8 +411,8 @@
       <div class="policy-note">All visits in-person. Billed monthly. Cancel anytime. Miss an appointment — reschedule that same week. If not rescheduled, visit is forfeited and monthly fee still applies.</div>
 
       <div class="cta-row" style="margin-top:2rem;display:flex;gap:1rem;flex-wrap:wrap;">
-        <a href="#book" class="btn-primary">Book Online</a>
-        <a href="tel:9136056275" class="btn-gold">Call to Enroll</a>
+        <a href="#book" class="btn-gold">Book Online</a>
+        <a href="tel:9136056275" class="btn-partnership">Call to Enroll</a>
       </div>
     </div>
   </div>
@@ -421,7 +422,7 @@
 <section class="service-detail" id="direct">
   <div class="service-detail-inner">
     <div class="service-detail-header">
-      <div class="service-number" style="background:var(--teal);">03</div>
+      <div class="service-number" style="background:#4a6fa5;">03</div>
       <h2>Nurse Direct Line</h2>
       <div class="service-detail-price">$149<span class="small">Per Month · Virtual · Available Nationwide</span></div>
     </div>
@@ -458,10 +459,117 @@
         <div class="price-sub">No contract. No commitment.</div>
         <div style="margin-top:1.25rem;display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
           <a href="nurse-direct.html" class="btn-teal">Get Started Online</a>
-          <a href="tel:9136056275" style="display:inline-block;padding:1rem 2rem;text-decoration:none;font-size:0.85rem;letter-spacing:0.18em;text-transform:uppercase;font-weight:600;border-radius:2px;border:1.5px solid rgba(255,255,255,0.4);color:white;background:transparent;">Call to Enroll</a>
+          <a href="tel:9136056275" style="display:inline-block;padding:1rem 2rem;text-decoration:none;font-size:0.85rem;letter-spacing:0.18em;text-transform:uppercase;font-weight:600;border-radius:2px;background:#4a6fa5;color:white;">Call to Enroll</a>
         </div>
       </div>
       <p class="disclaimer">Nurse Direct Line is not a replacement for emergency services. If you are experiencing a medical emergency, call 911.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 04 MEDICAL ADVOCACY -->
+<section class="service-detail" id="advocacy">
+  <div class="service-detail-inner">
+    <div class="service-detail-header" style="background: var(--gold);">
+      <div class="service-number" style="background: rgba(255,255,255,0.2); color: var(--navy);">04</div>
+      <h2 style="color: var(--navy);">Medical Advocacy</h2>
+      <div class="service-detail-price" style="color: var(--navy);">$200<span class="small" style="color: rgba(45,49,66,0.65);">In-Person · As Needed · First 2 hrs</span></div>
+    </div>
+    <div class="service-detail-body">
+      <div class="mobile-price">$200 <span style="font-family:'Inter',sans-serif;font-size:0.9rem;font-weight:400;color:var(--text-light);">first 2 hours</span></div>
+      <p>An ICU-trained nurse with you in the doctor's office, hospital room, or before a procedure. Having someone who knows the system sitting next to you changes everything — including how the physician shows up.</p>
+      <p>Most patients leave appointments confused, having nodded along to clinical language they didn't fully understand. I make sure that doesn't happen to you. I prepare you beforehand, translate in real time, and debrief you after so nothing gets lost.</p>
+      <ul class="check-list">
+        <li>Pre-visit question preparation</li>
+        <li>Real-time clinical interpretation</li>
+        <li>Ensure your concerns are fully addressed</li>
+        <li>Medication &amp; treatment plan review</li>
+        <li>Post-visit plain-language debrief</li>
+        <li>Written visit summary — yours to keep</li>
+        <li>Help evaluating options &amp; next steps</li>
+        <li>Hospital room presence &amp; support</li>
+        <li>Pre-procedure preparation</li>
+        <li>Coordination with care team when needed</li>
+      </ul>
+      <div class="policy-note">$200 minimum covers the first two hours. $50 for each additional 30 minutes. Travel within West Valley included. Distance outside Goodyear, Litchfield Park, and Avondale may incur a travel fee — ask when you call.</div>
+      <div class="cta-row" style="margin-top:2rem;display:flex;gap:1rem;flex-wrap:wrap;">
+        <a href="advocacy.html" class="btn-gold">Book Online</a>
+        <a href="tel:9136056275" class="btn-advocacy-gold">Call to Check Availability</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 05 PERSONAL TRAINING -->
+<section class="service-detail" id="training">
+  <div class="service-detail-inner">
+    <div class="service-detail-header" style="background: #2d5a3d;">
+      <div class="service-number" style="background: rgba(255,255,255,0.15); color: white;">05</div>
+      <h2>Personal Training</h2>
+      <div class="service-detail-price">From $95<span class="small">Per Session · In-Home or HOA Gym</span></div>
+    </div>
+    <div class="service-detail-body">
+      <div class="mobile-price">From $95 <span style="font-family:'Inter',sans-serif;font-size:0.9rem;font-weight:400;color:var(--text-light);">per session</span></div>
+      <p>Private, one-on-one personal training from a registered nurse and ACE-certified trainer. I bring both worlds to every session — the clinical eye of an ICU nurse and the programming knowledge of a certified trainer. I notice what other trainers don't: pain patterns, compensation habits, how your medications affect your performance and recovery.</p>
+      <p>Sessions in your home or your HOA community gym. Strength, balance, mobility, and core — built around where you are and where you want to go.</p>
+      <ul class="check-list">
+        <li>Strength &amp; resistance training</li>
+        <li>Balance &amp; fall prevention</li>
+        <li>Core stability &amp; functional movement</li>
+        <li>Corrective exercise &amp; injury prevention</li>
+        <li>Mobility &amp; flexibility work</li>
+        <li>Myofascial release techniques</li>
+        <li>Medication-aware programming</li>
+        <li>Progress tracking each session</li>
+        <li>In-home or HOA gym — your space</li>
+        <li>Always 1-on-1, always Gretchen</li>
+      </ul>
+
+      <div class="tiers-block">
+        <div class="tiers-label">Choose Your Package</div>
+        <div class="tiers-grid four-col">
+            <div class="tier-freq">Single session</div>
+            <div class="tier-price">$95<span class="per">/session</span></div>
+            <ul class="check-list">
+              <li>No commitment required</li>
+              <li>Try it first</li>
+            </ul>
+          </div>
+          <div class="tier-card">
+            <h3>Jumpstart</h3>
+            <div class="tier-freq">4 sessions · one month</div>
+            <div class="tier-price">$300<span class="per"> · $75/session</span></div>
+            <ul class="check-list">
+              <li>Build the foundation</li>
+              <li>Best intro package</li>
+            </ul>
+          </div>
+          <div class="tier-card featured">
+            <div class="tier-badge">Most Popular</div>
+            <h3>Momentum</h3>
+            <div class="tier-freq">8 sessions · two months</div>
+            <div class="tier-price">$560<span class="per"> · $70/session</span></div>
+            <ul class="check-list">
+              <li>Build real habits</li>
+              <li>See lasting results</li>
+            </ul>
+          </div>
+          <div class="tier-card">
+            <h3>Committed</h3>
+            <div class="tier-freq">12 sessions · three months</div>
+            <div class="tier-price">$780<span class="per"> · $65/session</span></div>
+            <ul class="check-list">
+              <li>Transform your training</li>
+              <li>Best value per session</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="cta-row" style="margin-top:2rem;display:flex;gap:1rem;flex-wrap:wrap;">
+        <a href="personal-training.html" class="btn-gold">Learn More</a>
+        <a href="tel:9136056275" style="display:inline-block;padding:1rem 2rem;text-decoration:none;font-size:0.85rem;letter-spacing:0.18em;text-transform:uppercase;font-weight:600;border-radius:2px;background:#2d5a3d;color:white;transition:all 0.2s;">Call or Text Gretchen</a>
+      </div>
     </div>
   </div>
 </section>
