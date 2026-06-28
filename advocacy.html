@@ -61,18 +61,13 @@
   .mobile-menu a { color: white; text-decoration: none; font-size: 1.6rem; font-family: 'Cormorant Garamond', serif; font-weight: 600; padding: 1rem 2rem; letter-spacing: 0.02em; border-bottom: 1px solid rgba(255,255,255,0.08); width: 100%; text-align: center; transition: color 0.2s; }
   .mobile-menu a:last-child { border-bottom: none; }
   .mobile-menu a:hover { color: var(--gold); }
-  .mobile-menu-cta { margin-top: 1.5rem; display: flex; flex-direction: column; gap: 0.75rem; width: 100%; padding: 0 2rem; }
-  .mobile-menu-cta a { font-family: 'Inter', sans-serif !important; font-size: 0.85rem !important; letter-spacing: 0.18em !important; text-transform: uppercase !important; font-weight: 600 !important; padding: 1rem !important; border-radius: 2px !important; border-bottom: none !important; }
-  .mobile-menu-cta .m-gold { background: var(--gold); color: var(--navy) !important; }
-  .mobile-menu-cta .m-red { background: var(--red); color: white !important; }
-  .mobile-menu-cta .m-teal { background: #4a6fa5; color: white !important; }
 
   /* BUTTONS */
   .btn-primary { padding: 1rem 2rem; text-decoration: none; font-size: 0.85rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; display: inline-block; border-radius: 2px; background: var(--red); color: white; border: none; cursor: pointer; }
   .btn-primary:hover { background: var(--red-deep); transform: translateY(-1px); }
   .btn-advocacy-gold { padding: 1rem 2rem; text-decoration: none; font-size: 0.85rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; display: inline-block; border-radius: 2px; background: var(--gold); color: var(--navy); }
   .btn-advocacy-gold:hover { background: var(--gold-deep); transform: translateY(-1px); }
-  .btn-gold { padding: 1rem 2rem; text-decoration: none; font-size: 0.85rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; display: inline-block; border-radius: 2px; background: #f5f0e8; color: var(--navy); border: 1.5px solid #c9b99a; }
+  .btn-gold { padding: 1rem 2rem; text-decoration: none; font-size: 0.85rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; display: inline-block; border-radius: 2px; background: #f5f0e8; color: var(--navy); border: 1.5px solid #b8a070; }
   .btn-gold:hover { background: #ede7d9; transform: translateY(-1px); }
   .btn-outline-white { padding: 1rem 2rem; text-decoration: none; font-size: 0.85rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; display: inline-block; border-radius: 2px; border: 1.5px solid rgba(255,255,255,0.5); color: white; background: transparent; }
   .btn-outline-white:hover { border-color: white; background: rgba(255,255,255,0.08); }
@@ -189,12 +184,8 @@
   <a href="why.html" onclick="closeMenu()">Why Mobile Health Nurse</a>
   <a href="services.html" onclick="closeMenu()">Services</a>
   <a href="personal-training.html" onclick="closeMenu()">Personal Training</a>
+  <a href="advocacy.html" onclick="closeMenu()">Medical Advocacy</a>
   <a href="#contact" onclick="closeMenu()">Contact</a>
-  <div class="mobile-menu-cta">
-    <a href="#contact" class="m-gold" onclick="closeMenu()">Connect</a>
-    <a href="tel:9136056275" class="m-red" onclick="closeMenu()">Call Now</a>
-    <a href="nurse-direct.html" class="m-teal" onclick="closeMenu()">Nurse Direct Line</a>
-  </div>
 </div>
 
 <nav>
@@ -213,6 +204,7 @@
     <li><a href="why.html">Why Mobile Health Nurse</a></li>
     <li><a href="services.html">Services</a></li>
     <li><a href="personal-training.html">Personal Training</a></li>
+    <li><a href="advocacy.html" class="active">Medical Advocacy</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
   </div>
@@ -331,7 +323,8 @@
     <li><a href="why.html">Why Mobile Health Nurse</a></li>
     <li><a href="services.html">Services</a></li>
     <li><a href="personal-training.html">Personal Training</a></li>
-    <li><a href="advocacy.html">Medical Advocacy</a></li>
+    <li><a href="advocacy.html" class="active">Medical Advocacy</a></li>
+    <li><a href="advocacy.html" class="active">Medical Advocacy</a></li>
   </ul>
   <div class="footer-contact">
     <a href="mailto:HealthSpanRN@gmail.com">HealthSpanRN@gmail.com</a> · (913) 605-6275 · West Valley, AZ<br>

@@ -31,20 +31,13 @@
   h1, h2, h3, h4 { font-family: 'Cormorant Garamond', serif; font-weight: 600; line-height: 1.15; color: var(--navy); letter-spacing: -0.01em; }
 
   /* ── NAV ── */
-  nav {
-    background: var(--navy);
-    padding: 1.25rem 3rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 200;
-  }
-  .brand h1 { color: white; font-size: 1.5rem; font-weight: 600; margin: 0; }
-  .brand .location { color: var(--gold); font-size: 0.7rem; letter-spacing: 0.18em; font-family: 'Inter', sans-serif; font-weight: 500; text-transform: uppercase; }
-  .nav-links { display: flex; gap: 2rem; list-style: none; }
-  .nav-links a { color: white; text-decoration: none; font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 500; transition: color 0.2s; }
+  nav { background: var(--navy); padding: 0; display: flex; flex-direction: column; position: sticky; top: 0; z-index: 200; }
+  .nav-top { display: flex; justify-content: space-between; align-items: center; padding: 0.9rem 2.5rem; }
+  .nav-bottom { display: flex; justify-content: space-between; align-items: center; padding: 0.6rem 2.5rem 0.7rem; border-top: 1px solid rgba(255,255,255,0.08); }
+  .brand h1 { color: white; font-size: 1.4rem; font-weight: 600; margin: 0; white-space: nowrap; }
+  .brand .location { color: var(--gold); font-size: 0.65rem; letter-spacing: 0.15em; font-family: 'Inter', sans-serif; font-weight: 500; text-transform: uppercase; }
+  .nav-links { display: flex; gap: 1.75rem; list-style: none; align-items: center; }
+  .nav-links a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; transition: color 0.2s; white-space: nowrap; }
   .nav-links a:hover { color: var(--gold); }
   .nav-buttons { display: none; }
   .btn-connect, .btn-advocacy {
@@ -118,29 +111,10 @@
   }
   .mobile-menu a:last-child { border-bottom: none; }
   .mobile-menu a:hover { color: var(--gold); }
-  .mobile-menu-cta {
-    margin-top: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-    width: 100%;
-    padding: 0 2rem;
-  }
-  .mobile-menu-cta a {
-    font-family: 'Inter', sans-serif !important;
-    font-size: 0.85rem !important;
-    letter-spacing: 0.18em !important;
-    text-transform: uppercase !important;
-    font-weight: 600 !important;
-    padding: 1rem !important;
-    border-radius: 2px !important;
-    border-bottom: none !important;
-  }
-  .mobile-menu-cta .m-gold { background: var(--gold); color: var(--navy) !important; }
-  .mobile-menu-cta .m-red { background: var(--red); color: white !important; }
-  .mobile-menu-cta .m-teal { background: #3a3d4a; color: var(--gold) !important; border: 1px solid var(--gold); }
 
   /* ── BUTTONS ── */
+  .btn-hero-cream { padding: 0.95rem 1.75rem; text-decoration: none; font-size: 0.82rem; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; display: inline-block; border-radius: 2px; background: #f5f0e8; color: var(--navy); border: 1.5px solid #b8a070; }
+  .btn-hero-cream:hover { background: #ede7d9; transform: translateY(-1px); }
   .btn-hero-call { padding: 0.95rem 1.75rem; text-decoration: none; font-size: 0.82rem; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; display: inline-block; border-radius: 2px; background: var(--red); color: white; }
   .btn-hero-call:hover { background: var(--red-deep); transform: translateY(-1px); }
   .btn-hero-advocacy { padding: 0.95rem 1.75rem; text-decoration: none; font-size: 0.82rem; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; display: inline-block; border-radius: 2px; background: var(--gold); color: var(--navy); border: 1.5px solid var(--gold-deep); }
@@ -153,7 +127,7 @@
   .btn-primary:hover { background: var(--red-deep); transform: translateY(-1px); }
   .btn-advocacy-gold { padding: 1rem 2rem; text-decoration: none; font-size: 0.85rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; display: inline-block; border-radius: 2px; background: var(--gold); color: var(--navy); }
   .btn-advocacy-gold:hover { background: var(--gold-deep); transform: translateY(-1px); }
-  .btn-gold { padding: 1rem 2rem; text-decoration: none; font-size: 0.85rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; display: inline-block; border-radius: 2px; background: #f5f0e8; color: var(--navy); border: 1.5px solid #c9b99a; }
+  .btn-gold { padding: 1rem 2rem; text-decoration: none; font-size: 0.85rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; display: inline-block; border-radius: 2px; background: #f5f0e8; color: var(--navy); border: 1.5px solid #b8a070; }
   .btn-gold:hover { background: #ede7d9; transform: translateY(-1px); }
 
   /* ── EYEBROW ── */
@@ -343,12 +317,9 @@
   <a href="why.html" onclick="closeMenu()">Why Mobile Health Nurse</a>
   <a href="services.html" onclick="closeMenu()">Services</a>
   <a href="personal-training.html" onclick="closeMenu()">Personal Training</a>
+  <a href="advocacy.html" onclick="closeMenu()">Medical Advocacy</a>
+  <a href="nurse-direct.html" onclick="closeMenu()">Nurse Direct Line</a>
   <a href="#connect" onclick="closeMenu()">Contact</a>
-  <div class="mobile-menu-cta">
-    <a href="#connect" class="m-gold" onclick="closeMenu()">Connect</a>
-    <a href="advocacy.html" class="m-red" onclick="closeMenu()">Medical Advocacy</a>
-    <a href="nurse-direct.html" class="m-teal" onclick="closeMenu()">Nurse Direct Line</a>
-  </div>
 </div>
 
 <nav>
@@ -367,6 +338,7 @@
     <li><a href="why.html">Why Mobile Health Nurse</a></li>
     <li><a href="services.html">Services</a></li>
     <li><a href="personal-training.html">Personal Training</a></li>
+    <li><a href="advocacy.html">Medical Advocacy</a></li>
     <li><a href="#connect">Contact</a></li>
   </ul>
 
@@ -391,9 +363,9 @@
     </div>
     <div class="hero-cta-row">
       <a href="tel:9136056275" class="btn-hero-call">Call Me Directly</a>
-      <a href="advocacy.html" class="btn-hero-advocacy">Medical Advocacy</a>
-      <a href="nurse-direct.html" class="btn-hero-direct">Nurse Direct Line</a>
-      <a href="personal-training.html" class="btn-hero-training">Personal Training</a>
+      <a href="advocacy.html" class="btn-hero-cream">Medical Advocacy</a>
+      <a href="nurse-direct.html" class="btn-hero-cream">Nurse Direct Line</a>
+      <a href="personal-training.html" class="btn-hero-cream">Personal Training</a>
     </div>
     <div class="hero-fineprint">Gretchen Hess, BSN, RN, ACE-CPT · HealthSpanRN@gmail.com</div>
   </div>
@@ -547,6 +519,7 @@
     <li><a href="why.html">Why Mobile Health Nurse</a></li>
     <li><a href="services.html">Services</a></li>
     <li><a href="personal-training.html">Personal Training</a></li>
+    <li><a href="advocacy.html">Medical Advocacy</a></li>
     <li><a href="#connect">Contact</a></li>
     <li><a href="advocacy.html">Medical Advocacy</a></li>
   </ul>
