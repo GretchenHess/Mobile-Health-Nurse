@@ -147,6 +147,8 @@
   .btn-hero-advocacy:hover { background: var(--gold-deep); transform: translateY(-1px); }
   .btn-hero-direct { padding: 0.95rem 1.75rem; text-decoration: none; font-size: 0.82rem; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; display: inline-block; border-radius: 2px; background: #4a6fa5; color: white; }
   .btn-hero-direct:hover { background: #3a5a8a; transform: translateY(-1px); }
+  .btn-hero-training { padding: 0.95rem 1.75rem; text-decoration: none; font-size: 0.82rem; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; display: inline-block; border-radius: 2px; background: #2d5a3d; color: white; }
+  .btn-hero-training:hover { background: #234830; transform: translateY(-1px); }
   .btn-primary { padding: 1rem 2rem; text-decoration: none; font-size: 0.85rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; display: inline-block; border-radius: 2px; border: none; cursor: pointer; background: var(--red); color: white; }
   .btn-primary:hover { background: var(--red-deep); transform: translateY(-1px); }
   .btn-advocacy-gold { padding: 1rem 2rem; text-decoration: none; font-size: 0.85rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; display: inline-block; border-radius: 2px; background: var(--gold); color: var(--navy); }
@@ -166,7 +168,7 @@
   .hero-services { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 0.5rem 0.75rem; margin-bottom: 2.25rem; }
   .hero-services span { color: rgba(255,255,255,0.92); font-size: clamp(1rem, 2vw, 1.25rem); font-family: 'Inter', sans-serif; font-weight: 400; letter-spacing: 0.02em; }
   .hero-services-dot { color: var(--gold) !important; font-weight: 700; font-size: 1.4rem !important; }
-  .hero-cta-row { display: flex; gap: 0.85rem; flex-wrap: wrap; justify-content: center; margin-bottom: 1.5rem; max-width: 640px; margin-left: auto; margin-right: auto; }
+  .hero-cta-row { display: flex; gap: 0.85rem; flex-wrap: wrap; justify-content: center; margin-bottom: 1.5rem; max-width: 860px; margin-left: auto; margin-right: auto; }
   .hero-fineprint { color: rgba(255,255,255,0.45); font-size: 0.82rem; margin-top: 1.25rem; margin-bottom: 3.5rem; }
   .hero-image-wrap { max-width: 1400px; margin: 0 auto; }
   .hero-image-wrap img { width: 100%; display: block; max-height: 520px; object-fit: cover; object-position: center 20%; border-radius: 4px 4px 0 0; }
@@ -199,12 +201,15 @@
   .four-ways-header { text-align: center; margin-bottom: 3.5rem; }
   .four-ways-header h2 { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 0.75rem; }
   .four-ways-header p { color: var(--text-medium); font-size: 1.05rem; max-width: 540px; margin: 0 auto; }
-  .four-ways-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
+  .four-ways-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1.5rem; }
   .way-card { background: white; padding: 2.25rem 1.75rem; border-top: 4px solid var(--gold); border-radius: 2px; display: flex; flex-direction: column; }
   .way-card.teal-top { border-top-color: var(--teal); }
   .way-card.red-top { border-top-color: var(--red); }
   .way-card.navy-top { border-top-color: var(--navy); }
   .way-card.charcoal-top { border-top-color: #3a3d4a; }
+  .way-card.green-top { border-top-color: #2d5a3d; }
+  .way-card.green-top .way-card-label { color: #2d5a3d; }
+  .way-card.green-top a { color: #2d5a3d; }
   .way-card-label { font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 600; color: var(--gold-deep); margin-bottom: 0.75rem; }
   .way-card.teal-top .way-card-label { color: var(--teal); }
   .way-card.red-top .way-card-label { color: var(--red); }
@@ -250,7 +255,7 @@
      TABLET (≤ 1000px)
   ════════════════════════ */
   @media (max-width: 1000px) {
-    .four-ways-grid { grid-template-columns: repeat(2, 1fr); }
+    .four-ways-grid { grid-template-columns: repeat(3, 1fr); }
   }
 
   /* ════════════════════════
@@ -388,6 +393,7 @@
       <a href="tel:9136056275" class="btn-hero-call">Call Me Directly</a>
       <a href="advocacy.html" class="btn-hero-advocacy">Medical Advocacy</a>
       <a href="nurse-direct.html" class="btn-hero-direct">Nurse Direct Line</a>
+      <a href="personal-training.html" class="btn-hero-training">Personal Training</a>
     </div>
     <div class="hero-fineprint">Gretchen Hess, BSN, RN, ACE-CPT · HealthSpanRN@gmail.com</div>
   </div>
@@ -436,7 +442,7 @@
   <div class="four-ways-inner">
     <div class="four-ways-header">
       <div class="eyebrow">What I Do</div>
-      <h2>Four ways I can help.</h2>
+      <h2>Five ways I can help.</h2>
       <p>Private pay only — which means I work for you, not an insurance company.</p>
     </div>
     <div class="four-ways-grid">
@@ -471,6 +477,14 @@
         <p>Unlimited call and text access to me — no portal, no automated system, no stranger. Available to anyone in Arizona or across the U.S. When you call, I answer. When you text, I respond personally.</p>
         <div class="way-card-price">$149 <span class="per">/month</span></div>
         <a href="nurse-direct.html" style="color: #3a3d4a;">Learn more →</a>
+      </div>
+
+      <div class="way-card green-top">
+        <div class="way-card-label">In-Home · HOA Gym</div>
+        <h3>Personal Training</h3>
+        <p>Private one-on-one training from a registered nurse and ACE-certified trainer. Strength, balance, mobility, and core — with a clinical eye that notices what other trainers don't.</p>
+        <div class="way-card-price">From $95 <span class="per">/session</span></div>
+        <a href="personal-training.html">See packages →</a>
       </div>
 
     </div>
