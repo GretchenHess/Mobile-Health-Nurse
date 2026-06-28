@@ -238,8 +238,8 @@
   @media (max-width: 768px) {
 
     /* Nav */
-    .nav-top { padding: 0.9rem 1.25rem; }
-    .nav-bottom { display: none; }
+    nav { padding: 0.9rem 1.25rem; }
+    .nav-links { display: none; }
     .hamburger { display: flex; }
     .mobile-menu { display: flex; }
 
@@ -323,26 +323,21 @@
 </div>
 
 <nav>
-  <div class="nav-top">
-    <div class="brand">
+  <div class="brand">
     <h1>Mobile Health Nurse</h1>
     <div class="location">West Valley, Arizona</div>
   </div>
-    <button class="hamburger" id="hamburger" aria-label="Open menu" onclick="toggleMenu()">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-  <div class="nav-bottom">
-    <ul class="nav-links">
-    <li><a href="#about">About</a></li>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
     <li><a href="why.html">Why Mobile Health Nurse</a></li>
     <li><a href="services.html">Services</a></li>
     <li><a href="personal-training.html">Personal Training</a></li>
     <li><a href="advocacy.html">Medical Advocacy</a></li>
     <li><a href="#connect">Contact</a></li>
   </ul>
-
-  </div>
+  <button class="hamburger" id="hamburger" aria-label="Open menu" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
 
 <a id="top"></a>
@@ -515,7 +510,7 @@
   <div class="footer-tag">In-Home Nursing Care · Medical Advocacy · Personal Training</div>
   <ul class="footer-nav">
     <li><a href="#top">Home</a></li>
-    <li><a href="#about">About</a></li>
+    <li><a href="index.html">Home</a></li>
     <li><a href="why.html">Why Mobile Health Nurse</a></li>
     <li><a href="services.html">Services</a></li>
     <li><a href="personal-training.html">Personal Training</a></li>

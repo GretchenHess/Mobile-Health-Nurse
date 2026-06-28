@@ -31,13 +31,12 @@
   h1, h2, h3 { font-family: 'Cormorant Garamond', serif; font-weight: 600; line-height: 1.15; color: var(--navy); letter-spacing: -0.01em; }
 
   /* NAV */
-  nav { background: var(--navy); padding: 0; display: flex; flex-direction: column; position: sticky; top: 0; z-index: 200; }
-  .nav-top { display: flex; justify-content: space-between; align-items: center; padding: 0.9rem 2.5rem; }
-  .nav-bottom { display: flex; justify-content: space-between; align-items: center; padding: 0.6rem 2.5rem 0.7rem; border-top: 1px solid rgba(255,255,255,0.08); }
+  nav { background: var(--navy); padding: 1rem 2.5rem; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 200; gap: 2rem; }
+  .brand { flex-shrink: 0; }
   .brand h1 { color: white; font-size: 1.4rem; font-weight: 600; margin: 0; white-space: nowrap; }
   .brand .location { color: var(--gold); font-size: 0.65rem; letter-spacing: 0.15em; font-family: 'Inter', sans-serif; font-weight: 500; text-transform: uppercase; }
-  .nav-links { display: flex; gap: 1.75rem; list-style: none; align-items: center; }
-  .nav-links a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; transition: color 0.2s; white-space: nowrap; }
+  .nav-links { display: flex; gap: 1.5rem; list-style: none; align-items: center; flex-wrap: nowrap; }
+  .nav-links a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 500; transition: color 0.2s; white-space: nowrap; }
   .nav-links a:hover { color: var(--gold); }
   .nav-links a.active { color: var(--gold); }
   .nav-buttons { display: none; }
@@ -149,8 +148,8 @@
      MOBILE (≤ 768px)
   ══════════════════════ */
   @media (max-width: 768px) {
-    .nav-top { padding: 0.9rem 1.25rem; }
-    .nav-bottom { display: none; }
+    nav { padding: 0.9rem 1.25rem; }
+    .nav-links { display: none; }
     .hamburger { display: flex; }
     .mobile-menu { display: flex; }
 
@@ -189,25 +188,21 @@
 </div>
 
 <nav>
-  <div class="nav-top">
-    <div class="brand">
+  <div class="brand">
     <h1>Mobile Health Nurse</h1>
     <div class="location">West Valley, Arizona</div>
   </div>
-    <button class="hamburger" id="hamburger" aria-label="Open menu" onclick="toggleMenu()">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-  <div class="nav-bottom">
-    <ul class="nav-links">
-    <li><a href="index.html#about">About</a></li>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
     <li><a href="why.html" class="active">Why Mobile Health Nurse</a></li>
     <li><a href="services.html">Services</a></li>
     <li><a href="personal-training.html">Personal Training</a></li>
     <li><a href="advocacy.html">Medical Advocacy</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
-  </div>
+  <button class="hamburger" id="hamburger" aria-label="Open menu" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
 
 <!-- PAGE HERO -->
@@ -322,7 +317,7 @@
   <div class="footer-tag">In-Home Nursing Care · Medical Advocacy · Personal Training</div>
   <ul class="footer-nav">
     <li><a href="index.html">Home</a></li>
-    <li><a href="index.html#about">About</a></li>
+    <li><a href="index.html">Home</a></li>
     <li><a href="why.html">Why Mobile Health Nurse</a></li>
     <li><a href="services.html">Services</a></li>
     <li><a href="personal-training.html">Personal Training</a></li>
