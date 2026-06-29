@@ -30,110 +30,46 @@
   body { font-family: 'Inter', sans-serif; color: var(--text-dark); background: var(--off-white); line-height: 1.6; font-weight: 400; -webkit-font-smoothing: antialiased; }
   h1, h2, h3, h4 { font-family: 'Cormorant Garamond', serif; font-weight: 600; line-height: 1.15; color: var(--navy); letter-spacing: -0.01em; }
 
-  /* ── NAV ── */
+  /* NAV */
   nav { background: var(--navy); padding: 1rem 2.5rem; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 200; gap: 2rem; }
-  .nav-top { display: flex; justify-content: space-between; align-items: center; padding: 0.9rem 2.5rem; }
-  .nav-bottom { display: flex; justify-content: space-between; align-items: center; padding: 0.6rem 2.5rem 0.7rem; border-top: 1px solid rgba(255,255,255,0.08); }
+  .brand { flex-shrink: 0; }
   .brand h1 { color: white; font-size: 1.4rem; font-weight: 600; margin: 0; white-space: nowrap; }
   .brand .location { color: var(--gold); font-size: 0.65rem; letter-spacing: 0.15em; font-family: 'Inter', sans-serif; font-weight: 500; text-transform: uppercase; }
   .nav-links { display: flex; gap: 1.75rem; list-style: none; align-items: center; }
   .nav-links a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; transition: color 0.2s; white-space: nowrap; }
   .nav-links a:hover { color: var(--gold); }
-  .nav-buttons { display: none; }
-  .btn-connect, .btn-advocacy {
-    padding: 0.75rem 1.5rem;
-    text-decoration: none;
-    font-size: 0.78rem;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    font-weight: 600;
-    transition: all 0.2s;
-    border-radius: 2px;
-  }
-  .btn-connect { background: var(--gold); color: var(--navy); }
-  .btn-connect:hover { background: var(--gold-deep); }
-  .btn-advocacy { background: var(--red); color: white; }
-  .btn-advocacy:hover { background: var(--red-deep); }
-  .btn-direct { padding: 0.6rem 1rem; text-decoration: none; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; border-radius: 2px; background: #3a3d4a; color: var(--gold); border: 1px solid var(--gold); white-space: nowrap; }
-  .btn-direct:hover { background: #2c2e38; }
+  .nav-links a.active { color: var(--gold); }
 
-  /* ── HAMBURGER ── */
-  .hamburger {
-    display: none;
-    flex-direction: column;
-    gap: 5px;
-    cursor: pointer;
-    padding: 4px;
-    background: none;
-    border: none;
-    z-index: 300;
-  }
-  .hamburger span {
-    display: block;
-    width: 24px;
-    height: 2px;
-    background: white;
-    border-radius: 2px;
-    transition: all 0.3s ease;
-    transform-origin: center;
-  }
+  /* HAMBURGER */
+  .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; background: none; border: none; z-index: 300; }
+  .hamburger span { display: block; width: 24px; height: 2px; background: white; border-radius: 2px; transition: all 0.3s ease; transform-origin: center; }
   .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
   .hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
   .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
-  /* ── MOBILE DRAWER ── */
-  .mobile-menu {
-    display: none;
-    position: fixed;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: var(--navy-deep);
-    z-index: 150;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s ease;
-  }
+  /* MOBILE DRAWER */
+  .mobile-menu { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: var(--navy-deep); z-index: 150; flex-direction: column; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: opacity 0.3s ease; }
   .mobile-menu.open { opacity: 1; pointer-events: all; }
-  .mobile-menu a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.6rem;
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: 600;
-    padding: 1rem 2rem;
-    letter-spacing: 0.02em;
-    border-bottom: 1px solid rgba(255,255,255,0.08);
-    width: 100%;
-    text-align: center;
-    transition: color 0.2s;
-  }
+  .mobile-menu a { color: white; text-decoration: none; font-size: 1.6rem; font-family: 'Cormorant Garamond', serif; font-weight: 600; padding: 1rem 2rem; letter-spacing: 0.02em; border-bottom: 1px solid rgba(255,255,255,0.08); width: 100%; text-align: center; transition: color 0.2s; }
   .mobile-menu a:last-child { border-bottom: none; }
   .mobile-menu a:hover { color: var(--gold); }
 
-  /* ── BUTTONS ── */
+  /* BUTTONS */
   .btn-hero-cream { padding: 0.95rem 1.75rem; text-decoration: none; font-size: 0.82rem; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; display: inline-block; border-radius: 2px; background: #f5f0e8; color: var(--navy); border: 1.5px solid #b8a070; }
   .btn-hero-cream:hover { background: #ede7d9; transform: translateY(-1px); }
   .btn-hero-call { padding: 0.95rem 1.75rem; text-decoration: none; font-size: 0.82rem; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; display: inline-block; border-radius: 2px; background: var(--red); color: white; }
   .btn-hero-call:hover { background: var(--red-deep); transform: translateY(-1px); }
-  .btn-hero-advocacy { padding: 0.95rem 1.75rem; text-decoration: none; font-size: 0.82rem; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; display: inline-block; border-radius: 2px; background: var(--gold); color: var(--navy); border: 1.5px solid var(--gold-deep); }
-  .btn-hero-advocacy:hover { background: var(--gold-deep); transform: translateY(-1px); }
   .btn-hero-direct { padding: 0.95rem 1.75rem; text-decoration: none; font-size: 0.82rem; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; display: inline-block; border-radius: 2px; background: #4a6fa5; color: white; }
   .btn-hero-direct:hover { background: #3a5a8a; transform: translateY(-1px); }
-  .btn-hero-training { padding: 0.95rem 1.75rem; text-decoration: none; font-size: 0.82rem; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; display: inline-block; border-radius: 2px; background: #2d5a3d; color: white; }
-  .btn-hero-training:hover { background: #234830; transform: translateY(-1px); }
   .btn-primary { padding: 1rem 2rem; text-decoration: none; font-size: 0.85rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; display: inline-block; border-radius: 2px; border: none; cursor: pointer; background: var(--red); color: white; }
   .btn-primary:hover { background: var(--red-deep); transform: translateY(-1px); }
-  .btn-advocacy-gold { padding: 1rem 2rem; text-decoration: none; font-size: 0.85rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; display: inline-block; border-radius: 2px; background: var(--gold); color: var(--navy); }
-  .btn-advocacy-gold:hover { background: var(--gold-deep); transform: translateY(-1px); }
   .btn-gold { padding: 1rem 2rem; text-decoration: none; font-size: 0.85rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; display: inline-block; border-radius: 2px; background: #f5f0e8; color: var(--navy); border: 1.5px solid #b8a070; }
   .btn-gold:hover { background: #ede7d9; transform: translateY(-1px); }
 
-  /* ── EYEBROW ── */
+  /* EYEBROW */
   .eyebrow { color: var(--teal); font-size: 0.78rem; letter-spacing: 0.22em; font-weight: 600; text-transform: uppercase; margin-bottom: 1.25rem; }
 
-  /* ── HERO ── */
+  /* HERO */
   .hero { background: var(--navy); color: white; padding: 5rem 3rem 0; }
   .hero-top { max-width: 1400px; margin: 0 auto 3.5rem; text-align: center; }
   .hero-eyebrow { color: var(--gold); font-size: 0.78rem; letter-spacing: 0.22em; font-weight: 600; text-transform: uppercase; margin-bottom: 1.5rem; }
@@ -147,18 +83,7 @@
   .hero-image-wrap { max-width: 1400px; margin: 0 auto; }
   .hero-image-wrap img { width: 100%; display: block; max-height: 520px; object-fit: cover; object-position: center 20%; border-radius: 4px 4px 0 0; }
 
-  /* ── FOUNDING BANNER ── */
-  .founding-banner { background: var(--navy-deep); border-top: 4px solid var(--gold); padding: 3rem; }
-  .founding-banner-inner { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: 1fr auto; gap: 3rem; align-items: center; }
-  .founding-eyebrow { color: var(--gold); font-size: 0.72rem; letter-spacing: 0.22em; font-weight: 600; text-transform: uppercase; margin-bottom: 0.75rem; }
-  .founding-banner h3 { color: white; font-size: clamp(1.5rem, 2.5vw, 2rem); margin-bottom: 0.75rem; line-height: 1.2; }
-  .founding-banner p { color: rgba(255,255,255,0.72); font-size: 0.97rem; line-height: 1.65; max-width: 600px; }
-  .founding-spots { text-align: center; background: rgba(201,169,97,0.12); border: 1.5px solid var(--gold); border-radius: 6px; padding: 1.5rem 2rem; min-width: 180px; }
-  .founding-spots-num { font-family: 'Cormorant Garamond', serif; font-size: 3.5rem; font-weight: 600; color: var(--gold); line-height: 1; }
-  .founding-spots-label { color: rgba(255,255,255,0.7); font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; margin-top: 0.4rem; }
-  .founding-spots-sub { color: rgba(255,255,255,0.4); font-size: 0.72rem; margin-top: 0.25rem; }
-
-  /* ── WHO I AM ── */
+  /* WHO I AM */
   .who-i-am { padding: 5rem 3rem; background: var(--navy); color: white; }
   .who-i-am-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 320px; gap: 4rem; align-items: center; }
   .who-i-am .eyebrow { color: var(--gold); }
@@ -169,7 +94,7 @@
   .who-i-am-phone:hover { color: var(--gold); }
   .who-i-am-portrait img { width: 100%; border-radius: 4px; display: block; object-fit: cover; object-position: center top; max-height: 480px; }
 
-  /* ── FOUR WAYS ── */
+  /* FIVE WAYS */
   .four-ways { padding: 5rem 3rem; background: var(--off-white); }
   .four-ways-inner { max-width: 1100px; margin: 0 auto; }
   .four-ways-header { text-align: center; margin-bottom: 3.5rem; }
@@ -179,23 +104,36 @@
   .way-card { background: white; padding: 2.25rem 1.75rem; border-top: 4px solid var(--gold); border-radius: 2px; display: flex; flex-direction: column; }
   .way-card.teal-top { border-top-color: var(--teal); }
   .way-card.red-top { border-top-color: var(--red); }
-  .way-card.navy-top { border-top-color: var(--navy); }
-  .way-card.charcoal-top { border-top-color: #3a3d4a; }
+  .way-card.slate-top { border-top-color: #4a6fa5; }
   .way-card.green-top { border-top-color: #2d5a3d; }
-  .way-card.green-top .way-card-label { color: #2d5a3d; }
-  .way-card.green-top a { color: #2d5a3d; }
   .way-card-label { font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 600; color: var(--gold-deep); margin-bottom: 0.75rem; }
   .way-card.teal-top .way-card-label { color: var(--teal); }
   .way-card.red-top .way-card-label { color: var(--red); }
-  .way-card.navy-top .way-card-label { color: var(--navy); }
+  .way-card.slate-top .way-card-label { color: #4a6fa5; }
+  .way-card.green-top .way-card-label { color: #2d5a3d; }
   .way-card h3 { font-size: 1.5rem; margin-bottom: 0.75rem; line-height: 1.2; }
   .way-card p { color: var(--text-medium); font-size: 0.95rem; line-height: 1.65; flex-grow: 1; margin-bottom: 1.5rem; }
   .way-card-price { font-family: 'Cormorant Garamond', serif; font-size: 1.35rem; font-weight: 600; color: var(--navy); margin-bottom: 1rem; }
   .way-card-price .per { font-family: 'Inter', sans-serif; font-size: 0.82rem; color: var(--text-light); font-weight: 400; }
   .way-card a { font-size: 0.78rem; letter-spacing: 0.15em; text-transform: uppercase; font-weight: 600; color: var(--teal); text-decoration: none; transition: color 0.2s; }
-  .way-card a:hover { color: var(--teal-deep); }
+  .way-card.teal-top a { color: var(--teal); }
+  .way-card.red-top a { color: var(--red); }
+  .way-card.slate-top a { color: #4a6fa5; }
+  .way-card.green-top a { color: #2d5a3d; }
+  .way-card a:hover { opacity: 0.75; }
 
-  /* ── WHO THIS IS FOR ── */
+  /* NURSE DIRECT BAND */
+  .nurse-direct-band { background: #3a3d4a; padding: 4rem 3rem; border-top: 3px solid var(--gold); }
+  .nurse-direct-band-grid { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: 1fr auto; gap: 3rem; align-items: center; }
+  .nurse-direct-band-eyebrow { color: var(--gold); font-size: 0.78rem; letter-spacing: 0.22em; font-weight: 600; text-transform: uppercase; margin-bottom: 0.85rem; }
+  .nurse-direct-band h2 { color: white; font-size: clamp(1.75rem, 3.5vw, 2.75rem); margin-bottom: 0.85rem; line-height: 1.1; }
+  .nurse-direct-band p { color: rgba(255,255,255,0.78); font-size: 1.05rem; line-height: 1.7; max-width: 560px; }
+  .nurse-direct-price { font-family: 'Cormorant Garamond', serif; font-size: 3.5rem; font-weight: 700; color: var(--gold); line-height: 1; text-align: center; }
+  .nurse-direct-per { color: rgba(255,255,255,0.5); font-size: 0.82rem; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 1.25rem; text-align: center; }
+  .btn-now-you-do { display: inline-block; background: #4a6fa5; color: white; padding: 0.9rem 1.75rem; text-decoration: none; font-size: 0.82rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 700; border-radius: 2px; transition: all 0.2s; }
+  .btn-now-you-do:hover { background: #3a5a8a; }
+
+  /* WHO THIS IS FOR */
   .who-for { padding: 5rem 3rem; background: var(--cream); }
   .who-for-inner { max-width: 860px; margin: 0 auto; }
   .who-for-header { text-align: center; margin-bottom: 3.5rem; }
@@ -206,7 +144,7 @@
   .for-item em { color: var(--navy); font-style: normal; font-weight: 600; }
   .who-for-close { text-align: center; margin-top: 3rem; font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: var(--navy); font-style: italic; }
 
-  /* ── BOTTOM CTA ── */
+  /* BOTTOM CTA */
   .bottom-cta { background: var(--navy); color: white; padding: 5rem 3rem; text-align: center; }
   .bottom-cta-inner { max-width: 680px; margin: 0 auto; }
   .bottom-cta .eyebrow { color: var(--gold); }
@@ -215,7 +153,7 @@
   .bottom-cta-buttons { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
   .bottom-cta .fine { color: rgba(255,255,255,0.4); font-size: 0.82rem; margin-top: 1.5rem; }
 
-  /* ── FOOTER ── */
+  /* FOOTER */
   footer { background: var(--navy-deep); color: rgba(255,255,255,0.7); padding: 3.5rem 3rem 2rem; text-align: center; }
   .footer-brand { color: white; font-family: 'Cormorant Garamond', serif; font-size: 1.7rem; font-weight: 600; margin-bottom: 0.4rem; }
   .footer-tag { color: var(--gold); font-size: 0.82rem; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 2.25rem; }
@@ -225,25 +163,18 @@
   .footer-contact { border-top: 1px solid rgba(255,255,255,0.12); padding-top: 1.75rem; font-size: 0.88rem; color: rgba(255,255,255,0.5); }
   .footer-contact a { color: var(--gold); text-decoration: none; }
 
-  /* ════════════════════════
-     TABLET (≤ 1000px)
-  ════════════════════════ */
+  /* TABLET */
   @media (max-width: 1000px) {
     .four-ways-grid { grid-template-columns: repeat(3, 1fr); }
   }
 
-  /* ════════════════════════
-     MOBILE (≤ 768px)
-  ════════════════════════ */
+  /* MOBILE */
   @media (max-width: 768px) {
-
-    /* Nav */
     nav { padding: 0.9rem 1.25rem; }
     .nav-links { display: none; }
     .hamburger { display: flex; }
     .mobile-menu { display: flex; }
 
-    /* Hero */
     .hero { padding: 2.75rem 1.25rem 0; }
     .hero-top { margin-bottom: 2rem; }
     .hero h1 { font-size: 2.5rem; }
@@ -253,55 +184,33 @@
     .hero-cta-row { flex-direction: column; align-items: stretch; gap: 0.75rem; max-width: 100%; }
     .hero-cta-row a { text-align: center; }
     .hero-fineprint { font-size: 0.75rem; margin-bottom: 2rem; }
-    /* Hero image — bleed edge-to-edge */
     .hero-image-wrap { margin: 0 -1.25rem; }
     .hero-image-wrap img { max-height: 260px; border-radius: 0; object-position: center 15%; }
 
-    /* Founding banner */
-    .founding-banner { padding: 2rem 1.25rem; }
-    .founding-banner-inner { grid-template-columns: 1fr; gap: 1.5rem; text-align: center; }
-    .founding-banner p { font-size: 0.92rem; }
-    .founding-spots { margin: 0 auto; max-width: 200px; padding: 1.25rem 1.5rem; }
-    .founding-spots-num { font-size: 3rem; }
-
-    /* Who I Am */
     .who-i-am { padding: 3rem 1.25rem; }
     .who-i-am-inner { grid-template-columns: 1fr; gap: 2rem; }
     .who-i-am-portrait { display: block; order: -1; text-align: center; }
-    .who-i-am-portrait img {
-      border-radius: 4px;
-      max-height: 220px;
-      width: auto;
-      max-width: 180px;
-      object-position: center 10%;
-      border: 3px solid var(--gold);
-      box-shadow: 0 4px 20px rgba(0,0,0,0.35);
-      display: inline-block;
-    }
+    .who-i-am-portrait img { border-radius: 4px; max-height: 220px; width: auto; max-width: 180px; object-position: center 10%; border: 3px solid var(--gold); box-shadow: 0 4px 20px rgba(0,0,0,0.35); display: inline-block; }
     .who-i-am-cta { flex-direction: column; gap: 0.85rem; align-items: stretch; }
     .who-i-am-cta .btn-primary { text-align: center; }
     .who-i-am-phone { text-align: center; }
 
-    /* Nurse Direct band */
-    .nurse-direct-band-grid { grid-template-columns: 1fr !important; gap: 1.5rem !important; text-align: center; }
-    .nurse-direct-band-grid > div:last-child { justify-self: center; }
+    .nurse-direct-band { padding: 2.5rem 1.25rem; }
+    .nurse-direct-band-grid { grid-template-columns: 1fr; gap: 1.5rem; text-align: center; }
+    .nurse-direct-band p { max-width: 100%; }
 
-    /* Four Ways */
     .four-ways { padding: 3rem 1.25rem; }
     .four-ways-grid { grid-template-columns: 1fr; gap: 1rem; }
     .way-card { padding: 1.75rem 1.5rem; }
 
-    /* Who This Is For */
     .who-for { padding: 3rem 1.25rem; }
     .for-item { font-size: 1rem; padding: 1.25rem 0; }
 
-    /* Bottom CTA */
     .bottom-cta { padding: 3rem 1.25rem; }
     .bottom-cta-buttons { flex-direction: column; align-items: stretch; }
     .bottom-cta-buttons a { text-align: center; }
     .bottom-cta .fine { font-size: 0.74rem; }
 
-    /* Footer */
     footer { padding: 2.5rem 1.25rem 1.5rem; }
     .footer-nav { gap: 0.75rem 1.25rem; }
     .footer-nav a { font-size: 0.68rem; }
@@ -311,7 +220,6 @@
 </head>
 <body>
 
-<!-- ── MOBILE DRAWER ── -->
 <div class="mobile-menu" id="mobileMenu">
   <a href="index.html" onclick="closeMenu()">Home</a>
   <a href="why.html" onclick="closeMenu()">Why Mobile Health Nurse</a>
@@ -328,7 +236,7 @@
     <div class="location">West Valley, Arizona</div>
   </div>
   <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
+    <li><a href="index.html" class="active">Home</a></li>
     <li><a href="why.html">Why Mobile Health Nurse</a></li>
     <li><a href="services.html">Services</a></li>
     <li><a href="personal-training.html">Personal Training</a></li>
@@ -343,7 +251,7 @@
 
 <a id="top"></a>
 
-<!-- ── HERO ── -->
+<!-- HERO -->
 <section class="hero">
   <div class="hero-top">
     <div class="hero-eyebrow">West Valley, Arizona · Private Pay · In-Home</div>
@@ -360,7 +268,7 @@
     <div class="hero-cta-row">
       <a href="tel:9136056275" class="btn-hero-call">Call Me Directly</a>
       <a href="advocacy.html" class="btn-hero-cream">Medical Advocacy</a>
-      <a href="nurse-direct.html" class="btn-hero-cream">Nurse Direct Line</a>
+      <a href="nurse-direct.html" class="btn-hero-direct">Nurse Direct Line</a>
       <a href="personal-training.html" class="btn-hero-cream">Personal Training</a>
     </div>
     <div class="hero-fineprint">Gretchen Hess, BSN, RN, ACE-CPT · HealthSpanRN@gmail.com</div>
@@ -370,29 +278,14 @@
   </div>
 </section>
 
-<!-- ── FOUNDING MEMBER BANNER ── -->
-<section class="founding-banner">
-  <div class="founding-banner-inner">
-    <div>
-      <div class="founding-eyebrow">Founding Member Offer — Health Partnership</div>
-      <h3>Lock in your rate. Keep it for life.</h3>
-      <p>The first 10 clients who enroll in Health Partnership receive a founding member rate — significantly reduced from full price. Your rate is locked in for as long as you remain enrolled. These spots are limited and will not be offered again once they're gone.</p>
-    </div>
-    <div class="founding-spots">
-      <div class="founding-spots-num">10</div>
-      <div class="founding-spots-label">of 10 spots</div>
-      <div class="founding-spots-sub">remaining</div>
-    </div>
-  </div>
-</section>
-
-<!-- ── WHO I AM ── -->
+<!-- WHO I AM — flows directly after hero image, no banner interrupt -->
 <section class="who-i-am" id="about">
   <div class="who-i-am-inner">
     <div>
       <div class="eyebrow">Who I Am</div>
       <h2>I'm Gretchen. I'm here to help.</h2>
-      <p>I'm a registered nurse and certified personal trainer — and I built this practice because people deserve more than what the healthcare system has time to give them. I've spent years as an ICU nurse watching what happens when people don't have the right support at the right time. I started Mobile Health Nurse so that doesn't have to be you.</p>
+      <p>I'm a registered nurse and certified personal trainer — and I built this practice because people deserve more than what the healthcare system has time to give them. I've spent years as an ICU nurse watching what happens when people don't have the right support at the right time.</p>
+      <p>I started Mobile Health Nurse because I know exactly what people need — and I built this practice so you can have a RN as your advocate.</p>
       <p>Whether you have a question, a concern, or just don't know where to start — call me. That's what I'm here for.</p>
       <div class="who-i-am-cta">
         <a href="tel:9136056275" class="btn-primary">Call or Text Me</a>
@@ -405,7 +298,7 @@
   </div>
 </section>
 
-<!-- ── FOUR WAYS I CAN HELP ── -->
+<!-- FIVE WAYS I CAN HELP -->
 <section class="four-ways" id="services">
   <div class="four-ways-inner">
     <div class="four-ways-header">
@@ -418,7 +311,7 @@
       <div class="way-card">
         <div class="way-card-label">In-Home · One Time</div>
         <h3>Health Clarity Visit</h3>
-        <p>A comprehensive in-home health assessment covering vitals, medications, labs, nutrition, movement, and your goals. You leave with a written visit summary and nursing recommendations — your baseline on paper.</p>
+        <p>A comprehensive in-home health assessment covering vitals, medications, labs, nutrition, movement, and your goals. You leave with a written visit summary — your baseline on paper.</p>
         <div class="way-card-price">$250 <span class="per">one time</span></div>
         <a href="services.html#clarity">See what's included →</a>
       </div>
@@ -426,7 +319,7 @@
       <div class="way-card teal-top">
         <div class="way-card-label">In-Home · Monthly</div>
         <h3>Health Partnership</h3>
-        <p>Ongoing in-home visits that build on your baseline. Vitals trending, medication and lab follow-up, doctor visit clarification, personal training, and full access to me between visits. Every visit continues your story.</p>
+        <p>Ongoing in-home visits that build on your baseline. Vitals trending, medication and lab follow-up, doctor visit clarification, and personal training — every visit continues your story.</p>
         <div class="way-card-price">From $325 <span class="per">/month</span></div>
         <a href="services.html#partnership">See tiers &amp; pricing →</a>
       </div>
@@ -434,17 +327,17 @@
       <div class="way-card red-top">
         <div class="way-card-label">In-Person · As Needed</div>
         <h3>Medical Advocacy</h3>
-        <p>An ICU-trained nurse with you in the doctor's office, hospital room, or before a procedure. Having someone who knows the system sitting next to you changes everything — including how the physician shows up.</p>
+        <p>An ICU-trained nurse with you in the doctor's office, hospital room, or before a procedure. Your care improves when the doctor knows a nurse advocate is part of the plan.</p>
         <div class="way-card-price">$200 <span class="per">first 2 hrs</span></div>
         <a href="advocacy.html">Learn more →</a>
       </div>
 
-      <div class="way-card charcoal-top">
-        <div class="way-card-label" style="color: var(--gold-deep);">Virtual · Anywhere in the U.S.</div>
+      <div class="way-card slate-top">
+        <div class="way-card-label">Virtual · Anywhere in the U.S.</div>
         <h3>Nurse Direct Line</h3>
-        <p>Unlimited call and text access to me — no portal, no automated system, no stranger. Available to anyone in Arizona or across the U.S. When you call, I answer. When you text, I respond personally.</p>
+        <p>Unlimited call and text access to me — no portal, no automated system, no stranger. Available to anyone in Arizona or across the U.S. When you call, I answer personally.</p>
         <div class="way-card-price">$149 <span class="per">/month</span></div>
-        <a href="nurse-direct.html" style="color: #3a3d4a;">Learn more →</a>
+        <a href="nurse-direct.html">Learn more →</a>
       </div>
 
       <div class="way-card green-top">
@@ -459,23 +352,23 @@
   </div>
 </section>
 
-<!-- ── NURSE DIRECT LINE BAND ── -->
-<section style="background: #3a3d4a; padding: 4rem 3rem; border-top: 3px solid var(--gold);">
-  <div style="max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: 1fr auto; gap: 3rem; align-items: center;" class="nurse-direct-band-grid">
+<!-- NURSE DIRECT LINE BAND -->
+<section class="nurse-direct-band">
+  <div class="nurse-direct-band-grid">
     <div>
-      <div style="color: var(--gold); font-size: 0.78rem; letter-spacing: 0.22em; font-weight: 600; text-transform: uppercase; margin-bottom: 0.85rem;">Available Anywhere in the U.S. · Virtual · No In-Home Visit Required</div>
-      <h2 style="color: white; font-size: clamp(1.75rem, 3.5vw, 2.75rem); margin-bottom: 0.85rem; line-height: 1.1;">You've always wished you knew a nurse.</h2>
-      <p style="color: rgba(255,255,255,0.78); font-size: 1.05rem; line-height: 1.7; max-width: 560px;">Unlimited call and text access to an ICU-trained RN — from anywhere in the country. When you reach out, I respond personally. <span style="color: rgba(255,255,255,0.5); font-style: italic;">$149/month. Cancel anytime.</span></p>
+      <div class="nurse-direct-band-eyebrow">Available Anywhere in the U.S. · Virtual · No In-Home Visit Required</div>
+      <h2>You've always wished you knew a nurse.</h2>
+      <p>Unlimited call and text access to an ICU-trained RN — from anywhere in the country. When you reach out, I respond personally. <span style="color: rgba(255,255,255,0.5); font-style: italic;">$149/month. Cancel anytime.</span></p>
     </div>
     <div style="text-align: center; flex-shrink: 0;">
-      <div style="font-family: 'Cormorant Garamond', serif; font-size: 3.5rem; font-weight: 700; color: var(--gold); line-height: 1;">$149</div>
-      <div style="color: rgba(255,255,255,0.5); font-size: 0.82rem; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 1.25rem;">/month</div>
-      <a href="nurse-direct.html" style="display: inline-block; background: #4a6fa5; color: white; padding: 0.9rem 1.75rem; text-decoration: none; font-size: 0.82rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 700; border-radius: 2px; transition: all 0.2s;">Now You Do →</a>
+      <div class="nurse-direct-price">$149</div>
+      <div class="nurse-direct-per">/month</div>
+      <a href="nurse-direct.html" class="btn-now-you-do">Now You Do →</a>
     </div>
   </div>
 </section>
 
-<!-- ── WHO THIS IS FOR ── -->
+<!-- WHO THIS IS FOR -->
 <section class="who-for" id="who-for">
   <div class="who-for-inner">
     <div class="who-for-header">
@@ -493,7 +386,7 @@
   </div>
 </section>
 
-<!-- ── BOTTOM CTA ── -->
+<!-- BOTTOM CTA -->
 <section class="bottom-cta" id="connect">
   <div class="bottom-cta-inner">
     <div class="eyebrow">The Best First Step</div>
@@ -511,14 +404,12 @@
   <div class="footer-tag">In-Home Nursing Care · Medical Advocacy · Personal Training</div>
   <ul class="footer-nav">
     <li><a href="#top">Home</a></li>
-    <li><a href="index.html">Home</a></li>
     <li><a href="why.html">Why Mobile Health Nurse</a></li>
     <li><a href="services.html">Services</a></li>
     <li><a href="personal-training.html">Personal Training</a></li>
     <li><a href="advocacy.html">Medical Advocacy</a></li>
     <li><a href="nurse-direct.html">Nurse Direct Line</a></li>
     <li><a href="#connect">Contact</a></li>
-    <li><a href="advocacy.html">Medical Advocacy</a></li>
   </ul>
   <div class="footer-contact">
     <a href="mailto:HealthSpanRN@gmail.com">HealthSpanRN@gmail.com</a> · (913) 605-6275 · West Valley, AZ · Goodyear · Litchfield Park · Avondale<br>
