@@ -144,6 +144,15 @@
   .for-item em { color: var(--navy); font-style: normal; font-weight: 600; }
   .who-for-close { text-align: center; margin-top: 3rem; font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: var(--navy); font-style: italic; }
 
+  /* NURSE DIRECT GEOGRAPHY */
+  .nurse-direct-geo { padding: 4rem 3rem; background: #f0f4fa; border-top: 3px solid #4a6fa5; }
+  .nurse-direct-geo-inner { max-width: 860px; margin: 0 auto; display: grid; grid-template-columns: 1fr auto; gap: 3rem; align-items: center; }
+  .nurse-direct-geo .geo-eyebrow { color: #4a6fa5; font-size: 0.78rem; letter-spacing: 0.22em; font-weight: 600; text-transform: uppercase; margin-bottom: 0.85rem; }
+  .nurse-direct-geo h2 { font-size: clamp(1.75rem, 3vw, 2.25rem); color: var(--navy); margin-bottom: 0.85rem; line-height: 1.15; }
+  .nurse-direct-geo p { color: var(--text-medium); font-size: 1.02rem; line-height: 1.72; max-width: 560px; }
+  .btn-slate { display: inline-block; background: #4a6fa5; color: white; padding: 1rem 2rem; text-decoration: none; font-size: 0.85rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; border-radius: 2px; transition: all 0.2s; white-space: nowrap; }
+  .btn-slate:hover { background: #3a5a8a; transform: translateY(-1px); }
+
   /* BOTTOM CTA */
   .bottom-cta { background: var(--navy); color: white; padding: 5rem 3rem; text-align: center; }
   .bottom-cta-inner { max-width: 680px; margin: 0 auto; }
@@ -198,6 +207,10 @@
     .nurse-direct-band { padding: 2.5rem 1.25rem; }
     .nurse-direct-band-grid { grid-template-columns: 1fr; gap: 1.5rem; text-align: center; }
     .nurse-direct-band p { max-width: 100%; }
+
+    .nurse-direct-geo { padding: 2.5rem 1.25rem; }
+    .nurse-direct-geo-inner { grid-template-columns: 1fr; gap: 1.5rem; }
+    .nurse-direct-geo .btn-slate { width: 100%; text-align: center; }
 
     .four-ways { padding: 3rem 1.25rem; }
     .four-ways-grid { grid-template-columns: 1fr; gap: 1rem; }
@@ -352,22 +365,6 @@
   </div>
 </section>
 
-<!-- NURSE DIRECT LINE BAND -->
-<section class="nurse-direct-band">
-  <div class="nurse-direct-band-grid">
-    <div>
-      <div class="nurse-direct-band-eyebrow">Available Anywhere in the U.S. · Virtual · No In-Home Visit Required</div>
-      <h2>You've always wished you knew a nurse.</h2>
-      <p>Unlimited call and text access to an ICU-trained RN — from anywhere in the country. When you reach out, I respond personally. <span style="color: rgba(255,255,255,0.5); font-style: italic;">$149/month. Cancel anytime.</span></p>
-    </div>
-    <div style="text-align: center; flex-shrink: 0;">
-      <div class="nurse-direct-price">$149</div>
-      <div class="nurse-direct-per">/month</div>
-      <a href="nurse-direct.html" class="btn-now-you-do">Now You Do →</a>
-    </div>
-  </div>
-</section>
-
 <!-- WHO THIS IS FOR -->
 <section class="who-for" id="who-for">
   <div class="who-for-inner">
@@ -383,6 +380,36 @@
       <div class="for-item">For the person who wants <em>independence</em> instead of dependency on the healthcare system.</div>
     </div>
     <p class="who-for-close">If any of that sounds like you — you're in the right place.</p>
+  </div>
+</section>
+
+<!-- NURSE DIRECT — NOT IN ARIZONA -->
+<section class="nurse-direct-geo">
+  <div class="nurse-direct-geo-inner">
+    <div>
+      <div class="geo-eyebrow">Available Nationwide · Virtual · No Visit Required</div>
+      <h2>Not in Arizona?</h2>
+      <p>That's okay. The Nurse Direct Line is available to anyone in the country — no in-home visit required, no zip code needed. Just a nurse whose number is in your phone. $149/month, cancel anytime.</p>
+    </div>
+    <div>
+      <a href="nurse-direct.html" class="btn-slate">Learn More →</a>
+    </div>
+  </div>
+</section>
+
+<!-- NURSE DIRECT LINE BAND -->
+<section class="nurse-direct-band">
+  <div class="nurse-direct-band-grid">
+    <div>
+      <div class="nurse-direct-band-eyebrow">Available Anywhere in the U.S. · Virtual · No In-Home Visit Required</div>
+      <h2>You've always wished you knew a nurse.</h2>
+      <p>Unlimited call and text access to an ICU-trained RN — from anywhere in the country. When you reach out, I respond personally. <span style="color: rgba(255,255,255,0.5); font-style: italic;">$149/month. Cancel anytime.</span></p>
+    </div>
+    <div style="text-align: center; flex-shrink: 0;">
+      <div class="nurse-direct-price">$149</div>
+      <div class="nurse-direct-per">/month</div>
+      <a href="nurse-direct.html" class="btn-now-you-do">Now You Do →</a>
+    </div>
   </div>
 </section>
 
