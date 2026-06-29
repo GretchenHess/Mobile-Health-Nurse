@@ -39,6 +39,8 @@
   .nav-links a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 500; transition: color 0.2s; white-space: nowrap; }
   .nav-links a:hover { color: var(--gold); }
   .nav-links a.active { color: var(--gold); }
+  .btn-nav-call { padding: 0.6rem 1.25rem; text-decoration: none; font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; border-radius: 2px; background: var(--red); color: white; white-space: nowrap; }
+  .btn-nav-call:hover { background: var(--red-deep); }
   .nav-buttons { display: none; }
   .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; background: none; border: none; z-index: 300; }
   .hamburger span { display: block; width: 24px; height: 2px; background: white; border-radius: 2px; transition: all 0.3s ease; transform-origin: center; }
@@ -76,6 +78,29 @@
   .page-hero h1 .gold-accent { color: var(--gold); font-style: italic; }
   .page-hero p { color: rgba(255,255,255,0.75); font-size: 1.05rem; line-height: 1.7; }
   .page-hero-image img { width: 100%; border-radius: 4px; display: block; object-fit: cover; height: 100%; max-height: 400px; }
+
+  /* IN-HOME CHOICE BLOCK */
+  .in-home-choice { padding: 4rem 3rem; background: white; border-bottom: 1px solid var(--border-soft); }
+  .in-home-choice-inner { max-width: 1100px; margin: 0 auto; }
+  .in-home-choice-header { text-align: center; margin-bottom: 2.5rem; }
+  .in-home-choice-header .eyebrow { color: var(--teal); }
+  .in-home-choice-header h2 { font-size: clamp(1.75rem, 3vw, 2.5rem); margin-bottom: 0.5rem; }
+  .in-home-choice-header p { color: var(--text-medium); font-size: 1rem; max-width: 540px; margin: 0 auto; }
+  .in-home-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+  .in-home-card { border-radius: 4px; padding: 2.5rem; border: 2px solid var(--border-soft); background: var(--off-white); display: flex; flex-direction: column; }
+  .in-home-card.featured { border-color: var(--teal); background: white; }
+  .in-home-card-tag { font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 600; color: var(--teal); margin-bottom: 0.75rem; }
+  .in-home-card h3 { font-size: clamp(1.6rem, 2.5vw, 2rem); color: var(--navy); margin-bottom: 0.5rem; }
+  .in-home-card .card-price { font-family: 'Cormorant Garamond', serif; font-size: 1.75rem; font-weight: 600; color: var(--navy); margin-bottom: 1rem; }
+  .in-home-card .card-price .per { font-family: 'Inter', sans-serif; font-size: 0.88rem; color: var(--text-light); font-weight: 400; }
+  .in-home-card p { color: var(--text-medium); font-size: 0.97rem; line-height: 1.7; flex-grow: 1; margin-bottom: 1.75rem; }
+  .in-home-card a.card-btn { display: inline-block; padding: 1rem 2rem; text-decoration: none; font-size: 0.85rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; border-radius: 2px; transition: all 0.2s; background: #f5f0e8; color: var(--navy); border: 1.5px solid #b8a070; text-align: center; }
+  .in-home-card a.card-btn:hover { background: #ede7d9; transform: translateY(-1px); }
+  .in-home-card.featured a.card-btn { background: var(--teal); color: white; border-color: var(--teal); }
+  .in-home-card.featured a.card-btn:hover { background: var(--teal-deep); }
+  .in-home-divider { text-align: center; padding: 1.5rem 0 0; color: var(--text-light); font-size: 0.85rem; }
+  .in-home-divider a { color: var(--teal); text-decoration: none; font-weight: 600; }
+  .in-home-divider a:hover { color: var(--teal-deep); }
 
   /* SERVICE NAV ANCHORS */
   .service-nav { background: var(--cream); border-bottom: 1px solid var(--border-soft); padding: 0 3rem; position: sticky; top: 72px; z-index: 90; }
@@ -188,6 +213,10 @@
     .page-hero-inner-grid > div:first-child { padding-bottom: 2rem; }
     .page-hero-image { margin: 0 -1.25rem; }
     .page-hero-image img { max-height: 240px; border-radius: 0; }
+    .in-home-choice { padding: 2.5rem 1.25rem; }
+    .in-home-cards { grid-template-columns: 1fr; gap: 1.25rem; }
+    .in-home-card { padding: 1.75rem 1.5rem; }
+
     .service-nav { top: 60px; padding: 0; overflow-x: auto; -webkit-overflow-scrolling: touch; }
     .service-nav-inner { gap: 0; }
     .service-nav a { padding: 0.85rem 1rem; font-size: 0.68rem; }
@@ -226,7 +255,7 @@
   <a href="personal-training.html" onclick="closeMenu()">Personal Training</a>
   <a href="advocacy.html" onclick="closeMenu()">Medical Advocacy</a>
   <a href="nurse-direct.html" onclick="closeMenu()">Nurse Direct Line</a>
-  <a href="#connect" onclick="closeMenu()">Contact</a>
+  <a href="tel:9136056275" onclick="closeMenu()">Call Me · (913) 605-6275</a>
 </div>
 
 <nav>
@@ -241,7 +270,7 @@
     <li><a href="personal-training.html">Personal Training</a></li>
     <li><a href="advocacy.html">Medical Advocacy</a></li>
     <li><a href="nurse-direct.html">Nurse Direct Line</a></li>
-    <li><a href="#connect">Contact</a></li>
+    <li><a href="tel:9136056275" class="btn-nav-call">Call Me · (913) 605-6275</a></li>
   </ul>
   <button class="hamburger" id="hamburger" aria-label="Open menu" onclick="toggleMenu()">
     <span></span><span></span><span></span>
@@ -272,6 +301,38 @@
     <a href="#training">Personal Training</a>
   </div>
 </div>
+
+<!-- IN-HOME PRIVATE NURSING — CHOOSE YOUR PATH -->
+<a id="in-home"></a>
+<section class="in-home-choice">
+  <div class="in-home-choice-inner">
+    <div class="in-home-choice-header">
+      <div class="eyebrow">In-Home · West Valley, Arizona</div>
+      <h2>Which in-home service is right for you?</h2>
+      <p>Both services happen in your home. The difference is whether you're looking for a one-time visit or an ongoing relationship.</p>
+    </div>
+    <div class="in-home-cards">
+
+      <div class="in-home-card">
+        <div class="in-home-card-tag">One Time · 90 min</div>
+        <h3>Health Clarity Visit</h3>
+        <div class="card-price">$250 <span class="per">one time</span></div>
+        <p>A comprehensive in-home health assessment — vitals, medications, labs, nutrition, movement, and your goals. You leave with a written summary in plain language. Your baseline on paper, the day we meet. No ongoing commitment required.</p>
+        <a href="#clarity" class="card-btn">See What's Included →</a>
+      </div>
+
+      <div class="in-home-card featured">
+        <div class="in-home-card-tag">Ongoing · Monthly · Includes Personal Training</div>
+        <h3>Health Partnership</h3>
+        <div class="card-price">From $325 <span class="per">/month</span></div>
+        <p>Every visit builds on the last. I already know your baseline, your medications, your story. We track your numbers, talk through doctor visits and lab results, and train together — every single visit. This is ongoing care that actually knows you.</p>
+        <a href="#partnership" class="card-btn">See Tiers &amp; Pricing →</a>
+      </div>
+
+    </div>
+    <div class="in-home-divider">Not sure which fits? <a href="tel:9136056275">Call me and we'll figure it out together.</a></div>
+  </div>
+</section>
 
 <!-- 01 HEALTH CLARITY VISIT -->
 <section class="service-detail" id="clarity">
@@ -383,11 +444,11 @@
 
       <div class="founding-callout">
         <div>
-          <strong>Founding Member Offer</strong>
-          <p>The first 10 clients who enroll lock in their rate for the life of their enrollment — significantly reduced from full price. Once these spots are gone, they won't be offered again.</p>
+          <strong>Founding Member Offer — First 5 Clients Only</strong>
+          <p>The first 5 clients who enroll lock in their rate for the life of their enrollment — significantly reduced from full price. Once these spots are gone, they won't be offered again.</p>
         </div>
         <div class="founding-spots-mini">
-          <div class="num">10</div>
+          <div class="num">5</div>
           <div class="lbl">spots remaining</div>
         </div>
       </div>
@@ -412,6 +473,7 @@
     </div>
     <div class="nurse-direct-body">
       <div class="mobile-price">$149 <span style="font-family:'Inter',sans-serif;font-size:0.9rem;font-weight:400;color:var(--text-light);">/month</span></div>
+      <p style="font-size:0.9rem;color:#4a6fa5;font-weight:600;letter-spacing:0.04em;margin-bottom:1rem;">Available to anyone in the United States — no Arizona zip code required.</p>
       <p>Direct access to an ICU-trained RN — by call or text, whenever you need it. Available to anyone in Arizona or across the United States. No in-home visit required. No portal, no automated system, no stranger answering your question.</p>
       <p>Subscribe on its own, or add it to your Health Partnership for complete care — clinical visits in person, and a nurse you can reach whenever something comes up.</p>
 

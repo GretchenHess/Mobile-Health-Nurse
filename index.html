@@ -39,6 +39,8 @@
   .nav-links a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; transition: color 0.2s; white-space: nowrap; }
   .nav-links a:hover { color: var(--gold); }
   .nav-links a.active { color: var(--gold); }
+  .btn-nav-call { padding: 0.6rem 1.25rem; text-decoration: none; font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; border-radius: 2px; background: var(--red); color: white; white-space: nowrap; }
+  .btn-nav-call:hover { background: var(--red-deep); }
 
   /* HAMBURGER */
   .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; background: none; border: none; z-index: 300; }
@@ -240,7 +242,7 @@
   <a href="personal-training.html" onclick="closeMenu()">Personal Training</a>
   <a href="advocacy.html" onclick="closeMenu()">Medical Advocacy</a>
   <a href="nurse-direct.html" onclick="closeMenu()">Nurse Direct Line</a>
-  <a href="#connect" onclick="closeMenu()">Contact</a>
+  <a href="tel:9136056275" onclick="closeMenu()">Call Me · (913) 605-6275</a>
 </div>
 
 <nav>
@@ -255,7 +257,7 @@
     <li><a href="personal-training.html">Personal Training</a></li>
     <li><a href="advocacy.html">Medical Advocacy</a></li>
     <li><a href="nurse-direct.html">Nurse Direct Line</a></li>
-    <li><a href="#connect">Contact</a></li>
+    <li><a href="tel:9136056275" class="btn-nav-call">Call Me · (913) 605-6275</a></li>
   </ul>
   <button class="hamburger" id="hamburger" aria-label="Open menu" onclick="toggleMenu()">
     <span></span><span></span><span></span>
@@ -279,10 +281,9 @@
       <span>Nurse Direct Line</span>
     </div>
     <div class="hero-cta-row">
-      <a href="tel:9136056275" class="btn-hero-call">Call Me Directly</a>
+      <a href="services.html#in-home" class="btn-hero-cream">Book In-Home Private Nursing</a>
       <a href="advocacy.html" class="btn-hero-cream">Medical Advocacy</a>
       <a href="nurse-direct.html" class="btn-hero-direct">Nurse Direct Line</a>
-      <a href="personal-training.html" class="btn-hero-cream">Personal Training</a>
     </div>
     <div class="hero-fineprint">Gretchen Hess, BSN, RN, ACE-CPT · HealthSpanRN@gmail.com</div>
   </div>
