@@ -34,7 +34,7 @@
   body { font-family: 'Inter', sans-serif; color: var(--text-dark); background: var(--off-white); line-height: 1.6; font-weight: 400; -webkit-font-smoothing: antialiased; }
   h1, h2, h3, h4 { font-family: 'Cormorant Garamond', serif; font-weight: 600; line-height: 1.15; color: var(--navy); letter-spacing: -0.01em; }
 
-  /* ── NAV ── */
+  /* NAV */
   nav { background: var(--navy); padding: 1rem 2.5rem; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 200; gap: 2rem; }
   .brand { flex-shrink: 0; }
   .brand h1 { color: white; font-size: 1.4rem; font-weight: 600; margin: 0; white-space: nowrap; }
@@ -44,44 +44,29 @@
   .nav-links a:hover { color: var(--gold); }
   .nav-links a.active { color: var(--gold); }
   .nav-buttons { display: none; }
-  .nav-buttons { display: none; }
-  .btn-connect { padding: 0.75rem 1.5rem; text-decoration: none; font-size: 0.78rem; letter-spacing: 0.15em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; border-radius: 2px; background: var(--gold); color: var(--navy); }
-  .btn-connect:hover { background: var(--gold-deep); }
-  .btn-advocacy { padding: 0.75rem 1.5rem; text-decoration: none; font-size: 0.78rem; letter-spacing: 0.15em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; border-radius: 2px; background: var(--red); color: white; }
-  .btn-advocacy:hover { background: var(--red-deep); }
-  .btn-direct { padding: 0.75rem 1.5rem; text-decoration: none; font-size: 0.78rem; letter-spacing: 0.15em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; border-radius: 2px; background: var(--charcoal); color: var(--gold); border: 1px solid var(--gold); }
-  .btn-direct:hover { background: var(--charcoal-deep); }
-
-  /* ── HAMBURGER ── */
   .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; background: none; border: none; z-index: 300; }
   .hamburger span { display: block; width: 24px; height: 2px; background: white; border-radius: 2px; transition: all 0.3s ease; transform-origin: center; }
   .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
   .hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
   .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-
-  /* ── MOBILE DRAWER ── */
   .mobile-menu { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: var(--navy-deep); z-index: 150; flex-direction: column; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: opacity 0.3s ease; }
   .mobile-menu.open { opacity: 1; pointer-events: all; }
   .mobile-menu a { color: white; text-decoration: none; font-size: 1.6rem; font-family: 'Cormorant Garamond', serif; font-weight: 600; padding: 1rem 2rem; letter-spacing: 0.02em; border-bottom: 1px solid rgba(255,255,255,0.08); width: 100%; text-align: center; transition: color 0.2s; }
   .mobile-menu a:hover { color: var(--gold); }
 
-  /* ── BUTTONS ── */
+  /* BUTTONS */
   .btn-primary { padding: 1rem 2rem; text-decoration: none; font-size: 0.85rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; display: inline-block; border-radius: 2px; background: #4a6fa5; color: white; border: none; cursor: pointer; }
   .btn-primary:hover { background: #3a5a8a; transform: translateY(-1px); }
-  .btn-advocacy-gold { padding: 1rem 2rem; text-decoration: none; font-size: 0.85rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; display: inline-block; border-radius: 2px; background: var(--gold); color: var(--navy); }
-  .btn-advocacy-gold:hover { background: var(--gold-deep); transform: translateY(-1px); }
   .btn-gold { padding: 1rem 2rem; text-decoration: none; font-size: 0.85rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; display: inline-block; border-radius: 2px; background: #f5f0e8; color: var(--navy); border: 1.5px solid #b8a070; }
   .btn-gold:hover { background: #ede7d9; transform: translateY(-1px); }
-  .btn-outline-white { padding: 1rem 2rem; text-decoration: none; font-size: 0.85rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; display: inline-block; border-radius: 2px; border: 1.5px solid rgba(255,255,255,0.45); color: white; background: transparent; transition: all 0.2s; }
-  .btn-outline-white:hover { border-color: white; background: rgba(255,255,255,0.08); }
   .btn-slate { padding: 1rem 2rem; text-decoration: none; font-size: 0.85rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; display: inline-block; border-radius: 2px; background: #4a6fa5; color: white; }
   .btn-slate:hover { background: #3a5a8a; transform: translateY(-1px); }
 
-  /* ── EYEBROW ── */
+  /* EYEBROW */
   .eyebrow { font-size: 0.78rem; letter-spacing: 0.22em; font-weight: 600; text-transform: uppercase; margin-bottom: 1.25rem; color: #4a6fa5; }
   .eyebrow-gold { font-size: 0.78rem; letter-spacing: 0.22em; font-weight: 600; text-transform: uppercase; margin-bottom: 1.25rem; color: var(--gold); }
 
-  /* ── HERO ── */
+  /* HERO */
   .hero { background: var(--charcoal); color: white; padding: 0; overflow: hidden; }
   .hero-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 420px; min-height: 580px; }
   .hero-text { padding: 5rem 4rem 5rem 3rem; display: flex; flex-direction: column; justify-content: center; }
@@ -99,18 +84,19 @@
   .hero-image-tag { color: white; font-size: 0.82rem; letter-spacing: 0.08em; }
   .hero-image-tag strong { display: block; font-size: 1.1rem; font-family: 'Cormorant Garamond', serif; font-weight: 600; margin-bottom: 0.15rem; }
 
-  /* ── LETTER SECTION ── */
+  /* LETTER SECTION — darkened text on light background */
   .letter-section { padding: 6rem 3rem; background: var(--off-white); }
   .letter-inner { max-width: 720px; margin: 0 auto; }
   .letter-inner .eyebrow { margin-bottom: 2rem; }
   .letter-body { font-family: 'Cormorant Garamond', serif; }
-  .letter-body p { font-size: clamp(1.2rem, 2vw, 1.45rem); color: var(--text-dark); line-height: 1.75; margin-bottom: 1.75rem; font-weight: 400; }
+  /* Darkened: was using default which rendered too light in some browsers */
+  .letter-body p { font-size: clamp(1.2rem, 2vw, 1.45rem); color: #2a2d3a; line-height: 1.75; margin-bottom: 1.75rem; font-weight: 500; }
   .letter-body p strong { font-weight: 700; color: var(--navy); }
   .letter-body .pull { font-size: clamp(1.4rem, 2.5vw, 1.85rem); color: var(--navy); font-style: italic; font-weight: 600; border-left: 4px solid var(--gold); padding-left: 1.75rem; margin: 2.5rem 0; line-height: 1.45; }
   .letter-sig { margin-top: 2.5rem; font-family: 'Cormorant Garamond', serif; font-size: 1.35rem; color: var(--navy); font-style: italic; }
-  .letter-sig strong { font-style: normal; font-weight: 600; display: block; font-size: 1.1rem; margin-top: 0.25rem; font-family: 'Inter', sans-serif; color: var(--text-medium); font-size: 0.88rem; }
+  .letter-sig strong { font-style: normal; font-weight: 600; display: block; margin-top: 0.25rem; font-family: 'Inter', sans-serif; color: var(--text-medium); font-size: 0.88rem; }
 
-  /* ── HOW IT WORKS ── */
+  /* HOW IT WORKS */
   .how-section { padding: 5rem 3rem; background: var(--charcoal); }
   .how-inner { max-width: 1000px; margin: 0 auto; }
   .how-inner h2 { color: white; font-size: clamp(2rem, 4vw, 2.75rem); margin-bottom: 0.75rem; text-align: center; }
@@ -118,28 +104,30 @@
   .how-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 3rem; }
   .how-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.15); border-top: 3px solid #4a6fa5; border-radius: 4px; padding: 2rem 1.75rem; }
   .how-card h3 { color: white; font-size: 1.4rem; margin-bottom: 0.75rem; }
-  .how-card p { color: rgba(255,255,255,0.72); font-size: 0.95rem; line-height: 1.65; }
+  .how-card p { color: rgba(255,255,255,0.82); font-size: 0.95rem; line-height: 1.65; }
   .how-card .how-icon { font-size: 1.5rem; margin-bottom: 1rem; }
 
-  /* ── WHAT YOU GET ── */
+  /* WHAT YOU GET — darkened text on cream background */
   .includes-section { padding: 5rem 3rem; background: var(--cream); }
   .includes-inner { max-width: 860px; margin: 0 auto; }
   .includes-inner h2 { font-size: clamp(2rem, 4vw, 2.75rem); margin-bottom: 0.5rem; text-align: center; }
   .includes-sub { color: var(--text-medium); font-size: 1rem; text-align: center; margin-bottom: 3rem; }
   .check-list { display: grid; grid-template-columns: 1fr 1fr; gap: 0.85rem 3rem; list-style: none; }
-  .check-list li { font-size: 1rem; padding-left: 1.75rem; position: relative; line-height: 1.55; color: var(--text-dark); }
+  /* Darkened from var(--text-dark) implied default — explicit #2a2d3a */
+  .check-list li { font-size: 1rem; padding-left: 1.75rem; position: relative; line-height: 1.55; color: #2a2d3a; font-weight: 500; }
   .check-list li::before { content: '✓'; color: #4a6fa5; position: absolute; left: 0; font-weight: 700; font-size: 1.05rem; }
 
-  /* ── WHO IT'S FOR ── */
+  /* WHO IT'S FOR — darkened text on white background */
   .who-section { padding: 5rem 3rem; background: var(--off-white); }
   .who-inner { max-width: 860px; margin: 0 auto; }
   .who-inner h2 { font-size: clamp(2rem, 4vw, 2.75rem); margin-bottom: 3rem; text-align: center; }
   .who-list { list-style: none; }
-  .who-list li { padding: 1.4rem 0 1.4rem 0; border-bottom: 1px solid var(--border-soft); font-size: clamp(1rem, 1.8vw, 1.1rem); color: var(--text-medium); line-height: 1.65; }
+  /* Darkened: was var(--text-medium) #555866, now explicit darker shade */
+  .who-list li { padding: 1.4rem 0; border-bottom: 1px solid var(--border-soft); font-size: clamp(1rem, 1.8vw, 1.1rem); color: #3d4050; line-height: 1.65; font-weight: 400; }
   .who-list li:first-child { border-top: 1px solid var(--border-soft); }
   .who-list li em { color: var(--navy); font-style: normal; font-weight: 600; }
 
-  /* ── PRICING CTA ── */
+  /* PRICING CTA */
   .pricing-section { padding: 5rem 3rem; background: var(--charcoal); text-align: center; }
   .pricing-inner { max-width: 600px; margin: 0 auto; }
   .pricing-section h2 { color: white; font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 0.5rem; }
@@ -151,11 +139,11 @@
   .pricing-cta-row { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 1.5rem; }
   .pricing-fine { color: rgba(255,255,255,0.45); font-size: 0.82rem; }
 
-  /* ── DISCLAIMER ── */
+  /* DISCLAIMER */
   .disclaimer-band { background: var(--navy-deep); padding: 2rem 3rem; text-align: center; }
   .disclaimer-band p { color: rgba(255,255,255,0.4); font-size: 0.8rem; max-width: 600px; margin: 0 auto; line-height: 1.65; }
 
-  /* ── FOOTER ── */
+  /* FOOTER */
   footer { background: var(--navy-deep); color: rgba(255,255,255,0.7); padding: 3.5rem 3rem 2rem; text-align: center; }
   .footer-brand { color: white; font-family: 'Cormorant Garamond', serif; font-size: 1.7rem; font-weight: 600; margin-bottom: 0.4rem; }
   .footer-tag { color: var(--gold); font-size: 0.82rem; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 2.25rem; }
@@ -165,16 +153,11 @@
   .footer-contact { border-top: 1px solid rgba(255,255,255,0.12); padding-top: 1.75rem; font-size: 0.88rem; color: rgba(255,255,255,0.5); }
   .footer-contact a { color: var(--gold); text-decoration: none; }
 
-  /* ══════════════════════
-     MOBILE (≤ 768px)
-  ══════════════════════ */
   @media (max-width: 768px) {
     nav { padding: 0.9rem 1.25rem; }
     .nav-links { display: none; }
     .hamburger { display: flex; }
     .mobile-menu { display: flex; }
-
-    /* Hero */
     .hero-inner { grid-template-columns: 1fr; min-height: auto; }
     .hero-text { padding: 2.75rem 1.25rem 2rem; }
     .hero h1 { font-size: 2.4rem; }
@@ -183,30 +166,18 @@
     .hero-cta-row a { text-align: center; }
     .hero-image { height: 280px; }
     .hero-image img { object-position: center 15%; }
-
-    /* Letter */
     .letter-section { padding: 3.5rem 1.25rem; }
     .letter-body p { font-size: 1.2rem; }
-
-    /* How */
     .how-section { padding: 3rem 1.25rem; }
     .how-grid { grid-template-columns: 1fr; gap: 1rem; }
-
-    /* Includes */
     .includes-section { padding: 3rem 1.25rem; }
     .check-list { grid-template-columns: 1fr; gap: 0.7rem; }
-
-    /* Who */
     .who-section { padding: 3rem 1.25rem; }
-
-    /* Pricing */
     .pricing-section { padding: 3.5rem 1.25rem; }
     .price-big { font-size: 4rem; }
     .pricing-cta-row { flex-direction: column; align-items: stretch; }
     .pricing-cta-row a { text-align: center; }
-
     .disclaimer-band { padding: 1.5rem 1.25rem; }
-
     footer { padding: 2.5rem 1.25rem 1.5rem; }
     .footer-nav { gap: 0.75rem 1.25rem; }
     .footer-nav a { font-size: 0.68rem; }
@@ -215,13 +186,13 @@
 </head>
 <body>
 
-<!-- MOBILE DRAWER -->
 <div class="mobile-menu" id="mobileMenu">
   <a href="index.html" onclick="closeMenu()">Home</a>
   <a href="why.html" onclick="closeMenu()">Why Mobile Health Nurse</a>
   <a href="services.html" onclick="closeMenu()">Services</a>
   <a href="personal-training.html" onclick="closeMenu()">Personal Training</a>
   <a href="advocacy.html" onclick="closeMenu()">Medical Advocacy</a>
+  <a href="nurse-direct.html" onclick="closeMenu()">Nurse Direct Line</a>
   <a href="#contact" onclick="closeMenu()">Contact</a>
 </div>
 
@@ -244,7 +215,7 @@
   </button>
 </nav>
 
-<!-- ── HERO ── -->
+<!-- HERO -->
 <section class="hero">
   <div class="hero-inner">
     <div class="hero-text">
@@ -272,7 +243,7 @@
   </div>
 </section>
 
-<!-- ── THE LETTER ── -->
+<!-- THE LETTER -->
 <section class="letter-section">
   <div class="letter-inner">
     <div class="eyebrow">A note from Gretchen</div>
@@ -297,7 +268,7 @@
   </div>
 </section>
 
-<!-- ── HOW IT WORKS ── -->
+<!-- HOW IT WORKS -->
 <section class="how-section">
   <div class="how-inner">
     <h2>How it works.</h2>
@@ -322,7 +293,7 @@
   </div>
 </section>
 
-<!-- ── WHAT'S INCLUDED ── -->
+<!-- WHAT'S INCLUDED -->
 <section class="includes-section">
   <div class="includes-inner">
     <div class="eyebrow" style="text-align:center;">What's included</div>
@@ -345,7 +316,7 @@
   </div>
 </section>
 
-<!-- ── WHO IT'S FOR ── -->
+<!-- WHO IT'S FOR -->
 <section class="who-section">
   <div class="who-inner">
     <h2>Who this is for.</h2>
@@ -361,7 +332,7 @@
   </div>
 </section>
 
-<!-- ── PRICING CTA ── -->
+<!-- PRICING CTA -->
 <section class="pricing-section" id="book">
   <div class="pricing-inner">
     <div class="eyebrow-gold">Simple pricing</div>
@@ -380,7 +351,7 @@
   </div>
 </section>
 
-<!-- ── DISCLAIMER ── -->
+<!-- DISCLAIMER -->
 <div class="disclaimer-band" id="contact">
   <p>The Nurse Direct Line is not a replacement for emergency medical services. If you are experiencing a medical emergency, call 911. This service provides nursing guidance and health information — not diagnosis or treatment.</p>
 </div>
@@ -394,8 +365,8 @@
     <li><a href="services.html">Services</a></li>
     <li><a href="personal-training.html">Personal Training</a></li>
     <li><a href="advocacy.html">Medical Advocacy</a></li>
-    <li><a href="advocacy.html">Medical Advocacy</a></li>
-    <li><a href="nurse-direct.html" class="active">Nurse Direct Line</a></li>
+    <li><a href="nurse-direct.html">Nurse Direct Line</a></li>
+    <li><a href="#contact">Contact</a></li>
   </ul>
   <div class="footer-contact">
     <a href="mailto:HealthSpanRN@gmail.com">HealthSpanRN@gmail.com</a> · (913) 605-6275 · Available Nationwide<br>

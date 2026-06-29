@@ -40,23 +40,11 @@
   .nav-links a:hover { color: var(--gold); }
   .nav-links a.active { color: var(--gold); }
   .nav-buttons { display: none; }
-  .nav-buttons { display: none; }
-  .btn-connect, .btn-advocacy { padding: 0.6rem 1rem; text-decoration: none; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; border-radius: 2px; white-space: nowrap; }
-  .btn-connect { background: var(--gold); color: var(--navy); }
-  .btn-connect:hover { background: var(--gold-deep); }
-  .btn-advocacy { background: var(--red); color: white; }
-  .btn-advocacy:hover { background: var(--red-deep); }
-  .btn-direct { padding: 0.6rem 1rem; text-decoration: none; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; border-radius: 2px; background: #3a3d4a; color: var(--gold); border: 1px solid var(--gold); white-space: nowrap; }
-  .btn-direct:hover { background: #2c2e38; }
-
-  /* HAMBURGER */
   .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; background: none; border: none; z-index: 300; }
   .hamburger span { display: block; width: 24px; height: 2px; background: white; border-radius: 2px; transition: all 0.3s ease; transform-origin: center; }
   .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
   .hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
   .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-
-  /* MOBILE DRAWER */
   .mobile-menu { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: var(--navy-deep); z-index: 150; flex-direction: column; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: opacity 0.3s ease; }
   .mobile-menu.open { opacity: 1; pointer-events: all; }
   .mobile-menu a { color: white; text-decoration: none; font-size: 1.6rem; font-family: 'Cormorant Garamond', serif; font-weight: 600; padding: 1rem 2rem; letter-spacing: 0.02em; border-bottom: 1px solid rgba(255,255,255,0.08); width: 100%; text-align: center; transition: color 0.2s; }
@@ -74,7 +62,7 @@
   .btn-navy-outline:hover { background: var(--navy-deep); transform: translateY(-1px); }
   .btn-gold { padding: 1rem 2rem; text-decoration: none; font-size: 0.85rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; display: inline-block; border-radius: 2px; background: #f5f0e8; color: var(--navy); border: 1.5px solid #b8a070; }
   .btn-gold:hover { background: #ede7d9; transform: translateY(-1px); }
-  .btn-teal { display: inline-block; background: #f5f0e8; color: var(--navy); padding: 1rem 2rem; text-decoration: none; font-size: 0.85rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; border-radius: 2px; transition: all 0.2s; }
+  .btn-teal { display: inline-block; background: #f5f0e8; color: var(--navy); padding: 1rem 2rem; text-decoration: none; font-size: 0.85rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; border-radius: 2px; transition: all 0.2s; border: 1.5px solid #b8a070; }
   .btn-teal:hover { background: #ede7d9; transform: translateY(-1px); }
 
   /* EYEBROW */
@@ -119,7 +107,6 @@
   .tiers-block { margin-top: 2.5rem; padding-top: 2rem; border-top: 1px solid var(--border-soft); }
   .tiers-label { text-align: center; color: var(--gold-deep); font-size: 0.75rem; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 600; margin-bottom: 1.75rem; }
   .tiers-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
-  .tiers-grid.four-col { grid-template-columns: repeat(4, 1fr); }
   .tier-card { border: 1.5px solid var(--border-soft); border-radius: 4px; padding: 1.75rem 1.5rem; position: relative; background: white; }
   .tier-card.featured { border-color: var(--gold); border-width: 2px; }
   .tier-badge { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--gold); color: var(--navy); font-size: 0.65rem; letter-spacing: 0.18em; font-weight: 700; text-transform: uppercase; padding: 0.3rem 0.9rem; border-radius: 2px; white-space: nowrap; }
@@ -138,6 +125,14 @@
   .founding-spots-mini .num { font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; font-weight: 600; color: var(--gold); line-height: 1; }
   .founding-spots-mini .lbl { color: rgba(255,255,255,0.6); font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; margin-top: 0.25rem; }
 
+  /* NURSE DIRECT ADD-ON CALLOUT */
+  .addon-callout { background: #f0f4fa; border: 1.5px solid #4a6fa5; border-radius: 4px; padding: 1.5rem 2rem; margin-top: 1.5rem; display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; }
+  .addon-callout-text { flex: 1; }
+  .addon-callout-text strong { color: #4a6fa5; display: block; font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 700; margin-bottom: 0.35rem; }
+  .addon-callout-text p { color: var(--text-medium); font-size: 0.92rem; line-height: 1.6; margin: 0; }
+  .addon-callout a { display: inline-block; background: #4a6fa5; color: white; padding: 0.75rem 1.5rem; text-decoration: none; font-size: 0.78rem; letter-spacing: 0.15em; text-transform: uppercase; font-weight: 600; border-radius: 2px; transition: all 0.2s; white-space: nowrap; }
+  .addon-callout a:hover { background: #3a5a8a; }
+
   /* POLICY NOTE */
   .policy-note { margin-top: 1.5rem; padding: 1rem 1.5rem; background: var(--cream); border-radius: 2px; font-size: 0.85rem; color: var(--text-light); line-height: 1.65; }
 
@@ -153,6 +148,17 @@
   .nurse-direct-price-block .price-label { color: rgba(255,255,255,0.7); font-size: 0.82rem; letter-spacing: 0.12em; text-transform: uppercase; margin-top: 0.35rem; }
   .nurse-direct-price-block .price-sub { color: rgba(255,255,255,0.45); font-size: 0.78rem; margin-top: 0.25rem; font-style: italic; }
   .disclaimer { font-size: 0.8rem; color: var(--text-light); font-style: italic; margin-top: 1rem; }
+
+  /* PERSONAL TRAINING PACKAGES */
+  .pkg-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; margin-top: 0; }
+  .pkg-card { border: 1.5px solid var(--border-soft); border-radius: 4px; padding: 1.75rem 1.5rem; position: relative; background: white; text-align: center; }
+  .pkg-card.featured { border-color: #2d5a3d; border-width: 2px; }
+  .pkg-badge { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: #2d5a3d; color: white; font-size: 0.65rem; letter-spacing: 0.18em; font-weight: 700; text-transform: uppercase; padding: 0.3rem 0.9rem; border-radius: 2px; white-space: nowrap; }
+  .pkg-sessions { font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; font-weight: 600; color: var(--text-light); margin-bottom: 0.4rem; }
+  .pkg-name { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 600; color: var(--navy); margin-bottom: 0.75rem; line-height: 1.1; }
+  .pkg-price { font-family: 'Cormorant Garamond', serif; font-size: 2.25rem; font-weight: 600; color: var(--navy); line-height: 1; margin-bottom: 0.25rem; }
+  .pkg-per { font-size: 0.82rem; color: var(--text-medium); margin-bottom: 0.75rem; }
+  .pkg-tagline { font-size: 0.88rem; color: var(--text-medium); font-style: italic; }
 
   /* BOTTOM CTA */
   .bottom-cta { background: var(--navy); color: white; padding: 5rem 3rem; text-align: center; }
@@ -171,59 +177,39 @@
   .footer-contact { border-top: 1px solid rgba(255,255,255,0.12); padding-top: 1.75rem; font-size: 0.88rem; color: rgba(255,255,255,0.5); }
   .footer-contact a { color: var(--gold); text-decoration: none; }
 
-  /* ══════════════════════
-     MOBILE (≤ 768px)
-  ══════════════════════ */
   @media (max-width: 768px) {
-    /* Nav */
     nav { padding: 0.9rem 1.25rem; }
     .nav-links { display: none; }
     .hamburger { display: flex; }
     .mobile-menu { display: flex; }
-
-    /* Page hero */
     .page-hero { padding: 2.5rem 1.25rem 0; }
     .page-hero-inner-grid { grid-template-columns: 1fr; gap: 1.5rem; }
     .page-hero-inner-grid > div:first-child { padding-bottom: 2rem; }
     .page-hero-image { margin: 0 -1.25rem; }
     .page-hero-image img { max-height: 240px; border-radius: 0; }
-
-    /* Service sub-nav */
     .service-nav { top: 60px; padding: 0; overflow-x: auto; -webkit-overflow-scrolling: touch; }
     .service-nav-inner { gap: 0; }
     .service-nav a { padding: 0.85rem 1rem; font-size: 0.68rem; }
-
-    /* Service sections */
     .service-detail { padding: 2.5rem 1.25rem; }
     .service-detail-header { grid-template-columns: auto 1fr; gap: 1rem; padding: 1.25rem 1.5rem; }
     .service-detail-price { display: none; }
     .service-detail-body { padding: 1.5rem 1.25rem; }
     .service-detail-body > p { font-size: 0.95rem; }
-
-    /* Price shown inline on mobile instead */
     .mobile-price { display: block; font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: var(--navy); margin-bottom: 1rem; }
-
     .check-list { grid-template-columns: 1fr; gap: 0.6rem; }
     .tiers-grid { grid-template-columns: 1fr; gap: 1rem; }
+    .pkg-grid { grid-template-columns: 1fr; gap: 1rem; }
     .access-details { grid-template-columns: 1fr; }
     .founding-callout { grid-template-columns: 1fr; text-align: center; gap: 1.25rem; }
     .founding-spots-mini { margin: 0 auto; }
-
-    /* Service CTA rows */
+    .addon-callout { flex-direction: column; }
     .service-detail-body .cta-row { display: flex; flex-direction: column; gap: 0.75rem; margin-top: 1.5rem; }
     .service-detail-body .cta-row a { text-align: center; }
-
-    /* Nurse direct */
     .nurse-direct-body { padding: 1.5rem 1.25rem; }
     .nurse-direct-price-block { padding: 1.5rem 1.25rem; }
-    .nurse-direct-price-block > div[style] { flex-direction: column !important; }
-
-    /* Bottom CTA */
     .bottom-cta { padding: 3rem 1.25rem; }
     .bottom-cta-buttons { flex-direction: column; align-items: stretch; }
     .bottom-cta-buttons a { text-align: center; }
-
-    /* Footer */
     footer { padding: 2.5rem 1.25rem 1.5rem; }
     .footer-nav { gap: 0.75rem 1.25rem; }
     .footer-nav a { font-size: 0.68rem; }
@@ -232,7 +218,6 @@
 </head>
 <body>
 
-<!-- MOBILE DRAWER -->
 <div class="mobile-menu" id="mobileMenu">
   <a href="index.html" onclick="closeMenu()">Home</a>
   <a href="why.html" onclick="closeMenu()">Why Mobile Health Nurse</a>
@@ -330,7 +315,6 @@
     <div class="service-detail-body">
       <div class="mobile-price">From $325 <span style="font-family:'Inter',sans-serif;font-size:0.9rem;font-weight:400;color:var(--text-light);">/month</span></div>
       <p>Every visit builds on the last. I already know your baseline, your medications, your goals, and your story. We check your numbers against your own trend line, talk through anything new — doctor visits, confusing test results, medication changes — and I translate it all into plain language and clear direction. Then we train. Every single visit.</p>
-      <p>Health Partnership includes full access to me between visits. Call or text anytime — you'll hear from me directly, not an automated system.</p>
       <ul class="check-list">
         <li>In-home RN visit — 75 min per session</li>
         <li>Personal training included every visit</li>
@@ -340,8 +324,8 @@
         <li>Nutrition &amp; movement coaching</li>
         <li>Written progress summaries</li>
         <li>Chronic condition monitoring</li>
-        <li>Full access — call or text me directly</li>
         <li>Early intervention &amp; care coordination</li>
+        <li>Deep continuity of care, visit to visit</li>
       </ul>
 
       <div class="tiers-block">
@@ -356,7 +340,7 @@
               <li>Monthly in-home RN visit</li>
               <li>Personal training included</li>
               <li>Vital signs &amp; health review</li>
-              <li>Full access between visits</li>
+              <li>Progress summaries</li>
             </ul>
           </div>
           <div class="tier-card featured">
@@ -369,7 +353,7 @@
               <li>Bi-monthly in-home RN visits</li>
               <li>Personal training each visit</li>
               <li>Ongoing health tracking</li>
-              <li>Full access between visits</li>
+              <li>Progress summaries</li>
             </ul>
           </div>
           <div class="tier-card">
@@ -381,10 +365,19 @@
               <li>Weekly in-home RN visits</li>
               <li>Personal training each visit</li>
               <li>Closest level of monitoring</li>
-              <li>Full access between visits</li>
+              <li>Progress summaries</li>
             </ul>
           </div>
         </div>
+      </div>
+
+      <!-- Nurse Direct Line add-on callout -->
+      <div class="addon-callout">
+        <div class="addon-callout-text">
+          <strong>Add-On · Nurse Direct Line · $149/month</strong>
+          <p>Want unlimited call and text access to me between visits? Add the Nurse Direct Line to your Health Partnership for complete, always-on support — clinical care in person, and a nurse on call whenever you need one.</p>
+        </div>
+        <a href="nurse-direct.html">Learn More →</a>
       </div>
 
       <div class="founding-callout">
@@ -419,7 +412,7 @@
     <div class="nurse-direct-body">
       <div class="mobile-price">$149 <span style="font-family:'Inter',sans-serif;font-size:0.9rem;font-weight:400;color:var(--text-light);">/month</span></div>
       <p>Direct access to an ICU-trained RN — by call or text, whenever you need it. Available to anyone in Arizona or across the United States. No in-home visit required. No portal, no automated system, no stranger answering your question.</p>
-      <p>This is the right service if you've had a Health Clarity Visit and aren't ready for Health Partnership, or if you simply want a clinical voice you can reach when something comes up — a confusing lab result, a medication question, a symptom you're not sure about, a doctor's recommendation you don't understand.</p>
+      <p>Subscribe on its own, or add it to your Health Partnership for complete care — clinical visits in person, and a nurse you can reach whenever something comes up.</p>
 
       <div class="access-details">
         <div class="access-card">
@@ -467,7 +460,7 @@
     </div>
     <div class="service-detail-body">
       <div class="mobile-price">$200 <span style="font-family:'Inter',sans-serif;font-size:0.9rem;font-weight:400;color:var(--text-light);">first 2 hours</span></div>
-      <p>An ICU-trained nurse with you in the doctor's office, hospital room, or before a procedure. Having someone who knows the system sitting next to you changes everything — including how the physician shows up.</p>
+      <p>An ICU-trained nurse with you in the doctor's office, hospital room, or before a procedure. Your care — or your loved one's care — improves when the doctor knows a nurse advocate is part of the care plan.</p>
       <p>Most patients leave appointments confused, having nodded along to clinical language they didn't fully understand. I make sure that doesn't happen to you. I prepare you beforehand, translate in real time, and debrief you after so nothing gets lost.</p>
       <ul class="check-list">
         <li>Pre-visit question preparation</li>
@@ -483,8 +476,8 @@
       </ul>
       <div class="policy-note">$200 minimum covers the first two hours. $50 for each additional 30 minutes. Travel within West Valley included. Distance outside Goodyear, Litchfield Park, and Avondale may incur a travel fee — ask when you call.</div>
       <div class="cta-row" style="margin-top:2rem;display:flex;gap:1rem;flex-wrap:wrap;">
-        <a href="advocacy.html" class="btn-gold">Book Online</a>
-        <a href="tel:9136056275" class="btn-advocacy-gold">Call to Check Availability</a>
+        <a href="advocacy.html" class="btn-gold" style="flex:1;text-align:center;">Book Online</a>
+        <a href="tel:9136056275" class="btn-advocacy-gold" style="flex:1;text-align:center;">Call to Check Availability</a>
       </div>
     </div>
   </div>
@@ -517,41 +510,35 @@
 
       <div class="tiers-block">
         <div class="tiers-label">Choose Your Package</div>
-        <div class="tiers-grid four-col">
-            <div class="tier-freq">Single session</div>
-            <div class="tier-price">$95<span class="per">/session</span></div>
-            <ul class="check-list">
-              <li>No commitment required</li>
-              <li>Try it first</li>
-            </ul>
+        <div class="pkg-grid">
+          <div class="pkg-card">
+            <div class="pkg-sessions">Single Session</div>
+            <div class="pkg-name">Drop-In</div>
+            <div class="pkg-price">$95</div>
+            <div class="pkg-per">per session</div>
+            <div class="pkg-tagline">Try it first — no commitment</div>
           </div>
-          <div class="tier-card">
-            <h3>Jumpstart</h3>
-            <div class="tier-freq">4 sessions · one month</div>
-            <div class="tier-price">$300<span class="per"> · $75/session</span></div>
-            <ul class="check-list">
-              <li>Build the foundation</li>
-              <li>Best intro package</li>
-            </ul>
+          <div class="pkg-card">
+            <div class="pkg-sessions">4 Sessions</div>
+            <div class="pkg-name">Jumpstart</div>
+            <div class="pkg-price">$300</div>
+            <div class="pkg-per">$75/session · one month</div>
+            <div class="pkg-tagline">Build the foundation</div>
           </div>
-          <div class="tier-card featured">
-            <div class="tier-badge">Most Popular</div>
-            <h3>Momentum</h3>
-            <div class="tier-freq">8 sessions · two months</div>
-            <div class="tier-price">$560<span class="per"> · $70/session</span></div>
-            <ul class="check-list">
-              <li>Build real habits</li>
-              <li>See lasting results</li>
-            </ul>
+          <div class="pkg-card featured">
+            <div class="pkg-badge">Most Popular</div>
+            <div class="pkg-sessions">8 Sessions</div>
+            <div class="pkg-name">Momentum</div>
+            <div class="pkg-price">$560</div>
+            <div class="pkg-per">$70/session · two months</div>
+            <div class="pkg-tagline">Build real habits</div>
           </div>
-          <div class="tier-card">
-            <h3>Committed</h3>
-            <div class="tier-freq">12 sessions · three months</div>
-            <div class="tier-price">$780<span class="per"> · $65/session</span></div>
-            <ul class="check-list">
-              <li>Transform your training</li>
-              <li>Best value per session</li>
-            </ul>
+          <div class="pkg-card">
+            <div class="pkg-sessions">12 Sessions</div>
+            <div class="pkg-name">Committed</div>
+            <div class="pkg-price">$780</div>
+            <div class="pkg-per">$65/session · three months</div>
+            <div class="pkg-tagline">Best value per session</div>
           </div>
         </div>
       </div>
@@ -582,12 +569,12 @@
   <div class="footer-tag">In-Home Nursing Care · Medical Advocacy · Personal Training</div>
   <ul class="footer-nav">
     <li><a href="index.html">Home</a></li>
-    <li><a href="index.html">Home</a></li>
     <li><a href="why.html">Why Mobile Health Nurse</a></li>
     <li><a href="services.html">Services</a></li>
     <li><a href="personal-training.html">Personal Training</a></li>
     <li><a href="advocacy.html">Medical Advocacy</a></li>
-    <li><a href="advocacy.html">Medical Advocacy</a></li>
+    <li><a href="nurse-direct.html">Nurse Direct Line</a></li>
+    <li><a href="#connect">Contact</a></li>
   </ul>
   <div class="footer-contact">
     <a href="mailto:HealthSpanRN@gmail.com">HealthSpanRN@gmail.com</a> · (913) 605-6275 · West Valley, AZ<br>

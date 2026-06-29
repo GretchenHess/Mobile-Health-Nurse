@@ -40,23 +40,11 @@
   .nav-links a:hover { color: var(--gold); }
   .nav-links a.active { color: var(--gold); }
   .nav-buttons { display: none; }
-  .nav-buttons { display: none; }
-  .btn-connect, .btn-advocacy { padding: 0.6rem 1rem; text-decoration: none; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; border-radius: 2px; white-space: nowrap; }
-  .btn-connect { background: var(--gold); color: var(--navy); }
-  .btn-connect:hover { background: var(--gold-deep); }
-  .btn-advocacy { background: var(--red); color: white; }
-  .btn-advocacy:hover { background: var(--red-deep); }
-  .btn-direct { padding: 0.6rem 1rem; text-decoration: none; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; border-radius: 2px; background: #3a3d4a; color: var(--gold); border: 1px solid var(--gold); white-space: nowrap; }
-  .btn-direct:hover { background: #2c2e38; }
-
-  /* HAMBURGER */
   .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; background: none; border: none; z-index: 300; }
   .hamburger span { display: block; width: 24px; height: 2px; background: white; border-radius: 2px; transition: all 0.3s ease; transform-origin: center; }
   .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
   .hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
   .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-
-  /* MOBILE DRAWER */
   .mobile-menu { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: var(--navy-deep); z-index: 150; flex-direction: column; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: opacity 0.3s ease; }
   .mobile-menu.open { opacity: 1; pointer-events: all; }
   .mobile-menu a { color: white; text-decoration: none; font-size: 1.6rem; font-family: 'Cormorant Garamond', serif; font-weight: 600; padding: 1rem 2rem; letter-spacing: 0.02em; border-bottom: 1px solid rgba(255,255,255,0.08); width: 100%; text-align: center; transition: color 0.2s; }
@@ -144,31 +132,22 @@
   .footer-contact { border-top: 1px solid rgba(255,255,255,0.12); padding-top: 1.75rem; font-size: 0.88rem; color: rgba(255,255,255,0.5); }
   .footer-contact a { color: var(--gold); text-decoration: none; }
 
-  /* ══════════════════════
-     MOBILE (≤ 768px)
-  ══════════════════════ */
   @media (max-width: 768px) {
     nav { padding: 0.9rem 1.25rem; }
     .nav-links { display: none; }
     .hamburger { display: flex; }
     .mobile-menu { display: flex; }
-
     .page-hero { padding: 2.5rem 1.25rem 0; }
     .page-hero-inner { grid-template-columns: 1fr; gap: 1.5rem; }
     .page-hero-inner > div:first-child { padding-bottom: 2rem; }
     .page-hero-image { margin: 0 -1.25rem; }
     .page-hero-image img { max-height: 240px; border-radius: 0; object-fit: cover; }
-
     .problem-section, .private-pay-section, .story-section, .closing-cta { padding: 3rem 1.25rem; }
     .problem-list li { font-size: 1rem; }
-
     .compare-grid { grid-template-columns: 1fr; gap: 1rem; }
-
     .story-stats { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
-
     .closing-cta-buttons { flex-direction: column; align-items: stretch; }
     .closing-cta-buttons a { text-align: center; }
-
     footer { padding: 2.5rem 1.25rem 1.5rem; }
     .footer-nav { gap: 0.75rem 1.25rem; }
     .footer-nav a { font-size: 0.68rem; }
@@ -177,13 +156,13 @@
 </head>
 <body>
 
-<!-- MOBILE DRAWER -->
 <div class="mobile-menu" id="mobileMenu">
   <a href="index.html" onclick="closeMenu()">Home</a>
   <a href="why.html" onclick="closeMenu()">Why Mobile Health Nurse</a>
   <a href="services.html" onclick="closeMenu()">Services</a>
   <a href="personal-training.html" onclick="closeMenu()">Personal Training</a>
   <a href="advocacy.html" onclick="closeMenu()">Medical Advocacy</a>
+  <a href="nurse-direct.html" onclick="closeMenu()">Nurse Direct Line</a>
   <a href="#contact" onclick="closeMenu()">Contact</a>
 </div>
 
@@ -206,7 +185,6 @@
   </button>
 </nav>
 
-<!-- PAGE HERO -->
 <section class="page-hero">
   <div class="page-hero-inner">
     <div>
@@ -220,7 +198,6 @@
   </div>
 </section>
 
-<!-- THE PROBLEM -->
 <section class="problem-section">
   <div class="problem-inner">
     <div class="eyebrow">The reality</div>
@@ -237,7 +214,6 @@
   </div>
 </section>
 
-<!-- PRIVATE PAY -->
 <section class="private-pay-section">
   <div class="private-pay-inner">
     <div class="eyebrow">Why private pay</div>
@@ -271,13 +247,12 @@
   </div>
 </section>
 
-<!-- GRETCHEN'S STORY -->
 <section class="story-section">
   <div class="story-inner">
     <div class="eyebrow">Who I am</div>
     <h2>I built this because I watched what happens when people don't have support.</h2>
     <p>I'm Gretchen Hess — a registered nurse, ACE-certified personal trainer, and competitive triathlete. I spent years working in ICU environments, including through the COVID-19 pandemic, watching patients and families navigate their most vulnerable moments with almost no support outside the clinical walls.</p>
-    <p>I watched people leave the hospital confused. I watched families make decisions without understanding the options. I watched conditions worsen because nobody caught the early signs. <strong>I started Mobile Health Nurse because I know exactly what people need — and I know the system can't give it to them.</strong></p>
+    <p>I watched people leave the hospital confused. I watched families make decisions without understanding the options. I watched conditions worsen because nobody caught the early signs. <strong>I started Mobile Health Nurse because I know exactly what people need — and I built this practice so you can have a RN as your advocate.</strong></p>
     <p>I also live the active aging lifestyle my clients aspire to. I'm 54, take zero medications, and am currently training for a triathlon. I don't just know what healthy looks like on paper — I know what it takes to build and maintain it at every stage of life.</p>
 
     <div class="story-stats">
@@ -303,7 +278,6 @@
   </div>
 </section>
 
-<!-- CLOSING CTA -->
 <section class="closing-cta" id="contact">
   <h2>Ready to have someone in your corner?</h2>
   <p>Start with a call. Tell me what's going on and I'll tell you honestly how I can help.</p>
@@ -318,12 +292,12 @@
   <div class="footer-tag">In-Home Nursing Care · Medical Advocacy · Personal Training</div>
   <ul class="footer-nav">
     <li><a href="index.html">Home</a></li>
-    <li><a href="index.html">Home</a></li>
     <li><a href="why.html">Why Mobile Health Nurse</a></li>
     <li><a href="services.html">Services</a></li>
     <li><a href="personal-training.html">Personal Training</a></li>
     <li><a href="advocacy.html">Medical Advocacy</a></li>
-    <li><a href="advocacy.html">Medical Advocacy</a></li>
+    <li><a href="nurse-direct.html">Nurse Direct Line</a></li>
+    <li><a href="#contact">Contact</a></li>
   </ul>
   <div class="footer-contact">
     <a href="mailto:HealthSpanRN@gmail.com">HealthSpanRN@gmail.com</a> · (913) 605-6275 · West Valley, AZ<br>
