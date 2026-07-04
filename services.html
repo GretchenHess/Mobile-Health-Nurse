@@ -142,6 +142,10 @@
   .tier-price .per { font-family: 'Inter', sans-serif; font-size: 1rem; color: var(--text-medium); font-weight: 400; }
   .tier-founding { font-size: 0.82rem; color: var(--teal); font-weight: 600; margin-bottom: 1rem; }
   .tier-card .check-list { grid-template-columns: 1fr; gap: 0.6rem; margin-top: 0.75rem; }
+  .tier-book-btn { display: block; text-align: center; margin-top: 1.25rem; padding: 0.85rem 1rem; text-decoration: none; font-size: 0.78rem; letter-spacing: 0.15em; text-transform: uppercase; font-weight: 600; border-radius: 2px; transition: all 0.2s; background: #f5f0e8; color: var(--navy); border: 1.5px solid #b8a070; }
+  .tier-book-btn:hover { background: #ede7d9; transform: translateY(-1px); }
+  .tier-card.featured .tier-book-btn { background: var(--gold); color: var(--navy); border-color: var(--gold); }
+  .tier-card.featured .tier-book-btn:hover { background: var(--gold-deep); }
 
   /* FOUNDING CALLOUT */
   .founding-callout { background: var(--navy-deep); border-radius: 4px; padding: 1.75rem 2rem; margin-top: 2rem; display: grid; grid-template-columns: 1fr auto; gap: 2rem; align-items: center; }
@@ -252,7 +256,6 @@
   <a href="index.html" onclick="closeMenu()">Home</a>
   <a href="why.html" onclick="closeMenu()">Why Mobile Health Nurse</a>
   <a href="services.html" onclick="closeMenu()">Services</a>
-  <a href="personal-training.html" onclick="closeMenu()">Personal Training</a>
   <a href="advocacy.html" onclick="closeMenu()">Medical Advocacy</a>
   <a href="nurse-direct.html" onclick="closeMenu()">Nurse Direct Line</a>
   <a href="tel:9136056275" onclick="closeMenu()">Call Me · (913) 605-6275</a>
@@ -267,7 +270,6 @@
     <li><a href="index.html">Home</a></li>
     <li><a href="why.html">Why Mobile Health Nurse</a></li>
     <li><a href="services.html" class="active">Services</a></li>
-    <li><a href="personal-training.html">Personal Training</a></li>
     <li><a href="advocacy.html">Medical Advocacy</a></li>
     <li><a href="nurse-direct.html">Nurse Direct Line</a></li>
     <li><a href="tel:9136056275" class="btn-nav-call">Call Me · (913) 605-6275</a></li>
@@ -300,6 +302,7 @@
     <a href="#advocacy">Medical Advocacy</a>
     <a href="#training">Personal Training</a>
   </div>
+  <!-- training anchor retained: points to pointer section -->
 </div>
 
 <!-- IN-HOME PRIVATE NURSING — CHOOSE YOUR PATH -->
@@ -404,6 +407,7 @@
               <li>Vital signs &amp; health review</li>
               <li>Progress summaries</li>
             </ul>
+            <a href="https://my.practicebetter.io/#/69ffb000145191dbf1011aa4/bookings?s=6a4858b535781474038ce83f" class="tier-book-btn">Book Essential</a>
           </div>
           <div class="tier-card featured">
             <div class="tier-badge">Most Popular</div>
@@ -417,6 +421,7 @@
               <li>Ongoing health tracking</li>
               <li>Progress summaries</li>
             </ul>
+            <a href="https://my.practicebetter.io/#/69ffb000145191dbf1011aa4/bookings?s=6a48566b35781474038cdb73" class="tier-book-btn">Book Standard</a>
           </div>
           <div class="tier-card">
             <h3>Premium</h3>
@@ -429,6 +434,7 @@
               <li>Closest level of monitoring</li>
               <li>Progress summaries</li>
             </ul>
+            <a href="https://my.practicebetter.io/#/69ffb000145191dbf1011aa4/bookings?s=6a485a3835781474038cf988" class="tier-book-btn">Book Premium</a>
           </div>
         </div>
       </div>
@@ -455,8 +461,8 @@
 
       <div class="policy-note">All visits in-person. Billed monthly. Cancel anytime. Miss an appointment — reschedule that same week. If not rescheduled, visit is forfeited and monthly fee still applies.</div>
 
-      <div class="cta-row" style="margin-top:2rem;display:flex;gap:1rem;flex-wrap:wrap;">
-        <a href="#book" class="btn-gold">Book Online</a>
+      <div class="cta-row" style="margin-top:2rem;display:flex;gap:1rem;flex-wrap:wrap;align-items:center;">
+        <span style="font-size:0.92rem;color:var(--text-medium);flex:1;min-width:220px;">Choose a tier above to book online, or call and I'll help you pick the right fit.</span>
         <a href="tel:9136056275" class="btn-partnership">Call to Enroll</a>
       </div>
     </div>
@@ -504,7 +510,7 @@
         <div class="price-label">per month · cancel anytime</div>
         <div class="price-sub">No contract. No commitment.</div>
         <div style="margin-top:1.25rem;display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
-          <a href="nurse-direct.html" class="btn-teal">Get Started Online</a>
+          <a href="https://my.practicebetter.io/#/69ffb000145191dbf1011aa4/bookings?s=6a496efb252fc8c7016b166a" class="btn-teal">Get Started Online</a>
           <a href="tel:9136056275" style="display:inline-block;padding:1rem 2rem;text-decoration:none;font-size:0.85rem;letter-spacing:0.18em;text-transform:uppercase;font-weight:600;border-radius:2px;background:#4a6fa5;color:white;">Call to Enroll</a>
         </div>
       </div>
@@ -539,8 +545,7 @@
       </ul>
       <div class="policy-note">$200 minimum covers the first two hours. $50 for each additional 30 minutes. Travel within West Valley included. Distance outside Goodyear, Litchfield Park, and Avondale may incur a travel fee — ask when you call.</div>
       <div class="cta-row" style="margin-top:2rem;display:flex;gap:1rem;flex-wrap:wrap;">
-        <a href="advocacy.html" class="btn-gold" style="flex:1;text-align:center;">Book Online</a>
-        <a href="tel:9136056275" class="btn-advocacy-gold" style="flex:1;text-align:center;">Call to Check Availability</a>
+        <a href="tel:9136056275" class="btn-advocacy-gold">Call to Check Availability</a>
       </div>
     </div>
   </div>
@@ -552,63 +557,13 @@
     <div class="service-detail-header" style="background: #2d5a3d;">
       <div class="service-number" style="background: rgba(255,255,255,0.15); color: white;">05</div>
       <h2>Personal Training</h2>
-      <div class="service-detail-price">From $95<span class="small">Per Session · In-Home or HOA Gym</span></div>
+      <div class="service-detail-price"><span class="small" style="color: rgba(255,255,255,0.75);">Included in Health Partnership · Standalone at gretchenhess.com</span></div>
     </div>
     <div class="service-detail-body">
-      <div class="mobile-price">From $95 <span style="font-family:'Inter',sans-serif;font-size:0.9rem;font-weight:400;color:var(--text-light);">per session</span></div>
-      <p>Private, one-on-one personal training from a registered nurse and ACE-certified trainer. I bring both worlds to every session — the clinical eye of an ICU nurse and the programming knowledge of a certified trainer. I notice what other trainers don't: pain patterns, compensation habits, how your medications affect your performance and recovery.</p>
-      <p>Sessions in your home or your HOA community gym. Strength, balance, mobility, and core — built around where you are and where you want to go.</p>
-      <ul class="check-list">
-        <li>Strength &amp; resistance training</li>
-        <li>Balance &amp; fall prevention</li>
-        <li>Core stability &amp; functional movement</li>
-        <li>Corrective exercise &amp; injury prevention</li>
-        <li>Mobility &amp; flexibility work</li>
-        <li>Myofascial release techniques</li>
-        <li>Medication-aware programming</li>
-        <li>Progress tracking each session</li>
-        <li>In-home or HOA gym — your space</li>
-        <li>Always 1-on-1, always Gretchen</li>
-      </ul>
-
-      <div class="tiers-block">
-        <div class="tiers-label">Choose Your Package</div>
-        <div class="pkg-grid">
-          <div class="pkg-card">
-            <div class="pkg-sessions">Single Session</div>
-            <div class="pkg-name">Drop-In</div>
-            <div class="pkg-price">$95</div>
-            <div class="pkg-per">per session</div>
-            <div class="pkg-tagline">Try it first — no commitment</div>
-          </div>
-          <div class="pkg-card">
-            <div class="pkg-sessions">4 Sessions</div>
-            <div class="pkg-name">Jumpstart</div>
-            <div class="pkg-price">$300</div>
-            <div class="pkg-per">$75/session · one month</div>
-            <div class="pkg-tagline">Build the foundation</div>
-          </div>
-          <div class="pkg-card featured">
-            <div class="pkg-badge">Most Popular</div>
-            <div class="pkg-sessions">8 Sessions</div>
-            <div class="pkg-name">Momentum</div>
-            <div class="pkg-price">$560</div>
-            <div class="pkg-per">$70/session · two months</div>
-            <div class="pkg-tagline">Build real habits</div>
-          </div>
-          <div class="pkg-card">
-            <div class="pkg-sessions">12 Sessions</div>
-            <div class="pkg-name">Committed</div>
-            <div class="pkg-price">$780</div>
-            <div class="pkg-per">$65/session · three months</div>
-            <div class="pkg-tagline">Best value per session</div>
-          </div>
-        </div>
-      </div>
-
+      <p>Personal training is part of every Health Partnership visit — the clinical eye of an ICU nurse paired with the programming knowledge of an ACE-certified trainer, built into your ongoing care.</p>
+      <p>Looking for <strong>standalone personal training</strong>? I offer that through my separate training practice, including sessions at HOA community gyms. Everything — packages, pricing, and booking — lives there.</p>
       <div class="cta-row" style="margin-top:2rem;display:flex;gap:1rem;flex-wrap:wrap;">
-        <a href="personal-training.html" class="btn-gold">Learn More</a>
-        <a href="tel:9136056275" style="display:inline-block;padding:1rem 2rem;text-decoration:none;font-size:0.85rem;letter-spacing:0.18em;text-transform:uppercase;font-weight:600;border-radius:2px;background:#2d5a3d;color:white;transition:all 0.2s;">Call or Text Gretchen</a>
+        <a href="https://gretchenhess.com" class="btn-gold" style="background:#2d5a3d;color:white;border-color:#2d5a3d;">Visit gretchenhess.com →</a>
       </div>
     </div>
   </div>
@@ -634,7 +589,6 @@
     <li><a href="index.html">Home</a></li>
     <li><a href="why.html">Why Mobile Health Nurse</a></li>
     <li><a href="services.html">Services</a></li>
-    <li><a href="personal-training.html">Personal Training</a></li>
     <li><a href="advocacy.html">Medical Advocacy</a></li>
     <li><a href="nurse-direct.html">Nurse Direct Line</a></li>
     <li><a href="#connect">Contact</a></li>
