@@ -57,6 +57,8 @@
   .mobile-menu a:hover { color: var(--gold); }
 
   /* BUTTONS */
+  .btn-hero-plum { padding: 0.95rem 1.75rem; text-decoration: none; font-size: 0.82rem; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; display: inline-block; border-radius: 2px; background: #c4622d; color: white; }
+  .btn-hero-plum:hover { background: #a8521f; transform: translateY(-1px); }
   .btn-hero-cream { padding: 0.95rem 1.75rem; text-decoration: none; font-size: 0.82rem; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; display: inline-block; border-radius: 2px; background: #f5f0e8; color: var(--navy); border: 1.5px solid #b8a070; }
   .btn-hero-cream:hover { background: #ede7d9; transform: translateY(-1px); }
   .btn-hero-call { padding: 0.95rem 1.75rem; text-decoration: none; font-size: 0.82rem; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; display: inline-block; border-radius: 2px; background: var(--red); color: white; }
@@ -96,13 +98,13 @@
   .who-i-am-phone:hover { color: var(--gold); }
   .who-i-am-portrait img { width: 100%; border-radius: 4px; display: block; object-fit: cover; object-position: center top; max-height: 480px; }
 
-  /* FOUR WAYS */
+  /* FIVE WAYS */
   .four-ways { padding: 5rem 3rem; background: var(--off-white); }
   .four-ways-inner { max-width: 1100px; margin: 0 auto; }
   .four-ways-header { text-align: center; margin-bottom: 3.5rem; }
   .four-ways-header h2 { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 0.75rem; }
   .four-ways-header p { color: var(--text-medium); font-size: 1.05rem; max-width: 540px; margin: 0 auto; }
-  .four-ways-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
+  .four-ways-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1.5rem; }
   .way-card { background: white; padding: 2.25rem 1.75rem; border-top: 4px solid var(--gold); border-radius: 2px; display: flex; flex-direction: column; }
   .way-card.teal-top { border-top-color: var(--teal); }
   .way-card.red-top { border-top-color: var(--red); }
@@ -176,7 +178,7 @@
 
   /* TABLET */
   @media (max-width: 1000px) {
-    .four-ways-grid { grid-template-columns: repeat(2, 1fr); }
+    .four-ways-grid { grid-template-columns: repeat(3, 1fr); }
   }
 
   /* MOBILE */
@@ -239,6 +241,7 @@
   <a href="index.html" onclick="closeMenu()">Home</a>
   <a href="why.html" onclick="closeMenu()">Why Mobile Health Nurse</a>
   <a href="services.html" onclick="closeMenu()">Services</a>
+  <a href="personal-training.html" onclick="closeMenu()">Personal Training</a>
   <a href="advocacy.html" onclick="closeMenu()">Medical Advocacy</a>
   <a href="nurse-direct.html" onclick="closeMenu()">Nurse Direct Line</a>
   <a href="tel:9136056275" onclick="closeMenu()">Call Me · (913) 605-6275</a>
@@ -253,6 +256,7 @@
     <li><a href="index.html" class="active">Home</a></li>
     <li><a href="why.html">Why Mobile Health Nurse</a></li>
     <li><a href="services.html">Services</a></li>
+    <li><a href="personal-training.html">Personal Training</a></li>
     <li><a href="advocacy.html">Medical Advocacy</a></li>
     <li><a href="nurse-direct.html">Nurse Direct Line</a></li>
     <li><a href="tel:9136056275" class="btn-nav-call">Call Me · (913) 605-6275</a></li>
@@ -272,14 +276,14 @@
     <div class="hero-services">
       <span>In-Home Private Nursing</span>
       <span class="hero-services-dot">·</span>
-      <span>Personal Training</span>
+      <span>Health Clarity Visit</span>
       <span class="hero-services-dot">·</span>
       <span>Medical Advocacy</span>
       <span class="hero-services-dot">·</span>
       <span>Nurse Direct Line</span>
     </div>
     <div class="hero-cta-row">
-      <a href="services.html#in-home" class="btn-hero-cream">Book In-Home Private Nursing</a>
+      <a href="services.html#in-home" class="btn-hero-plum">Book In-Home Private Nursing</a>
       <a href="advocacy.html" class="btn-hero-cream">Medical Advocacy</a>
       <a href="nurse-direct.html" class="btn-hero-direct">Nurse Direct Line</a>
     </div>
@@ -310,12 +314,12 @@
   </div>
 </section>
 
-<!-- FOUR WAYS I CAN HELP -->
+<!-- FIVE WAYS I CAN HELP -->
 <section class="four-ways" id="services">
   <div class="four-ways-inner">
     <div class="four-ways-header">
       <div class="eyebrow">What I Do</div>
-      <h2>Four ways I can help.</h2>
+      <h2>Five ways I can help.</h2>
       <p>Private pay only — which means I work for you, not an insurance company.</p>
     </div>
     <div class="four-ways-grid">
@@ -350,6 +354,14 @@
         <p>Unlimited call and text access to me — no portal, no automated system, no stranger. Available to anyone in Arizona or across the U.S. When you call, I answer personally.</p>
         <div class="way-card-price">$149 <span class="per">/month</span></div>
         <a href="nurse-direct.html">Learn more →</a>
+      </div>
+
+      <div class="way-card green-top">
+        <div class="way-card-label">In-Home · HOA Gym</div>
+        <h3>Personal Training</h3>
+        <p>Private one-on-one training from a registered nurse and ACE-certified trainer. Strength, balance, mobility, and core — with a clinical eye that notices what other trainers don't.</p>
+        <div class="way-card-price">From $95 <span class="per">/session</span></div>
+        <a href="personal-training.html">See packages →</a>
       </div>
 
     </div>
@@ -408,6 +420,7 @@
     <li><a href="#top">Home</a></li>
     <li><a href="why.html">Why Mobile Health Nurse</a></li>
     <li><a href="services.html">Services</a></li>
+    <li><a href="personal-training.html">Personal Training</a></li>
     <li><a href="advocacy.html">Medical Advocacy</a></li>
     <li><a href="nurse-direct.html">Nurse Direct Line</a></li>
     <li><a href="#connect">Contact</a></li>
