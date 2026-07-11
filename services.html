@@ -64,8 +64,8 @@
   .btn-navy-outline:hover { background: var(--navy-deep); transform: translateY(-1px); }
   .btn-gold { padding: 1rem 2rem; text-decoration: none; font-size: 0.85rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; display: inline-block; border-radius: 2px; background: #f5f0e8; color: var(--navy); border: 1.5px solid #b8a070; }
   .btn-gold:hover { background: #ede7d9; transform: translateY(-1px); }
-  .btn-teal { display: inline-block; background: #f5f0e8; color: var(--navy); padding: 1rem 2rem; text-decoration: none; font-size: 0.85rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; border-radius: 2px; transition: all 0.2s; border: 1.5px solid #b8a070; }
-  .btn-teal:hover { background: #ede7d9; transform: translateY(-1px); }
+  .btn-slate { display: inline-block; background: #4a6fa5; color: white; padding: 1rem 2rem; text-decoration: none; font-size: 0.85rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; border-radius: 2px; transition: all 0.2s; }
+  .btn-slate:hover { background: #3a5a8a; transform: translateY(-1px); }
 
   /* EYEBROW */
   .eyebrow { color: var(--teal); font-size: 0.78rem; letter-spacing: 0.22em; font-weight: 600; text-transform: uppercase; margin-bottom: 1.25rem; }
@@ -83,7 +83,6 @@
   .in-home-choice { padding: 4rem 3rem; background: white; border-bottom: 1px solid var(--border-soft); }
   .in-home-choice-inner { max-width: 1100px; margin: 0 auto; }
   .in-home-choice-header { text-align: center; margin-bottom: 2.5rem; }
-  .in-home-choice-header .eyebrow { color: var(--teal); }
   .in-home-choice-header h2 { font-size: clamp(1.75rem, 3vw, 2.5rem); margin-bottom: 0.5rem; }
   .in-home-choice-header p { color: var(--text-medium); font-size: 1rem; max-width: 540px; margin: 0 auto; }
   .in-home-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
@@ -100,9 +99,8 @@
   .in-home-card.featured a.card-btn:hover { background: var(--teal-deep); }
   .in-home-divider { text-align: center; padding: 1.5rem 0 0; color: var(--text-light); font-size: 0.85rem; }
   .in-home-divider a { color: var(--teal); text-decoration: none; font-weight: 600; }
-  .in-home-divider a:hover { color: var(--teal-deep); }
 
-  /* SERVICE NAV ANCHORS */
+  /* SERVICE NAV */
   .service-nav { background: var(--cream); border-bottom: 1px solid var(--border-soft); padding: 0 3rem; position: sticky; top: 72px; z-index: 90; }
   .service-nav-inner { max-width: 1100px; margin: 0 auto; display: flex; gap: 0; }
   .service-nav a { display: block; padding: 1rem 1.5rem; font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; font-weight: 600; color: var(--text-medium); text-decoration: none; border-bottom: 2px solid transparent; transition: all 0.2s; white-space: nowrap; }
@@ -134,16 +132,15 @@
   .tiers-label { text-align: center; color: var(--gold-deep); font-size: 0.75rem; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 600; margin-bottom: 1.75rem; }
   .tiers-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
   .tier-card { border: 1.5px solid var(--border-soft); border-radius: 4px; padding: 1.75rem 1.5rem; position: relative; background: white; display: flex; flex-direction: column; }
-  .tier-card .check-list { grid-template-columns: 1fr; gap: 0.6rem; margin-top: 0.75rem; margin-bottom: auto; }
   .tier-card.featured { border-color: var(--gold); border-width: 2px; }
   .tier-badge { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--gold); color: var(--navy); font-size: 0.65rem; letter-spacing: 0.18em; font-weight: 700; text-transform: uppercase; padding: 0.3rem 0.9rem; border-radius: 2px; white-space: nowrap; }
   .tier-card h3 { font-size: 1.5rem; margin-bottom: 0.35rem; }
   .tier-freq { font-size: 0.82rem; color: var(--text-light); margin-bottom: 0.75rem; }
   .tier-price { font-family: 'Cormorant Garamond', serif; font-size: 2rem; color: var(--navy); font-weight: 600; margin-bottom: 0.15rem; }
   .tier-price .per { font-family: 'Inter', sans-serif; font-size: 1rem; color: var(--text-medium); font-weight: 400; }
-  .tier-card > a { margin-top: 1.25rem; display: block; text-align: center; }
   .tier-founding { font-size: 0.82rem; color: var(--teal); font-weight: 600; margin-bottom: 1rem; }
-  .tier-card .check-list { grid-template-columns: 1fr; gap: 0.6rem; margin-top: 0.75rem; }
+  .tier-card .check-list { grid-template-columns: 1fr; gap: 0.6rem; margin-top: 0.75rem; margin-bottom: auto; }
+  .tier-card > a { margin-top: 1.25rem; display: block; text-align: center; }
 
   /* FOUNDING CALLOUT */
   .founding-callout { background: var(--navy-deep); border-radius: 4px; padding: 1.75rem 2rem; margin-top: 2rem; display: grid; grid-template-columns: 1fr auto; gap: 2rem; align-items: center; }
@@ -153,7 +150,7 @@
   .founding-spots-mini .num { font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; font-weight: 600; color: var(--gold); line-height: 1; }
   .founding-spots-mini .lbl { color: rgba(255,255,255,0.6); font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; margin-top: 0.25rem; }
 
-  /* NURSE DIRECT ADD-ON CALLOUT */
+  /* NURSE DIRECT ADD-ON */
   .addon-callout { background: #f0f4fa; border: 1.5px solid #4a6fa5; border-radius: 4px; padding: 1.5rem 2rem; margin-top: 1.5rem; display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; }
   .addon-callout-text { flex: 1; }
   .addon-callout-text strong { color: #4a6fa5; display: block; font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 700; margin-bottom: 0.35rem; }
@@ -177,17 +174,6 @@
   .nurse-direct-price-block .price-sub { color: rgba(255,255,255,0.45); font-size: 0.78rem; margin-top: 0.25rem; font-style: italic; }
   .disclaimer { font-size: 0.8rem; color: var(--text-light); font-style: italic; margin-top: 1rem; }
 
-  /* PERSONAL TRAINING PACKAGES */
-  .pkg-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; margin-top: 0; }
-  .pkg-card { border: 1.5px solid var(--border-soft); border-radius: 4px; padding: 1.75rem 1.5rem; position: relative; background: white; text-align: center; }
-  .pkg-card.featured { border-color: #2d5a3d; border-width: 2px; }
-  .pkg-badge { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: #2d5a3d; color: white; font-size: 0.65rem; letter-spacing: 0.18em; font-weight: 700; text-transform: uppercase; padding: 0.3rem 0.9rem; border-radius: 2px; white-space: nowrap; }
-  .pkg-sessions { font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; font-weight: 600; color: var(--text-light); margin-bottom: 0.4rem; }
-  .pkg-name { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 600; color: var(--navy); margin-bottom: 0.75rem; line-height: 1.1; }
-  .pkg-price { font-family: 'Cormorant Garamond', serif; font-size: 2.25rem; font-weight: 600; color: var(--navy); line-height: 1; margin-bottom: 0.25rem; }
-  .pkg-per { font-size: 0.82rem; color: var(--text-medium); margin-bottom: 0.75rem; }
-  .pkg-tagline { font-size: 0.88rem; color: var(--text-medium); font-style: italic; }
-
   /* BOTTOM CTA */
   .bottom-cta { background: var(--navy); color: white; padding: 5rem 3rem; text-align: center; }
   .bottom-cta-inner { max-width: 640px; margin: 0 auto; }
@@ -198,7 +184,6 @@
   /* FOOTER */
   footer { background: var(--navy-deep); color: rgba(255,255,255,0.7); padding: 3.5rem 3rem 2rem; text-align: center; }
   .footer-brand { color: white; font-family: 'Cormorant Garamond', serif; font-size: 1.7rem; font-weight: 600; margin-bottom: 0.4rem; }
-  .footer-tag { color: var(--gold); font-size: 0.82rem; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 2.25rem; }
   .footer-nav { display: flex; justify-content: center; gap: 2.25rem; flex-wrap: wrap; list-style: none; margin-bottom: 2.25rem; }
   .footer-nav a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; font-weight: 500; }
   .footer-nav a:hover { color: var(--gold); }
@@ -218,7 +203,6 @@
     .in-home-choice { padding: 2.5rem 1.25rem; }
     .in-home-cards { grid-template-columns: 1fr; gap: 1.25rem; }
     .in-home-card { padding: 1.75rem 1.5rem; }
-
     .service-nav { top: 60px; padding: 0; overflow-x: auto; -webkit-overflow-scrolling: touch; }
     .service-nav-inner { gap: 0; }
     .service-nav a { padding: 0.85rem 1rem; font-size: 0.68rem; }
@@ -230,7 +214,6 @@
     .mobile-price { display: block; font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: var(--navy); margin-bottom: 1rem; }
     .check-list { grid-template-columns: 1fr; gap: 0.6rem; }
     .tiers-grid { grid-template-columns: 1fr; gap: 1rem; }
-    .pkg-grid { grid-template-columns: 1fr; gap: 1rem; }
     .access-details { grid-template-columns: 1fr; }
     .founding-callout { grid-template-columns: 1fr; text-align: center; gap: 1.25rem; }
     .founding-spots-mini { margin: 0 auto; }
@@ -311,7 +294,6 @@
       <p>Both services happen in your home. The difference is whether you're looking for a one-time visit or an ongoing relationship.</p>
     </div>
     <div class="in-home-cards">
-
       <div class="in-home-card">
         <div class="in-home-card-tag">One Time · 90 min</div>
         <h3>Health Clarity Visit</h3>
@@ -319,7 +301,6 @@
         <p>A comprehensive in-home health assessment — vitals, medications, labs, nutrition, movement, and your goals. You leave with a written summary in plain language. Your baseline on paper, the day we meet. No ongoing commitment required.</p>
         <a href="#clarity" class="card-btn">See What's Included →</a>
       </div>
-
       <div class="in-home-card featured">
         <div class="in-home-card-tag">Ongoing · Monthly · Includes Personal Training</div>
         <h3>Health Partnership</h3>
@@ -327,7 +308,6 @@
         <p>Every visit builds on the last. I already know your baseline, your medications, your story. We track your numbers, talk through doctor visits and lab results, and train together — every single visit. This is ongoing care that actually knows you.</p>
         <a href="#partnership" class="card-btn">See Tiers &amp; Pricing →</a>
       </div>
-
     </div>
     <div class="in-home-divider">Not sure which fits? <a href="tel:9136056275">Call me and we'll figure it out together.</a></div>
   </div>
@@ -392,6 +372,7 @@
       <div class="tiers-block">
         <div class="tiers-label">Choose Your Frequency</div>
         <div class="tiers-grid">
+
           <div class="tier-card">
             <h3>Essential</h3>
             <div class="tier-freq">1 visit per month · 75 min</div>
@@ -405,6 +386,7 @@
             </ul>
             <a href="https://my.practicebetter.io/#/69ffb000145191dbf1011aa4/bookings?s=6a4858b535781474038ce83f" class="btn-gold">Book Essential →</a>
           </div>
+
           <div class="tier-card featured">
             <div class="tier-badge">Most Popular</div>
             <h3>Standard</h3>
@@ -419,6 +401,7 @@
             </ul>
             <a href="https://my.practicebetter.io/#/69ffb000145191dbf1011aa4/bookings?s=6a48566b35781474038cdb73" class="btn-partnership">Book Standard →</a>
           </div>
+
           <div class="tier-card">
             <h3>Premium</h3>
             <div class="tier-freq">Weekly visits · 75 min each</div>
@@ -432,10 +415,10 @@
             </ul>
             <a href="https://my.practicebetter.io/#/69ffb000145191dbf1011aa4/bookings?s=6a485a3835781474038cf988" class="btn-gold">Book Premium →</a>
           </div>
+
         </div>
       </div>
 
-      <!-- Nurse Direct Line add-on callout -->
       <div class="addon-callout">
         <div class="addon-callout-text">
           <strong>Add-On · Nurse Direct Line · $149/month</strong>
@@ -475,7 +458,7 @@
     <div class="nurse-direct-body">
       <div class="mobile-price">$149 <span style="font-family:'Inter',sans-serif;font-size:0.9rem;font-weight:400;color:var(--text-light);">/month</span></div>
       <p style="font-size:0.9rem;color:#4a6fa5;font-weight:600;letter-spacing:0.04em;margin-bottom:1rem;">Available to anyone in the United States — no Arizona zip code required.</p>
-      <p>Direct access to an ICU-trained RN — by call or text, whenever you need it. Available to anyone in Arizona or across the United States. No in-home visit required. No portal, no automated system, no stranger answering your question.</p>
+      <p>Direct access to an ICU-trained RN — by call or text, whenever you need it. No in-home visit required. No portal, no automated system, no stranger answering your question.</p>
       <p>Subscribe on its own, or add it to your Health Partnership for complete care — clinical visits in person, and a nurse you can reach whenever something comes up.</p>
 
       <div class="access-details">
@@ -505,8 +488,8 @@
         <div class="price-label">per month · cancel anytime</div>
         <div class="price-sub">No contract. No commitment.</div>
         <div style="margin-top:1.25rem;display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
-          <a href="https://my.practicebetter.io/#/69ffb000145191dbf1011aa4/bookings?s=6a496efb252fc8c7016b166a" class="btn-teal">Get Started Online</a>
-          <a href="tel:9136056275" style="display:inline-block;padding:1rem 2rem;text-decoration:none;font-size:0.85rem;letter-spacing:0.18em;text-transform:uppercase;font-weight:600;border-radius:2px;background:#4a6fa5;color:white;">Call to Enroll</a>
+          <a href="https://my.practicebetter.io/#/69ffb000145191dbf1011aa4/bookings?s=6a496efb252fc8c7016b166a" class="btn-gold">Get Started Online</a>
+          <a href="tel:9136056275" class="btn-slate">Call to Enroll</a>
         </div>
       </div>
       <p class="disclaimer">Nurse Direct Line is not a replacement for emergency services. If you are experiencing a medical emergency, call 911.</p>
@@ -538,16 +521,16 @@
         <li>Pre-procedure preparation</li>
         <li>Coordination with care team when needed</li>
       </ul>
-      <div class="policy-note">$200 minimum covers the first two hours. $50 for each additional 30 minutes. Travel within West Valley included. Distance outside Goodyear, Litchfield Park, and Avondale may incur a travel fee — ask when you call.</div>
+      <div class="policy-note">$200 minimum covers the first two hours. $50 for each additional 30 minutes. Travel within the Phoenix West Valley included. Distance outside Goodyear, Litchfield Park, and Avondale may incur a travel fee — ask when you call.</div>
       <div class="cta-row" style="margin-top:2rem;display:flex;gap:1rem;flex-wrap:wrap;">
-        <a href="advocacy.html" class="btn-gold" style="flex:1;text-align:center;">Book Online</a>
         <a href="tel:9136056275" class="btn-advocacy-gold" style="flex:1;text-align:center;">Call to Check Availability</a>
+        <a href="advocacy.html" class="btn-navy-outline" style="flex:1;text-align:center;">Learn More</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- PERSONAL TRAINING POINTER -->
+<!-- 05 PERSONAL TRAINING POINTER -->
 <section class="service-detail" id="training">
   <div class="service-detail-inner">
     <div class="service-detail-header" style="background: #2d5a3d;">
