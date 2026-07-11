@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Medical Advocacy — Mobile Health Nurse | Gretchen Hess, BSN, RN</title>
-<meta name="description" content="An ICU-trained nurse in the room with you. Doctor's office, hospital room, or before a procedure. West Valley Arizona and beyond.">
+<meta name="description" content="An ICU-trained nurse in the room with you. Doctor's office, hospital room, or before a procedure. Phoenix West Valley, Arizona and beyond.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -115,7 +115,8 @@
   .price-desc { color: rgba(255,255,255,0.75); font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.6; }
   .price-then { color: rgba(255,255,255,0.55); font-size: 0.88rem; margin-top: 0.35rem; font-style: italic; }
   .pricing-note { font-size: 0.9rem; color: var(--text-light); line-height: 1.65; margin-bottom: 2rem; }
-  .pricing-cta { display: flex; justify-content: center; }
+  /* Equal-width buttons */
+  .pricing-cta { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
   .pricing-cta a { text-align: center; }
 
   /* AVAILABILITY */
@@ -149,6 +150,7 @@
     .story-section, .where-section, .what-section, .pricing-section { padding: 3rem 1.25rem; }
     .where-grid { grid-template-columns: 1fr; gap: 1rem; }
     .check-list { grid-template-columns: 1fr; gap: 0.7rem; }
+    .pricing-cta { grid-template-columns: 1fr; }
     .availability-band { padding: 2.5rem 1.25rem; }
     .availability-band .btn-row { flex-direction: column; align-items: stretch; }
     .availability-band .btn-row a { text-align: center; }
@@ -164,6 +166,7 @@
   <a href="index.html" onclick="closeMenu()">Home</a>
   <a href="why.html" onclick="closeMenu()">Why Mobile Health Nurse</a>
   <a href="services.html" onclick="closeMenu()">Services</a>
+  <a href="personal-training.html" onclick="closeMenu()">Personal Training</a>
   <a href="advocacy.html" onclick="closeMenu()">Medical Advocacy</a>
   <a href="nurse-direct.html" onclick="closeMenu()">Nurse Direct Line</a>
   <a href="#contact" onclick="closeMenu()">Contact</a>
@@ -172,12 +175,13 @@
 <nav>
   <div class="brand">
     <h1>Mobile Health Nurse</h1>
-    <div class="location">West Valley, Arizona</div>
+    <div class="location">Serving Phoenix West Valley</div>
   </div>
   <ul class="nav-links">
     <li><a href="index.html">Home</a></li>
     <li><a href="why.html">Why Mobile Health Nurse</a></li>
     <li><a href="services.html">Services</a></li>
+    <li><a href="personal-training.html">Personal Training</a></li>
     <li><a href="advocacy.html" class="active">Medical Advocacy</a></li>
     <li><a href="nurse-direct.html">Nurse Direct Line</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -195,7 +199,8 @@
       <h1>Having a nurse in the room<br><em>changes everything.</em></h1>
       <p class="hero-lead">In the doctor's office, the hospital room, or before a procedure — I show up with you.</p>
       <div class="cta-row">
-        <a href="tel:9136056275" class="btn-advocacy-gold">Call to Check Availability</a>
+        <a href="#book" class="btn-advocacy-gold">Book Online</a>
+        <a href="tel:9136056275" class="btn-outline-white">Call to Check Availability</a>
       </div>
     </div>
     <div class="page-hero-image">
@@ -273,7 +278,8 @@
       <div class="price-then">$50 for each additional 30 minutes</div>
     </div>
     <p class="pricing-note">Travel time within West Valley is included. Distance outside Goodyear, Litchfield Park, and Avondale may incur an additional travel fee — ask when you call.</p>
-    <div class="pricing-cta">
+    <div class="pricing-cta" id="book">
+      <a href="services.html#advocacy" class="btn-advocacy-gold">Book Online</a>
       <a href="tel:9136056275" class="btn-primary">Call to Check Availability</a>
     </div>
   </div>
@@ -291,17 +297,17 @@
 
 <footer>
   <div class="footer-brand">Mobile Health Nurse</div>
-  <div class="footer-tag">In-Home Nursing Care · Medical Advocacy · Personal Training</div>
   <ul class="footer-nav">
     <li><a href="index.html">Home</a></li>
     <li><a href="why.html">Why Mobile Health Nurse</a></li>
     <li><a href="services.html">Services</a></li>
+    <li><a href="personal-training.html">Personal Training</a></li>
     <li><a href="advocacy.html">Medical Advocacy</a></li>
     <li><a href="nurse-direct.html">Nurse Direct Line</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
   <div class="footer-contact">
-    <a href="mailto:HealthSpanRN@gmail.com">HealthSpanRN@gmail.com</a> · (913) 605-6275 · West Valley, AZ<br>
+    <a href="mailto:HealthSpanRN@gmail.com">HealthSpanRN@gmail.com</a> · (913) 605-6275 · Goodyear · Litchfield Park · Avondale · Verrado · Estrella Mountain Ranch<br>
     <span style="margin-top:0.75rem;display:inline-block;">Gretchen Hess, BSN, RN, ACE-CPT</span>
   </div>
 </footer>
