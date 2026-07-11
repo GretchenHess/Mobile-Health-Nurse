@@ -35,11 +35,12 @@
   .brand { flex-shrink: 0; }
   .brand h1 { color: white; font-size: 1.4rem; font-weight: 600; margin: 0; white-space: nowrap; }
   .brand .location { color: var(--gold); font-size: 0.65rem; letter-spacing: 0.15em; font-family: 'Inter', sans-serif; font-weight: 500; text-transform: uppercase; }
-  .nav-links { display: flex; gap: 1.75rem; list-style: none; }
-  .nav-links a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; transition: color 0.2s; white-space: nowrap; }
+  .nav-links { display: flex; gap: 1.5rem; list-style: none; align-items: center; flex-wrap: nowrap; }
+  .nav-links a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 500; transition: color 0.2s; white-space: nowrap; }
   .nav-links a:hover { color: var(--gold); }
   .nav-links a.active { color: var(--gold); }
-  .nav-buttons { display: none; }
+  .btn-nav-call { padding: 0.6rem 1.25rem; text-decoration: none; font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; border-radius: 2px; background: var(--red); color: white; white-space: nowrap; }
+  .btn-nav-call:hover { background: var(--red-deep); }
   .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; background: none; border: none; z-index: 300; }
   .hamburger span { display: block; width: 24px; height: 2px; background: white; border-radius: 2px; transition: all 0.3s ease; transform-origin: center; }
   .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
@@ -56,8 +57,6 @@
   .btn-primary:hover { background: var(--red-deep); transform: translateY(-1px); }
   .btn-advocacy-gold { padding: 1rem 2rem; text-decoration: none; font-size: 0.85rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; display: inline-block; border-radius: 2px; background: var(--gold); color: var(--navy); }
   .btn-advocacy-gold:hover { background: var(--gold-deep); transform: translateY(-1px); }
-  .btn-gold { padding: 1rem 2rem; text-decoration: none; font-size: 0.85rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; display: inline-block; border-radius: 2px; background: #f5f0e8; color: var(--navy); border: 1.5px solid #b8a070; }
-  .btn-gold:hover { background: #ede7d9; transform: translateY(-1px); }
   .btn-outline-white { padding: 1rem 2rem; text-decoration: none; font-size: 0.85rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; display: inline-block; border-radius: 2px; border: 1.5px solid rgba(255,255,255,0.5); color: white; background: transparent; }
   .btn-outline-white:hover { border-color: white; background: rgba(255,255,255,0.08); }
 
@@ -65,7 +64,7 @@
   .eyebrow { color: var(--teal); font-size: 0.78rem; letter-spacing: 0.22em; font-weight: 600; text-transform: uppercase; margin-bottom: 1.25rem; }
   .eyebrow-gold { color: var(--gold); font-size: 0.78rem; letter-spacing: 0.22em; font-weight: 600; text-transform: uppercase; margin-bottom: 1.25rem; }
 
-  /* PAGE HERO — larger image */
+  /* PAGE HERO */
   .page-hero { background: var(--navy); color: white; padding: 5rem 3rem 0; }
   .page-hero-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; padding-bottom: 4rem; }
   .page-hero .eyebrow { color: rgba(255,255,255,0.75); }
@@ -73,7 +72,6 @@
   .page-hero h1 em { font-style: italic; color: rgba(255,255,255,0.85); }
   .page-hero .hero-lead { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.35rem, 2.5vw, 1.75rem); color: rgba(255,255,255,0.9); line-height: 1.5; margin-bottom: 2rem; font-weight: 500; font-style: italic; }
   .page-hero .cta-row { display: flex; gap: 1rem; flex-wrap: wrap; }
-  /* Hero image — tall rectangle, not square */
   .page-hero-image { margin: -5rem -3rem 0 0; }
   .page-hero-image img { width: 100%; display: block; object-fit: cover; max-height: 460px; min-height: 360px; border-radius: 0; }
 
@@ -115,8 +113,7 @@
   .price-desc { color: rgba(255,255,255,0.75); font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.6; }
   .price-then { color: rgba(255,255,255,0.55); font-size: 0.88rem; margin-top: 0.35rem; font-style: italic; }
   .pricing-note { font-size: 0.9rem; color: var(--text-light); line-height: 1.65; margin-bottom: 2rem; }
-  /* Equal-width buttons */
-  .pricing-cta { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .pricing-cta { display: grid; grid-template-columns: 1fr; gap: 1rem; max-width: 360px; margin: 0 auto; }
   .pricing-cta a { text-align: center; }
 
   /* AVAILABILITY */
@@ -128,7 +125,6 @@
   /* FOOTER */
   footer { background: var(--navy-deep); color: rgba(255,255,255,0.7); padding: 3.5rem 3rem 2rem; text-align: center; }
   .footer-brand { color: white; font-family: 'Cormorant Garamond', serif; font-size: 1.7rem; font-weight: 600; margin-bottom: 0.4rem; }
-  .footer-tag { color: var(--gold); font-size: 0.82rem; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 2.25rem; }
   .footer-nav { display: flex; justify-content: center; gap: 2.25rem; flex-wrap: wrap; list-style: none; margin-bottom: 2.25rem; }
   .footer-nav a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; font-weight: 500; }
   .footer-nav a:hover { color: var(--gold); }
@@ -150,7 +146,7 @@
     .story-section, .where-section, .what-section, .pricing-section { padding: 3rem 1.25rem; }
     .where-grid { grid-template-columns: 1fr; gap: 1rem; }
     .check-list { grid-template-columns: 1fr; gap: 0.7rem; }
-    .pricing-cta { grid-template-columns: 1fr; }
+    .pricing-cta { grid-template-columns: 1fr; max-width: 100%; }
     .availability-band { padding: 2.5rem 1.25rem; }
     .availability-band .btn-row { flex-direction: column; align-items: stretch; }
     .availability-band .btn-row a { text-align: center; }
@@ -168,7 +164,7 @@
   <a href="services.html" onclick="closeMenu()">Services</a>
   <a href="advocacy.html" onclick="closeMenu()">Medical Advocacy</a>
   <a href="nurse-direct.html" onclick="closeMenu()">Nurse Direct Line</a>
-  <a href="#contact" onclick="closeMenu()">Contact</a>
+  <a href="tel:9136056275" onclick="closeMenu()">Call Me · (913) 605-6275</a>
 </div>
 
 <nav>
@@ -182,7 +178,7 @@
     <li><a href="services.html">Services</a></li>
     <li><a href="advocacy.html" class="active">Medical Advocacy</a></li>
     <li><a href="nurse-direct.html">Nurse Direct Line</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="tel:9136056275" class="btn-nav-call">Call Me · (913) 605-6275</a></li>
   </ul>
   <button class="hamburger" id="hamburger" aria-label="Open menu" onclick="toggleMenu()">
     <span></span><span></span><span></span>
@@ -197,8 +193,8 @@
       <h1>Having a nurse in the room<br><em>changes everything.</em></h1>
       <p class="hero-lead">In the doctor's office, the hospital room, or before a procedure — I show up with you.</p>
       <div class="cta-row">
-        <a href="#book" class="btn-advocacy-gold">Book Online</a>
-        <a href="tel:9136056275" class="btn-outline-white">Call to Check Availability</a>
+        <a href="tel:9136056275" class="btn-advocacy-gold">Call to Check Availability</a>
+        <a href="tel:9136056275" class="btn-outline-white">(913) 605-6275</a>
       </div>
     </div>
     <div class="page-hero-image">
@@ -275,10 +271,9 @@
       <div class="price-desc">First two hours — minimum engagement</div>
       <div class="price-then">$50 for each additional 30 minutes</div>
     </div>
-    <p class="pricing-note">Travel time within West Valley is included. Distance outside Goodyear, Litchfield Park, and Avondale may incur an additional travel fee — ask when you call.</p>
-    <div class="pricing-cta" id="book">
-      <a href="services.html#advocacy" class="btn-advocacy-gold">Book Online</a>
-      <a href="tel:9136056275" class="btn-primary">Call to Check Availability</a>
+    <p class="pricing-note">Travel time within the Phoenix West Valley is included. Distance outside Goodyear, Litchfield Park, and Avondale may incur an additional travel fee — ask when you call.</p>
+    <div class="pricing-cta">
+      <a href="tel:9136056275" class="btn-advocacy-gold">Call to Check Availability</a>
     </div>
   </div>
 </section>
