@@ -133,13 +133,15 @@
   .tiers-block { margin-top: 2.5rem; padding-top: 2rem; border-top: 1px solid var(--border-soft); }
   .tiers-label { text-align: center; color: var(--gold-deep); font-size: 0.75rem; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 600; margin-bottom: 1.75rem; }
   .tiers-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
-  .tier-card { border: 1.5px solid var(--border-soft); border-radius: 4px; padding: 1.75rem 1.5rem; position: relative; background: white; }
+  .tier-card { border: 1.5px solid var(--border-soft); border-radius: 4px; padding: 1.75rem 1.5rem; position: relative; background: white; display: flex; flex-direction: column; }
+  .tier-card .check-list { grid-template-columns: 1fr; gap: 0.6rem; margin-top: 0.75rem; margin-bottom: auto; }
   .tier-card.featured { border-color: var(--gold); border-width: 2px; }
   .tier-badge { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--gold); color: var(--navy); font-size: 0.65rem; letter-spacing: 0.18em; font-weight: 700; text-transform: uppercase; padding: 0.3rem 0.9rem; border-radius: 2px; white-space: nowrap; }
   .tier-card h3 { font-size: 1.5rem; margin-bottom: 0.35rem; }
   .tier-freq { font-size: 0.82rem; color: var(--text-light); margin-bottom: 0.75rem; }
   .tier-price { font-family: 'Cormorant Garamond', serif; font-size: 2rem; color: var(--navy); font-weight: 600; margin-bottom: 0.15rem; }
   .tier-price .per { font-family: 'Inter', sans-serif; font-size: 1rem; color: var(--text-medium); font-weight: 400; }
+  .tier-card > a { margin-top: 1.25rem; display: block; text-align: center; }
   .tier-founding { font-size: 0.82rem; color: var(--teal); font-weight: 600; margin-bottom: 1rem; }
   .tier-card .check-list { grid-template-columns: 1fr; gap: 0.6rem; margin-top: 0.75rem; }
 
@@ -396,7 +398,7 @@
               <li>Vital signs &amp; health review</li>
               <li>Progress summaries</li>
             </ul>
-            <a href="https://my.practicebetter.io/#/69ffb000145191dbf1011aa4/bookings?s=6a4858b535781474038ce83f" class="btn-gold" style="display:block;text-align:center;margin-top:1.25rem;">Book Essential →</a>
+            <a href="https://my.practicebetter.io/#/69ffb000145191dbf1011aa4/bookings?s=6a4858b535781474038ce83f" class="btn-gold">Book Essential →</a>
           </div>
           <div class="tier-card featured">
             <div class="tier-badge">Most Popular</div>
@@ -410,7 +412,7 @@
               <li>Ongoing health tracking</li>
               <li>Progress summaries</li>
             </ul>
-            <a href="https://my.practicebetter.io/#/69ffb000145191dbf1011aa4/bookings?s=6a48566b35781474038cdb73" class="btn-partnership" style="display:block;text-align:center;margin-top:1.25rem;">Book Standard →</a>
+            <a href="https://my.practicebetter.io/#/69ffb000145191dbf1011aa4/bookings?s=6a48566b35781474038cdb73" class="btn-partnership">Book Standard →</a>
           </div>
           <div class="tier-card">
             <h3>Premium</h3>
@@ -423,7 +425,7 @@
               <li>Closest level of monitoring</li>
               <li>Progress summaries</li>
             </ul>
-            <a href="https://my.practicebetter.io/#/69ffb000145191dbf1011aa4/bookings?s=6a485a3835781474038cf988" class="btn-gold" style="display:block;text-align:center;margin-top:1.25rem;">Book Premium →</a>
+            <a href="https://my.practicebetter.io/#/69ffb000145191dbf1011aa4/bookings?s=6a485a3835781474038cf988" class="btn-gold">Book Premium →</a>
           </div>
         </div>
       </div>
