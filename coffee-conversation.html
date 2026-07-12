@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coffee & Conversation — Mobile Health Nurse | Gretchen Hess, BSN, RN</title>
+<meta name="description" content="How are you doing? Seriously. A 30-minute conversation with an ICU-trained RN about your health, your fitness, and your life. $50. Estrella Mountain Ranch.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #2d3142;
+    --navy-deep: #1f2230;
+    --red: #b8413a;
+    --red-deep: #9c3530;
+    --gold: #c9a961;
+    --gold-deep: #a88a47;
+    --teal: #2a7a7a;
+    --teal-deep: #1f5e5e;
+    --cream: #faf8f3;
+    --off-white: #fdfcf9;
+    --text-dark: #2a2d3a;
+    --text-medium: #555866;
+    --text-light: #888b95;
+    --border-soft: #e8e5dd;
+    --warm: #c4622d;
+    --warm-deep: #a8521f;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', sans-serif; color: var(--text-dark); background: var(--off-white); line-height: 1.6; font-weight: 400; -webkit-font-smoothing: antialiased; }
+  h1, h2, h3, h4 { font-family: 'Cormorant Garamond', serif; font-weight: 600; line-height: 1.15; color: var(--navy); letter-spacing: -0.01em; }
+
+  /* NAV */
+  nav { background: var(--navy); padding: 1rem 2.5rem; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 200; gap: 2rem; }
+  .brand { flex-shrink: 0; }
+  .brand h1 { color: white; font-size: 1.4rem; font-weight: 600; margin: 0; white-space: nowrap; }
+  .brand .location { color: var(--gold); font-size: 0.65rem; letter-spacing: 0.15em; font-family: 'Inter', sans-serif; font-weight: 500; text-transform: uppercase; }
+  .nav-links { display: flex; gap: 1.5rem; list-style: none; align-items: center; flex-wrap: nowrap; }
+  .nav-links a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 500; transition: color 0.2s; white-space: nowrap; }
+  .nav-links a:hover { color: var(--gold); }
+  .nav-links a.active { color: var(--gold); }
+  .btn-nav-call { padding: 0.6rem 1.25rem; text-decoration: none; font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; border-radius: 2px; background: var(--red); color: white; white-space: nowrap; }
+  .btn-nav-call:hover { background: var(--red-deep); }
+  .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; background: none; border: none; z-index: 300; }
+  .hamburger span { display: block; width: 24px; height: 2px; background: white; border-radius: 2px; transition: all 0.3s ease; transform-origin: center; }
+  .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+  .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  .mobile-menu { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: var(--navy-deep); z-index: 150; flex-direction: column; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: opacity 0.3s ease; }
+  .mobile-menu.open { opacity: 1; pointer-events: all; }
+  .mobile-menu a { color: white; text-decoration: none; font-size: 1.6rem; font-family: 'Cormorant Garamond', serif; font-weight: 600; padding: 1rem 2rem; letter-spacing: 0.02em; border-bottom: 1px solid rgba(255,255,255,0.08); width: 100%; text-align: center; transition: color 0.2s; }
+  .mobile-menu a:last-child { border-bottom: none; }
+  .mobile-menu a:hover { color: var(--gold); }
+
+  /* BUTTONS */
+  .btn-warm { padding: 1rem 2.5rem; text-decoration: none; font-size: 0.85rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; display: inline-block; border-radius: 2px; background: var(--warm); color: white; }
+  .btn-warm:hover { background: var(--warm-deep); transform: translateY(-1px); }
+  .btn-coffee { padding: 1rem 2.5rem; text-decoration: none; font-size: 0.85rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; display: inline-block; border-radius: 2px; background: #f5f0e8; color: var(--navy); border: 2.5px solid #9a7a4a; }
+  .btn-coffee:hover { background: #ede7d9; transform: translateY(-1px); }
+
+  /* EYEBROW */
+  .eyebrow { font-size: 0.78rem; letter-spacing: 0.22em; font-weight: 600; text-transform: uppercase; margin-bottom: 1.25rem; color: var(--warm); }
+  .eyebrow-gold { font-size: 0.78rem; letter-spacing: 0.22em; font-weight: 600; text-transform: uppercase; margin-bottom: 1.25rem; color: var(--gold); }
+
+  /* HERO */
+  .hero { background: var(--cream); overflow: hidden; }
+  .hero-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 460px; min-height: 640px; align-items: stretch; }
+  .hero-text { padding: 5rem 4rem 5rem 3rem; display: flex; flex-direction: column; justify-content: center; }
+  .hero-label { color: var(--warm); font-size: 0.78rem; letter-spacing: 0.22em; font-weight: 600; text-transform: uppercase; margin-bottom: 1.5rem; }
+  .hero h1 { font-size: clamp(3rem, 6vw, 5.5rem); color: var(--navy); line-height: 1.0; margin-bottom: 0.5rem; }
+  .hero-question { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.5rem, 3vw, 2.25rem); color: var(--navy); font-style: italic; font-weight: 500; margin-bottom: 0.75rem; }
+  .hero-seriously { font-size: 1.05rem; color: var(--text-medium); line-height: 1.7; margin-bottom: 2.5rem; max-width: 480px; }
+  .hero-seriously strong { color: var(--navy); }
+  .hero-detail { color: var(--text-light); font-size: 0.85rem; letter-spacing: 0.06em; margin-bottom: 2rem; }
+  .hero-detail span { color: var(--warm); font-weight: 600; }
+  .hero-cta { display: flex; gap: 1rem; flex-wrap: wrap; }
+  .hero-image { position: relative; overflow: hidden; }
+  .hero-image img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
+
+  /* LETTER */
+  .letter-section { padding: 6rem 3rem; background: var(--navy); }
+  .letter-inner { max-width: 700px; margin: 0 auto; }
+  .letter-inner .eyebrow-gold { margin-bottom: 2rem; }
+  .letter-body p { font-family: 'Inter', sans-serif; font-size: 1.05rem; color: rgba(255,255,255,0.92); line-height: 1.85; margin-bottom: 1.5rem; font-weight: 300; }
+  .letter-body p strong { color: white; font-weight: 600; }
+  .letter-pull { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.4rem, 2.5vw, 1.9rem); color: var(--gold); font-style: italic; font-weight: 600; border-left: 4px solid var(--warm); padding-left: 1.75rem; margin: 2.5rem 0; line-height: 1.45; }
+  .letter-glad { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.5rem, 2.5vw, 2rem); color: var(--gold); font-style: italic; font-weight: 600; margin-top: 2rem; margin-bottom: 0.5rem; }
+  .letter-sig { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; color: rgba(255,255,255,0.7); font-style: italic; }
+  .letter-sig strong { font-style: normal; font-weight: 400; display: block; margin-top: 0.25rem; font-family: 'Inter', sans-serif; color: rgba(255,255,255,0.4); font-size: 0.85rem; }
+
+  /* WHERE */
+  .where-section { padding: 5rem 3rem; background: var(--off-white); }
+  .where-inner { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+  .where-text .eyebrow { color: var(--warm); }
+  .where-text h2 { font-size: clamp(2rem, 4vw, 2.75rem); margin-bottom: 1rem; }
+  .where-text p { color: var(--text-medium); font-size: 1.05rem; line-height: 1.75; margin-bottom: 1rem; }
+  .where-text p strong { color: var(--navy); }
+  .where-image img { width: 100%; border-radius: 4px; display: block; object-fit: cover; max-height: 400px; }
+
+  /* SIMPLE CLOSE */
+  .close-section { padding: 5rem 3rem; background: var(--cream); text-align: center; }
+  .close-inner { max-width: 560px; margin: 0 auto; }
+  .close-section h2 { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 0.75rem; font-style: italic; color: var(--navy); }
+  .close-section p { color: var(--text-medium); font-size: 1.05rem; line-height: 1.75; margin-bottom: 0.5rem; }
+  .close-price { font-family: 'Cormorant Garamond', serif; font-size: 1.25rem; color: var(--text-light); margin-bottom: 2rem; }
+  .close-price strong { color: var(--navy); }
+  .close-glad { font-family: 'Cormorant Garamond', serif; font-size: 1.75rem; color: var(--warm); font-style: italic; margin-top: 2rem; }
+
+  /* FOOTER */
+  footer { background: var(--navy-deep); color: rgba(255,255,255,0.7); padding: 3.5rem 3rem 2rem; text-align: center; }
+  .footer-brand { color: white; font-family: 'Cormorant Garamond', serif; font-size: 1.7rem; font-weight: 600; margin-bottom: 0.4rem; }
+  .footer-nav { display: flex; justify-content: center; gap: 2.25rem; flex-wrap: wrap; list-style: none; margin-bottom: 2.25rem; }
+  .footer-nav a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; font-weight: 500; }
+  .footer-nav a:hover { color: var(--gold); }
+  .footer-contact { border-top: 1px solid rgba(255,255,255,0.12); padding-top: 1.75rem; font-size: 0.88rem; color: rgba(255,255,255,0.5); }
+  .footer-contact a { color: var(--gold); text-decoration: none; }
+
+  @media (max-width: 768px) {
+    nav { padding: 0.9rem 1.25rem; }
+    .nav-links { display: none; }
+    .hamburger { display: flex; }
+    .mobile-menu { display: flex; }
+    .hero-inner { grid-template-columns: 1fr; min-height: auto; }
+    .hero-text { padding: 3rem 1.25rem 2rem; }
+    .hero h1 { font-size: 3.25rem; }
+    .hero-cta { flex-direction: column; align-items: stretch; }
+    .hero-cta a { text-align: center; }
+    .hero-image { height: 380px; }
+    .letter-section { padding: 3.5rem 1.25rem; }
+    .letter-body p { font-size: 1.2rem; }
+    .where-section { padding: 3rem 1.25rem; }
+    .where-inner { grid-template-columns: 1fr; gap: 2rem; }
+    .where-image { order: -1; }
+    .close-section { padding: 3.5rem 1.25rem; }
+    footer { padding: 2.5rem 1.25rem 1.5rem; }
+    .footer-nav { gap: 0.75rem 1.25rem; }
+    .footer-nav a { font-size: 0.68rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html" onclick="closeMenu()">Home</a>
+  <a href="why.html" onclick="closeMenu()">Why Mobile Health Nurse</a>
+  <a href="services.html" onclick="closeMenu()">Services</a>
+  <a href="advocacy.html" onclick="closeMenu()">Medical Advocacy</a>
+  <a href="nurse-direct.html" onclick="closeMenu()">Nurse Direct Line</a>
+  <a href="coffee-conversation.html" onclick="closeMenu()">Coffee &amp; Conversation</a>
+  <a href="tel:9136056275" onclick="closeMenu()">Call Me · (913) 605-6275</a>
+</div>
+
+<nav>
+  <div class="brand">
+    <h1>Mobile Health Nurse</h1>
+    <div class="location">Serving Phoenix West Valley</div>
+  </div>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="why.html">Why Mobile Health Nurse</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="advocacy.html">Medical Advocacy</a></li>
+    <li><a href="nurse-direct.html">Nurse Direct Line</a></li>
+    <li><a href="coffee-conversation.html" class="active">Coffee &amp; Conversation</a></li>
+    <li><a href="tel:9136056275" class="btn-nav-call">Call Me · (913) 605-6275</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="Open menu" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-text">
+      <div class="hero-label">In Person · 30 Minutes · $50</div>
+      <h1>Coffee &amp;<br>Conversation.</h1>
+      <p class="hero-question">"How are you doing?"</p>
+      <p class="hero-seriously">Seriously. I'm interested in your health, what's working, what isn't, and what's getting in the way of feeling better.</p>
+      <p class="hero-detail">Estrella Mountain Ranch Community Welcome Center &nbsp;<span>·</span>&nbsp; Near Star Tower</p>
+      <div class="hero-cta">
+        <a href="#book" class="btn-coffee">Book a Conversation · $50</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="images/coffee-conversation.jpg" alt="Gretchen Hess, RN, relaxed in a chair with coffee at the Estrella Mountain Ranch clubhouse">
+    </div>
+  </div>
+</section>
+
+<!-- THE LETTER -->
+<section class="letter-section">
+  <div class="letter-inner">
+    <div class="eyebrow-gold">From Gretchen</div>
+    <div class="letter-body">
+      <p>I think of this as a neighbor visit.</p>
+      <p>I've been a nurse for nearly ten years. ICU through COVID. Pre-op and PACU. Now a personal trainer competing in triathlons. I've sat with people at their most uncertain moments, and I've noticed something: most people are carrying a health question they've never gotten around to asking.</p>
+
+      <div class="letter-pull">That question deserves a real conversation. Not a Google search. Not a patient portal. Just two people and a cup of coffee.</div>
+
+      <p>Bring whatever is on your mind. Your health, your fitness, your energy, your concerns. I'll listen and share what I know. <strong>No agenda. No clipboard. No pressure to do anything afterward.</strong></p>
+
+      <div class="letter-glad">I'm so glad you found this.</div>
+      <div class="letter-sig">
+        Gretchen
+        <strong>Gretchen Hess, BSN, RN, ACE-CPT · Mobile Health Nurse</strong>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHERE WE MEET -->
+<section class="where-section">
+  <div class="where-inner">
+    <div class="where-text">
+      <div class="eyebrow">Where we meet</div>
+      <h2>A beautiful place for a real conversation.</h2>
+      <p>The <strong>Estrella Mountain Ranch Community Welcome Center</strong> — near Star Tower, tucked against the mountains, with good light and comfortable chairs and the kind of setting that makes it easy to talk.</p>
+      <p>Come from anywhere in the valley. The drive is worth it.</p>
+      <p>Other locations available by request — just ask when you book.</p>
+    </div>
+    <div class="where-image">
+      <img src="images/estrella-welcome-center.jpg" alt="Estrella Mountain Ranch Community Welcome Center at dusk with mountain backdrop">
+    </div>
+  </div>
+</section>
+
+<!-- SIMPLE CLOSE -->
+<section class="close-section" id="book">
+  <div class="close-inner">
+    <h2>Pull up a chair.</h2>
+    <p>Thirty minutes. A cup of coffee. Whatever's on your mind.</p>
+    <p class="close-price"><strong>$50</strong> · No commitment · No follow-up required</p>
+    <a href="#book" class="btn-warm">Book a Conversation</a>
+    <div class="close-glad">I'm so glad you came.</div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-brand">Mobile Health Nurse</div>
+  <ul class="footer-nav">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="why.html">Why Mobile Health Nurse</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="advocacy.html">Medical Advocacy</a></li>
+    <li><a href="nurse-direct.html">Nurse Direct Line</a></li>
+    <li><a href="coffee-conversation.html">Coffee &amp; Conversation</a></li>
+  </ul>
+  <div class="footer-contact">
+    <a href="mailto:HealthSpanRN@gmail.com">HealthSpanRN@gmail.com</a> · (913) 605-6275 · Goodyear · Litchfield Park · Avondale · Verrado · Estrella Mountain Ranch<br>
+    <span style="margin-top:0.75rem;display:inline-block;">Gretchen Hess, BSN, RN, ACE-CPT</span>
+  </div>
+</footer>
+
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById('mobileMenu');
+    const burger = document.getElementById('hamburger');
+    const isOpen = menu.classList.toggle('open');
+    burger.classList.toggle('open', isOpen);
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+  }
+  function closeMenu() {
+    document.getElementById('mobileMenu').classList.remove('open');
+    document.getElementById('hamburger').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
+</script>
+</body>
+</html>
