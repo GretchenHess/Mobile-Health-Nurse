@@ -61,9 +61,7 @@
   .btn-hero-plum:hover { background: #a8521f; transform: translateY(-1px); }
   .btn-hero-gold { padding: 0.95rem 1.75rem; text-decoration: none; font-size: 0.82rem; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; display: inline-block; border-radius: 2px; background: var(--gold); color: var(--navy); border: 1.5px solid var(--gold-deep); }
   .btn-hero-gold:hover { background: var(--gold-deep); color: white; transform: translateY(-1px); }
-  .btn-hero-coffee { padding: 0.95rem 1.75rem; text-decoration: none; font-size: 0.82rem; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; display: inline-block; border-radius: 2px; background: #f5f0e8; color: var(--navy); border: 2.5px solid #9a7a4a; }
-  .btn-hero-coffee:hover { background: #ede7d9; transform: translateY(-1px); }
-  .hero-cta-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; max-width: 860px; margin: 0 auto 1.5rem; }
+  .hero-cta-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.75rem; max-width: 980px; margin: 0 auto 1.5rem; }
   .hero-cta-grid a { text-align: center; }
   .btn-hero-call { padding: 0.95rem 1.75rem; text-decoration: none; font-size: 0.82rem; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; display: inline-block; border-radius: 2px; background: var(--red); color: white; }
   .btn-hero-call:hover { background: var(--red-deep); transform: translateY(-1px); }
@@ -83,6 +81,8 @@
   .hero-eyebrow { color: var(--gold); font-size: 0.78rem; letter-spacing: 0.22em; font-weight: 600; text-transform: uppercase; margin-bottom: 1.5rem; }
   .hero h1 { color: white; font-size: clamp(2.75rem, 5.5vw, 5.5rem); line-height: 1.05; margin-bottom: 1.25rem; }
   .hero h1 .gold-accent { color: var(--gold); font-style: italic; }
+  .hero-subhead { color: rgba(255,255,255,0.82); font-family: 'Inter', sans-serif; font-weight: 300; font-size: clamp(1.05rem, 1.9vw, 1.35rem); line-height: 1.6; max-width: 720px; margin: 0 auto 2.25rem; }
+  .hero-break { display: inline; }
   .hero-services { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 0.5rem 0.75rem; margin-bottom: 2.25rem; }
   .hero-services span { color: rgba(255,255,255,0.92); font-size: clamp(1rem, 2vw, 1.25rem); font-family: 'Inter', sans-serif; font-weight: 400; letter-spacing: 0.02em; }
   .hero-services-dot { color: var(--gold) !important; font-weight: 700; font-size: 1.4rem !important; }
@@ -152,20 +152,11 @@
   .for-item em { color: var(--navy); font-style: normal; font-weight: 600; }
   .who-for-close { text-align: center; margin-top: 3rem; font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: var(--navy); font-style: italic; }
 
-  /* NEIGHBOR VISIT TEASER */
-  .neighbor-teaser { padding: 0; background: var(--cream); border-top: 1px solid var(--border-soft); }
-  .neighbor-teaser-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 420px; align-items: stretch; }
-  .neighbor-teaser-text { padding: 4rem 4rem 4rem 3rem; display: flex; flex-direction: column; justify-content: center; }
-  .neighbor-teaser-eyebrow { color: #c4622d; font-size: 0.78rem; letter-spacing: 0.22em; font-weight: 600; text-transform: uppercase; margin-bottom: 1rem; }
-  .neighbor-teaser-but { font-family: 'Cormorant Garamond', serif; font-size: clamp(1rem, 1.8vw, 1.25rem); color: var(--text-light); font-style: italic; margin-bottom: 0.5rem; }
-  .neighbor-teaser h2 { font-size: clamp(2rem, 4vw, 3rem); color: var(--navy); margin-bottom: 0.75rem; line-height: 1.1; }
-  .neighbor-teaser-sub { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.1rem, 2vw, 1.4rem); color: var(--text-medium); line-height: 1.6; margin-bottom: 1.75rem; font-style: italic; }
-  .neighbor-teaser-details { display: flex; gap: 0.5rem; align-items: center; margin-bottom: 2rem; color: var(--text-light); font-size: 0.88rem; }
-  .neighbor-teaser-details span { color: var(--gold); }
-  .btn-warm { display: inline-block; background: #c4622d; color: white; padding: 1rem 2rem; text-decoration: none; font-size: 0.85rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; border-radius: 2px; transition: all 0.2s; }
-  .btn-warm:hover { background: #a8521f; transform: translateY(-1px); }
-  .neighbor-teaser-image { overflow: hidden; }
-  .neighbor-teaser-image img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; min-height: 420px; }
+  /* DECIDE NUDGE */
+  .decide-nudge { padding: 4.5rem 3rem; background: var(--cream); border-top: 1px solid var(--border-soft); text-align: center; }
+  .decide-nudge-inner { max-width: 600px; margin: 0 auto; }
+  .decide-nudge h2 { font-size: clamp(1.9rem, 3.5vw, 2.6rem); color: var(--navy); margin-bottom: 0.75rem; line-height: 1.15; }
+  .decide-nudge p { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.2rem, 2vw, 1.5rem); color: var(--text-medium); line-height: 1.5; margin-bottom: 2rem; font-style: italic; }
 
   /* NURSE DIRECT GEOGRAPHY */
   .nurse-direct-geo { padding: 4rem 3rem; background: #f0f4fa; border-top: 3px solid #4a6fa5; }
@@ -210,6 +201,8 @@
     .hero { padding: 2.75rem 1.25rem 0; }
     .hero-top { margin-bottom: 2rem; }
     .hero h1 { font-size: 2.5rem; }
+    .hero-subhead { font-size: 1.02rem; margin-bottom: 1.75rem; }
+    .hero-break { display: none; }
     .hero-services { gap: 0.3rem 0.5rem; }
     .hero-services span { font-size: 0.92rem; }
     .hero-services-dot { font-size: 1rem !important; }
@@ -230,10 +223,7 @@
     .nurse-direct-band-grid { grid-template-columns: 1fr; gap: 1.5rem; text-align: center; }
     .nurse-direct-band p { max-width: 100%; }
 
-    .neighbor-teaser-inner { grid-template-columns: 1fr; }
-    .neighbor-teaser-text { padding: 2.5rem 1.25rem; }
-    .neighbor-teaser-image { order: -1; }
-    .neighbor-teaser-image img { min-height: 280px; }
+    .decide-nudge { padding: 3rem 1.25rem; }
 
     .nurse-direct-geo { padding: 2.5rem 1.25rem; }
     .nurse-direct-geo-inner { grid-template-columns: 1fr; gap: 1.5rem; }
@@ -293,11 +283,11 @@
 <section class="hero">
   <div class="hero-top">
     <div class="hero-eyebrow">Phoenix West Valley · Private Pay · In-Home</div>
-    <h1>You Found the <span class="gold-accent">Right Person.</span></h1>
+    <h1>A Registered Nurse <span class="gold-accent">Who Comes to You.</span></h1>
+    <p class="hero-subhead">For the moments you need real answers, an extra set of trained eyes, or someone in your corner.<br class="hero-break"> Someone with the time to help you understand what's going on and what to do next.</p>
     <div class="hero-cta-grid">
       <a href="services.html#in-home" class="btn-hero-plum">Book In-Home Private Nursing</a>
       <a href="advocacy.html" class="btn-hero-gold">Medical Advocacy</a>
-      <a href="coffee-conversation.html" class="btn-hero-coffee">Coffee &amp; Conversation</a>
       <a href="nurse-direct.html" class="btn-hero-direct">Nurse Direct Line</a>
     </div>
     <div class="hero-fineprint">Gretchen Hess, BSN, RN, ACE-CPT · HealthSpanRN@gmail.com</div>
@@ -391,21 +381,12 @@
   </div>
 </section>
 
-<!-- NEIGHBOR VISIT TEASER -->
-<section class="neighbor-teaser">
-  <div class="neighbor-teaser-inner">
-    <div class="neighbor-teaser-text">
-      <div class="neighbor-teaser-but">One more option for you…</div>
-      <h2>Coffee &amp; Conversation</h2>
-      <p class="neighbor-teaser-sub">How are you doing? Seriously — pull up a chair and let's talk about your health, what's working, what isn't, and what's getting in the way of feeling better.</p>
-      <div class="neighbor-teaser-details">
-        $50 &nbsp;<span>·</span>&nbsp; 30 minutes &nbsp;<span>·</span>&nbsp; Estrella Mountain Ranch Community Welcome Center
-      </div>
-      <a href="coffee-conversation.html" class="btn-warm">Learn More →</a>
-    </div>
-    <div class="neighbor-teaser-image">
-      <img src="images/neighbor-visit.jpg" alt="Gretchen Hess, RN, relaxed with coffee at the Estrella clubhouse">
-    </div>
+<!-- NOT SURE WHICH SERVICE -->
+<section class="decide-nudge">
+  <div class="decide-nudge-inner">
+    <h2>Not sure which service fits?</h2>
+    <p>A quick call and we'll decide together what might work for you.</p>
+    <a href="tel:9136056275" class="btn-primary">Call Me · (913) 605-6275</a>
   </div>
 </section>
 
