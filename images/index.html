@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mobile Health Nurse · Gretchen Hess, BSN, RN | Serving Phoenix West Valley</title>
+<meta name="description" content="A registered nurse who comes to you. In-home nursing, medical advocacy, and personal training in the Phoenix West Valley.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #2d3142;
+    --navy-deep: #1f2230;
+    --red: #b8413a;
+    --red-deep: #9c3530;
+    --gold: #c9a961;
+    --gold-deep: #a88a47;
+    --teal: #2a7a7a;
+    --teal-deep: #1f5e5e;
+    --cream: #faf8f3;
+    --off-white: #fdfcf9;
+    --text-dark: #2a2d3a;
+    --text-medium: #555866;
+    --text-light: #888b95;
+    --border-soft: #e8e5dd;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', sans-serif; color: var(--text-dark); background: var(--off-white); line-height: 1.6; font-weight: 400; -webkit-font-smoothing: antialiased; }
+  h1, h2, h3, h4 { font-family: 'Cormorant Garamond', serif; font-weight: 600; line-height: 1.15; color: var(--navy); letter-spacing: -0.01em; }
+
+  /* NAV */
+  nav { background: var(--navy); padding: 1rem 2.5rem; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 200; gap: 2rem; }
+  .brand { flex-shrink: 0; }
+  .brand h1 { color: white; font-size: 1.4rem; font-weight: 600; margin: 0; white-space: nowrap; }
+  .brand .location { color: var(--gold); font-size: 0.65rem; letter-spacing: 0.15em; font-family: 'Inter', sans-serif; font-weight: 500; text-transform: uppercase; }
+  .nav-links { display: flex; gap: 1.75rem; list-style: none; align-items: center; }
+  .nav-links a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; transition: color 0.2s; white-space: nowrap; }
+  .nav-links a:hover { color: var(--gold); }
+  .nav-links a.active { color: var(--gold); }
+  .btn-nav-call { padding: 0.6rem 1.25rem; text-decoration: none; font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; border-radius: 2px; background: var(--red); color: white; white-space: nowrap; }
+  .btn-nav-call:hover { background: var(--red-deep); }
+
+  /* HAMBURGER */
+  .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; background: none; border: none; z-index: 300; }
+  .hamburger span { display: block; width: 24px; height: 2px; background: white; border-radius: 2px; transition: all 0.3s ease; transform-origin: center; }
+  .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+  .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  /* MOBILE DRAWER */
+  .mobile-menu { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: var(--navy-deep); z-index: 150; flex-direction: column; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: opacity 0.3s ease; }
+  .mobile-menu.open { opacity: 1; pointer-events: all; }
+  .mobile-menu a { color: white; text-decoration: none; font-size: 1.6rem; font-family: 'Cormorant Garamond', serif; font-weight: 600; padding: 1rem 2rem; letter-spacing: 0.02em; border-bottom: 1px solid rgba(255,255,255,0.08); width: 100%; text-align: center; transition: color 0.2s; }
+  .mobile-menu a:last-child { border-bottom: none; }
+  .mobile-menu a:hover { color: var(--gold); }
+
+  /* BUTTONS */
+  .btn-hero-plum { padding: 0.95rem 1.75rem; text-decoration: none; font-size: 0.82rem; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; display: inline-block; border-radius: 2px; background: #c4622d; color: white; }
+  .btn-hero-plum:hover { background: #a8521f; transform: translateY(-1px); }
+  .btn-hero-gold { padding: 0.95rem 1.75rem; text-decoration: none; font-size: 0.82rem; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; display: inline-block; border-radius: 2px; background: var(--gold); color: var(--navy); border: 1.5px solid var(--gold-deep); }
+  .btn-hero-gold:hover { background: var(--gold-deep); color: white; transform: translateY(-1px); }
+  .hero-cta-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.75rem; max-width: 980px; margin: 0 auto 1.5rem; }
+  .hero-cta-grid a { text-align: center; }
+  .btn-hero-call { padding: 0.95rem 1.75rem; text-decoration: none; font-size: 0.82rem; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; display: inline-block; border-radius: 2px; background: var(--red); color: white; }
+  .btn-hero-call:hover { background: var(--red-deep); transform: translateY(-1px); }
+  .btn-hero-direct { padding: 0.95rem 1.75rem; text-decoration: none; font-size: 0.82rem; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; display: inline-block; border-radius: 2px; background: #4a6fa5; color: white; }
+  .btn-hero-direct:hover { background: #3a5a8a; transform: translateY(-1px); }
+  .btn-primary { padding: 1rem 2rem; text-decoration: none; font-size: 0.85rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; display: inline-block; border-radius: 2px; border: none; cursor: pointer; background: var(--red); color: white; }
+  .btn-primary:hover { background: var(--red-deep); transform: translateY(-1px); }
+  .btn-gold { padding: 1rem 2rem; text-decoration: none; font-size: 0.85rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; display: inline-block; border-radius: 2px; background: #f5f0e8; color: var(--navy); border: 1.5px solid #b8a070; }
+  .btn-gold:hover { background: #ede7d9; transform: translateY(-1px); }
+
+  /* EYEBROW */
+  .eyebrow { color: var(--teal); font-size: 0.78rem; letter-spacing: 0.22em; font-weight: 600; text-transform: uppercase; margin-bottom: 1.25rem; }
+
+  /* HERO */
+  .hero { background: var(--navy); color: white; padding: 5rem 3rem 0; }
+  .hero-top { max-width: 1400px; margin: 0 auto 3.5rem; text-align: center; }
+  .hero-eyebrow { color: var(--gold); font-size: 0.78rem; letter-spacing: 0.22em; font-weight: 600; text-transform: uppercase; margin-bottom: 1.5rem; }
+  .hero h1 { color: white; font-size: clamp(2.75rem, 5.5vw, 5.5rem); line-height: 1.05; margin-bottom: 1.25rem; }
+  .hero h1 .gold-accent { color: var(--gold); font-style: italic; }
+  .hero-subhead { color: rgba(255,255,255,0.82); font-family: 'Inter', sans-serif; font-weight: 300; font-size: clamp(1.05rem, 1.9vw, 1.35rem); line-height: 1.6; max-width: 720px; margin: 0 auto 2.25rem; }
+  .hero-break { display: inline; }
+  .hero-services { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 0.5rem 0.75rem; margin-bottom: 2.25rem; }
+  .hero-services span { color: rgba(255,255,255,0.92); font-size: clamp(1rem, 2vw, 1.25rem); font-family: 'Inter', sans-serif; font-weight: 400; letter-spacing: 0.02em; }
+  .hero-services-dot { color: var(--gold) !important; font-weight: 700; font-size: 1.4rem !important; }
+  .hero-cta-row { display: flex; gap: 0.85rem; flex-wrap: wrap; justify-content: center; margin-bottom: 1.5rem; max-width: 1000px; margin-left: auto; margin-right: auto; }
+  .hero-fineprint { color: rgba(255,255,255,0.45); font-size: 0.82rem; margin-top: 1.25rem; margin-bottom: 3.5rem; }
+  .hero-image-wrap { max-width: 1400px; margin: 0 auto; }
+  .hero-image-wrap img { width: 100%; display: block; max-height: 520px; object-fit: cover; object-position: center 20%; border-radius: 4px 4px 0 0; }
+
+  /* WHO I AM */
+  .who-i-am { padding: 5rem 3rem; background: var(--navy); color: white; }
+  .who-i-am-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 320px; gap: 4rem; align-items: center; }
+  .who-i-am .eyebrow { color: var(--gold); }
+  .who-i-am h2 { color: white; font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 1.25rem; }
+  .who-i-am p { color: rgba(255,255,255,0.82); font-size: 1.05rem; line-height: 1.75; margin-bottom: 1.25rem; font-family: 'Inter', sans-serif; font-weight: 300; }
+  .who-i-am-cta { display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; margin-top: 1.75rem; }
+  .who-i-am-phone { color: white; font-family: 'Cormorant Garamond', serif; font-size: clamp(1.5rem, 3vw, 2.25rem); font-weight: 600; text-decoration: none; letter-spacing: 0.02em; transition: color 0.2s; }
+  .who-i-am-phone:hover { color: var(--gold); }
+  .who-i-am-portrait img { width: 100%; border-radius: 4px; display: block; object-fit: cover; object-position: center top; max-height: 480px; }
+
+  /* FIVE WAYS */
+  .four-ways { padding: 5rem 3rem; background: var(--off-white); }
+  .four-ways-inner { max-width: 1100px; margin: 0 auto; }
+  .four-ways-header { text-align: center; margin-bottom: 3.5rem; }
+  .four-ways-header h2 { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 0.75rem; }
+  .four-ways-header p { color: var(--text-medium); font-size: 1.05rem; max-width: 540px; margin: 0 auto; }
+  .four-ways-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
+  .way-card { background: white; padding: 2.25rem 1.75rem; border-top: 4px solid var(--gold); border-radius: 2px; display: flex; flex-direction: column; }
+  .way-card.teal-top { border-top-color: var(--teal); }
+  .way-card.red-top { border-top-color: var(--red); }
+  .way-card.slate-top { border-top-color: #4a6fa5; }
+  .way-card.green-top { border-top-color: #2d5a3d; }
+  .way-card-label { font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 600; color: var(--gold-deep); margin-bottom: 0.75rem; }
+  .way-card.teal-top .way-card-label { color: var(--teal); }
+  .way-card.red-top .way-card-label { color: var(--red); }
+  .way-card.slate-top .way-card-label { color: #4a6fa5; }
+  .way-card.green-top .way-card-label { color: #2d5a3d; }
+  .way-card h3 { font-size: 1.5rem; margin-bottom: 0.75rem; line-height: 1.2; }
+  .way-card p { color: var(--text-medium); font-size: 0.95rem; line-height: 1.65; flex-grow: 1; margin-bottom: 1.5rem; }
+  .way-card-price { font-family: 'Cormorant Garamond', serif; font-size: 1.35rem; font-weight: 600; color: var(--navy); margin-bottom: 1rem; }
+  .way-card-price .per { font-family: 'Inter', sans-serif; font-size: 0.82rem; color: var(--text-light); font-weight: 400; }
+  .way-card a { font-size: 0.78rem; letter-spacing: 0.15em; text-transform: uppercase; font-weight: 600; color: var(--teal); text-decoration: none; transition: color 0.2s; }
+  .way-card.teal-top a { color: var(--teal); }
+  .way-card.red-top a { color: var(--red); }
+  .way-card.slate-top a { color: #4a6fa5; }
+  .way-card.green-top a { color: #2d5a3d; }
+  .way-card a:hover { opacity: 0.75; }
+
+  /* NURSE DIRECT BAND */
+  .nurse-direct-band { background: #3a3d4a; padding: 4rem 3rem; border-top: 3px solid var(--gold); }
+  .nurse-direct-band-grid { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: 1fr auto; gap: 3rem; align-items: center; }
+  .nurse-direct-band-eyebrow { color: var(--gold); font-size: 0.78rem; letter-spacing: 0.22em; font-weight: 600; text-transform: uppercase; margin-bottom: 0.85rem; }
+  .nurse-direct-band h2 { color: white; font-size: clamp(1.75rem, 3.5vw, 2.75rem); margin-bottom: 0.85rem; line-height: 1.1; }
+  .nurse-direct-band p { color: rgba(255,255,255,0.78); font-size: 1.05rem; line-height: 1.7; max-width: 560px; }
+  .nurse-direct-price { font-family: 'Cormorant Garamond', serif; font-size: 3.5rem; font-weight: 700; color: var(--gold); line-height: 1; text-align: center; }
+  .nurse-direct-per { color: rgba(255,255,255,0.5); font-size: 0.82rem; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 1.25rem; text-align: center; }
+  .btn-now-you-do { display: inline-block; background: #4a6fa5; color: white; padding: 0.9rem 1.75rem; text-decoration: none; font-size: 0.82rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 700; border-radius: 2px; transition: all 0.2s; }
+  .btn-now-you-do:hover { background: #3a5a8a; }
+
+  /* WHO THIS IS FOR */
+  .who-for { padding: 5rem 3rem; background: var(--cream); }
+  .who-for-inner { max-width: 860px; margin: 0 auto; }
+  .who-for-header { text-align: center; margin-bottom: 3.5rem; }
+  .who-for-header h2 { font-size: clamp(2rem, 4vw, 3rem); }
+  .for-list { display: flex; flex-direction: column; }
+  .for-item { padding: 1.6rem 0; border-bottom: 1px solid var(--border-soft); font-family: 'Inter', sans-serif; font-size: clamp(1rem, 1.8vw, 1.15rem); color: var(--text-medium); line-height: 1.65; font-weight: 400; }
+  .for-item:last-of-type { border-bottom: none; }
+  .for-item em { color: var(--navy); font-style: normal; font-weight: 600; }
+  .who-for-close { text-align: center; margin-top: 3rem; font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: var(--navy); font-style: italic; }
+
+  /* DECIDE NUDGE */
+  .decide-nudge { padding: 4.5rem 3rem; background: var(--cream); border-top: 1px solid var(--border-soft); text-align: center; }
+  .decide-nudge-inner { max-width: 600px; margin: 0 auto; }
+  .decide-nudge h2 { font-size: clamp(1.9rem, 3.5vw, 2.6rem); color: var(--navy); margin-bottom: 0.75rem; line-height: 1.15; }
+  .decide-nudge p { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.2rem, 2vw, 1.5rem); color: var(--text-medium); line-height: 1.5; margin-bottom: 2rem; font-style: italic; }
+
+  /* NURSE DIRECT GEOGRAPHY */
+  .nurse-direct-geo { padding: 4rem 3rem; background: #f0f4fa; border-top: 3px solid #4a6fa5; }
+  .nurse-direct-geo-inner { max-width: 860px; margin: 0 auto; display: grid; grid-template-columns: 1fr auto; gap: 3rem; align-items: center; }
+  .nurse-direct-geo .geo-eyebrow { color: #4a6fa5; font-size: 0.78rem; letter-spacing: 0.22em; font-weight: 600; text-transform: uppercase; margin-bottom: 0.85rem; }
+  .nurse-direct-geo h2 { font-size: clamp(1.75rem, 3vw, 2.25rem); color: var(--navy); margin-bottom: 0.85rem; line-height: 1.15; }
+  .nurse-direct-geo p { color: var(--text-medium); font-size: 1.02rem; line-height: 1.72; max-width: 560px; }
+  .btn-slate { display: inline-block; background: #4a6fa5; color: white; padding: 1rem 2rem; text-decoration: none; font-size: 0.85rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; border-radius: 2px; transition: all 0.2s; white-space: nowrap; }
+  .btn-slate:hover { background: #3a5a8a; transform: translateY(-1px); }
+
+  /* BOTTOM CTA */
+  .bottom-cta { background: var(--navy); color: white; padding: 5rem 3rem; text-align: center; }
+  .bottom-cta-inner { max-width: 680px; margin: 0 auto; }
+  .bottom-cta .eyebrow { color: var(--gold); }
+  .bottom-cta h2 { color: white; font-size: clamp(2.25rem, 4vw, 3.25rem); margin-bottom: 1.25rem; line-height: 1.1; }
+  .bottom-cta p { color: rgba(255,255,255,0.82); font-size: 1.05rem; line-height: 1.7; margin-bottom: 2rem; }
+  .bottom-cta-buttons { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
+  .bottom-cta .fine { color: rgba(255,255,255,0.4); font-size: 0.82rem; margin-top: 1.5rem; }
+
+  /* FOOTER */
+  footer { background: var(--navy-deep); color: rgba(255,255,255,0.7); padding: 3.5rem 3rem 2rem; text-align: center; }
+  .footer-brand { color: white; font-family: 'Cormorant Garamond', serif; font-size: 1.7rem; font-weight: 600; margin-bottom: 0.4rem; }
+  .footer-tag { color: var(--gold); font-size: 0.82rem; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 2.25rem; }
+  .footer-nav { display: flex; justify-content: center; gap: 2.25rem; flex-wrap: wrap; list-style: none; margin-bottom: 2.25rem; }
+  .footer-nav a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; font-weight: 500; }
+  .footer-nav a:hover { color: var(--gold); }
+  .footer-contact { border-top: 1px solid rgba(255,255,255,0.12); padding-top: 1.75rem; font-size: 0.88rem; color: rgba(255,255,255,0.5); }
+  .footer-contact a { color: var(--gold); text-decoration: none; }
+
+  /* TABLET */
+  @media (max-width: 1000px) {
+    .four-ways-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  /* MOBILE */
+  @media (max-width: 768px) {
+    nav { padding: 0.9rem 1.25rem; }
+    .nav-links { display: none; }
+    .hamburger { display: flex; }
+    .mobile-menu { display: flex; }
+
+    .hero { padding: 2.75rem 1.25rem 0; }
+    .hero-top { margin-bottom: 2rem; }
+    .hero h1 { font-size: 2.5rem; }
+    .hero-subhead { font-size: 1.02rem; margin-bottom: 1.75rem; }
+    .hero-break { display: none; }
+    .hero-services { gap: 0.3rem 0.5rem; }
+    .hero-services span { font-size: 0.92rem; }
+    .hero-services-dot { font-size: 1rem !important; }
+    .hero-cta-grid { grid-template-columns: 1fr; gap: 0.75rem; max-width: 100%; }
+    .hero-fineprint { font-size: 0.75rem; margin-bottom: 2rem; }
+    .hero-image-wrap { margin: 0 -1.25rem; }
+    .hero-image-wrap img { max-height: 260px; border-radius: 0; object-position: center 15%; }
+
+    .who-i-am { padding: 3rem 1.25rem; }
+    .who-i-am-inner { grid-template-columns: 1fr; gap: 2rem; }
+    .who-i-am-portrait { display: block; order: -1; text-align: center; }
+    .who-i-am-portrait img { border-radius: 4px; max-height: 220px; width: auto; max-width: 180px; object-position: center 10%; border: 3px solid var(--gold); box-shadow: 0 4px 20px rgba(0,0,0,0.35); display: inline-block; }
+    .who-i-am-cta { flex-direction: column; gap: 0.85rem; align-items: stretch; }
+    .who-i-am-cta .btn-primary { text-align: center; }
+    .who-i-am-phone { text-align: center; }
+
+    .nurse-direct-band { padding: 2.5rem 1.25rem; }
+    .nurse-direct-band-grid { grid-template-columns: 1fr; gap: 1.5rem; text-align: center; }
+    .nurse-direct-band p { max-width: 100%; }
+
+    .decide-nudge { padding: 3rem 1.25rem; }
+
+    .nurse-direct-geo { padding: 2.5rem 1.25rem; }
+    .nurse-direct-geo-inner { grid-template-columns: 1fr; gap: 1.5rem; }
+    .nurse-direct-geo .btn-slate { width: 100%; text-align: center; }
+
+    .four-ways { padding: 3rem 1.25rem; }
+    .four-ways-grid { grid-template-columns: 1fr; gap: 1rem; }
+    .way-card { padding: 1.75rem 1.5rem; }
+
+    .who-for { padding: 3rem 1.25rem; }
+    .for-item { font-size: 1rem; padding: 1.25rem 0; }
+
+    .bottom-cta { padding: 3rem 1.25rem; }
+    .bottom-cta-buttons { flex-direction: column; align-items: stretch; }
+    .bottom-cta-buttons a { text-align: center; }
+    .bottom-cta .fine { font-size: 0.74rem; }
+
+    footer { padding: 2.5rem 1.25rem 1.5rem; }
+    .footer-nav { gap: 0.75rem 1.25rem; }
+    .footer-nav a { font-size: 0.68rem; }
+    .footer-contact { font-size: 0.78rem; line-height: 1.9; }
+  }
+</style>
+</head>
+<body>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html" onclick="closeMenu()">Home</a>
+  <a href="why.html" onclick="closeMenu()">Why Mobile Health Nurse</a>
+  <a href="services.html" onclick="closeMenu()">Services</a>
+  <a href="advocacy.html" onclick="closeMenu()">Medical Advocacy</a>
+  <a href="nurse-direct.html" onclick="closeMenu()">Nurse Direct Line</a>
+  <a href="tel:9136056275" onclick="closeMenu()">Call Me · (913) 605-6275</a>
+</div>
+
+<nav>
+  <div class="brand">
+    <h1>Mobile Health Nurse</h1>
+    <div class="location">Serving Phoenix West Valley</div>
+  </div>
+  <ul class="nav-links">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="why.html">Why Mobile Health Nurse</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="advocacy.html">Medical Advocacy</a></li>
+    <li><a href="nurse-direct.html">Nurse Direct Line</a></li>
+    <li><a href="tel:9136056275" class="btn-nav-call">Call Me · (913) 605-6275</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="Open menu" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<a id="top"></a>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-top">
+    <div class="hero-eyebrow">Phoenix West Valley · Private Pay · In-Home</div>
+    <h1>A Registered Nurse <span class="gold-accent">Who Comes to You.</span></h1>
+    <p class="hero-subhead">Real answers, trained eyes, and someone in your corner, with time to help you understand what's happening and what to do next.</p>
+    <div class="hero-cta-grid">
+      <a href="services.html#in-home" class="btn-hero-plum">Book In-Home Private Nursing</a>
+      <a href="advocacy.html" class="btn-hero-gold">Call to Schedule Medical Advocacy</a>
+      <a href="nurse-direct.html" class="btn-hero-direct">Book Nurse Direct Line</a>
+    </div>
+    <div class="hero-fineprint">Gretchen Hess, BSN, RN, ACE-CPT · HealthSpanRN@gmail.com</div>
+  </div>
+  <div class="hero-image-wrap">
+    <img src="images/hero-nurse.jpg" alt="Gretchen Hess, RN, with a patient in their home">
+  </div>
+</section>
+
+<!-- WHO I AM - flows directly after hero image, no banner interrupt -->
+<section class="who-i-am" id="about">
+  <div class="who-i-am-inner">
+    <div>
+      <div class="eyebrow">Who I Am</div>
+      <h2>I'm Gretchen. I'm here to help.</h2>
+      <p>I'm a registered nurse and certified personal trainer, and I built this practice because people deserve more than what the healthcare system has time to give them. I've spent years as an ICU nurse watching what happens when people don't have the right support at the right time.</p>
+      <p>I started Mobile Health Nurse because I know exactly what people need.</p>
+      <p>Whether you have a question, a concern, or just don't know where to start, call me. That's what I'm here for.</p>
+      <div class="who-i-am-cta">
+        <a href="tel:9136056275" class="btn-primary">Call or Text Me</a>
+        <a href="tel:9136056275" class="who-i-am-phone">(913) 605-6275</a>
+      </div>
+    </div>
+    <div class="who-i-am-portrait">
+      <img src="images/gretchen-portrait.jpg" alt="Gretchen Hess, BSN, RN, Mobile Health Nurse">
+    </div>
+  </div>
+</section>
+
+<!-- FIVE WAYS I CAN HELP -->
+<section class="four-ways" id="services">
+  <div class="four-ways-inner">
+    <div class="four-ways-header">
+      <div class="eyebrow">What I Do</div>
+      <h2>Four ways I can help.</h2>
+      <p>Private pay only, which means I work for you, not an insurance company.</p>
+    </div>
+    <div class="four-ways-grid">
+
+      <div class="way-card">
+        <div class="way-card-label">In-Home · One Time</div>
+        <h3>Health Clarity Visit</h3>
+        <p>A comprehensive in-home health assessment covering vitals, medications, labs, nutrition, movement, and your goals. You leave with a written visit summary. Your baseline on paper.</p>
+        <div class="way-card-price">$250 <span class="per">one time</span></div>
+        <a href="services.html#clarity">See what's included →</a>
+      </div>
+
+      <div class="way-card teal-top">
+        <div class="way-card-label">In-Home · Monthly</div>
+        <h3>Health Partnership</h3>
+        <p>Ongoing in-home visits that build on your baseline. Vitals trending, medication and lab follow-up, doctor visit clarification, and personal training. Every visit continues your story.</p>
+        <div class="way-card-price">From $325 <span class="per">/month</span></div>
+        <a href="services.html#partnership">See tiers &amp; pricing →</a>
+      </div>
+
+      <div class="way-card red-top">
+        <div class="way-card-label">In-Person · As Needed</div>
+        <h3>Medical Advocacy</h3>
+        <p>An ICU-trained nurse with you in the doctor's office, hospital room, or before a procedure. Your care improves when the doctor knows a nurse advocate is part of the plan.</p>
+        <div class="way-card-price">$200 <span class="per">first 2 hrs</span></div>
+        <a href="advocacy.html">Learn more →</a>
+      </div>
+
+      <div class="way-card slate-top">
+        <div class="way-card-label">Virtual · Anywhere in the U.S.</div>
+        <h3>Nurse Direct Line</h3>
+        <p>Unlimited call and text access to me. No portal, no automated system, no stranger. Available to anyone in Arizona or across the U.S. When you call, I answer personally.</p>
+        <div class="way-card-price">$149 <span class="per">/month</span></div>
+        <a href="nurse-direct.html">Learn more →</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- WHO THIS IS FOR -->
+<section class="who-for" id="who-for">
+  <div class="who-for-inner">
+    <div class="who-for-header">
+      <div class="eyebrow">Who This Is For</div>
+      <h2>If any of this sounds like you,<br>you're in the right place.</h2>
+    </div>
+    <div class="for-list">
+      <div class="for-item">For the person who is done leaving appointments <em>feeling dismissed.</em></div>
+      <div class="for-item">For the person managing a health condition who wants more than <em>a prescription and a follow-up in six months.</em></div>
+      <div class="for-item">For the person who is healthy now and wants to <em>stay that way</em>, because they've watched what happens when people don't.</div>
+      <div class="for-item">For the person who wants to stay strong, stay sharp, and <em>stay in control</em> of their own health story.</div>
+      <div class="for-item">For the person who wants <em>independence</em> instead of dependency on the healthcare system.</div>
+    </div>
+    <p class="who-for-close">If any of that sounds like you, you're in the right place.</p>
+  </div>
+</section>
+
+<!-- NOT SURE WHICH SERVICE -->
+<section class="decide-nudge" id="connect">
+  <div class="decide-nudge-inner">
+    <h2>Not sure which service fits?</h2>
+    <p>A quick call and we'll decide together what might work for you.</p>
+    <a href="tel:9136056275" class="btn-primary">Call Me · (913) 605-6275</a>
+  </div>
+</section>
+
+<!-- NURSE DIRECT - NOT IN ARIZONA -->
+<section class="nurse-direct-geo">
+  <div class="nurse-direct-geo-inner">
+    <div>
+      <div class="geo-eyebrow">Available Nationwide · Virtual · No Visit Required</div>
+      <h2>Not in Arizona?</h2>
+      <p>That's okay. The Nurse Direct Line is available to anyone in the country. No in-home visit required, no zip code needed. Just a nurse whose number is in your phone. $149/month, cancel anytime.</p>
+    </div>
+    <div>
+      <a href="nurse-direct.html" class="btn-slate">Learn More →</a>
+    </div>
+  </div>
+</section>
+
+<!-- BOTTOM CTA -->
+<footer>
+  <div class="footer-brand">Mobile Health Nurse</div>
+  <ul class="footer-nav">
+    <li><a href="#top">Home</a></li>
+    <li><a href="why.html">Why Mobile Health Nurse</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="advocacy.html">Medical Advocacy</a></li>
+    <li><a href="nurse-direct.html">Nurse Direct Line</a></li>
+    <li><a href="#connect">Contact</a></li>
+  </ul>
+  <div class="footer-contact">
+    <a href="mailto:HealthSpanRN@gmail.com">HealthSpanRN@gmail.com</a> · (913) 605-6275 · Goodyear · Litchfield Park · Avondale · Verrado · Estrella Mountain Ranch<br>
+    <span style="margin-top: 0.75rem; display: inline-block;">Gretchen Hess, BSN, RN, ACE-CPT</span>
+  </div>
+</footer>
+
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById('mobileMenu');
+    const burger = document.getElementById('hamburger');
+    const isOpen = menu.classList.toggle('open');
+    burger.classList.toggle('open', isOpen);
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+  }
+  function closeMenu() {
+    const menu = document.getElementById('mobileMenu');
+    const burger = document.getElementById('hamburger');
+    menu.classList.remove('open');
+    burger.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeMenu();
+  });
+</script>
+
+</body>
+</html>
