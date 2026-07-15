@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Why Mobile Health Nurse — Gretchen Hess, BSN, RN</title>
+<title>Why Mobile Health Nurse · Gretchen Hess, BSN, RN</title>
 <meta name="description" content="You deserve great healthcare, not just good. Mobile Health Nurse exists to make sure you get it.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -39,6 +39,10 @@
   .nav-links a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 500; transition: color 0.2s; white-space: nowrap; }
   .nav-links a:hover { color: var(--gold); }
   .nav-links a.active { color: var(--gold); }
+  .btn-nav-call { padding: 0.6rem 1.25rem; text-decoration: none; font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; border-radius: 2px; background: var(--red); color: white; white-space: nowrap; }
+  .btn-nav-call:hover { background: var(--red-deep); }
+  .nav-links a.btn-nav-call { color: white; }
+  .nav-links a.btn-nav-call:hover { color: white; }
   .nav-buttons { display: none; }
   .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; background: none; border: none; z-index: 300; }
   .hamburger span { display: block; width: 24px; height: 2px; background: white; border-radius: 2px; transition: all 0.3s ease; transform-origin: center; }
@@ -162,7 +166,7 @@
   <a href="services.html" onclick="closeMenu()">Services</a>
   <a href="advocacy.html" onclick="closeMenu()">Medical Advocacy</a>
   <a href="nurse-direct.html" onclick="closeMenu()">Nurse Direct Line</a>
-  <a href="#contact" onclick="closeMenu()">Contact</a>
+  <a href="tel:9136056275" onclick="closeMenu()">Call Me · (913) 605-6275</a>
 </div>
 
 <nav>
@@ -176,7 +180,7 @@
     <li><a href="services.html">Services</a></li>
     <li><a href="advocacy.html">Medical Advocacy</a></li>
     <li><a href="nurse-direct.html">Nurse Direct Line</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="tel:9136056275" class="btn-nav-call">Call Me · (913) 605-6275</a></li>
   </ul>
   <button class="hamburger" id="hamburger" aria-label="Open menu" onclick="toggleMenu()">
     <span></span><span></span><span></span>
@@ -188,7 +192,7 @@
     <div>
       <div class="eyebrow">Why This Exists</div>
       <h1>You deserve<br><em>great healthcare.</em><br>Not just good.</h1>
-      <p>Most people navigate their health completely alone — leaving appointments confused, managing conditions without real guidance, and making important decisions without someone in their corner. Mobile Health Nurse exists to change that.</p>
+      <p>Most people navigate their health completely alone: leaving appointments confused, managing conditions without real guidance, and making important decisions without someone in their corner. Mobile Health Nurse exists to change that.</p>
     </div>
     <div class="page-hero-image">
       <img src="images/why-couple.jpg" alt="Older couple reviewing medication information together">
@@ -200,22 +204,22 @@
   <div class="problem-inner">
     <div class="eyebrow">The reality</div>
     <h2>What's actually happening in healthcare.</h2>
-    <p>The American healthcare system is built for volume. Physicians are rushed, appointment windows are short, and the language used is clinical — not conversational. Most people leave their appointments with more questions than answers.</p>
+    <p>The American healthcare system is built for volume. Physicians are rushed, appointment windows are short, and the language used is clinical, not conversational. Most people leave their appointments with more questions than answers.</p>
     <ul class="problem-list">
       <li>The average primary care visit is 15–18 minutes. That's not enough time to understand a new diagnosis, review a medication change, and ask every question you have.</li>
       <li>Confusing test results arrive in a patient portal with no context and no one to call. Most people turn to Google.</li>
-      <li>Transitions between specialists, hospitals, and home care are poorly coordinated. Things fall through the cracks — and nobody is responsible for the gaps.</li>
-      <li>Patients who don't advocate loudly for themselves often receive less thorough care — not because providers don't care, but because the system doesn't create space for it.</li>
+      <li>Transitions between specialists, hospitals, and home care are poorly coordinated. Things fall through the cracks, and nobody is responsible for the gaps.</li>
+      <li>Patients who don't advocate loudly for themselves often receive less thorough care. Not because providers don't care, but because the system doesn't create space for it.</li>
     </ul>
     <div class="pull-quote">You are not a number. You are a person with a history, a life, and goals worth protecting.</div>
-    <p>This isn't about blaming the system or the people in it. It's about acknowledging what the system cannot do — and filling that gap with something real.</p>
+    <p>This isn't about blaming the system or the people in it. It's about acknowledging what the system cannot do, and filling that gap with something real.</p>
   </div>
 </section>
 
 <section class="private-pay-section">
   <div class="private-pay-inner">
     <div class="eyebrow">Why private pay</div>
-    <h2>When I work for you — not your insurance company — everything changes.</h2>
+    <h2>When I work for you, not your insurance company, everything changes.</h2>
     <p>Insurance-based care isn't designed around your needs. It's designed around what's billable, what's covered, and what can be done in the least amount of time. Private pay removes all of that.</p>
     <div class="compare-grid">
       <div class="compare-card system">
@@ -234,7 +238,7 @@
         <ul class="compare-list">
           <li>90 minutes in your home</li>
           <li>Unhurried, personal, thorough</li>
-          <li>I work for you — full stop</li>
+          <li>I work for you, full stop</li>
           <li>Call or text me directly</li>
           <li>I coordinate alongside you</li>
           <li>Every question gets answered</li>
@@ -249,9 +253,9 @@
   <div class="story-inner">
     <div class="eyebrow">Who I am</div>
     <h2>I built this because I watched what happens when people don't have support.</h2>
-    <p>I'm Gretchen Hess — a registered nurse, ACE-certified personal trainer, and competitive triathlete. I spent years working in ICU environments, including through the COVID-19 pandemic, watching patients and families navigate their most vulnerable moments with almost no support outside the clinical walls.</p>
+    <p>I'm Gretchen Hess, a registered nurse, ACE-certified personal trainer, and competitive triathlete. I spent years working in ICU environments, including through the COVID-19 pandemic, watching patients and families navigate their most vulnerable moments with almost no support outside the clinical walls.</p>
     <p>I watched people leave the hospital confused. I watched families make decisions without understanding the options. I watched conditions worsen because nobody caught the early signs. <strong>I started Mobile Health Nurse because I know exactly what people need.</strong></p>
-    <p>I also live the active aging lifestyle my clients aspire to. I'm 54, take zero medications, and am currently training for a triathlon. I don't just know what healthy looks like on paper — I know what it takes to build and maintain it at every stage of life.</p>
+    <p>I also live the active aging lifestyle my clients aspire to. I'm 54, take zero medications, and am currently training for a triathlon. I don't just know what healthy looks like on paper. I know what it takes to build and maintain it at every stage of life.</p>
 
     <div class="story-stats">
       <div class="story-stat">
@@ -272,7 +276,7 @@
       </div>
     </div>
 
-    <p>I built this practice for the person who knows they deserve more — more time, more attention, more clarity, more support. If that's you, I'd love to talk.</p>
+    <p>I built this practice for the person who knows they deserve more: more time, more attention, more clarity, more support. If that's you, I'd love to talk.</p>
   </div>
 </section>
 

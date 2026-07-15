@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nurse Direct Line — You've Always Wished You Knew a Nurse. Now You Do. | Mobile Health Nurse</title>
+<title>Nurse Direct Line · You've Always Wished You Knew a Nurse. Now You Do. | Mobile Health Nurse</title>
 <meta name="description" content="Unlimited call and text access to an ICU-trained RN. $149/month. Available anywhere in the U.S. When you call, I answer.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -43,6 +43,10 @@
   .nav-links a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 500; transition: color 0.2s; white-space: nowrap; }
   .nav-links a:hover { color: var(--gold); }
   .nav-links a.active { color: var(--gold); }
+  .btn-nav-call { padding: 0.6rem 1.25rem; text-decoration: none; font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 600; transition: all 0.2s; border-radius: 2px; background: var(--red); color: white; white-space: nowrap; }
+  .btn-nav-call:hover { background: var(--red-deep); }
+  .nav-links a.btn-nav-call { color: white; }
+  .nav-links a.btn-nav-call:hover { color: white; }
   .nav-buttons { display: none; }
   .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; background: none; border: none; z-index: 300; }
   .hamburger span { display: block; width: 24px; height: 2px; background: white; border-radius: 2px; transition: all 0.3s ease; transform-origin: center; }
@@ -84,7 +88,7 @@
   .hero-image-tag { color: white; font-size: 0.82rem; letter-spacing: 0.08em; }
   .hero-image-tag strong { display: block; font-size: 1.1rem; font-family: 'Cormorant Garamond', serif; font-weight: 600; margin-bottom: 0.15rem; }
 
-  /* LETTER SECTION — darkened text on light background */
+  /* LETTER SECTION - darkened text on light background */
   .letter-section { padding: 6rem 3rem; background: var(--off-white); }
   .letter-inner { max-width: 720px; margin: 0 auto; }
   .letter-inner .eyebrow { margin-bottom: 2rem; }
@@ -107,17 +111,17 @@
   .how-card p { color: rgba(255,255,255,0.82); font-size: 0.95rem; line-height: 1.65; }
   .how-card .how-icon { font-size: 1.5rem; margin-bottom: 1rem; }
 
-  /* WHAT YOU GET — darkened text on cream background */
+  /* WHAT YOU GET - darkened text on cream background */
   .includes-section { padding: 5rem 3rem; background: var(--cream); }
   .includes-inner { max-width: 860px; margin: 0 auto; }
   .includes-inner h2 { font-size: clamp(2rem, 4vw, 2.75rem); margin-bottom: 0.5rem; text-align: center; }
   .includes-sub { color: var(--text-medium); font-size: 1rem; text-align: center; margin-bottom: 3rem; }
   .check-list { display: grid; grid-template-columns: 1fr 1fr; gap: 0.85rem 3rem; list-style: none; }
-  /* Darkened from var(--text-dark) implied default — explicit #2a2d3a */
+  /* Darkened from var(--text-dark) implied default - explicit #2a2d3a */
   .check-list li { font-size: 1rem; padding-left: 1.75rem; position: relative; line-height: 1.55; color: #2a2d3a; font-weight: 500; }
   .check-list li::before { content: '✓'; color: #4a6fa5; position: absolute; left: 0; font-weight: 700; font-size: 1.05rem; }
 
-  /* WHO IT'S FOR — darkened text on white background */
+  /* WHO IT'S FOR - darkened text on white background */
   .who-section { padding: 5rem 3rem; background: var(--off-white); }
   .who-inner { max-width: 860px; margin: 0 auto; }
   .who-inner h2 { font-size: clamp(2rem, 4vw, 2.75rem); margin-bottom: 3rem; text-align: center; }
@@ -192,7 +196,7 @@
   <a href="services.html" onclick="closeMenu()">Services</a>
   <a href="advocacy.html" onclick="closeMenu()">Medical Advocacy</a>
   <a href="nurse-direct.html" onclick="closeMenu()">Nurse Direct Line</a>
-  <a href="#contact" onclick="closeMenu()">Contact</a>
+  <a href="tel:9136056275" onclick="closeMenu()">Call Me · (913) 605-6275</a>
 </div>
 
 <nav>
@@ -206,7 +210,7 @@
     <li><a href="services.html">Services</a></li>
     <li><a href="advocacy.html">Medical Advocacy</a></li>
     <li><a href="nurse-direct.html" class="active">Nurse Direct Line</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="tel:9136056275" class="btn-nav-call">Call Me · (913) 605-6275</a></li>
   </ul>
   <button class="hamburger" id="hamburger" aria-label="Open menu" onclick="toggleMenu()">
     <span></span><span></span><span></span>
@@ -219,7 +223,7 @@
     <div class="hero-text">
       <div class="hero-label">Available Anywhere in the U.S. · Virtual · No In-Home Visit Required</div>
       <h1>You've always wished<br>you knew a nurse.<br><span class="gold-line">Now you do.</span></h1>
-      <p class="hero-lead">Unlimited call and text access to an ICU-trained RN. No portal. No hold music. No stranger. When you reach out, I respond — personally.</p>
+      <p class="hero-lead">Unlimited call and text access to an ICU-trained RN. No portal. No hold music. No stranger. When you reach out, I respond, personally.</p>
       <div class="hero-price-row">
         <div class="hero-price">$149</div>
         <div class="hero-price-label">per month · cancel anytime</div>
@@ -230,7 +234,7 @@
       </div>
     </div>
     <div class="hero-image">
-      <img src="images/Gretchen_RN_.jpeg" alt="Gretchen Hess, BSN RN — ICU nurse at work">
+      <img src="images/Gretchen_RN_.jpeg" alt="Gretchen Hess, BSN, RN, ICU nurse at work">
       <div class="hero-image-overlay">
         <div class="hero-image-tag">
           <strong>Gretchen Hess, BSN, RN</strong>
@@ -255,12 +259,12 @@
       <div class="pull">You now do. I'm here to help.</div>
 
       <p>Have you ever noticed how people with a nurse in the family just seem calmer about health stuff? They have someone to call. Someone who will tell them the truth. Someone who knows what that number on the lab report actually means, whether that symptom is worth worrying about, and what questions to ask before agreeing to a procedure.</p>
-      <p>That's what the Nurse Direct Line is. It's not a hotline. It's not a call center. It's my number — and when you call it, I answer.</p>
+      <p>That's what the Nurse Direct Line is. It's not a hotline. It's not a call center. It's my number, and when you call it, I answer.</p>
       <p>I'm an ICU nurse. I've seen what happens when people don't have the right information at the right time. I started this service because I believe everyone deserves a clinical voice they can actually reach. Not just people in Arizona. Not just the people who can afford a concierge doctor. Everyone.</p>
-      <p>$149 a month. Call or text anytime. I'll respond personally — always. That's my commitment to you.</p>
+      <p>$149 a month. Call or text anytime. I'll respond personally, always. That's my commitment to you.</p>
 
       <div class="letter-sig">
-        — Gretchen
+        Gretchen
         <strong>Gretchen Hess, BSN, RN, ACE-CPT · Mobile Health Nurse</strong>
       </div>
     </div>
@@ -276,7 +280,7 @@
       <div class="how-card">
         <div class="how-icon">📞</div>
         <h3>When you call</h3>
-        <p>I answer. If I'm with a client, leave a message and I'll call you back within 2 hours — no exceptions.</p>
+        <p>I answer. If I'm with a client, leave a message and I'll call you back within 2 hours, no exceptions.</p>
       </div>
       <div class="how-card">
         <div class="how-icon">💬</div>
@@ -286,7 +290,7 @@
       <div class="how-card">
         <div class="how-icon">🌎</div>
         <h3>From anywhere</h3>
-        <p>You don't need to be in Arizona. You don't need to live near me or ever meet me in person. If you found this page from another state and it resonated — that's exactly who this is for.</p>
+        <p>You don't need to be in Arizona. You don't need to live near me or ever meet me in person. If you found this page from another state and it resonated, that's exactly who this is for.</p>
       </div>
     </div>
   </div>
@@ -310,7 +314,7 @@
       <li>Hospital discharge support</li>
       <li>"Should I go to the ER?" guidance</li>
       <li>Insurance &amp; care navigation help</li>
-      <li>Peace of mind — that's real too</li>
+      <li>Peace of mind. That's real too</li>
     </ul>
   </div>
 </section>
@@ -320,13 +324,13 @@
   <div class="who-inner">
     <h2>Who this is for.</h2>
     <ul class="who-list">
-      <li>For the person who <em>doesn't have a nurse in the family</em> — and has always wished they did.</li>
+      <li>For the person who <em>doesn't have a nurse in the family</em>, and has always wished they did.</li>
       <li>For the person who is <em>managing a health condition</em> and wants a clinical voice they can actually reach.</li>
       <li>For the person whose <em>parents are aging</em> and wants someone to call when something comes up.</li>
-      <li>For the person who is <em>healthy and wants to stay that way</em> — and knows that questions come up even when nothing is wrong.</li>
+      <li>For the person who is <em>healthy and wants to stay that way</em>, and knows that questions come up even when nothing is wrong.</li>
       <li>For the person who <em>lives far from family</em> and doesn't have anyone nearby who knows medicine.</li>
       <li>For the caregiver who needs someone to <em>think out loud with</em> about a loved one's care.</li>
-      <li>For the person who <em>found this page from somewhere other than Arizona</em> — and realized it doesn't matter where you are.</li>
+      <li>For the person who <em>found this page from somewhere other than Arizona</em>, and realized it doesn't matter where you are.</li>
       <li>For anyone who has ever thought, <em>"I just wish I knew a nurse."</em></li>
     </ul>
   </div>
@@ -353,7 +357,7 @@
 
 <!-- DISCLAIMER -->
 <div class="disclaimer-band" id="contact">
-  <p>The Nurse Direct Line is not a replacement for emergency medical services. If you are experiencing a medical emergency, call 911. This service provides nursing guidance and health information — not diagnosis or treatment.</p>
+  <p>The Nurse Direct Line is not a replacement for emergency medical services. If you are experiencing a medical emergency, call 911. This service provides nursing guidance and health information, not diagnosis or treatment.</p>
 </div>
 
 <footer>
